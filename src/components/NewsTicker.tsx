@@ -7,7 +7,7 @@ export default function NewsTicker() {
   const items = [...NEWS, ...NEWS];
 
   return (
-    <section className="relative bg-gradient-to-r from-[var(--vgo-dark)] to-[var(--vgo-light)] text-white overflow-hidden">
+    <section id="news" className="relative bg-gradient-to-r from-[#E55A00] to-[#FF7A1F] text-white overflow-hidden scroll-mt-20">
       <div className="flex items-center">
         <div className="shrink-0 px-4 sm:px-6 py-3 bg-black/20 font-bold text-sm flex items-center gap-2 z-10">
           <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
