@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import NewsTicker from "@/components/NewsTicker";
 import PainPoints from "@/components/PainPoints";
 import FeatureCards from "@/components/FeatureCards";
+import SceneShowcase from "@/components/SceneShowcase";
 import HowItWorks from "@/components/HowItWorks";
 import Roles from "@/components/Roles";
 import Merchant from "@/components/Merchant";
@@ -183,6 +184,7 @@ export default function Home() {
       <NewsTicker />
       <PainPoints />
       <FeatureCards />
+      <SceneShowcase />
       <HowItWorks />
       <Roles />
       <Merchant />

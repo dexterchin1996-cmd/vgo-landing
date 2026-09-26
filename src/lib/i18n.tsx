@@ -664,13 +664,25 @@ export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("zh");
 
   useEffect(() => {
-    const saved = typeof window !== "undefined" ? localStorage.getItem("vgo_lang") : null;
+    if (typeof window === "undefined") return;
+
+    // 1. 用户手动选过 → 优先用他的选择
+    const saved = localStorage.getItem("vgo_lang");
     if (saved === "zh" || saved === "en" || saved === "ms") {
       setLangState(saved);
       document.documentElement.setAttribute("data-lang", saved);
-    } else {
-      document.documentElement.setAttribute("data-lang", "zh");
+      return;
     }
+
+    // 2. 没选过 → 读浏览器语言自动识别
+    const browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || "en").toLowerCase();
+    let detected: Lang = "en"; // 默认英文（国际通用）
+    if (browserLang.startsWith("zh")) detected = "zh";
+    else if (browserLang.startsWith("ms") || browserLang.startsWith("id")) detected = "ms";
+    else if (browserLang.startsWith("en")) detected = "en";
+
+    setLangState(detected);
+    document.documentElement.setAttribute("data-lang", detected);
   }, []);
 
   const setLang = (l: Lang) => {
