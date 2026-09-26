@@ -414,7 +414,7 @@ Certified hands, one tap away."
     svc_more_desc: "Akan Datang",
     svc_action: "Terokai",
     pain_label: "Pernah Hadapi Ini?",
-    pain_title: "VGO Faham",
+    pain_title: "Kami di sisi anda"
     pain_1: "Sukar Cari Tukang Dipercayai",
     pain_2: "Harga Tak Telus, Kena Tipu",
     pain_3: "Janji Tapi Tak Datang",
@@ -444,7 +444,7 @@ Certified hands, one tap away."
     role_customer_p4: "Boleh Track",
     role_customer_cta: "Cari Servis",
     role_merchant_tag: "Ada Perniagaan? Sertai VGO",
-    role_merchant_title: "Besarkan Perniagaan Anda",
+    role_merchant_title: "Bisnes Anda, Cahaya Kami"
     role_merchant_desc: "Kedai hardware, syarikat cuci, jual barang terpakai, urutan spa — letak perniagaan anda di VGO, biar semua orang di Kota Kinabalu jumpa anda.",
     role_merchant_p1: "Daftar Percuma",
     role_merchant_p2: "Trafik Tempatan",
@@ -452,7 +452,7 @@ Certified hands, one tap away."
     role_merchant_p4: "Tak Perlu Skill Teknikal",
     role_merchant_cta: "Daftar Peniaga",
     role_tech_tag: "Ada Kemahiran? Mari ke VGO",
-    role_tech_title: "Ada Kemahiran, Takkan Kebuluran",
+    role_tech_title: "Kemahiran Anda, Rezeki Kita"
     role_tech_desc: "Pandai baiki paip, faham elektrik, boleh cuci, ada kemahiran urut — tak perlu tunggu orang kenalkan. Tunjuk kemahiran anda di sini, biar orang yang perlukan anda datang sendiri.",
     role_tech_p1: "Kos Sifar",
     role_tech_p2: "Bayar Ikut Tempahan",
@@ -483,7 +483,7 @@ Certified hands, one tap away."
     merchant_audit: "Masa semakan purata",
     merchant_audit_time: "1-2 hari",
     review_label: "Ulasan Sebenar",
-    review_title: "Apa Kata Pengguna",
+    review_title: "Pengalaman Yang Bercerita"
     faq_label: "Soalan Lazim",
     faq_title: "Soalan Lazim",
     faq_q1: "Apa itu VGO?",
@@ -498,8 +498,8 @@ Certified hands, one tap away."
     faq_a5: "Boleh. Jika tukang tak datang tepat masa atau servis tak siap, anda boleh minta bayaran balik penuh. Diproses dalam 1-3 hari bekerja.",
     faq_q6: "Liputan kawasan mana?",
     faq_a6: "Kota Kinabalu dan kawasan sekitarnya (Damai, Penampang, Luyang, Inanam, dll). Akan berkembang ke bandar lain di Sabah tidak lama lagi.",
-    cta_title1: "Semua Hal Rumah,",
-    cta_title2: "VGO Datang",
+    cta_title1: "Satu Tap,"
+    cta_title2: "Kami Sedia"
     cta_sub: "Daftar percuma — tukang bertauliah sedia dipanggil",
     cta_register: "Daftar Percuma",
     cta_download: "Muat Turun App",
