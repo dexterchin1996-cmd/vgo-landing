@@ -11,7 +11,7 @@ const C = {
     s1_t: "1. 数据控制者",
     s1: "VGO (V Go On) 是您个人数据的控制者。我们的注册地址位于马来西亚。",
     s2_t: "2. 数据保护官 (DPO)",
-    s2: "根据 PDPA 要求，我们已任命数据保护官。任何隐私相关问题，请联系：",
+    s2: "根据 PDPA 要求，我们已任命数据保护官（DPO）。任何隐私相关问题，请联系：\njason52013141018@gmail.com · +60 11-7269 1788\n数据泄露时，我们将在 72 小时内通知监管机构，并在 7 天内通知受影响的用户。",
     s3_t: "3. 我们收集什么数据",
     s3: "当您注册或使用 VGO 时，我们可能收集：姓名、手机号、电子邮件、服务地址、付款信息（由第三方支付机构处理，我们不直接存储卡号）、设备信息、使用日志、位置数据。",
     s4_t: "4. 我们如何使用您的数据",
@@ -37,7 +37,7 @@ const C = {
     s1_t: "1. Data Controller",
     s1: "VGO (V Go On) is the data controller of your personal data. Our registered address is located in Malaysia.",
     s2_t: "2. Data Protection Officer (DPO)",
-    s2: "In accordance with the PDPA, we have appointed a Data Protection Officer. For any privacy-related matters, please contact:",
+    s2: "In accordance with the PDPA, we have appointed a Data Protection Officer (DPO). For any privacy-related matters, please contact:\njason52013141018@gmail.com · +60 11-7269 1788\nIn the event of a data breach, we will notify the regulator within 72 hours and affected users within 7 days.",
     s3_t: "3. What Data We Collect",
     s3: "When you register or use VGO, we may collect: name, phone number, email, service address, payment information (processed by third-party payment providers; we do not store card numbers), device information, usage logs, and location data.",
     s4_t: "4. How We Use Your Data",
@@ -63,7 +63,7 @@ const C = {
     s1_t: "1. Pengawal Data",
     s1: "VGO (V Go On) ialah pengawal data bagi data peribadi anda. Alamat berdaftar kami terletak di Malaysia.",
     s2_t: "2. Pegawai Perlindungan Data (DPO)",
-    s2: "Selaras dengan PDPA, kami telah melantik Pegawai Perlindungan Data. Untuk sebarang perkara berkaitan privasi, sila hubungi:",
+    s2: "Selaras dengan PDPA, kami telah melantik Pegawai Perlindungan Data (DPO). Untuk sebarang perkara berkaitan privasi, sila hubungi:\njason52013141018@gmail.com · +60 11-7269 1788\nJika berlaku kebocoran data, kami akan memaklumkan pengawal selia dalam 72 jam dan pengguna terjejas dalam 7 hari.",
     s3_t: "3. Data Apa Yang Kami Kumpul",
     s3: "Apabila anda mendaftar atau menggunakan VGO, kami mungkin mengumpul: nama, nombor telefon, e-mel, alamat perkhidmatan, maklumat pembayaran (diproses oleh pembekal pihak ketiga; kami tidak simpan nombor kad), maklumat peranti, log penggunaan, dan data lokasi.",
     s4_t: "4. Bagaimana Kami Guna Data Anda",
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
       {SECTIONS.map((s) => (
         <div key={s.t} className="mb-10">
           <h2 className="text-xl font-black mb-3">{s.t}</h2>
-          <p className="text-white/65 leading-relaxed">{s.d}</p>
+          <p className="text-white/65 leading-relaxed whitespace-pre-line">{s.d}</p>
         </div>
       ))}
       <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
