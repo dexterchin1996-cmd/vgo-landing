@@ -6,6 +6,7 @@ import PainPoints from "@/components/PainPoints";
 import FeatureCards from "@/components/FeatureCards";
 import SceneShowcase from "@/components/SceneShowcase";
 import HowItWorks from "@/components/HowItWorks";
+import Guarantees from "@/components/Guarantees";
 import Roles from "@/components/Roles";
 import Merchant from "@/components/Merchant";
 import Testimonials from "@/components/Testimonials";
@@ -186,6 +187,7 @@ export default function Home() {
       <FeatureCards />
       <SceneShowcase />
       <HowItWorks />
+      <Guarantees />
       <Roles />
       <Merchant />
       <Testimonials />
