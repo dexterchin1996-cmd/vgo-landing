@@ -204,19 +204,19 @@ export const TRANSLATIONS = {
     drawer_jobs: "Jobs",
     drawer_news: "News",
     drawer_about: "About Us",
-    hero_tag: "VGO · Certified Technicians · All Malaysia",
-    hero_title1: "No More Worries,",
-    hero_title2: "VGO Comes To You",
+    hero_tag: "🇲🇾 VGO · Certified Pros · Nationwide"
+    hero_title1: "Whatever you need,"
+    hero_title2: "VGO takes the lead"
     hero_desc: "Repair · Cleaning · Massage · Errands · Marketplace · Jobs",
-    hero_sub: "30+ services. One tap to order. Certified technicians at your door.",
-    cta_customer: "Need Help? Find VGO",
-    cta_merchant: "Have Business? Join VGO",
-    cta_tech: "Have Skills? Come to VGO",
+    hero_sub: "30+ services, one tap to book. Certified pros at your door."
+    cta_customer: "Got a problem? Find VGO"
+    cta_merchant: "Got a business? Grow with VGO"
+    cta_tech: "Got skills? Earn with VGO"
     stat_rating: "Rating",
     stat_family: "Families",
     stat_category: "Services",
     stat_cover: "Coverage",
-    scroll_more: "Scroll to learn more",
+    scroll_more: "Scroll to explore"
     news_label: "LATEST",
     news_1: "New: Marketplace is live",
     news_2: "Grand opening — first order discount",
@@ -224,8 +224,8 @@ export const TRANSLATIONS = {
     news_4: "Massage service expanded nationwide",
     news_5: "Same-day errands within 24 hours",
     sec_services_label: "Our Services",
-    sec_services_title: "What Can VGO Do For You?",
-    sec_services_sub: "30+ service categories covering every aspect of life",
+    sec_services_title: "Everything Your Home Needs"
+    sec_services_sub: "30+ services, every corner of life covered"
     svc_repair: "Home Repair",
     svc_repair_desc: "Plumbing · Electrical · Appliances",
     svc_clean: "Cleaning",
@@ -241,52 +241,52 @@ export const TRANSLATIONS = {
     svc_more: "More Services",
     svc_more_desc: "Coming Soon",
     svc_action: "Explore",
-    pain_label: "Ever Faced These?",
-    pain_title: "VGO Understands",
-    pain_1: "Can't Find Reliable Help",
-    pain_2: "Hidden Fees & Overcharging",
-    pain_3: "No-show Appointments",
-    pain_4: "Don't Know Where To Look",
-    pain_answer_label: "VGO's Answer",
-    pain_answer: "Certified · Transparent · On Time · One Tap",
+    pain_label: "Sound Familiar?"
+    pain_title: "We’ve All Been There"
+    pain_1: "Can’t find someone reliable"
+    pain_2: "Hidden fees, surprise charges"
+    pain_3: "Booked, then ghosted"
+    pain_4: "No idea where to look"
+    pain_answer_label: "The VGO Way"
+    pain_answer: "Certified · Transparent · Punctual · One Tap"
     flow_label: "How It Works",
-    flow_title: "Everything, One Tap Away",
-    flow_sub: "4 simple steps — easier than you think",
+    flow_title: "From Tap to Doorstep"
+    flow_sub: "Four steps. Simpler than you’d think."
     step_1: "Sign Up",
-    step_1_desc: "Phone number sign-up in 30 seconds",
+    step_1_desc: "Phone number sign-up, 30 seconds flat"
     step_2: "Download App",
-    step_2_desc: "Install to home screen, works like an app",
+    step_2_desc: "Install from browser — no app store needed"
     step_3: "Choose Service",
-    step_3_desc: "Pick a service, see price, order in one tap",
-    step_4: "Technician Arrives",
-    step_4_desc: "Certified technician arrives on time, fully trackable",
+    step_3_desc: "Pick, see price, book in one tap"
+    step_4: "Pro Arrives"
+    step_4_desc: "Certified pro, on time. Track in real time."
     roles_label: "Three Ways In",
     roles_title: "Which One Are You?",
-    roles_sub: "Whether you need help, run a business, or work with your hands — VGO has a place for you",
+    roles_sub: "Need a hand, run a shop, or work with your hands — there’s a place for you."
     role_customer_tag: "Need Help? Find VGO",
-    role_customer_title: "You Have A Problem, We Come To You",
+    role_customer_title: "Tell Us What’s Wrong — We’ll Handle It"
     role_customer_desc: "Burst pipe, broken AC, need cleaning, want a massage — no more asking around, no more getting ripped off. One order on VGO, certified technician shows up.",
     role_customer_p1: "30+ Service Categories",
     role_customer_p2: "Transparent Pricing",
     role_customer_p3: "Certified Technicians",
     role_customer_p4: "Fully Trackable",
-    role_customer_cta: "Find Service",
+    role_customer_cta: "Find a Service"
     role_merchant_tag: "Have Business? Join VGO",
-    role_merchant_title: "Grow Your Business With Us",
+    role_merchant_title: "Put Your Business In The Spotlight"
     role_merchant_desc: "Hardware store, cleaning company, second-hand goods, massage spa — put your business on VGO and let everyone in Kota Kinabalu find you.",
     role_merchant_p1: "Free Sign Up",
     role_merchant_p2: "Local Traffic Boost",
     role_merchant_p3: "Direct Order Push",
     role_merchant_p4: "No Tech Skills Needed",
-    role_merchant_cta: "Merchant Sign Up",
+    role_merchant_cta: "List Your Business"
     role_tech_tag: "Have Skills? Come to VGO",
-    role_tech_title: "With Skills, You'll Never Go Hungry",
-    role_tech_desc: "Plumbing, electrical, cleaning, massage — stop waiting for referrals. Showcase your skills here and let people who need you find you.",
+    role_tech_title: "With Skills, You’ll Never Go Hungry"
+    role_tech_desc: "Plumbing, electrical, cleaning, massage — stop waiting on referrals. Showcase your craft and let the work come to you."
     role_tech_p1: "Zero Cost",
     role_tech_p2: "Pay Per Order",
     role_tech_p3: "Skill Certification",
     role_tech_p4: "Set Your Own Hours",
-    role_tech_cta: "Technician Sign Up",
+    role_tech_cta: "Join as a Pro"
     merchant_label: "For Merchants",
     merchant_title1: "Let Your Business",
     merchant_title2: "Be Seen By More People",
@@ -311,7 +311,7 @@ export const TRANSLATIONS = {
     merchant_audit: "Average review time",
     merchant_audit_time: "1-2 days",
     review_label: "Real Reviews",
-    review_title: "What People Say",
+    review_title: "Don’t Take Our Word For It"
     faq_label: "FAQ",
     faq_title: "Frequently Asked",
     faq_q1: "What is VGO?",
@@ -326,13 +326,14 @@ export const TRANSLATIONS = {
     faq_a5: "Yes. If the technician doesn't show up on time or the service isn't completed, you can request a full refund. Processed within 1-3 business days.",
     faq_q6: "Which areas do you cover?",
     faq_a6: "Currently Kota Kinabalu and surrounding areas (Damai, Penampang, Luyang, Inanam, etc.). Expanding to other Sabah cities soon.",
-    cta_title1: "Everything At Home,",
-    cta_title2: "VGO On The Way",
-    cta_sub: "Free registration — certified technicians on call",
+    cta_title1: "One Tap Away,"
+    cta_title2: "VGO’s On The Way"
+    cta_sub: "Free to sign up. Certified pros on demand."
     cta_register: "Sign Up Free",
     cta_download: "Download App",
     cta_note: "iOS · Android · No app store needed — install from browser",
-    footer_tagline: "Malaysia home-service platform.\nCertified technicians, on call.",
+    footer_tagline: "Malaysia home-service platform.
+Certified hands, one tap away."
     footer_col1: "Services",
     footer_col2: "Partners",
     footer_col3: "Help",
