@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import ComingSoon from "@/components/ComingSoon";
 import { useLang } from "@/lib/i18n";
 
 const HERO_IMAGES = [
@@ -66,7 +67,7 @@ export default function Home() {
         </div>
 
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <div className="aurora absolute -top-32 -left-24 w-[500px] h-[500px] rounded-full bg-[#FF6600] blur-[140px] opacity-60" />
+          <div className="aurora absolute -top-32 -left-24 w-[500px] h-[500px] rounded-full bg-[var(--vgo)] blur-[140px] opacity-60" />
           <div className="aurora-2 absolute -bottom-32 -right-24 w-[600px] h-[600px] rounded-full bg-[#FF8A3D] blur-[160px] opacity-50" />
         </div>
 
@@ -77,7 +78,7 @@ export default function Home() {
             transition={{ duration: 0.6, type: "spring", stiffness: 80 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 text-xs sm:text-sm font-semibold mb-6"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FF6600] animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--vgo)] animate-pulse" />
             {t("hero_tag")}
           </motion.div>
 
@@ -92,7 +93,7 @@ export default function Home() {
             </span>
             <span className="block mt-1">
               {t("hero_title2").replace("VGO", "")}
-              <span className="text-[#FF6600] drop-shadow-[0_0_40px_rgba(255,102,0,0.6)]">VGO</span>
+              <span className="text-[var(--vgo)] drop-shadow-[0_0_40px_rgba(255,102,0,0.6)]">VGO</span>
             </span>
           </motion.h1>
 
@@ -115,7 +116,7 @@ export default function Home() {
           >
             <a
               href="#download"
-              className="group flex items-center justify-center gap-2 w-full px-6 py-4 rounded-2xl bg-gradient-to-b from-[#FF7A1F] to-[#E55A00] text-white font-bold text-base shadow-[0_10px_30px_-8px_rgba(255,102,0,0.6)] hover:shadow-[0_16px_40px_-8px_rgba(255,102,0,0.8)] hover:scale-[1.02] active:scale-95 transition-all pulse-glow"
+              className="group flex items-center justify-center gap-2 w-full px-6 py-4 rounded-2xl bg-gradient-to-b from-[var(--vgo-light)] to-[var(--vgo-dark)] text-white font-bold text-base shadow-[0_10px_30px_-8px_rgba(255,102,0,0.6)] hover:shadow-[0_16px_40px_-8px_rgba(255,102,0,0.8)] hover:scale-[1.02] active:scale-95 transition-all pulse-glow"
             >
               <span className="text-lg">👤</span>
               <span>{t("cta_customer")}</span>
@@ -143,7 +144,7 @@ export default function Home() {
           >
             {STATS.map((s) => (
               <div key={s.label} className="py-2 rounded-xl bg-white/5 hover:bg-white/10 transition-colors text-center">
-                <div className="text-base sm:text-2xl font-black text-[#FF6600] leading-tight">{s.num}</div>
+                <div className="text-base sm:text-2xl font-black text-[var(--vgo)] leading-tight">{s.num}</div>
                 <div className="text-[10px] sm:text-xs text-white/65 mt-0.5">{s.label}</div>
               </div>
             ))}
@@ -165,7 +166,7 @@ export default function Home() {
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
                     transition={{ duration: SLIDE_MS / 1000, ease: "linear" }}
-                    className="h-full bg-[#FF6600]"
+                    className="h-full bg-[var(--vgo)]"
                   />
                 )}
               </button>
@@ -189,6 +190,7 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Footer />
+      <ComingSoon />
     </>
   );
 }

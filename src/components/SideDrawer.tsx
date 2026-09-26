@@ -48,7 +48,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
           >
             <div className="flex items-center justify-between px-5 h-16 border-b border-gray-100">
               <div className="flex items-center gap-2.5">
-                <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#FF7A1F] to-[#E55A00] text-white font-black flex items-center justify-center shadow-md shadow-orange-500/30">V</span>
+                <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-[var(--vgo-light)] to-[var(--vgo-dark)] text-white font-black flex items-center justify-center shadow-md shadow-orange-500/30">V</span>
                 <div className="flex flex-col leading-none">
                   <span className="font-black text-lg text-gray-900">VGO</span>
                   <span className="text-[8px] font-semibold tracking-[0.2em] text-gray-400">V GO ON</span>
@@ -68,9 +68,9 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.05 + i * 0.035 }}
-                  className="flex items-center gap-3.5 px-5 py-3.5 text-gray-700 hover:bg-orange-50 hover:text-[#FF6600] transition group"
+                  className="flex items-center gap-3.5 px-5 py-3.5 text-gray-700 hover:bg-orange-50 hover:text-[var(--vgo)] transition group"
                 >
-                  <m.icon size={20} strokeWidth={2} className="text-gray-400 group-hover:text-[#FF6600] transition-colors" />
+                  <m.icon size={20} strokeWidth={2} className="text-gray-400 group-hover:text-[var(--vgo)] transition-colors" />
                   <span className="font-medium text-[15px]">{m.label}</span>
                 </motion.a>
               ))}
@@ -109,7 +109,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
                             <span className="font-semibold text-gray-900">{l.label}</span>
                             <span className="text-[10px] text-gray-400">{l.native}</span>
                           </span>
-                          {lang === l.code && <Check size={16} className="text-[#FF6600]" />}
+                          {lang === l.code && <Check size={16} className="text-[var(--vgo)]" />}
                         </button>
                       ))}
                     </motion.div>
@@ -120,7 +120,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
               <a
                 href="#download"
                 onClick={onClose}
-                className="block text-center py-3.5 rounded-xl bg-[#FF6600] text-white font-bold shadow-lg pulse-glow"
+                className="block text-center py-3.5 rounded-xl bg-[var(--vgo)] text-white font-bold shadow-lg pulse-glow"
               >
                 {t("nav_download")}
               </a>

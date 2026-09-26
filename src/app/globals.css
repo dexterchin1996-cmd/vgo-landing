@@ -1,8 +1,42 @@
 @import "tailwindcss";
 
+/* ===== 三语主题色 ===== */
+:root, html[data-lang="zh"] {
+  --vgo: #E63946;
+  --vgo-light: #FF6B6B;
+  --vgo-dark: #B71C1C;
+  --vgo-glow: rgba(230,57,70,0.5);
+  --vgo-grad-from: #FF8A80;
+  --vgo-grad-via: #E63946;
+  --vgo-grad-to: #B71C1C;
+}
+html[data-lang="en"] {
+  --vgo: #2563EB;
+  --vgo-light: #60A5FA;
+  --vgo-dark: #1E40AF;
+  --vgo-glow: rgba(37,99,235,0.5);
+  --vgo-grad-from: #93C5FD;
+  --vgo-grad-via: #2563EB;
+  --vgo-grad-to: #1E40AF;
+}
+html[data-lang="ms"] {
+  --vgo: #059669;
+  --vgo-light: #34D399;
+  --vgo-dark: #047857;
+  --vgo-glow: rgba(5,150,105,0.5);
+  --vgo-grad-from: #6EE7B7;
+  --vgo-grad-via: #059669;
+  --vgo-grad-to: #047857;
+}
+
+/* 平滑过渡 */
+html, body, header, section, footer, a, button, div {
+  transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+}
+
 @theme {
-  --color-vgo: #FF6600;
-  --color-vgo-dark: #E55A00;
+  --color-vgo: var(--vgo);
+  --color-vgo-dark: var(--vgo-dark);
   --color-vgo-light: #FFF3E8;
 }
 

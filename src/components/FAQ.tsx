@@ -17,8 +17,12 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="relative bg-white py-20 sm:py-28 px-5">
-      <div className="max-w-3xl mx-auto">
+    <section className="relative bg-white py-20 sm:py-28 px-5 overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-[0.04]"
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&q=80')" }}
+      />
+      <div className="relative max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,7 +30,7 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <p className="text-[#FF6600] font-bold text-sm tracking-widest uppercase mb-3">{t("faq_label")}</p>
+          <p className="text-[var(--vgo)] font-bold text-sm tracking-widest uppercase mb-3">{t("faq_label")}</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
             {t("faq_title")}
           </h2>
@@ -41,7 +45,7 @@ export default function FAQ() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               className={`rounded-2xl border transition-colors ${
-                open === i ? "border-[#FF6600]/30 bg-orange-50/40" : "border-gray-100 bg-white hover:border-gray-200"
+                open === i ? "border-[var(--vgo)]/30 bg-orange-50/40" : "border-gray-100 bg-white hover:border-gray-200"
               }`}
             >
               <button
@@ -50,7 +54,7 @@ export default function FAQ() {
               >
                 <span className="font-bold text-gray-900 text-sm sm:text-base">{f.q}</span>
                 <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-lg font-light transition-all duration-300 ${
-                  open === i ? "bg-[#FF6600] text-white rotate-45" : "bg-gray-100 text-gray-600"
+                  open === i ? "bg-[var(--vgo)] text-white rotate-45" : "bg-gray-100 text-gray-600"
                 }`}>+</span>
               </button>
               <AnimatePresence initial={false}>

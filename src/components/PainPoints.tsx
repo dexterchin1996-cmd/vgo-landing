@@ -14,7 +14,7 @@ export default function PainPoints() {
   return (
     <section className="relative bg-gray-50 py-20 sm:py-28 px-5 overflow-hidden">
       <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-80 h-80 bg-[#FF6600]/10 rounded-full blur-[100px]" />
+        <div className="absolute top-0 left-1/4 w-80 h-80 bg-[var(--vgo)]/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative max-w-5xl mx-auto">
@@ -25,7 +25,7 @@ export default function PainPoints() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <p className="text-[#FF6600] font-bold text-sm tracking-widest uppercase mb-3">
+          <p className="text-[var(--vgo)] font-bold text-sm tracking-widest uppercase mb-3">
             {t("pain_label")}
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
@@ -58,7 +58,7 @@ export default function PainPoints() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
-          <div className="inline-block px-8 py-5 rounded-3xl bg-gradient-to-br from-[#FF6600] to-[#E55A00] text-white shadow-2xl shadow-orange-500/30">
+          <div className="inline-block px-8 py-5 rounded-3xl bg-gradient-to-br from-[var(--vgo)] to-[var(--vgo-dark)] text-white shadow-2xl shadow-orange-500/30">
             <p className="text-xs font-semibold tracking-widest opacity-90 mb-1">{t("pain_answer_label")}</p>
             <p className="text-xl sm:text-2xl font-black">
               {t("pain_answer")}

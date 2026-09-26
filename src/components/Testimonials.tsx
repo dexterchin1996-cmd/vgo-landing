@@ -22,7 +22,7 @@ export default function Testimonials() {
   return (
     <section className="relative bg-gray-50 py-20 sm:py-28 px-5 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FF6600]/5 rounded-full blur-[140px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--vgo)]/5 rounded-full blur-[140px]" />
       </div>
 
       <div className="relative max-w-4xl mx-auto">
@@ -33,7 +33,7 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <p className="text-[#FF6600] font-bold text-sm tracking-widest uppercase mb-3">
+          <p className="text-[var(--vgo)] font-bold text-sm tracking-widest uppercase mb-3">
             {t("review_label")}
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
@@ -52,7 +52,7 @@ export default function Testimonials() {
               className="absolute inset-0 p-7 sm:p-10 rounded-[32px] bg-white border border-gray-100 shadow-xl shadow-gray-200/50 flex flex-col"
             >
               {/* 引号 */}
-              <div className="text-6xl font-black text-[#FF6600]/20 leading-none -mt-3 mb-2">"</div>
+              <div className="text-6xl font-black text-[var(--vgo)]/20 leading-none -mt-3 mb-2">"</div>
 
               <p className="text-lg sm:text-xl text-gray-800 leading-relaxed flex-1">
                 {REVIEWS[idx].text}
@@ -60,7 +60,7 @@ export default function Testimonials() {
 
               <div className="mt-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#FF7A1F] to-[#E55A00] text-white font-black flex items-center justify-center text-lg">
+                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[var(--vgo-light)] to-[var(--vgo-dark)] text-white font-black flex items-center justify-center text-lg">
                     {REVIEWS[idx].name[0]}
                   </div>
                   <div>
@@ -84,7 +84,7 @@ export default function Testimonials() {
               onClick={() => setIdx(i)}
               aria-label={`第 ${i + 1} 条`}
               className={`h-1.5 rounded-full transition-all duration-500 ${
-                i === idx ? "w-8 bg-[#FF6600]" : "w-1.5 bg-gray-300 hover:bg-gray-400"
+                i === idx ? "w-8 bg-[var(--vgo)]" : "w-1.5 bg-gray-300 hover:bg-gray-400"
               }`}
             />
           ))}

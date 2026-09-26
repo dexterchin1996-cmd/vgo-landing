@@ -43,7 +43,7 @@ export default function Roles() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-[#FF6600] font-bold text-sm tracking-widest uppercase mb-3">{t("roles_label")}</p>
+          <p className="text-[var(--vgo)] font-bold text-sm tracking-widest uppercase mb-3">{t("roles_label")}</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
             {t("roles_title")}
           </h2>
@@ -71,12 +71,12 @@ export default function Roles() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/60 to-transparent" />
                   <div className="absolute top-5 left-5 w-14 h-14 rounded-2xl bg-white/95 backdrop-blur flex items-center justify-center shadow-lg">
-                    <r.Icon size={28} strokeWidth={2.2} className="text-[#FF6600]" />
+                    <r.Icon size={28} strokeWidth={2.2} className="text-[var(--vgo)]" />
                   </div>
                 </div>
 
                 <div className="md:col-span-2 p-7 sm:p-10 bg-gray-50">
-                  <p className="text-[#FF6600] font-black text-sm tracking-wide mb-2">{r.tag}</p>
+                  <p className="text-[var(--vgo)] font-black text-sm tracking-wide mb-2">{r.tag}</p>
                   <h3 className="text-2xl sm:text-3xl font-black text-gray-900 mb-3">{r.title}</h3>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-5">{r.desc}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -88,7 +88,7 @@ export default function Roles() {
                   </div>
                   <a
                     href="#download"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[#FF6600] text-white font-bold text-sm shadow-lg shadow-orange-500/30 hover:bg-[#E55A00] hover:scale-105 transition-all"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[var(--vgo)] text-white font-bold text-sm shadow-lg shadow-orange-500/30 hover:bg-[var(--vgo-dark)] hover:scale-105 transition-all"
                   >
                     {r.cta}
                     <span>→</span>

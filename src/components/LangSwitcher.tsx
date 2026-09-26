@@ -62,7 +62,7 @@ export default function LangSwitcher({ scrolled = false }: { scrolled?: boolean 
                   <span className="font-semibold text-gray-900">{l.label}</span>
                   <span className="text-[10px] text-gray-400">{l.native}</span>
                 </span>
-                {lang === l.code && <Check size={16} className="text-[#FF6600]" />}
+                {lang === l.code && <Check size={16} className="text-[var(--vgo)]" />}
               </button>
             ))}
           </motion.div>

@@ -32,7 +32,7 @@ export default function FeatureCards() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <p className="text-[#FF6600] font-bold text-sm tracking-widest uppercase mb-3">
+          <p className="text-[var(--vgo)] font-bold text-sm tracking-widest uppercase mb-3">
             {t("sec_services_label")}
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
@@ -54,7 +54,7 @@ export default function FeatureCards() {
               transition={{ duration: 0.5, delay: i * 0.07, type: "spring", stiffness: 80 }}
               whileHover={{ y: -4 }}
               className={`${s.span} group relative overflow-hidden rounded-3xl ${
-                s.highlight ? "bg-gradient-to-br from-[#FF6600] to-[#E55A00]" : "bg-gray-900"
+                s.highlight ? "bg-gradient-to-br from-[var(--vgo)] to-[var(--vgo-dark)]" : "bg-gray-900"
               } shadow-lg hover:shadow-2xl transition-all duration-500`}
             >
               {s.img && (

@@ -12,8 +12,12 @@ export default function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-[#FF6600] via-[#F15800] to-[#C74A00] px-8 py-16 sm:px-16 sm:py-20 text-center text-white noise"
+          className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-[var(--vgo)] via-[#F15800] to-[#C74A00] px-8 py-16 sm:px-16 sm:py-20 text-center text-white noise"
         >
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay"
+            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600&q=80')" }}
+          />
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/20 rounded-full blur-[100px]" />
           <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-yellow-300/20 rounded-full blur-[120px]" />
 
@@ -28,7 +32,7 @@ export default function FinalCTA() {
             </p>
 
             <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a href="#" className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-white text-[#E55A00] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-all">
+              <a href="#" className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-white text-[var(--vgo-dark)] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-all">
                 {t("cta_register")}
               </a>
               <a href="#" className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-white/15 backdrop-blur-md border border-white/40 text-white font-bold text-base hover:bg-white/25 active:scale-95 transition-all">

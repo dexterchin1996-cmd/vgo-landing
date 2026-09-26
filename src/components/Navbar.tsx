@@ -42,7 +42,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between">
           <a href="#home" className="flex items-center gap-2.5 shrink-0">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF7A1F] to-[#E55A00] text-white font-black text-xl flex items-center justify-center shadow-lg shadow-orange-500/30">
+            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--vgo-light)] to-[var(--vgo-dark)] text-white font-black text-xl flex items-center justify-center shadow-lg shadow-orange-500/30">
               V
             </span>
             <div className="flex flex-col leading-none">
@@ -80,7 +80,7 @@ export default function Navbar() {
                         className="absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2"
                       >
                         {item.children.map((c) => (
-                          <a key={c.label} href={c.href} className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-[#FF6600] transition">
+                          <a key={c.label} href={c.href} className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-[var(--vgo)] transition">
                             <c.icon size={16} strokeWidth={2} />
                             {c.label}
                           </a>
@@ -100,7 +100,7 @@ export default function Navbar() {
             <div className="ml-3">
               <LangSwitcher scrolled={scrolled} />
             </div>
-            <a href="#download" className="ml-3 px-6 py-2.5 rounded-xl bg-[#FF6600] text-white text-sm font-bold shadow-lg shadow-orange-500/30 hover:bg-[#E55A00] hover:scale-105 transition-all pulse-glow">
+            <a href="#download" className="ml-3 px-6 py-2.5 rounded-xl bg-[var(--vgo)] text-white text-sm font-bold shadow-lg shadow-orange-500/30 hover:bg-[var(--vgo-dark)] hover:scale-105 transition-all pulse-glow">
               {t("nav_download")}
             </a>
           </nav>

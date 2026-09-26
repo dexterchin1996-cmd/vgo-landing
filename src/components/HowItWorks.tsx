@@ -16,7 +16,7 @@ export default function HowItWorks() {
   return (
     <section className="relative bg-gray-950 py-20 sm:py-28 px-5 overflow-hidden noise">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="aurora absolute top-1/4 -left-24 w-96 h-96 bg-[#FF6600]/40 rounded-full blur-[140px]" />
+        <div className="aurora absolute top-1/4 -left-24 w-96 h-96 bg-[var(--vgo)]/40 rounded-full blur-[140px]" />
         <div className="aurora-2 absolute bottom-0 -right-24 w-96 h-96 bg-[#FF8A3D]/30 rounded-full blur-[140px]" />
       </div>
 
@@ -28,7 +28,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="text-[#FF6600] font-bold text-sm tracking-widest uppercase mb-3">
+          <p className="text-[var(--vgo)] font-bold text-sm tracking-widest uppercase mb-3">
             {t("flow_label")}
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
@@ -49,7 +49,7 @@ export default function HowItWorks() {
               transition={{ duration: 0.6, delay: i * 0.12, type: "spring", stiffness: 70 }}
               className="relative group"
             >
-              <div className="relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[#FF6600]/40 transition-all duration-300">
+              <div className="relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[var(--vgo)]/40 transition-all duration-300">
                 <div className="relative h-32 overflow-hidden">
                   <img
                     src={s.img}
@@ -63,7 +63,7 @@ export default function HowItWorks() {
                 </div>
 
                 <div className="relative p-5">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#FF7A1F] to-[#E55A00] flex items-center justify-center mb-4 -mt-10 relative shadow-lg shadow-orange-500/30 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[var(--vgo-light)] to-[var(--vgo-dark)] flex items-center justify-center mb-4 -mt-10 relative shadow-lg shadow-orange-500/30 group-hover:scale-110 transition-transform duration-300">
                     <s.Icon size={22} strokeWidth={2.2} className="text-white" />
                   </div>
                   <h3 className="text-base font-black text-white mb-1.5">{s.title}</h3>
