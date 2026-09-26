@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useLang } from "@/lib/i18n";
 
 export default function Footer() {
@@ -8,34 +9,34 @@ export default function Footer() {
     {
       title: t("footer_col1"),
       links: [
-        t("footer_link_repair"),
-        t("footer_link_clean"),
-        t("footer_link_massage"),
-        t("footer_link_errand"),
-        t("footer_link_market"),
-        t("footer_link_jobs"),
+        { label: t("footer_link_repair"),  href: "#features" },
+        { label: t("footer_link_clean"),   href: "#features" },
+        { label: t("footer_link_massage"), href: "#features" },
+        { label: t("footer_link_errand"),  href: "#features" },
+        { label: t("footer_link_market"),  href: "#features" },
+        { label: t("footer_link_jobs"),    href: "#features" },
       ],
     },
     {
       title: t("footer_col2"),
       links: [
-        t("footer_link_merchant"),
-        t("footer_link_tech"),
-        t("footer_link_partner"),
-        t("footer_link_open"),
-        t("footer_link_enterprise"),
-        t("footer_link_careers"),
+        { label: t("footer_link_partner_invest"), href: "/partner" },
+        { label: t("footer_link_merchant"),       href: "#merchant" },
+        { label: t("footer_link_tech"),           href: "#technician" },
+        { label: t("footer_link_partner"),        href: "/partner" },
+        { label: t("footer_link_open"),           href: "/partner" },
+        { label: t("footer_link_enterprise"),     href: "/partner" },
       ],
     },
     {
       title: t("footer_col3"),
       links: [
-        t("footer_link_about"),
-        t("footer_link_faq"),
-        t("footer_link_privacy"),
-        t("footer_link_terms"),
-        t("footer_link_contact"),
-        t("footer_link_feedback"),
+        { label: t("footer_link_about"),    href: "/about" },
+        { label: t("footer_link_faq"),      href: "/faq" },
+        { label: t("footer_link_privacy"),  href: "/privacy" },
+        { label: t("footer_link_terms"),    href: "/terms" },
+        { label: t("footer_link_contact"),  href: "/contact" },
+        { label: t("footer_link_ip"),       href: "/ip-copyright" },
       ],
     },
   ];
@@ -62,7 +63,7 @@ export default function Footer() {
 
             <div className="flex gap-3">
               {["WhatsApp", "Facebook", "Instagram"].map((s) => (
-                <a key={s} href="#" aria-label={s}
+                <a key={s} href="https://wa.me/601172691788" aria-label={s}
                    className="w-10 h-10 rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-xs font-bold text-white/70 hover:bg-[#FF6600] hover:text-white hover:border-[#FF6600] transition-all">
                   {s[0]}
                 </a>
@@ -75,10 +76,16 @@ export default function Footer() {
               <h4 className="font-black text-sm mb-4 text-white">{c.title}</h4>
               <ul className="space-y-2.5">
                 {c.links.map((l) => (
-                  <li key={l}>
-                    <a href="#" className="text-sm text-white/55 hover:text-[#FF6600] transition-colors">
-                      {l}
-                    </a>
+                  <li key={l.label}>
+                    {l.href.startsWith("/") ? (
+                      <Link href={l.href} className="text-sm text-white/55 hover:text-[var(--vgo)] transition-colors">
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <a href={l.href} className="text-sm text-white/55 hover:text-[var(--vgo)] transition-colors">
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -90,8 +97,6 @@ export default function Footer() {
           <div>{t("footer_copyright")}</div>
           <div className="flex items-center gap-4">
             <span>{t("footer_location")}</span>
-            <span className="hidden sm:inline">·</span>
-            <span>{t("footer_ssm")}</span>
           </div>
         </div>
       </div>
