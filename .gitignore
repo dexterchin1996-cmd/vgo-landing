@@ -8,3 +8,7 @@ build/
 .DS_Store
 next-env.d.ts
 *.tsbuildinfo
+
+# 视频文件暂不上传（本地保留）
+public/videos/*.mp4
+

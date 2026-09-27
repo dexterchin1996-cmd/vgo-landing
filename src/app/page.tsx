@@ -13,7 +13,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
-import ComingSoon from "@/components/ComingSoon";
+import Waitlist from "@/components/Waitlist";
 import { useLang } from "@/lib/i18n";
 
 const HERO_IMAGES = [
@@ -194,7 +194,7 @@ export default function Home() {
       <FAQ />
       <FinalCTA />
       <Footer />
-      <ComingSoon />
+      <Waitlist />
     </>
   );
 }
