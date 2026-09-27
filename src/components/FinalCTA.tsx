@@ -22,6 +22,11 @@ export default function FinalCTA() {
           <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-yellow-300/20 rounded-full blur-[120px]" />
 
           <div className="relative">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs sm:text-sm font-bold mb-5">
+              <span className="text-lg">🎁</span>
+              <span>注册即送 <span className="text-lg font-black">RM80</span> 上门检查券</span>
+            </div>
+
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight">
               {t("cta_title1")}
               <br />

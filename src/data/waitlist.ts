@@ -1,0 +1,488 @@
+// VGO 注册数据 · 三语 + 分类树
+export type Lang = "zh" | "en" | "ms";
+
+type Label = { zh: string; en: string; ms: string };
+
+// ===== 州 =====
+export const STATES: { value: string; label: Label }[] = [
+  { value: "sabah",    label: { zh: "沙巴",   en: "Sabah",          ms: "Sabah" } },
+  { value: "kl",       label: { zh: "吉隆坡", en: "Kuala Lumpur",   ms: "Kuala Lumpur" } },
+  { value: "selangor", label: { zh: "雪兰莪", en: "Selangor",       ms: "Selangor" } },
+  { value: "penang",   label: { zh: "槟城",   en: "Penang",         ms: "Pulau Pinang" } },
+  { value: "johor",    label: { zh: "柔佛",   en: "Johor",          ms: "Johor" } },
+  { value: "sarawak",  label: { zh: "砂拉越", en: "Sarawak",        ms: "Sarawak" } },
+  { value: "other",    label: { zh: "其他",   en: "Other",          ms: "Lain-lain" } },
+];
+
+// ===== 城市（按州）=====
+export const CITIES: Record<string, { value: string; label: Label }[]> = {
+  sabah: [
+    { value: "kk",       label: { zh: "亚庇",   en: "Kota Kinabalu", ms: "Kota Kinabalu" } },
+    { value: "sandakan", label: { zh: "山打根", en: "Sandakan",      ms: "Sandakan" } },
+    { value: "tawau",    label: { zh: "斗湖",   en: "Tawau",         ms: "Tawau" } },
+  ],
+  kl: [
+    { value: "klc",      label: { zh: "吉隆坡市", en: "KL City",     ms: "Bandar KL" } },
+    { value: "cheras",   label: { zh: "蕉赖",   en: "Cheras",        ms: "Cheras" } },
+    { value: "ampang",   label: { zh: "安邦",   en: "Ampang",        ms: "Ampang" } },
+  ],
+  selangor: [
+    { value: "pj",       label: { zh: "八打灵再也", en: "Petaling Jaya", ms: "Petaling Jaya" } },
+    { value: "subang",   label: { zh: "梳邦",   en: "Subang",        ms: "Subang" } },
+    { value: "shahalam", label: { zh: "莎阿南", en: "Shah Alam",     ms: "Shah Alam" } },
+  ],
+  penang: [
+    { value: "georgetown", label: { zh: "乔治市", en: "George Town", ms: "George Town" } },
+    { value: "bayanlepas", label: { zh: "峇央峇鲁", en: "Bayan Lepas", ms: "Bayan Lepas" } },
+  ],
+  johor: [
+    { value: "jb",       label: { zh: "新山",   en: "Johor Bahru",   ms: "Johor Bahru" } },
+    { value: "batupahat",label: { zh: "峇株巴辖", en: "Batu Pahat",  ms: "Batu Pahat" } },
+  ],
+  sarawak: [
+    { value: "kuching",  label: { zh: "古晋",   en: "Kuching",       ms: "Kuching" } },
+    { value: "miri",     label: { zh: "美里",   en: "Miri",          ms: "Miri" } },
+  ],
+  other: [
+    { value: "other-city", label: { zh: "其他", en: "Other",         ms: "Lain-lain" } },
+  ],
+};
+
+// ===== 区（按城市）=====
+export const AREAS: Record<string, { value: string; label: Label }[]> = {
+  kk: [
+    { value: "damai",     label: { zh: "达迈",    en: "Damai",      ms: "Damai" } },
+    { value: "luyang",    label: { zh: "路阳",    en: "Luyang",     ms: "Luyang" } },
+    { value: "inanam",    label: { zh: "伊那南",  en: "Inanam",     ms: "Inanam" } },
+    { value: "penampang", label: { zh: "兵南邦",  en: "Penampang",  ms: "Penampang" } },
+    { value: "likas",     label: { zh: "里卡斯",  en: "Likas",      ms: "Likas" } },
+    { value: "kkcenter",  label: { zh: "亚庇市区", en: "KK Center", ms: "Pusat KK" } },
+    { value: "other",     label: { zh: "其他",    en: "Other",      ms: "Lain-lain" } },
+  ],
+  sandakan: [{ value: "sbh-center", label: { zh: "市中心", en: "City Center", ms: "Pusat Bandar" } }],
+  tawau: [{ value: "tw-center", label: { zh: "市中心", en: "City Center", ms: "Pusat Bandar" } }],
+  klc: [
+    { value: "bukitbintang", label: { zh: "武吉免登", en: "Bukit Bintang", ms: "Bukit Bintang" } },
+    { value: "klcc",         label: { zh: "KLCC",     en: "KLCC",         ms: "KLCC" } },
+    { value: "other-kl",     label: { zh: "其他",     en: "Other",        ms: "Lain-lain" } },
+  ],
+  pj: [
+    { value: "ss2",    label: { zh: "SS2",   en: "SS2",   ms: "SS2" } },
+    { value: "damansara", label: { zh: "万达镇", en: "Damansara", ms: "Damansara" } },
+  ],
+  georgetown: [{ value: "gt-center", label: { zh: "市中心", en: "City Center", ms: "Pusat Bandar" } }],
+  jb: [{ value: "jb-center", label: { zh: "市中心", en: "City Center", ms: "Pusat Bandar" } }],
+  kuching: [{ value: "kc-center", label: { zh: "市中心", en: "City Center", ms: "Pusat Bandar" } }],
+  miri: [{ value: "miri-center", label: { zh: "市中心", en: "City Center", ms: "Pusat Bandar" } }],
+};
+
+// ===== 行业（商家）=====
+export const INDUSTRIES: { value: string; label: Label; subs: { value: string; label: Label }[] }[] = [
+  {
+    value: "hardware",
+    label: { zh: "五金店", en: "Hardware Store", ms: "Kedai Hardware" },
+    subs: [
+      { value: "plumb",    label: { zh: "水喉",   en: "Plumbing",   ms: "Paip" } },
+      { value: "electric", label: { zh: "电工",   en: "Electrical", ms: "Elektrik" } },
+      { value: "paint",    label: { zh: "油漆",   en: "Paint",      ms: "Cat" } },
+      { value: "locks",    label: { zh: "锁具",   en: "Locks",      ms: "Kunci" } },
+      { value: "tools",    label: { zh: "工具",   en: "Tools",      ms: "Alatan" } },
+    ],
+  },
+  {
+    value: "cleaning",
+    label: { zh: "清洁公司", en: "Cleaning Company", ms: "Syarikat Pembersihan" },
+    subs: [
+      { value: "home",     label: { zh: "家庭保洁", en: "Home Cleaning", ms: "Bersih Rumah" } },
+      { value: "deep",     label: { zh: "深度清洁", en: "Deep Clean",    ms: "Cuci Mendalam" } },
+      { value: "office",   label: { zh: "商业清洁", en: "Office Cleaning", ms: "Bersih Pejabat" } },
+      { value: "movein",   label: { zh: "开荒保洁", en: "Move-in Clean", ms: "Cuci Mula Masuk" } },
+    ],
+  },
+  {
+    value: "massage",
+    label: { zh: "按摩院", en: "Massage Spa", ms: "Kedai Urutan" },
+    subs: [
+      { value: "chinese",  label: { zh: "中式推拿", en: "Chinese Tui Na", ms: "Tui Na Cina" } },
+      { value: "thai",     label: { zh: "泰式按摩", en: "Thai Massage",   ms: "Urutan Thai" } },
+      { value: "foot",     label: { zh: "足疗",     en: "Foot Reflexology", ms: "Urutan Kaki" } },
+      { value: "oil",      label: { zh: "精油SPA",  en: "Oil SPA",        ms: "SPA Minyak" } },
+    ],
+  },
+  {
+    value: "beauty",
+    label: { zh: "美容院", en: "Beauty Salon", ms: "Salun Kecantikan" },
+    subs: [
+      { value: "face",     label: { zh: "脸部护理", en: "Facial Care", ms: "Rawatan Muka" } },
+      { value: "nail",     label: { zh: "美甲",     en: "Nail Art",    ms: "Seni Kuku" } },
+      { value: "lash",     label: { zh: "美睫",     en: "Eyelash",     ms: "Bulu Mata" } },
+      { value: "spa",      label: { zh: "全身SPA",  en: "Body SPA",    ms: "SPA Badan" } },
+    ],
+  },
+  {
+    value: "fnb",
+    label: { zh: "餐饮", en: "Food & Beverage", ms: "Makanan & Minuman" },
+    subs: [
+      { value: "dinein",   label: { zh: "堂食",   en: "Dine-in",   ms: "Makan Dalam" } },
+      { value: "takeaway", label: { zh: "打包",   en: "Takeaway",  ms: "Bungkus" } },
+      { value: "delivery", label: { zh: "外卖",   en: "Delivery",  ms: "Penghantaran" } },
+      { value: "late",     label: { zh: "宵夜",   en: "Late Night", ms: "Makan Malam" } },
+    ],
+  },
+  {
+    value: "secondhand",
+    label: { zh: "二手店", en: "Second-hand", ms: "Kedai Barang Terpakai" },
+    subs: [
+      { value: "electronics", label: { zh: "电子",  en: "Electronics", ms: "Elektronik" } },
+      { value: "furniture",   label: { zh: "家具",  en: "Furniture",   ms: "Perabot" } },
+      { value: "clothing",    label: { zh: "衣物",  en: "Clothing",    ms: "Pakaian" } },
+      { value: "other-sh",    label: { zh: "其他",  en: "Other",       ms: "Lain-lain" } },
+    ],
+  },
+  {
+    value: "renovation",
+    label: { zh: "装修工程", en: "Renovation", ms: "Pengubahsuaian" },
+    subs: [
+      { value: "tiling",   label: { zh: "瓷砖", en: "Tiling",   ms: "Jubin" } },
+      { value: "carpentry",label: { zh: "木工", en: "Carpentry", ms: "Kayu" } },
+      { value: "paint-r",  label: { zh: "油漆", en: "Painting", ms: "Cat" } },
+      { value: "waterproof",label: { zh: "防水", en: "Waterproofing", ms: "Kalis Air" } },
+    ],
+  },
+  {
+    value: "other-ind",
+    label: { zh: "其他", en: "Other", ms: "Lain-lain" },
+    subs: [{ value: "misc", label: { zh: "其他", en: "Other", ms: "Lain-lain" } }],
+  },
+];
+
+// ===== 技能（技术员）=====
+export const TECH_SKILLS: { value: string; label: Label; subs: { value: string; label: Label }[] }[] = [
+  {
+    value: "plumb",
+    label: { zh: "水喉", en: "Plumbing", ms: "Paip" },
+    subs: [
+      { value: "clog",      label: { zh: "通渠",       en: "Clog",       ms: "Tersumbat" } },
+      { value: "burst",     label: { zh: "爆管抢修",   en: "Pipe Burst", ms: "Paip Pecah" } },
+      { value: "toilet",    label: { zh: "马桶维修",   en: "Toilet",     ms: "Tandas" } },
+      { value: "tap",       label: { zh: "水龙头更换", en: "Tap",        ms: "Pili Air" } },
+      { value: "heater",    label: { zh: "热水器",     en: "Water Heater", ms: "Pemanas Air" } },
+      { value: "pump",      label: { zh: "水泵维修",   en: "Water Pump", ms: "Pam Air" } },
+    ],
+  },
+  {
+    value: "electric",
+    label: { zh: "电工", en: "Electrical", ms: "Elektrik" },
+    subs: [
+      { value: "trip",      label: { zh: "跳电排查", en: "Tripping", ms: "Trip Elektrik" } },
+      { value: "socket",    label: { zh: "插座开关", en: "Socket",   ms: "Soket" } },
+      { value: "light",     label: { zh: "灯具安装", en: "Lighting", ms: "Lampu" } },
+      { value: "breaker",   label: { zh: "总闸维修", en: "Breaker",  ms: "Pemutus" } },
+      { value: "wiring",    label: { zh: "拉线布线", en: "Wiring",   ms: "Pendawaian" } },
+    ],
+  },
+  {
+    value: "aircon",
+    label: { zh: "冷气", en: "Air Conditioning", ms: "Penghawa Dingin" },
+    subs: [
+      { value: "install",   label: { zh: "安装",   en: "Install",   ms: "Pasang" } },
+      { value: "wash",      label: { zh: "清洗",   en: "Wash",      ms: "Cuci" } },
+      { value: "gas",       label: { zh: "加气",   en: "Gas Refill", ms: "Isi Gas" } },
+      { value: "repair",    label: { zh: "维修",   en: "Repair",    ms: "Baiki" } },
+      { value: "dismount",  label: { zh: "拆机",   en: "Dismount",  ms: "Buka" } },
+    ],
+  },
+  {
+    value: "reno",
+    label: { zh: "装修", en: "Renovation", ms: "Pengubahsuaian" },
+    subs: [
+      { value: "brick",     label: { zh: "泥水",   en: "Masonry",   ms: "Simen" } },
+      { value: "wood",      label: { zh: "木工",   en: "Carpentry", ms: "Kayu" } },
+      { value: "tile",      label: { zh: "瓷砖",   en: "Tiling",    ms: "Jubin" } },
+      { value: "paint",     label: { zh: "油漆",   en: "Paint",     ms: "Cat" } },
+      { value: "plaster",   label: { zh: "石膏",   en: "Plaster",   ms: "Plaster" } },
+      { value: "demolish",  label: { zh: "拆除",   en: "Demolish",  ms: "Roboh" } },
+    ],
+  },
+  {
+    value: "iron",
+    label: { zh: "铁工", en: "Iron Work", ms: "Kerja Besi" },
+    subs: [
+      { value: "gate",      label: { zh: "铁门",   en: "Gate",      ms: "Pintu Besi" } },
+      { value: "grill",     label: { zh: "铁花",   en: "Grill",     ms: "Pagar" } },
+      { value: "railing",   label: { zh: "护栏",   en: "Railing",   ms: "Pagar Tepi" } },
+      { value: "frame",     label: { zh: "铁架",   en: "Frame",     ms: "Rangka" } },
+      { value: "weld",      label: { zh: "焊接",   en: "Welding",   ms: "Kimpalan" } },
+    ],
+  },
+  {
+    value: "waterproof",
+    label: { zh: "防水", en: "Waterproofing", ms: "Kalis Air" },
+    subs: [
+      { value: "bathroom",  label: { zh: "浴室防水", en: "Bathroom", ms: "Bilik Air" } },
+      { value: "roof",      label: { zh: "屋顶防水", en: "Roof",     ms: "Bumbung" } },
+      { value: "wall",      label: { zh: "外墙防水", en: "Wall",     ms: "Dinding" } },
+      { value: "leak",      label: { zh: "漏水修补", en: "Leak Fix", ms: "Baiki Bocor" } },
+      { value: "seepage",   label: { zh: "渗水处理", en: "Seepage",  ms: "Resapan" } },
+    ],
+  },
+  {
+    value: "other-tech",
+    label: { zh: "其他", en: "Other", ms: "Lain-lain" },
+    subs: [{ value: "misc-tech", label: { zh: "其他", en: "Other", ms: "Lain-lain" } }],
+  },
+];
+
+// ===== 手艺（手艺人）=====
+export const ARTISAN_SKILLS: { value: string; label: Label; subs: { value: string; label: Label }[] }[] = [
+  {
+    value: "massage",
+    label: { zh: "按摩", en: "Massage", ms: "Urutan" },
+    subs: [
+      { value: "chinese-m", label: { zh: "中式推拿", en: "Chinese Tui Na", ms: "Tui Na Cina" } },
+      { value: "thai-m",    label: { zh: "泰式按摩", en: "Thai Massage",   ms: "Urutan Thai" } },
+      { value: "foot-m",    label: { zh: "足疗",     en: "Foot Massage",   ms: "Urutan Kaki" } },
+      { value: "body-m",    label: { zh: "全身按摩", en: "Full Body",      ms: "Badan Penuh" } },
+      { value: "meridian",  label: { zh: "经络疏通", en: "Meridian",       ms: "Meridian" } },
+      { value: "oil-m",     label: { zh: "精油SPA",  en: "Oil SPA",        ms: "SPA Minyak" } },
+    ],
+  },
+  {
+    value: "beauty",
+    label: { zh: "美容", en: "Beauty", ms: "Kecantikan" },
+    subs: [
+      { value: "facial",    label: { zh: "脸部护理", en: "Facial",      ms: "Rawatan Muka" } },
+      { value: "scrub",     label: { zh: "去角质",   en: "Exfoliation", ms: "Skrub" } },
+      { value: "acne",      label: { zh: "抗痘",     en: "Acne Care",   ms: "Rawatan Jerawat" } },
+      { value: "whitening", label: { zh: "美白",     en: "Whitening",   ms: "Pemutihan" } },
+      { value: "body-spa",  label: { zh: "全身SPA",  en: "Body SPA",    ms: "SPA Badan" } },
+    ],
+  },
+  {
+    value: "nail",
+    label: { zh: "美甲", en: "Nail", ms: "Kuku" },
+    subs: [
+      { value: "manicure",  label: { zh: "手部美甲", en: "Manicure",  ms: "Manikur" } },
+      { value: "pedicure",  label: { zh: "足部美甲", en: "Pedicure",  ms: "Pedikur" } },
+      { value: "gel",       label: { zh: "光疗甲",   en: "Gel Nail",  ms: "Kuku Gel" } },
+      { value: "art",       label: { zh: "彩绘",     en: "Nail Art",  ms: "Seni Kuku" } },
+    ],
+  },
+  {
+    value: "lash",
+    label: { zh: "美睫", en: "Eyelash", ms: "Bulu Mata" },
+    subs: [
+      { value: "extension", label: { zh: "嫁接",   en: "Extension", ms: "Sambung" } },
+      { value: "lift",      label: { zh: "烫翘",   en: "Lift",      ms: "Angkat" } },
+      { value: "tint",      label: { zh: "染睫",   en: "Tint",      ms: "Warna" } },
+    ],
+  },
+  {
+    value: "hair",
+    label: { zh: "美发", en: "Hair", ms: "Rambut" },
+    subs: [
+      { value: "cut",       label: { zh: "剪发",   en: "Haircut",   ms: "Potong" } },
+      { value: "color",     label: { zh: "染发",   en: "Hair Color",ms: "Warna Rambut" } },
+      { value: "perm",      label: { zh: "烫发",   en: "Perm",      ms: "Kerinting" } },
+      { value: "kids",      label: { zh: "儿童理发", en: "Kids Cut", ms: "Potong Kanak-kanak" } },
+      { value: "style",     label: { zh: "造型",   en: "Styling",   ms: "Gaya" } },
+    ],
+  },
+  {
+    value: "other-art",
+    label: { zh: "其他", en: "Other", ms: "Lain-lain" },
+    subs: [{ value: "misc-art", label: { zh: "其他", en: "Other", ms: "Lain-lain" } }],
+  },
+];
+
+// ===== 服务范围 =====
+export const RANGES: { value: string; label: Label }[] = [
+  { value: "5km",  label: { zh: "5 公里",  en: "Within 5 km",  ms: "Dalam 5 km" } },
+  { value: "10km", label: { zh: "10 公里", en: "Within 10 km", ms: "Dalam 10 km" } },
+  { value: "20km", label: { zh: "20 公里", en: "Within 20 km", ms: "Dalam 20 km" } },
+  { value: "city", label: { zh: "全城",    en: "Whole City",   ms: "Seluruh Bandar" } },
+  { value: "any",  label: { zh: "不限",    en: "Unlimited",    ms: "Tanpa Had" } },
+];
+
+// ===== 服务方式（手艺人）=====
+export const SERVE_MODES: { value: string; label: Label }[] = [
+  { value: "home",     label: { zh: "住家做", en: "At My Place",    ms: "Di Rumah Saya" } },
+  { value: "visit",    label: { zh: "上门做", en: "At Customer's",  ms: "Ke Rumah Pelanggan" } },
+  { value: "both",     label: { zh: "都可以", en: "Both",           ms: "Kedua-duanya" } },
+];
+
+// ===== 三语文案 =====
+export const T = {
+  zh: {
+    title: "抢先注册 VGO",
+    welcome: "注册即送 RM80 上门检查券",
+    welcome_sub: "限首批 1000 名",
+    role_label: "你是",
+    role_customer: "客户", role_merchant: "商家", role_tech: "技术员", role_artisan: "手艺人",
+    sec_account: "账号信息",
+    sec_info: "基本信息",
+    sec_shop: "店铺信息",
+    sec_address: "地址",
+    sec_skill: "技能",
+    sec_mode: "服务方式",
+
+    username: "账号 ID", username_ph: "英文+数字，4-20 位",
+    phone: "手机号", phone_ph: "+60123456789",
+    email: "邮箱", email_ph: "you@example.com",
+    password: "密码", password_ph: "至少 8 位",
+    confirm: "确认密码", confirm_ph: "再输一次",
+    name: "姓名", name_ph: "怎么称呼你",
+    shopName: "店名", shopName_ph: "店铺名称",
+    industry: "行业类别",
+    industrySubs: "具体服务（可多选）",
+    skillMain: "技能类别",
+    skillSubs: "具体技能（可多选）",
+    yearsExp: "经验年数", yearsExp_ph: "如 5",
+    range: "服务范围",
+    serveMode: "服务方式",
+    cert: "证书 / 资质（可选）", cert_ph: "如 SKM 认证",
+
+    state: "州", city: "城市", area: "区", detail: "详细地址",
+    detail_ph: "街道 / 门牌号",
+
+    submit: "提交注册",
+    submitting: "提交中…",
+    success_title: "注册成功！",
+    success_sub: "你的账号 ID",
+    success_keep: "请截图保存，登录时使用",
+    success_bonus: "🎁 RM80 上门检查券已到账",
+    success_next: "更多优惠即将公布，我们会通过邮件通知你",
+    ok: "好的",
+    close: "关闭",
+
+    err_required: "请填写所有必填项",
+    err_username: "账号 ID 需 4-20 位字母或数字",
+    err_phone: "手机号格式不对",
+    err_email: "邮箱格式不对",
+    err_password: "密码至少 8 位",
+    err_confirm: "两次密码不一致",
+    err_taken: "该信息已被注册",
+    err_server: "提交失败，请稍后重试",
+    err_terms: "请先同意服务条款",
+    agree: "我已阅读并同意",
+    terms: "服务条款",
+    and: "和",
+    privacy: "隐私政策",
+  },
+  en: {
+    title: "Join VGO Early Access",
+    welcome: "Sign up & get RM80 home check voucher",
+    welcome_sub: "Limited to first 1,000 users",
+    role_label: "I am a",
+    role_customer: "Customer", role_merchant: "Merchant", role_tech: "Technician", role_artisan: "Artisan",
+    sec_account: "Account",
+    sec_info: "Basic Info",
+    sec_shop: "Shop Info",
+    sec_address: "Address",
+    sec_skill: "Skills",
+    sec_mode: "Service Mode",
+
+    username: "Account ID", username_ph: "Letters + numbers, 4-20",
+    phone: "Phone", phone_ph: "+60123456789",
+    email: "Email", email_ph: "you@example.com",
+    password: "Password", password_ph: "At least 8 characters",
+    confirm: "Confirm Password", confirm_ph: "Type again",
+    name: "Full Name", name_ph: "Your name",
+    shopName: "Shop Name", shopName_ph: "Business name",
+    industry: "Industry",
+    industrySubs: "Services (multi-select)",
+    skillMain: "Skill Category",
+    skillSubs: "Specific Skills (multi-select)",
+    yearsExp: "Years of Experience", yearsExp_ph: "e.g. 5",
+    range: "Service Range",
+    serveMode: "Service Mode",
+    cert: "Certificates (optional)", cert_ph: "e.g. SKM Certified",
+
+    state: "State", city: "City", area: "Area", detail: "Detailed Address",
+    detail_ph: "Street / Unit number",
+
+    submit: "Submit Registration",
+    submitting: "Submitting…",
+    success_title: "Registration Successful!",
+    success_sub: "Your Account ID",
+    success_keep: "Save a screenshot — use it to log in",
+    success_bonus: "🎁 RM80 home check voucher credited",
+    success_next: "More offers coming. We'll notify you by email.",
+    ok: "Got it",
+    close: "Close",
+
+    err_required: "Please fill in all required fields",
+    err_username: "Account ID must be 4-20 letters or numbers",
+    err_phone: "Invalid phone number",
+    err_email: "Invalid email",
+    err_password: "Password must be at least 8 characters",
+    err_confirm: "Passwords don't match",
+    err_taken: "Already registered",
+    err_server: "Submission failed. Please try again.",
+    err_terms: "Please agree to the Terms first",
+    agree: "I have read and agree to",
+    terms: "Terms of Service",
+    and: "and",
+    privacy: "Privacy Policy",
+  },
+  ms: {
+    title: "Sertai VGO Awal",
+    welcome: "Daftar & dapat Baucar Pemeriksaan Rumah RM80",
+    welcome_sub: "Terhad kepada 1,000 pengguna terawal",
+    role_label: "Saya seorang",
+    role_customer: "Pelanggan", role_merchant: "Peniaga", role_tech: "Tukang", role_artisan: "Tukang Kraf",
+    sec_account: "Akaun",
+    sec_info: "Maklumat Asas",
+    sec_shop: "Maklumat Kedai",
+    sec_address: "Alamat",
+    sec_skill: "Kemahiran",
+    sec_mode: "Cara Perkhidmatan",
+
+    username: "ID Akaun", username_ph: "Huruf + nombor, 4-20",
+    phone: "Nombor Telefon", phone_ph: "+60123456789",
+    email: "E-mel", email_ph: "anda@contoh.com",
+    password: "Kata Laluan", password_ph: "Sekurang-kurangnya 8 aksara",
+    confirm: "Sahkan Kata Laluan", confirm_ph: "Taip sekali lagi",
+    name: "Nama Penuh", name_ph: "Nama anda",
+    shopName: "Nama Kedai", shopName_ph: "Nama perniagaan",
+    industry: "Kategori Industri",
+    industrySubs: "Perkhidmatan (boleh pilih banyak)",
+    skillMain: "Kategori Kemahiran",
+    skillSubs: "Kemahiran Khusus (boleh pilih banyak)",
+    yearsExp: "Tahun Pengalaman", yearsExp_ph: "cth. 5",
+    range: "Kawasan Perkhidmatan",
+    serveMode: "Cara Perkhidmatan",
+    cert: "Sijil (pilihan)", cert_ph: "cth. Bertauliah SKM",
+
+    state: "Negeri", city: "Bandar", area: "Daerah", detail: "Alamat Penuh",
+    detail_ph: "Jalan / Nombor unit",
+
+    submit: "Hantar Pendaftaran",
+    submitting: "Menghantar…",
+    success_title: "Pendaftaran Berjaya!",
+    success_sub: "ID Akaun anda",
+    success_keep: "Simpan tangkapan skrin — untuk log masuk",
+    success_bonus: "🎁 Baucar Pemeriksaan Rumah RM80 telah dikreditkan",
+    success_next: "Lebih banyak tawaran akan datang. Kami akan maklumkan melalui e-mel.",
+    ok: "Baik",
+    close: "Tutup",
+
+    err_required: "Sila isi semua ruangan wajib",
+    err_username: "ID Akaun perlu 4-20 huruf atau nombor",
+    err_phone: "Nombor telefon tidak sah",
+    err_email: "E-mel tidak sah",
+    err_password: "Kata laluan sekurang-kurangnya 8 aksara",
+    err_confirm: "Kata laluan tidak sepadan",
+    err_taken: "Sudah didaftarkan",
+    err_server: "Gagal hantar. Sila cuba lagi.",
+    err_terms: "Sila setuju Terma dahulu",
+    agree: "Saya telah baca dan setuju dengan",
+    terms: "Terma Perkhidmatan",
+    and: "dan",
+    privacy: "Notis Privasi",
+  },
+} as const;
+
+export function pickLabel(label: Label, lang: Lang): string {
+  return label[lang] ?? label.en;
+}

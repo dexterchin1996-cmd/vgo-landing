@@ -14,6 +14,7 @@ import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import Waitlist from "@/components/Waitlist";
+import Notice from "@/components/Notice";
 import { useLang } from "@/lib/i18n";
 
 const HERO_IMAGES = [
@@ -110,6 +111,20 @@ export default function Home() {
             <span className="text-white/50 text-xs sm:text-sm">{t("hero_sub")}</span>
           </motion.p>
 
+          {/* 🎁 福利横幅 */}
+          <motion.a
+            href="#download"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white text-xs sm:text-sm font-bold shadow-[0_8px_30px_-8px_rgba(255,150,0,0.8)] hover:scale-105 active:scale-95 transition-all"
+          >
+            <span className="text-base">🎁</span>
+            <span>注册即送 <span className="text-base font-black">RM80</span> 上门检查券</span>
+            <span className="text-white/70">·</span>
+            <span className="text-white/90">限首批 1000 名</span>
+          </motion.a>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -122,6 +137,7 @@ export default function Home() {
             >
               <span className="text-lg">👤</span>
               <span>{t("cta_customer")}</span>
+              <span className="ml-1 px-2 py-0.5 rounded-full bg-white/25 text-[10px] font-black">领 RM80</span>
               <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
             </a>
             <div className="grid grid-cols-2 gap-3">
@@ -195,6 +211,7 @@ export default function Home() {
       <FinalCTA />
       <Footer />
       <Waitlist />
+      <Notice />
     </>
   );
 }
