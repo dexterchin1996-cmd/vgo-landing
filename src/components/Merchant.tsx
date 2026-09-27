@@ -67,7 +67,7 @@ export default function Merchant() {
             </div>
 
             <a
-              href="#download"
+              href="#merchant"
               className="mt-8 inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-[var(--vgo)] text-white font-bold shadow-lg shadow-orange-500/30 hover:bg-[var(--vgo-dark)] hover:scale-105 transition-all pulse-glow"
             >
               {t("merchant_cta")}

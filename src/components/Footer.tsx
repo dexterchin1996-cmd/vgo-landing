@@ -37,6 +37,7 @@ export default function Footer() {
         { label: t("footer_link_terms"),    href: "/terms" },
         { label: t("footer_link_contact"),  href: "/contact" },
         { label: t("footer_link_ip"),       href: "/ip-copyright" },
+        { label: t("footer_link_partner_agreement"), href: "/merchant-agreement" },
       ],
     },
   ];

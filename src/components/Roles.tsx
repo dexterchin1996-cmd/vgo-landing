@@ -13,6 +13,7 @@ export default function Roles() {
       desc: t("role_customer_desc"),
       points: [t("role_customer_p1"), t("role_customer_p2"), t("role_customer_p3"), t("role_customer_p4")],
       cta: t("role_customer_cta"),
+      href: "#download",
       img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
     },
     {
@@ -21,6 +22,7 @@ export default function Roles() {
       desc: t("role_merchant_desc"),
       points: [t("role_merchant_p1"), t("role_merchant_p2"), t("role_merchant_p3"), t("role_merchant_p4")],
       cta: t("role_merchant_cta"),
+      href: "#merchant",
       img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80",
     },
     {
@@ -29,6 +31,7 @@ export default function Roles() {
       desc: t("role_tech_desc"),
       points: [t("role_tech_p1"), t("role_tech_p2"), t("role_tech_p3"), t("role_tech_p4")],
       cta: t("role_tech_cta"),
+      href: "#technician",
       img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&q=80",
     },
   ];
@@ -87,7 +90,7 @@ export default function Roles() {
                     ))}
                   </div>
                   <a
-                    href="#download"
+                    href={r.href}
                     className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[var(--vgo)] text-white font-bold text-sm shadow-lg shadow-orange-500/30 hover:bg-[var(--vgo-dark)] hover:scale-105 transition-all"
                   >
                     {r.cta}
