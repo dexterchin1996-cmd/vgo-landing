@@ -11,6 +11,7 @@ import Roles from "@/components/Roles";
 import Merchant from "@/components/Merchant";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import Cooperation from "@/components/Cooperation";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import Waitlist from "@/components/Waitlist";
@@ -207,6 +208,7 @@ export default function Home() {
       <Roles />
       <Merchant />
       <Testimonials />
+      <Cooperation />
       <FAQ />
       <FinalCTA />
       <Footer />
