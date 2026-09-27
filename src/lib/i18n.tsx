@@ -661,7 +661,7 @@ const LangCtx = createContext<{
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("zh");
+  const [lang, setLangState] = useState<Lang>("en");
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -675,11 +675,17 @@ export function LangProvider({ children }: { children: ReactNode }) {
     }
 
     // 2. 没选过 → 读浏览器语言自动识别
-    const browserLang = (navigator.language || (navigator.languages && navigator.languages[0]) || "en").toLowerCase();
-    let detected: Lang = "en"; // 默认英文（国际通用）
-    if (browserLang.startsWith("zh")) detected = "zh";
-    else if (browserLang.startsWith("ms") || browserLang.startsWith("id")) detected = "ms";
-    else if (browserLang.startsWith("en")) detected = "en";
+    // 读浏览器语言偏好列表（按优先级）
+    const langs = (navigator.languages && navigator.languages.length
+      ? navigator.languages
+      : [navigator.language || "en"]).map(l => String(l).toLowerCase());
+
+    let detected: Lang = "en"; // 默认英文
+    for (const l of langs) {
+      if (l.startsWith("zh")) { detected = "zh"; break; }
+      if (l.startsWith("ms") || l.startsWith("id")) { detected = "ms"; break; }
+      if (l.startsWith("en")) { detected = "en"; break; }
+    }
 
     setLangState(detected);
     document.documentElement.setAttribute("data-lang", detected);
