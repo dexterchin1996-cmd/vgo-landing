@@ -63,7 +63,7 @@ const C = {
 
 export default function PrivacyPage() {
   const { lang } = useLang();
-  const c = C[lang] ?? C.zh;
+  const c = (C as any)[lang] ?? C.en;
   const SECTIONS = [
     { t: c.s1_t, d: c.s1 }, { t: c.s2_t, d: c.s2 }, { t: c.s3_t, d: c.s3 },
     { t: c.s4_t, d: c.s4 }, { t: c.s5_t, d: c.s5 }, { t: c.s6_t, d: c.s6 },
