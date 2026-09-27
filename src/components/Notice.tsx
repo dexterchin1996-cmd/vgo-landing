@@ -42,7 +42,7 @@ export default function Notice() {
     if (typeof window === "undefined") return;
     const hideUntil = parseInt(localStorage.getItem(KEY) || "0", 10);
     if (Date.now() < hideUntil) return;
-    const timer = setTimeout(() => setOpen(true), 3000);
+    const timer = setTimeout(() => setOpen(true), 300);
     return () => clearTimeout(timer);
   }, []);
 
