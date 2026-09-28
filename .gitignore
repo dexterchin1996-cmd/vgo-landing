@@ -16,3 +16,6 @@ public/videos/*.mp4
 # backup + scratch
 .bak-*/
 20行要分段*
+
+# 备份文件
+*.bak_*

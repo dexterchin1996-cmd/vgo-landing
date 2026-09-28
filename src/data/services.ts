@@ -72,8 +72,8 @@ export const SERVICES: Record<"zh" | "en" | "ms", ServiceData> = {
     cta: "Book a Service",
     items: [
       { id: "repair", icon: "Wrench", image: "/features/repair.jpg", title: "Home Repair",
-        tagline: "Certified pros for plumbing, electrical & appliance fixes",
-        canDo: ["Plumbing (leaks, clogs, replacement)", "Electrical (trips, shorts, switches)", "Appliances (fridge, washer, AC)", "Lock replacement & unlocking", "AC cleaning & gas top-up", "Toilet/sink unclogging"],
+        tagline: "Certified technicians for plumbing, electrical & appliance fixes",
+        canDo: ["Plumbing (leaks, clogs, replacement)", "Electrical (trips, shorts, switches)", "Appliances (fridge, washer, AC)", "Lock replacement & unlocking", "AC normal service & gas top-up", "Toilet/sink unclogging"],
         scenarios: ["Pipe bursts at midnight", "Appliance suddenly breaks", "Elderly living alone", "Afraid of electrical risks"],
         capabilities: ["ID + credential verified", "Platform pricing for standard services", "Public quotes for others", "Platform warranty on completion"] },
       { id: "clean", icon: "Sparkles", image: "/features/clean.jpg", title: "Home Cleaning",
@@ -114,7 +114,7 @@ export const SERVICES: Record<"zh" | "en" | "ms", ServiceData> = {
     items: [
       { id: "repair", icon: "Wrench", image: "/features/repair.jpg", title: "Pembaikan Rumah",
         tagline: "Ada yang rosak? Juruteknik bertauliah ke pintu anda",
-        canDo: ["Paip (bocor, tersumbat, ganti)", "Elektrik (trip, litar pintas, suis)", "Alatan (peti sejuk, mesin basuh, penghawa)", "Ganti kunci & buka kunci", "Cuci penghawa & tambah gas", "Bersih tandas/sinki tersumbat"],
+        canDo: ["Paip (bocor, tersumbat, ganti)", "Elektrik (trip, litar pintas, suis)", "Alatan (peti sejuk, mesin basuh, penghawa)", "Ganti kunci & buka kunci", "Servis penghawa (cuci biasa) & isi gas", "Bersih tandas/sinki tersumbat"],
         scenarios: ["Paip pecah tengah malam", "Alatan tiba-tiba rosak", "Warga emas tinggal sendiri", "Takut risiko elektrik"],
         capabilities: ["Pengesahan ID + dokumen", "Harga platform untuk servis standard", "Sebut harga terbuka untuk lain", "Jaminan platform selepas siap"] },
       { id: "clean", icon: "Sparkles", image: "/features/clean.jpg", title: "Servis Pembersihan",

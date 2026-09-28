@@ -177,7 +177,7 @@ export const TECH_SKILLS: { value: string; label: Label; subs: { value: string; 
       { value: "trip",      label: { zh: "跳电排查", en: "Tripping", ms: "Trip Elektrik" } },
       { value: "socket",    label: { zh: "插座开关", en: "Socket",   ms: "Soket" } },
       { value: "light",     label: { zh: "灯具安装", en: "Lighting", ms: "Lampu" } },
-      { value: "breaker",   label: { zh: "总闸维修", en: "Breaker",  ms: "Pemutus" } },
+      { value: "breaker",   label: { zh: "总闸维修", en: "Breaker",  ms: "Pemutus Litar" } },
       { value: "wiring",    label: { zh: "拉线布线", en: "Wiring",   ms: "Pendawaian" } },
     ],
   },
@@ -186,10 +186,10 @@ export const TECH_SKILLS: { value: string; label: Label; subs: { value: string; 
     label: { zh: "冷气", en: "Air Conditioning", ms: "Penghawa Dingin" },
     subs: [
       { value: "install",   label: { zh: "安装",   en: "Install",   ms: "Pasang" } },
-      { value: "wash",      label: { zh: "清洗",   en: "Wash",      ms: "Cuci" } },
+      { value: "wash",      label: { zh: "清洗",   en: "Wash",      ms: "Cuci Biasa" } },
       { value: "gas",       label: { zh: "加气",   en: "Gas Refill", ms: "Isi Gas" } },
       { value: "repair",    label: { zh: "维修",   en: "Repair",    ms: "Baiki" } },
-      { value: "dismount",  label: { zh: "拆机",   en: "Dismount",  ms: "Buka" } },
+      { value: "dismount",  label: { zh: "拆机",   en: "Dismount",  ms: "Buka Unit" } },
     ],
   },
   {
