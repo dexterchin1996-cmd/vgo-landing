@@ -1,6 +1,6 @@
 export type Tri = { zh: string; en: string; ms: string };
-export const COVERAGE_CITIES: { key: string; label: Tri; live: boolean; areas: Tri[] }[] = [
-  { key: "kk", label: { zh: "亚庇", en: "Kota Kinabalu", ms: "Kota Kinabalu" }, live: true, areas: [
+export const COVERAGE_CITIES: { key: string; label: Tri; areas: Tri[] }[] = [
+  { key: "kk", label: { zh: "亚庇", en: "Kota Kinabalu", ms: "Kota Kinabalu" }, areas: [
     { zh: "亚庇市区", en: "KK Center", ms: "Pusat KK" },
     { zh: "丹容亚路", en: "Tanjung Aru", ms: "Tanjung Aru" },
     { zh: "路阳", en: "Luyang", ms: "Luyang" },
@@ -15,7 +15,7 @@ export const COVERAGE_CITIES: { key: string; label: Tri; live: boolean; areas: T
     { zh: "实邦加", en: "Sepanggar", ms: "Sepanggar" },
     { zh: "打里卜", en: "Telipok", ms: "Telipok" },
   ]},
-  { key: "sandakan", label: { zh: "山打根", en: "Sandakan", ms: "Sandakan" }, live: true, areas: [
+  { key: "sandakan", label: { zh: "山打根", en: "Sandakan", ms: "Sandakan" }, areas: [
     { zh: "市中心", en: "City Center", ms: "Pusat Bandar" },
     { zh: "英达镇", en: "Bandar Indah", ms: "Bandar Indah" },
     { zh: "金凤市", en: "Bandar Kim Fung", ms: "Bandar Kim Fung" },
@@ -24,37 +24,16 @@ export const COVERAGE_CITIES: { key: string; label: Tri; live: boolean; areas: T
     { zh: "七哩", en: "Mile 7", ms: "Batu 7" },
     { zh: "西必洛", en: "Sepilok", ms: "Sepilok" },
   ]},
-  { key: "tawau", label: { zh: "斗湖", en: "Tawau", ms: "Tawau" }, live: true, areas: [
+  { key: "tawau", label: { zh: "斗湖", en: "Tawau", ms: "Tawau" }, areas: [
     { zh: "沙宾都", en: "Sabindo", ms: "Sabindo" },
     { zh: "发佳", en: "Fajar", ms: "Fajar" },
     { zh: "旧斗湖", en: "Tawau Lama", ms: "Tawau Lama" },
     { zh: "古古山", en: "Kubota", ms: "Kubota" },
     { zh: "阿拔士", en: "Apas", ms: "Apas" },
   ]},
-  { key: "tuaran", label: { zh: "斗亚兰", en: "Tuaran", ms: "Tuaran" }, live: false, areas: [] },
-  { key: "papar", label: { zh: "吧巴", en: "Papar", ms: "Papar" }, live: false, areas: [] },
-  { key: "sipitang", label: { zh: "实必丹", en: "Sipitang", ms: "Sipitang" }, live: false, areas: [] },
-  { key: "kota-belud", label: { zh: "古打毛律", en: "Kota Belud", ms: "Kota Belud" }, live: false, areas: [] },
-  { key: "kota-marudu", label: { zh: "哥打马鲁都", en: "Kota Marudu", ms: "Kota Marudu" }, live: false, areas: [] },
-  { key: "kudat", label: { zh: "古达", en: "Kudat", ms: "Kudat" }, live: false, areas: [] },
-  { key: "pitas", label: { zh: "必达士", en: "Pitas", ms: "Pitas" }, live: false, areas: [] },
-  { key: "keningau", label: { zh: "根地咬", en: "Keningau", ms: "Keningau" }, live: false, areas: [] },
-  { key: "beaufort", label: { zh: "保佛", en: "Beaufort", ms: "Beaufort" }, live: false, areas: [] },
-  { key: "tenom", label: { zh: "丹南", en: "Tenom", ms: "Tenom" }, live: false, areas: [] },
-  { key: "nabawan", label: { zh: "纳巴湾", en: "Nabawan", ms: "Nabawan" }, live: false, areas: [] },
-  { key: "tambunan", label: { zh: "担布南", en: "Tambunan", ms: "Tambunan" }, live: false, areas: [] },
-  { key: "ranau", label: { zh: "兰瑙", en: "Ranau", ms: "Ranau" }, live: false, areas: [] },
-  { key: "kundasang", label: { zh: "昆达山", en: "Kundasang", ms: "Kundasang" }, live: false, areas: [] },
-  { key: "lahad-datu", label: { zh: "拿笃", en: "Lahad Datu", ms: "Lahad Datu" }, live: false, areas: [] },
-  { key: "kinabatangan", label: { zh: "京那巴当岸", en: "Kinabatangan", ms: "Kinabatangan" }, live: false, areas: [] },
-  { key: "beluran", label: { zh: "比鲁兰", en: "Beluran", ms: "Beluran" }, live: false, areas: [] },
-  { key: "telupid", label: { zh: "特鲁必", en: "Telupid", ms: "Telupid" }, live: false, areas: [] },
-  { key: "semporna", label: { zh: "仙本那", en: "Semporna", ms: "Semporna" }, live: false, areas: [] },
-  { key: "kunak", label: { zh: "古纳", en: "Kunak", ms: "Kunak" }, live: false, areas: [] },
-  { key: "kalabakan", label: { zh: "卡拉巴干", en: "Kalabakan", ms: "Kalabakan" }, live: false, areas: [] },
 ];
 export const COVERAGE_LABELS = {
-  zh: { label: "服务区域", sub: "三大城市已开通，沙巴全境陆续扩展中", live_t: "已开通", soon_t: "即将开通", soon_note: "更多城市即将上线 · WhatsApp 咨询开通进度" },
-  en: { label: "Service Area", sub: "Live in 3 cities, expanding across Sabah", live_t: "Live", soon_t: "Coming Soon", soon_note: "More cities launching soon · WhatsApp to check" },
-  ms: { label: "Kawasan Servis", sub: "Aktif di 3 bandar, berkembang di seluruh Sabah", live_t: "Aktif", soon_t: "Akan Datang", soon_note: "Lebih banyak bandar akan datang · WhatsApp untuk semak" },
+  zh: { label: "服务区域", sub: "当前服务区域，持续扩展中", form_t: "没有你的地区？", form_sub: "留个邮箱，开通时第一时间通知你", form_ph: "你的邮箱", form_btn: "通知我", form_agree: "我同意接收服务开通通知邮件，可随时取消订阅", form_ok: "已收到！开通后会通知你", form_err: "提交失败，请稍后再试" },
+  en: { label: "Service Area", sub: "Currently live, expanding", form_t: "Your area not listed?", form_sub: "Leave your email, we will notify you when we arrive", form_ph: "Your email", form_btn: "Notify Me", form_agree: "I agree to receive service launch notifications. Unsubscribe anytime.", form_ok: "Got it! We will notify you when live", form_err: "Failed. Please try again later." },
+  ms: { label: "Kawasan Servis", sub: "Kawasan semasa, sedang berkembang", form_t: "Kawasan anda tiada?", form_sub: "Tinggalkan e-mel, kami maklumkan apabila tiba", form_ph: "E-mel anda", form_btn: "Maklumkan", form_agree: "Saya bersetuju menerima notifikasi pelancaran perkhidmatan. Boleh berhenti bila-bila.", form_ok: "Diterima! Kami akan maklumkan", form_err: "Gagal. Sila cuba lagi." },
 };
