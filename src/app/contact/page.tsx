@@ -2,6 +2,7 @@
 import { useLang } from "@/lib/i18n";
 import PageShell from "@/components/PageShell";
 import { Mail, Phone, MapPin } from "lucide-react";
+import CoverageSection from "@/components/CoverageSection";
 
 const C = {
   zh: {
@@ -76,6 +77,9 @@ export default function ContactPage() {
         <h3 className="font-black text-base mb-2">{c.hours_t}</h3>
         <p className="text-sm text-white/65">{c.hours}</p>
         <p className="text-xs text-white/40 mt-4">{c.reply_note}</p>
+      </div>
+    <div className="mt-4">
+        <CoverageSection />
       </div>
     </PageShell>
   );
