@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import NewsTicker from "@/components/NewsTicker";
 import PainPoints from "@/components/PainPoints";
+import AboutVGO from "@/components/AboutVGO";
 import FeatureCards from "@/components/FeatureCards";
 import SceneShowcase from "@/components/SceneShowcase";
 import HowItWorks from "@/components/HowItWorks";
@@ -201,6 +202,7 @@ export default function Home() {
 
       <NewsTicker />
       <PainPoints />
+      <AboutVGO />
       <FeatureCards />
       <SceneShowcase />
       <HowItWorks />
