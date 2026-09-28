@@ -109,7 +109,7 @@ const L = {
       merchant: {
         tag: "Merchant Guide", title: "Get found by customers nationwide",
         sub: "Platform traffic · Transparent fees · Free store page",
-        pains: [["No foot traffic","Waiting for walk-ins, sales falling"],["High fees, thin margin","Commissions eat your earnings"],["No idea how to go online","Want digital but lack tech"]],
+        pains: [["No foot traffic","Waiting for walk-ins, sales falling"],["High fees, thin margin","Fees eat your earnings"],["No idea how to go online","Want digital but lack tech"]],
         solves: [["Platform traffic","12K+ families, orders come to you"],["Transparent fees","No hidden charges, clear terms"],["Free store page","One-click listing, zero tech"]],
         steps: [["Apply","Submit info, get a free store page"],["List Services","Configure services & prices, featured on homepage"],["Receive Orders","Get instant in-app notifications"],["Settle & Support","Auto settlement, plus after-sales support"]],
         before: ["Wait for walk-ins","High commissions","No tech skills","Zero online exposure"],
@@ -147,10 +147,10 @@ const L = {
       merchant: {
         tag: "Panduan Peniaga", title: "Ditemui pelanggan seluruh negara",
         sub: "Trafik platform · Caj telus · Halaman kedai percuma",
-        pains: [["Tiada trafik","Tunggu pelanggan masuk, jualan merosot"],["Caj tinggi, margin tipis","Komisen makan pendapatan"],["Tak tahu cara ke dalam talian","Mahu digital tapi tak ada teknologi"]],
+        pains: [["Tiada trafik","Tunggu pelanggan masuk, jualan merosot"],["Caj tinggi, margin tipis","Fi Perkhidmatan makan pendapatan"],["Tak tahu cara ke dalam talian","Mahu digital tapi tak ada teknologi"]],
         solves: [["Trafik platform","12K+ keluarga, pesanan datang sendiri"],["Caj telus","Tiada caj tersembunyi, terma jelas"],["Halaman kedai percuma","Senarai sekali klik, sifar teknologi"]],
         steps: [["Mohon Sertai","Hantar maklumat, dapat halaman kedai percuma"],["Senarai Servis","Tetapkan servis & harga, dipaparkan di utama"],["Terima Pesanan","Notifikasi segera dalam app"],["Selesai & Sokongan","Auto penyelesaian, sokongan selepas jualan"]],
-        before: ["Tunggu pelanggan masuk","Komisen tinggi","Tiada kemahiran teknologi","Sifar pendedahan dalam talian"],
+        before: ["Tunggu pelanggan masuk","Fi Perkhidmatan tinggi","Tiada kemahiran teknologi","Sifar pendedahan dalam talian"],
         after: ["Pesanan datang sendiri","Caj telus","Senarai sekali klik","Ditampilkan di platform"],
         trust: [["12K+","Pengguna aktif"],["Percuma","Pendaftaran"],["Percuma","Halaman kedai"],["Auto","Penyelesaian"]],
       },
