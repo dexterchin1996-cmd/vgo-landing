@@ -16,7 +16,7 @@ export default function FinalCTA() {
         >
           <div
             className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600&q=80')" }}
+            style={{ backgroundImage: "url('/shared/s01.jpg')" }}
           />
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/20 rounded-full blur-[100px]" />
           <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-yellow-300/20 rounded-full blur-[120px]" />

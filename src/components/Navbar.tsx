@@ -2,13 +2,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
-import { Wrench, Sparkles, Heart, Truck, ChevronDown, Menu, Star } from "lucide-react";
+import { Wrench, Sparkles, Heart, Truck, ChevronDown, Menu, Star, User, Store } from "lucide-react";
 import SideDrawer from "./SideDrawer";
 import LangSwitcher from "./LangSwitcher";
 import { useLang } from "@/lib/i18n";
 
 export default function Navbar() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [openDrop, setOpenDrop] = useState<string | null>(null);
@@ -33,7 +33,12 @@ export default function Navbar() {
     { label: t("nav_news"), href: "#news" },
     { label: t("nav_partner"), href: "/partner" },
     { label: t("nav_about"), href: "/about" },
-    { label: OFFERS_LABEL, href: "/offers" },
+    { label: lang === "zh" ? "福利" : lang === "ms" ? "Tawaran" : "Offers", href: "/offers" },
+    { label: lang === "zh" ? "指南" : lang === "ms" ? "Panduan" : "Guides", children: [
+      { icon: User,   label: lang === "zh" ? "客户指南" : lang === "ms" ? "Panduan Pelanggan" : "Customer Guide",   href: "/how-it-works/customer" },
+      { icon: Store,  label: lang === "zh" ? "商家指南" : lang === "ms" ? "Panduan Peniaga"   : "Merchant Guide",   href: "/how-it-works/merchant" },
+      { icon: Wrench, label: lang === "zh" ? "师傅指南" : lang === "ms" ? "Panduan Juruteknik" : "Technician Guide", href: "/how-it-works/technician" },
+    ] },
   ];
 
   return (
@@ -43,17 +48,15 @@ export default function Navbar() {
           scrolled ? "bg-white/85 backdrop-blur-xl shadow-[0_2px_20px_rgba(0,0,0,0.06)]" : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 h-[68px] flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
-            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF7A1F] to-[#E55A00] text-white font-black text-xl flex items-center justify-center shadow-lg shadow-orange-500/30">
-              V
-            </span>
+            <img src="/logo-bg.png" alt="V'GO" className="w-10 h-10 object-contain shrink-0" />
             <div className="flex flex-col leading-none">
               <span className={`font-black text-xl tracking-tight transition-colors ${scrolled ? "text-gray-900" : "text-white"}`}>
-                VGO
+                Smart. Simple. Sorted.
               </span>
               <span className={`hidden sm:block text-[9px] font-semibold tracking-[0.2em] transition-colors ${scrolled ? "text-gray-400" : "text-white/60"}`}>
-                V GO ON
+                Smart. Simple. Sorted.
               </span>
             </div>
           </Link>
@@ -69,7 +72,7 @@ export default function Navbar() {
 
           <nav className="hidden md:flex items-center gap-1">
             {NAV.map((item) => {
-              const isExternal = item.href.startsWith("/");
+              const isExternal = (item.href || "").startsWith("/");
               const cls = `px-4 py-2 rounded-lg text-sm font-semibold transition ${
                 scrolled ? "text-gray-700 hover:bg-gray-100" : "text-white/90 hover:bg-white/10"
               }`;

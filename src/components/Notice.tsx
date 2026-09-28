@@ -75,7 +75,7 @@ export default function Notice() {
             {/* 场景背景图 */}
             <div className="relative h-32 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80"
+                src="/shared/s02.jpg"
                 alt="Technician at work"
                 className="w-full h-full object-cover"
               />

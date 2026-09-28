@@ -24,7 +24,7 @@ export default function LegalShell({
         <div className="max-w-3xl mx-auto px-5 sm:px-10 py-4 flex items-center justify-between">
           <Link href="/" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[var(--vgo)] transition">
             <ArrowLeft size={16} />
-            <span>VGO</span>
+            <span>V'GO</span>
           </Link>
           <div className="text-[10px] font-black tracking-widest text-gray-400 uppercase">Legal Document</div>
         </div>
@@ -71,11 +71,11 @@ export default function LegalShell({
 
         {/* 页脚 */}
         <footer className="mt-10 pt-8 border-t border-gray-200 text-center">
-          <div className="text-sm font-black text-gray-800 tracking-widest">VGO</div>
-          <div className="mt-1 text-xs text-gray-500">VGO (V Go On) · Malaysia Home Service Platform</div>
+          <div className="text-sm font-black text-gray-800 tracking-widest">V'GO</div>
+          <div className="mt-1 text-xs text-gray-500">V'GO (V Go On) · Malaysia Home Service Platform</div>
           <div className="mt-2 text-xs text-gray-500">support.vgo@gmail.com</div>
           <div className="mt-1 text-xs text-gray-400">Kota Kinabalu, Sabah, Malaysia</div>
-          <div className="mt-4 text-[11px] text-gray-400">© 2026 VGO (V Go On). All Rights Reserved.</div>
+          <div className="mt-4 text-[11px] text-gray-400">© 2026 V'GO (V Go On). All Rights Reserved.</div>
         </footer>
       </div>
 

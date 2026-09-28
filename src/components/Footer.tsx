@@ -54,8 +54,8 @@ export default function Footer() {
                 V
               </span>
               <div className="leading-none">
-                <div className="font-black text-xl">VGO</div>
-                <div className="text-[9px] font-semibold tracking-[0.2em] text-white/50 mt-0.5">V GO ON</div>
+                <div className="font-black text-xl">Smart. Simple. Sorted.</div>
+                <div className="text-[9px] font-semibold tracking-[0.2em] text-white/50 mt-0.5">Smart. Simple. Sorted.</div>
               </div>
             </div>
             <p className="text-sm text-white/55 leading-relaxed mb-6 max-w-xs whitespace-pre-line">

@@ -8,7 +8,7 @@ const L = {
   zh: {
     label: "限时福利", title: "三大角色专属福利", sub: "注册即享 · 限首批 1000 名",
     tab_customer: "客户", tab_merchant: "商家", tab_tech: "师傅",
-    cta: "立即注册领取", note: "福利不可叠加，最终解释权归 VGO 所有",
+    cta: "立即注册领取", note: "福利不可叠加，最终解释权归 V'GO 所有",
     customer_title: "RM80 上门检查券", customer_desc: "注册即送，首次下单立减 RM80",
     customer_p: ["注册即到账","首单立减 RM80","全马通用","限首批 1000 名"],
     merchant_title: "前 2 个月 0% 佣金", merchant_desc: "入驻即享 2 个月免佣金，平台让利不出现金",
@@ -19,7 +19,7 @@ const L = {
   en: {
     label: "Limited Offers", title: "Exclusive Offers for 3 Roles", sub: "Sign up now · First 1000 only",
     tab_customer: "Customer", tab_merchant: "Merchant", tab_tech: "Pro",
-    cta: "Sign Up & Claim", note: "Offers not stackable. VGO reserves final interpretation.",
+    cta: "Sign Up & Claim", note: "Offers not stackable. V'GO reserves final interpretation.",
     customer_title: "RM80 Home Inspection Voucher", customer_desc: "Get RM80 off your first order upon signup",
     customer_p: ["Instant on signup","RM80 off first order","Valid nationwide","First 1000 only"],
     merchant_title: "First 2 Months 0% Commission", merchant_desc: "Zero commission for 2 months after onboarding",
@@ -30,7 +30,7 @@ const L = {
   ms: {
     label: "Tawaran Terhad", title: "Tawaran Eksklusif 3 Peranan", sub: "Daftar sekarang · 1000 terawal sahaja",
     tab_customer: "Pelanggan", tab_merchant: "Peniaga", tab_tech: "Pakar",
-    cta: "Daftar & Tuntut", note: "Tawaran tidak boleh digabung. VGO berhak tafsir akhir.",
+    cta: "Daftar & Tuntut", note: "Tawaran tidak boleh digabung. V'GO berhak tafsir akhir.",
     customer_title: "Baun Pemeriksaan RM80", customer_desc: "Dapat RM80 diskaun pesanan pertama selepas daftar",
     customer_p: ["Serta-merta selepas daftar","RM80 diskaun pesanan pertama","Sah seluruh negara","1000 terawal sahaja"],
     merchant_title: "2 Bulan Pertama 0% Komisen", merchant_desc: "Komisen sifar untuk 2 bulan pertama selepas daftar",
@@ -65,7 +65,7 @@ export default function OffersPage() {
       </div>
       <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 pt-8">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition">
-          <ArrowLeft size={16} /><span>VGO</span>
+          <ArrowLeft size={16} /><span>V'GO</span>
         </Link>
       </div>
       <section className="relative z-10 max-w-3xl mx-auto px-5 sm:px-8 pt-12 pb-10 text-center">

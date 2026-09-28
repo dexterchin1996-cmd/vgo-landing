@@ -19,11 +19,11 @@ import Notice from "@/components/Notice";
 import { useLang } from "@/lib/i18n";
 
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80",
-  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=80",
-  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80",
-  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80",
-  "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=1920&q=80",
+  "/shared/s01.jpg",
+  "/shared/s02.jpg",
+  "/shared/s03.jpg",
+  "/shared/s04.jpg",
+  "/shared/s05.jpg",
 ];
 
 const SLIDE_MS = 7000;
@@ -96,8 +96,8 @@ export default function Home() {
               {t("hero_title1")}
             </span>
             <span className="block mt-1">
-              {t("hero_title2").replace("VGO", "")}
-              <span className="text-[var(--vgo)] drop-shadow-[0_0_40px_rgba(255,102,0,0.6)]">VGO</span>
+              {t("hero_title2").replace("V'GO", "")}
+              <span className="text-[var(--vgo)] drop-shadow-[0_0_40px_rgba(255,102,0,0.6)]">V'GO</span>
             </span>
           </motion.h1>
 

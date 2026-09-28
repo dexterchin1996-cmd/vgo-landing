@@ -48,10 +48,10 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
           >
             <div className="flex items-center justify-between px-5 h-16 border-b border-gray-100">
               <div className="flex items-center gap-2.5">
-                <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-[var(--vgo-light)] to-[var(--vgo-dark)] text-white font-black flex items-center justify-center shadow-md shadow-orange-500/30">V</span>
+                <img src="/logo-bg.png" alt="V'GO" className="w-9 h-9 object-contain shrink-0" />
                 <div className="flex flex-col leading-none">
-                  <span className="font-black text-lg text-gray-900">VGO</span>
-                  <span className="text-[8px] font-semibold tracking-[0.2em] text-gray-400">V GO ON</span>
+                  <span className="font-black text-lg text-gray-900">Smart. Simple. Sorted.</span>
+                  <span className="text-[8px] font-semibold tracking-[0.2em] text-gray-400">Smart. Simple. Sorted.</span>
                 </div>
               </div>
               <button onClick={onClose} aria-label="close" className="w-10 h-10 rounded-xl hover:bg-gray-100 flex items-center justify-center text-gray-500">

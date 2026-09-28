@@ -20,7 +20,7 @@ export default function FAQ() {
     <section className="relative bg-white py-20 sm:py-28 px-5 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-[0.04]"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&q=80')" }}
+        style={{ backgroundImage: "url('/shared/s06.jpg')" }}
       />
       <div className="relative max-w-3xl mx-auto">
         <motion.div

@@ -23,10 +23,10 @@ const ROLE_MAP: Record<string, Role> = {
 };
 
 const ROLE_IMG: Record<Role, string> = {
-  customer: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
-  merchant: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
-  tech:     "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80",
-  artisan:  "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80",
+  customer: "/shared/s01.jpg",
+  merchant: "/shared/s06.jpg",
+  tech:     "/shared/s02.jpg",
+  artisan:  "/shared/s09.jpg",
 };
 const ROLE_PREFIX: Record<Role, string> = {
   customer: "c", merchant: "m", tech: "t", artisan: "t",

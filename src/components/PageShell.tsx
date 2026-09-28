@@ -23,7 +23,7 @@ export default function PageShell({
       <div className="relative z-10 max-w-3xl mx-auto px-5 sm:px-8 pt-8">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition">
           <ArrowLeft size={16} />
-          <span>VGO</span>
+          <span>V'GO</span>
         </Link>
 
         <motion.div
@@ -40,9 +40,9 @@ export default function PageShell({
       </div>
 
       <div className="relative z-10 border-t border-white/10 py-8 text-center text-xs text-white/40">
-        <div>jason52013141018@gmail.com</div>
+        <div>support.vgo@gmail.com</div>
         <div className="mt-1">+60 11-7269 1788 · Kota Kinabalu, Sabah</div>
-        <div className="mt-3">© 2026 VGO (V Go On). All Rights Reserved.</div>
+        <div className="mt-3">© 2026 V'GO (V Go On). All Rights Reserved.</div>
       </div>
     </main>
   );

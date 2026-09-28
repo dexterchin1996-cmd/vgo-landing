@@ -24,8 +24,8 @@ export default function PartnerPage() {
   const COOP = [
     { Icon: Store,     title: t("coop_merchant_t"), desc: t("coop_merchant_d"), cta: t("coop_merchant_cta"), href: "#merchant" },
     { Icon: Wrench,    title: t("coop_tech_t"),     desc: t("coop_tech_d"),     cta: t("coop_tech_cta"),     href: "#technician" },
-    { Icon: Crown,     title: t("coop_agent_t"),    desc: t("coop_agent_d"),    cta: t("coop_agent_cta"),    href: "mailto:jason52013141018@gmail.com?subject=VGO%20Regional%20Agent%20Application" },
-    { Icon: Briefcase, title: t("coop_invest_t"),   desc: t("coop_invest_d"),   cta: t("coop_invest_cta"),   href: "mailto:jason52013141018@gmail.com?subject=VGO%20Investment%20Partnership" },
+    { Icon: Crown,     title: t("coop_agent_t"),    desc: t("coop_agent_d"),    cta: t("coop_agent_cta"),    href: "mailto:support.vgo@gmail.com?subject=V'GO%20Regional%20Agent%20Application" },
+    { Icon: Briefcase, title: t("coop_invest_t"),   desc: t("coop_invest_d"),   cta: t("coop_invest_cta"),   href: "mailto:support.vgo@gmail.com?subject=V'GO%20Investment%20Partnership" },
   ];
 
   const FLOW = [
@@ -65,7 +65,7 @@ export default function PartnerPage() {
       <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 pt-8">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition">
           <ArrowLeft size={16} />
-          <span>VGO</span>
+          <span>V'GO</span>
         </Link>
       </div>
 
@@ -91,7 +91,7 @@ export default function PartnerPage() {
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href="mailto:jason52013141018@gmail.com"
+          <a href="mailto:support.vgo@gmail.com"
             className="group inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold text-base shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65),inset_0_1px_0_rgba(255,255,255,0.4)] hover:shadow-[0_16px_50px_-6px_rgba(255,150,0,0.9)] hover:scale-[1.03] active:scale-95 transition-all">
             <Mail size={18} />
             <span>{t("partner_contact_email")}</span>
@@ -175,7 +175,7 @@ export default function PartnerPage() {
         <p className="mt-6 text-xs text-white/40 text-center">{t("earn_note")}</p>
       </section>
 
-      {/* 为什么 VGO */}
+      {/* 为什么 V'GO */}
       <section className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-16">
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-3xl sm:text-5xl font-black text-center mb-12">
           {t("partner_why_title")}
@@ -219,7 +219,7 @@ export default function PartnerPage() {
           <h2 className="text-2xl sm:text-4xl font-black mb-4">{t("partner_cta_title")}</h2>
           <p className="text-sm sm:text-base text-white/65 mb-8 max-w-lg mx-auto leading-relaxed">{t("partner_cta_desc")}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="mailto:jason52013141018@gmail.com" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-all">
+            <a href="mailto:support.vgo@gmail.com" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-all">
               <Mail size={18} />
               {t("partner_contact_email")}
             </a>
@@ -233,9 +233,9 @@ export default function PartnerPage() {
       </section>
 
       <div className="relative z-10 border-t border-white/10 py-8 text-center text-xs text-white/40">
-        <div>jason52013141018@gmail.com</div>
+        <div>support.vgo@gmail.com</div>
         <div className="mt-1">+60 11-7269 1788 · Kota Kinabalu, Sabah</div>
-        <div className="mt-3">© 2026 VGO (V Go On). All Rights Reserved.</div>
+        <div className="mt-3">© 2026 V'GO (V Go On). All Rights Reserved.</div>
       </div>
     </main>
   );

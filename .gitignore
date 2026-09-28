@@ -12,3 +12,7 @@ next-env.d.ts
 # 视频文件暂不上传（本地保留）
 public/videos/*.mp4
 
+
+# backup + scratch
+.bak-*/
+20行要分段*

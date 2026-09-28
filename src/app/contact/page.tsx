@@ -44,7 +44,7 @@ export default function ContactPage() {
   const c = C[lang] ?? C.zh;
 
   const CARDS = [
-    { Icon: Mail,   t: c.email_t,   v: "jason52013141018@gmail.com", href: "mailto:jason52013141018@gmail.com" },
+    { Icon: Mail,   t: c.email_t,   v: "support.vgo@gmail.com", href: "mailto:support.vgo@gmail.com" },
     { Icon: Phone,  t: c.phone_t,   v: "+60 11-7269 1788",           href: "https://wa.me/601172691788" },
     { Icon: MapPin, t: c.address_t, v: c.address,                    href: null },
   ];

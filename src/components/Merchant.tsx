@@ -41,7 +41,7 @@ export default function Merchant() {
 
             <div className="mt-7 rounded-3xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80"
+                src="/shared/s06.jpg"
                 alt="Merchant"
                 className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-700"
               />
