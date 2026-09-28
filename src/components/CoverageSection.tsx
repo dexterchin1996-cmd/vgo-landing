@@ -23,22 +23,31 @@ export default function CoverageSection() {
       setStatus(r.ok ? "ok" : "err");
     } catch { setStatus("err"); }
   };
+  const mainCities = COVERAGE_CITIES.filter((c) => c.areas.length > 0);
+  const moreTowns = COVERAGE_CITIES.filter((c) => c.areas.length === 0);
   return (
     <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
       <h3 className="font-black text-base mb-2">{cl.label}</h3>
       <p className="text-sm text-white/65 mb-5">{cl.sub}</p>
       <div className="space-y-3 mb-5">
-        {COVERAGE_CITIES.map((city) => (
+        {mainCities.map((city) => (
           <div key={city.key}>
             <div className="flex items-center gap-2 mb-1">
               <span className="w-2 h-2 rounded-full bg-green-400" />
               <span className="font-bold text-sm">{city.label[lang]}</span>
+              <span className="text-[10px] text-green-400/70 ml-1">{cl.live_t}</span>
             </div>
-            {city.areas.length > 0 && (
-              <div className="text-xs text-white/50 pl-4">{city.areas.map((a) => a[lang]).join(" · ")}</div>
-            )}
+            <div className="text-xs text-white/50 pl-4">{city.areas.map((a) => a[lang]).join(" · ")}</div>
           </div>
         ))}
+      </div>
+      <div className="pt-3 border-t border-white/10 mb-5">
+        <p className="text-xs font-bold text-white/50 mb-2">{cl.more_t}</p>
+        <div className="flex flex-wrap gap-1.5">
+          {moreTowns.map((city) => (
+            <span key={city.key} className="text-xs px-2.5 py-1 rounded-full bg-white/5 text-white/55">{city.label[lang]}</span>
+          ))}
+        </div>
       </div>
       <div className="pt-4 border-t border-white/10">
         <p className="text-xs font-bold text-white/70 mb-1">{cl.form_t}</p>
