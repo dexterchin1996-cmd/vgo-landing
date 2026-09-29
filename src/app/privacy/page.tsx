@@ -12,7 +12,7 @@ const C = {
     s1: "VGO (V Go On) is the data controller of your personal data. Our registered address is located in Malaysia.",
     s2_t: "2. Data Protection Officer (DPO)",
     s2: "VGO has voluntarily appointed a Data Protection Officer (DPO) under PDPA 2024. For privacy matters, please contact:
-DPO Name: 待填
+DPO Name: Chong Kar Wei
 Email: 待填
 Phone: 待填
 Address: Malaysia (待填)
@@ -48,7 +48,7 @@ In the event of a data breach, we will notify the regulator within 72 hours and 
     s1: "VGO (V Go On) ialah pengawal data bagi data peribadi anda. Alamat berdaftar kami terletak di Malaysia.",
     s2_t: "2. Pegawai Perlindungan Data (DPO)",
     s2: "VGO secara sukarela telah melantik Pegawai Perlindungan Data (DPO) di bawah PDPA 2024. Untuk perkara privasi, sila hubungi:
-Nama DPO: 待填
+Nama DPO: Chong Kar Wei
 E-mel: 待填
 Telefon: 待填
 Alamat: Malaysia (待填)
