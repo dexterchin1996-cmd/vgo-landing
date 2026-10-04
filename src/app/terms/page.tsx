@@ -6,7 +6,7 @@ const C = {
   en: {
     label: "Terms of Service", title: "Terms of Service",
     updated: "Last updated: January 2026",
-    lang_note: "These terms are presented in both Bahasa Malaysia and English. In case of ambiguity, the Bahasa Malaysia version shall prevail.",
+    lang_note: "These terms are presented in English and Bahasa Malaysia. Both versions are authoritative. In the event of any conflict, the Bahasa Malaysia version shall prevail for matters subject to CPETTR 2024 statutory disclosure (service descriptions, fees, refund policy, dispute resolution, seller information); the English version shall prevail for all other matters.",
     intro: "Welcome to VGO. By using this platform, you agree to the following terms. Please read carefully.",
     s1_t: "1. Service Description",
     s1: "VGO is an information platform connecting users and certified pros. We do not directly provide services; we match both sides. All services are independently provided by listed pros or merchants.",
@@ -30,7 +30,7 @@ const C = {
   ms: {
     label: "Terma Perkhidmatan", title: "Terma Perkhidmatan",
     updated: "Kemas kini terakhir: Januari 2026",
-    lang_note: "Terma ini disediakan dalam Bahasa Malaysia dan Bahasa Inggeris. Sekiranya terdapat percanggahan, versi Bahasa Malaysia yang diguna pakai.",
+    lang_note: "Terma ini disediakan dalam Bahasa Inggeris dan Bahasa Malaysia. Kedua-dua versi adalah berwibawa. Sekiranya berlaku percanggahan, versi Bahasa Malaysia akan diguna pakai bagi perkara yang tertakluk kepada pendedahan statutori CPETTR 2024 (penerangan perkhidmatan, fi, dasar bayaran balik, penyelesaian pertikaian, maklumat penjual); versi Bahasa Inggeris akan diguna pakai bagi semua perkara lain.",
     intro: "Selamat datang ke VGO. Dengan menggunakan platform ini, anda bersetuju dengan terma berikut. Sila baca dengan teliti.",
     s1_t: "1. Penerangan Perkhidmatan",
     s1: "VGO ialah platform maklumat yang menghubungkan pengguna dengan tukang bertauliah. Kami tidak menyediakan perkhidmatan secara langsung; kami memadankan kedua-dua pihak.",

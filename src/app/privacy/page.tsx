@@ -6,20 +6,12 @@ const C = {
   en: {
     label: "Privacy Policy", title: "Privacy Policy",
     updated: "Last updated: January 2026",
-    lang_note: "This policy is presented in both English and Bahasa Malaysia as required by the PDPA. In the event of any inconsistency, the English version shall prevail.",
+    lang_note: "This policy is presented in English and Bahasa Malaysia. Both versions are authoritative. In the event of any conflict, the Bahasa Malaysia version shall prevail for matters subject to CPETTR 2024 statutory disclosure (service descriptions, fees, refund policy, dispute resolution, seller information); the English version shall prevail for all other matters.",
     intro: "VGO (V Go On) respects and protects your privacy. This policy is prepared in accordance with Malaysia's Personal Data Protection Act 2010 (PDPA) and its 2024 amendments, and explains how we collect, use, and protect your personal data.",
     s1_t: "1. Data Controller",
     s1: "VGO (V Go On) is the data controller of your personal data. Our registered address is located in Malaysia.",
     s2_t: "2. Data Protection Officer (DPO)",
-    s2: "VGO has voluntarily appointed a Data Protection Officer (DPO) under PDPA 2024. For privacy matters, please contact:
-DPO Name: Chong Kar Wei
-Email: 待填
-Phone: 待填
-Address: Malaysia (待填)
-
-The DPO must be a Malaysian resident (at least 180 days per year) and proficient in Bahasa Malaysia and English.
-
-In the event of a data breach, we will notify the regulator within 72 hours and affected users within 7 days.",
+    s2: "VGO has voluntarily appointed a Data Protection Officer (DPO) under PDPA 2024. For privacy matters, please contact:DPO Name: Chong Kar Wei\nEmail: 待填\nPhone: 待填\nAddress: Malaysia (待填)\n\nThe DPO must be a Malaysian resident (at least 180 days per year) and proficient in Bahasa Malaysia and English.\n\nIn the event of a data breach, we will notify the regulator within 72 hours and affected users within 7 days.",
     s3_t: "3. What Data We Collect",
     s3: "When you register or use VGO, we may collect: name, phone number, email, service address, payment information (processed by third-party payment providers; we do not store card numbers), device information, usage logs, and location data.",
     s4_t: "4. How We Use Your Data",
@@ -42,20 +34,12 @@ In the event of a data breach, we will notify the regulator within 72 hours and 
   ms: {
     label: "Polisi Privasi", title: "Polisi Privasi",
     updated: "Kemas kini terakhir: Januari 2026",
-    lang_note: "Polisi ini disediakan dalam Bahasa Inggeris dan Bahasa Malaysia seperti yang dikehendaki PDPA. Sekiranya terdapat percanggahan, versi Bahasa Inggeris akan diutamakan.",
+    lang_note: "Polisi ini disediakan dalam Bahasa Inggeris dan Bahasa Malaysia. Kedua-dua versi adalah berwibawa. Sekiranya berlaku percanggahan, versi Bahasa Malaysia akan diguna pakai bagi perkara yang tertakluk kepada pendedahan statutori CPETTR 2024 (penerangan perkhidmatan, fi, dasar bayaran balik, penyelesaian pertikaian, maklumat penjual); versi Bahasa Inggeris akan diguna pakai bagi semua perkara lain.",
     intro: "VGO (V Go On) menghormati dan melindungi privasi anda. Polisi ini disediakan selaras dengan Akta Perlindungan Data Peribadi 2010 (PDPA) dan pindaan 2024, dan menerangkan bagaimana kami mengumpul, menggunakan, dan melindungi data peribadi anda.",
     s1_t: "1. Pengawal Data",
     s1: "VGO (V Go On) ialah pengawal data bagi data peribadi anda. Alamat berdaftar kami terletak di Malaysia.",
     s2_t: "2. Pegawai Perlindungan Data (DPO)",
-    s2: "VGO secara sukarela telah melantik Pegawai Perlindungan Data (DPO) di bawah PDPA 2024. Untuk perkara privasi, sila hubungi:
-Nama DPO: Chong Kar Wei
-E-mel: 待填
-Telefon: 待填
-Alamat: Malaysia (待填)
-
-DPO mestilah pemastautin Malaysia (sekurang-kurangnya 180 hari setahun) dan mahir dalam Bahasa Malaysia dan Bahasa Inggeris.
-
-Jika berlaku kebocoran data, kami akan memaklumkan pengawal selia dalam 72 jam dan pengguna terjejas dalam 7 hari.",
+    s2: "VGO secara sukarela telah melantik Pegawai Perlindungan Data (DPO) di bawah PDPA 2024. Untuk perkara privasi, sila hubungi:Nama DPO: Chong Kar Wei\nE-mel: 待填\nTelefon: 待填\nAlamat: Malaysia (待填)\n\nDPO mestilah pemastautin Malaysia (sekurang-kurangnya 180 hari setahun) dan mahir dalam Bahasa Malaysia dan Bahasa Inggeris.\n\nJika berlaku kebocoran data, kami akan memaklumkan pengawal selia dalam 72 jam dan pengguna terjejas dalam 7 hari.",
     s3_t: "3. Data Apa Yang Kami Kumpul",
     s3: "Apabila anda mendaftar atau menggunakan VGO, kami mungkin mengumpul: nama, nombor telefon, e-mel, alamat perkhidmatan, maklumat pembayaran (diproses oleh pembekal pihak ketiga; kami tidak simpan nombor kad), maklumat peranti, log penggunaan, dan data lokasi.",
     s4_t: "4. Bagaimana Kami Guna Data Anda",
