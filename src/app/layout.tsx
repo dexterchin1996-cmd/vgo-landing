@@ -5,6 +5,18 @@ import { LangProvider } from "@/lib/i18n";
 
 const BASE_URL = "https://vgo-landing.vercel.app";
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FF6600" },
+    { media: "(prefers-color-scheme: dark)", color: "#0F172A" },
+  ],
+  viewportFit: "cover" as const,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
