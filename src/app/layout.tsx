@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import CookieBanner from "@/components/CookieBanner";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { LangProvider } from "@/lib/i18n";
 
 const inter = Inter({
@@ -134,6 +137,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LangProvider>
           <Navbar />
           {children}
+          <CookieBanner />
+          <Analytics />
+          <SpeedInsights />
         </LangProvider>
       </body>
     </html>

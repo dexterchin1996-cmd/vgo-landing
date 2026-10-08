@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
 import {
   X, User, Store, Wrench, Sparkles, CheckCircle2, ArrowRight, ArrowLeft,
   Loader2, ChevronDown, AlertCircle, Gift, ShieldCheck,
@@ -389,8 +390,8 @@ export default function Waitlist() {
                     transition={{ duration: 0.28 }}
                     className="-mx-6 -mt-5 touch-pan-y"
                   >
-                    <div className="relative">
-                      <img src={ROLE_IMG[role]} alt="" className="w-full h-44 object-cover" />
+                    <div className="relative h-44">
+                      <Image src={ROLE_IMG[role]} alt="" fill sizes="(max-width: 768px) 100vw, 480px" className="object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
                       <div className="absolute top-3 right-3 bg-amber-500 text-white text-[11px] font-black px-3 py-1 rounded-full shadow-lg">
                         {gI("limit")}

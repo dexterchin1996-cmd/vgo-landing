@@ -1,5 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
 import {
   Home, Wrench, Sparkles, Heart, Truck, ShoppingBag, Briefcase, Megaphone,
   Info, X, Globe, Check, UserPlus, MessageCircle, BookOpen, Gift, Users,
@@ -61,7 +62,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
             className="fixed top-0 left-0 bottom-0 z-[70] w-[82%] max-w-sm bg-white shadow-2xl flex flex-col md:hidden">
             <div className="flex items-center justify-between px-5 h-16 border-b border-gray-100">
               <div className="flex items-center gap-2.5">
-                <img src="/logo-bg.png" alt="V'GO" className="w-9 h-9 object-contain shrink-0" />
+                <Image src="/logo-bg.png" alt="V'GO" width={36} height={36} className="w-9 h-9 object-contain shrink-0" />
                 <div className="flex flex-col leading-none">
                   <span className="font-black text-lg text-gray-900">V'GO</span>
                   <span className="text-[8px] font-semibold tracking-[0.2em] text-gray-400">Smart. Simple. Sorted.</span>

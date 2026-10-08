@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { Wrench, Sparkles, Heart, Truck, ChevronDown, Menu, Star, User, Store } from "lucide-react";
 import SideDrawer from "./SideDrawer";
@@ -50,7 +51,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
-            <img src="/logo-bg.png" alt="V'GO" className="w-10 h-10 object-contain shrink-0" />
+            <Image src="/logo-bg.png" alt="V'GO" width={40} height={40} priority className="w-10 h-10 object-contain shrink-0" />
             <div className="flex flex-col leading-none">
               <span className={`font-black text-2xl tracking-tight transition-colors ${scrolled ? "text-gray-900" : "text-white"}`}>
                 V&apos;GO
