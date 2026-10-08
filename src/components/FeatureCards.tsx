@@ -52,7 +52,7 @@ export default function FeatureCards() {
               className="group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-500 aspect-[4/5] sm:aspect-[4/3]"
             >
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-55 group-hover:opacity-75 group-hover:scale-110 transition-all duration-700"
+                className="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-85 group-hover:kb-zoom-in transition-all duration-700"
                 style={{ backgroundImage: `url('${s.img}')` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />

@@ -6,10 +6,10 @@ import { useLang } from "@/lib/i18n";
 export default function PainPoints() {
   const { t } = useLang();
   const PAINS = [
-    { Icon: AlertCircle, text: t("pain_1") },
-    { Icon: Wallet,      text: t("pain_2") },
-    { Icon: Clock,       text: t("pain_3") },
-    { Icon: Search,      text: t("pain_4") },
+    { Icon: AlertCircle, text: t("pain_1"), img: "/scenes/leak.jpg" },
+    { Icon: Wallet,      text: t("pain_2"), img: "/scenes/burst.jpg" },
+    { Icon: Clock,       text: t("pain_3"), img: "/scenes/clog.jpg" },
+    { Icon: Search,      text: t("pain_4"), img: "/scenes/power.jpg" },
   ];
   return (
     <section className="relative bg-gray-50 py-20 sm:py-28 px-5 overflow-hidden">
@@ -41,12 +41,21 @@ export default function PainPoints() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="p-6 rounded-3xl bg-white border border-gray-100 text-center shadow-sm"
+              className="group relative overflow-hidden rounded-3xl border border-gray-100 shadow-sm bg-white hover:shadow-xl transition-shadow"
             >
-              <div className="w-14 h-14 mx-auto rounded-2xl bg-red-50 flex items-center justify-center mb-3">
-                <p.Icon size={26} strokeWidth={2} className="text-red-400" />
+              <div className="relative h-28 sm:h-32 overflow-hidden">
+                <div
+                  className="absolute inset-0 bg-cover bg-center kb-zoom-in opacity-80 group-hover:opacity-100 transition-opacity"
+                  style={{ backgroundImage: `url('${p.img}')` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute top-3 left-3 w-10 h-10 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center shadow-lg">
+                  <p.Icon size={20} strokeWidth={2.2} className="text-red-500" />
+                </div>
               </div>
-              <div className="text-sm text-gray-600 font-medium">{p.text}</div>
+              <div className="p-4 text-center">
+                <div className="text-sm text-gray-700 font-semibold leading-snug">{p.text}</div>
+              </div>
             </motion.div>
           ))}
         </div>
