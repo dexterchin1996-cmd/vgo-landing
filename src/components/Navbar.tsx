@@ -52,8 +52,8 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
             <img src="/logo-bg.png" alt="V'GO" className="w-10 h-10 object-contain shrink-0" />
             <div className="flex flex-col leading-none">
-              <span className={`font-black text-xl tracking-tight transition-colors ${scrolled ? "text-gray-900" : "text-white"}`}>
-                Smart. Simple. Sorted.
+              <span className={`font-black text-2xl tracking-tight transition-colors ${scrolled ? "text-gray-900" : "text-white"}`}>
+                V&apos;GO
               </span>
               <span className={`hidden sm:block text-[9px] font-semibold tracking-[0.2em] transition-colors ${scrolled ? "text-gray-400" : "text-white/60"}`}>
                 Smart. Simple. Sorted.
@@ -125,8 +125,10 @@ export default function Navbar() {
           <button
             aria-label="menu"
             onClick={() => setDrawerOpen(true)}
-            className={`md:hidden w-11 h-11 flex items-center justify-center rounded-xl transition ${
-              scrolled ? "text-gray-900 hover:bg-gray-100" : "text-white hover:bg-white/10"
+            className={`md:hidden w-11 h-11 flex items-center justify-center rounded-xl backdrop-blur-md border transition ${
+              scrolled
+                ? "text-gray-900 bg-gray-100 border-gray-200 hover:bg-gray-200"
+                : "text-white bg-white/15 border-white/25 hover:bg-white/25"
             }`}
           >
             <Menu size={26} strokeWidth={2.5} />
