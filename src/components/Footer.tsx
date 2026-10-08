@@ -96,6 +96,7 @@ export default function Footer() {
 
         <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
           <div>{t("footer_copyright")}</div>
+          <div className="text-[10px] text-white/40 mt-1">VGO · 由 Ventus Reflexology 运营</div>
           <div className="flex items-center gap-4">
             <span>{t("footer_location")}</span>
           </div>
