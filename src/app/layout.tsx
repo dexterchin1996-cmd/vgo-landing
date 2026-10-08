@@ -1,7 +1,22 @@
 import type { Metadata } from "next";
+import { Inter, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { LangProvider } from "@/lib/i18n";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const notoSansSC = Noto_Sans_SC({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-noto-sc",
+  weight: ["400", "500", "700", "900"],
+});
 
 const BASE_URL = "https://vgo-landing.vercel.app";
 
@@ -108,7 +123,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-MY">
+    <html lang="zh-MY" className={`${inter.variable} ${notoSansSC.variable}`}>
       <head>
         <script
           type="application/ld+json"

@@ -88,7 +88,9 @@ html, body, header, section, footer, a, button, div {
 html, body {
   background: #FFFFFF;
   color: #1A1A1A;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Noto Sans', Arial, sans-serif;
+  font-family: var(--font-inter), var(--font-noto-sc), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', Arial, sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'ss01';
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
