@@ -116,3 +116,31 @@ html, body {
 }
 .marquee { animation: marquee 30s linear infinite; }
 .marquee:hover { animation-play-state: paused; }
+
+
+/* ===== Ken Burns 场景动效（图"活"起来）===== */
+@keyframes kb-zoom-in {
+  0%   { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.15) translate(-2%, -1%); }
+}
+@keyframes kb-zoom-out {
+  0%   { transform: scale(1.15) translate(1%, 1%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+@keyframes kb-pan-left {
+  0%   { transform: scale(1.1) translate(2%, 0); }
+  100% { transform: scale(1.1) translate(-2%, 0); }
+}
+@keyframes kb-pan-right {
+  0%   { transform: scale(1.1) translate(-2%, 0); }
+  100% { transform: scale(1.1) translate(2%, 0); }
+}
+.kb-zoom-in  { animation: kb-zoom-in 20s ease-in-out infinite alternate; }
+.kb-zoom-out { animation: kb-zoom-out 20s ease-in-out infinite alternate; }
+.kb-pan-left { animation: kb-pan-left 24s ease-in-out infinite alternate; }
+.kb-pan-right{ animation: kb-pan-right 24s ease-in-out infinite alternate; }
+
+/* hover 时暂停（尊重用户） */
+.kb-zoom-in:hover, .kb-zoom-out:hover, .kb-pan-left:hover, .kb-pan-right:hover {
+  animation-play-state: paused;
+}

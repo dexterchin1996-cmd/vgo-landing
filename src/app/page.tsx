@@ -20,11 +20,11 @@ import Notice from "@/components/Notice";
 import { useLang } from "@/lib/i18n";
 
 const HERO_IMAGES = [
-  "/shared/s01.jpg",
-  "/shared/s02.jpg",
-  "/shared/s03.jpg",
-  "/shared/s04.jpg",
-  "/shared/s05.jpg",
+  { src: "/shared/s01.jpg", kb: "kb-zoom-in" },
+  { src: "/shared/s02.jpg", kb: "kb-pan-right" },
+  { src: "/features/repair.jpg", kb: "kb-zoom-out" },
+  { src: "/shared/s03.jpg", kb: "kb-pan-left" },
+  { src: "/features/clean.jpg", kb: "kb-zoom-in" },
 ];
 
 const SLIDE_MS = 7000;
@@ -50,6 +50,18 @@ export default function Home() {
     <>
       <main id="home" className="relative min-h-[100svh] flex flex-col overflow-hidden bg-gray-950 noise">
         <div className="absolute inset-0 z-0">
+          {/* 视频背景（移动端跳过，省流量）*/}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="hidden md:block absolute inset-0 w-full h-full object-cover"
+            style={{ display: "none" }}
+          >
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
           <AnimatePresence mode="sync">
             <motion.div
               key={idx}
@@ -63,8 +75,8 @@ export default function Home() {
               className="absolute inset-0"
             >
               <div
-                className="kenburns absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url('${HERO_IMAGES[idx]}')` }}
+                className={`absolute inset-0 bg-cover bg-center ${HERO_IMAGES[idx].kb}`}
+                style={{ backgroundImage: `url('${HERO_IMAGES[idx].src}')` }}
               />
             </motion.div>
           </AnimatePresence>
