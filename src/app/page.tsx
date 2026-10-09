@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import NewsTicker from "@/components/NewsTicker";
@@ -17,6 +18,7 @@ import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import Waitlist from "@/components/Waitlist";
 import Notice from "@/components/Notice";
+import Reveal from "@/components/Reveal";
 import { useLang } from "@/lib/i18n";
 
 const HERO_IMAGES = [
@@ -145,24 +147,24 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-8 w-full max-w-sm mx-auto space-y-3"
           >
-            <a
-              href="#download"
+            <Link
+              href="/how-it-works/customer"
               className="group flex items-center justify-center gap-2 w-full px-6 py-4 rounded-2xl bg-gradient-to-b from-[var(--vgo-light)] to-[var(--vgo-dark)] text-white font-bold text-base shadow-[0_10px_30px_-8px_rgba(255,102,0,0.6)] hover:shadow-[0_16px_40px_-8px_rgba(255,102,0,0.8)] hover:scale-[1.02] active:scale-95 transition-all pulse-glow"
             >
               <span className="text-lg">👤</span>
               <span>{t("cta_customer")}</span>
               <span className="ml-1 px-2 py-0.5 rounded-full bg-white/25 text-[10px] font-black">领 RM80</span>
               <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
-            </a>
+            </Link>
             <div className="grid grid-cols-2 gap-3">
-              <a href="#merchant" className="flex items-center justify-center gap-1.5 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-xl border border-white/20 text-white text-xs sm:text-sm font-semibold hover:bg-white/15 hover:border-white/40 active:scale-95 transition-all">
+              <Link href="/how-it-works/merchant" className="flex items-center justify-center gap-1.5 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-xl border border-white/20 text-white text-xs sm:text-sm font-semibold hover:bg-white/15 hover:border-white/40 active:scale-95 transition-all">
                 <span>🏪</span>
                 <span>{t("cta_merchant")}</span>
-              </a>
-              <a href="#technician" className="flex items-center justify-center gap-1.5 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-xl border border-white/20 text-white text-xs sm:text-sm font-semibold hover:bg-white/15 hover:border-white/40 active:scale-95 transition-all">
+              </Link>
+              <Link href="/how-it-works/technician" className="flex items-center justify-center gap-1.5 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-xl border border-white/20 text-white text-xs sm:text-sm font-semibold hover:bg-white/15 hover:border-white/40 active:scale-95 transition-all">
                 <span>🔧</span>
                 <span>{t("cta_tech")}</span>
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -213,18 +215,18 @@ export default function Home() {
       </main>
 
       <NewsTicker />
-      <PainPoints />
-      <AboutVGO />
-      <FeatureCards />
-      <SceneShowcase />
-      <HowItWorks />
-      <Guarantees />
-      <Roles />
-      <Merchant />
-      <Testimonials />
-      <Cooperation />
-      <FAQ />
-      <FinalCTA />
+      <Reveal><PainPoints /></Reveal>
+      <Reveal><AboutVGO /></Reveal>
+      <Reveal><FeatureCards /></Reveal>
+      <Reveal><SceneShowcase /></Reveal>
+      <Reveal><HowItWorks /></Reveal>
+      <Reveal><Guarantees /></Reveal>
+      <Reveal><Roles /></Reveal>
+      <Reveal><Merchant /></Reveal>
+      <Reveal><Testimonials /></Reveal>
+      <Reveal><Cooperation /></Reveal>
+      <Reveal><FAQ /></Reveal>
+      <Reveal><FinalCTA /></Reveal>
       <Footer />
       <Waitlist />
       <Notice />

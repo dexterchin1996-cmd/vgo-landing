@@ -21,7 +21,7 @@ const notoSansSC = Noto_Sans_SC({
   weight: ["400", "500", "700", "900"],
 });
 
-const BASE_URL = "https://vgo-landing.vercel.app";
+const BASE_URL = "https://vgo-website.vercel.app";
 
 export const viewport = {
   width: "device-width",

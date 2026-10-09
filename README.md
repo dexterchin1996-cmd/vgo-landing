@@ -1,9 +1,9 @@
 # VGO Malaysia · 官网
 
-> 已上线 https://vgo-landing.vercel.app
+> 已上线 https://vgo-website.vercel.app
 
 ## 快速开始
-    cd ~/vgo-dev/vgo-landing
+    cd ~/vgo-dev/vgo-website
     NODE_OPTIONS=--max-old-space-size=1024 nohup npm run dev > dev.log 2>&1 &
 
 ## 技术栈
@@ -72,7 +72,7 @@ push 到 GitHub → Vercel 自动部署
 - Roles / Merchant / FinalCTA 3 处按钮跳转 bug
 - 全站移除私人邮箱，统一 support.vgo@gmail.com
 - 全站移除手机号（法律页只保留邮箱）
-- 后端 .gitignore 加 vgo-landing/（避免前端混进后端 repo）
+- 后端 .gitignore 加 vgo-website/（避免前端混进后端 repo）
 
 ### 当前 HEAD
 - 前端：c37b942
@@ -80,10 +80,10 @@ push 到 GitHub → Vercel 自动部署
 
 ### 常用命令
 前端重启：
-    cd ~/vgo-dev/vgo-landing && pkill -9 -f "next dev"; pkill -9 -f "next-server"; sleep 3; NODE_OPTIONS=--max-old-space-size=1024 nohup npm run dev > dev.log 2>&1 & sleep 15 && tail -5 dev.log
+    cd ~/vgo-dev/vgo-website && pkill -9 -f "next dev"; pkill -9 -f "next-server"; sleep 3; NODE_OPTIONS=--max-old-space-size=1024 nohup npm run dev > dev.log 2>&1 & sleep 15 && tail -5 dev.log
 
 本地 build 验证（push 前必跑）：
-    cd ~/vgo-dev/vgo-landing && NODE_OPTIONS=--max-old-space-size=1024 npm run build 2>&1 | tail -30
+    cd ~/vgo-dev/vgo-website && NODE_OPTIONS=--max-old-space-size=1024 npm run build 2>&1 | tail -30
 
 ### Vercel 排查（部署失败时用）
 Token: （请从 Vercel 后台生成，勿写入仓库）
