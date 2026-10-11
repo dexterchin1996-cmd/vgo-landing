@@ -6,6 +6,7 @@ const APPS = [
     icon: "👤",
     title: { zh: "客户版 App", en: "Customer App", ms: "App Pelanggan" },
     desc: { zh: "下单、报价、支付、评价", en: "Order, quote, pay, review", ms: "Pesan, sebut harga, bayar, ulasan" },
+    cta: { zh: "打开客户版", en: "Open Customer", ms: "Buka Pelanggan" },
     href: "https://customer.vgoservice.com",
     color: "#4A90D9",
   },
@@ -13,6 +14,7 @@ const APPS = [
     icon: "🏪",
     title: { zh: "商家版 App", en: "Merchant App", ms: "App Peniaga" },
     desc: { zh: "服务管理、排班、对账", en: "Services, schedule, settlement", ms: "Perkhidmatan, jadual, penyelesaian" },
+    cta: { zh: "打开商家版", en: "Open Merchant", ms: "Buka Peniaga" },
     href: "https://merchant.vgoservice.com",
     color: "#FF8A1F",
   },
@@ -20,6 +22,7 @@ const APPS = [
     icon: "🔧",
     title: { zh: "师傅版 App", en: "Technician App", ms: "App Teknisi" },
     desc: { zh: "接单、报价、上传证据", en: "Jobs, quotes, upload evidence", ms: "Kerja, sebut harga, muat naik bukti" },
+    cta: { zh: "打开师傅版", en: "Open Technician", ms: "Buka Teknisi" },
     href: "https://tech.vgoservice.com",
     color: "#2BAE66",
   },
@@ -43,25 +46,31 @@ export default function AppLinks() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+        <div className="flex flex-col gap-4 mb-10">
           {APPS.map((app) => (
             <a
               key={app.href}
               href={app.href}
-              className="group relative p-6 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all"
+              className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all"
             >
               <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-4"
+                className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shrink-0"
                 style={{ background: `${app.color}20`, color: app.color }}
               >
                 {app.icon}
               </div>
-              <h3 className="text-lg font-black text-gray-900 mb-1">{app.title[L]}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed mb-4">{app.desc[L]}</p>
-              <div className="flex items-center gap-1.5 text-sm font-bold" style={{ color: app.color }}>
-                <span>{L === "zh" ? "立即打开" : L === "ms" ? "Buka sekarang" : "Open now"}</span>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-base sm:text-lg font-black text-gray-900 mb-0.5">{app.title[L]}</h3>
+                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">{app.desc[L]}</p>
+              </div>
+              <div
+                className="hidden sm:flex items-center gap-1 text-sm font-bold shrink-0"
+                style={{ color: app.color }}
+              >
+                <span>{app.cta[L]}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
+              <span className="sm:hidden text-xl shrink-0" style={{ color: app.color }}>→</span>
             </a>
           ))}
         </div>
