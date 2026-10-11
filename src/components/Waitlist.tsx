@@ -48,7 +48,7 @@ function Field({ label, required, children }: { label: string; required?: boolea
 }
 
 export default function Waitlist() {
-  const { lang } = useLang();
+  const { lang, t } = useLang();
   const l = (lang as Lang) || "en";
   const c = T[l] ?? T.en;
 
@@ -337,22 +337,22 @@ export default function Waitlist() {
                                         >
                                           <CheckCircle2 size={42} className="text-green-500" strokeWidth={2.5} />
                                         </motion.div>
-                                        <h3 className="text-2xl font-black text-gray-900 mb-2">📧 请查收邮件</h3>
+                                        <h3 className="text-2xl font-black text-gray-900 mb-2">{t("waitlist_email_title")}</h3>
                                         <p className="text-sm text-gray-500 mb-6">Check your inbox to verify your email</p>
                     
                                         <div className="my-6 p-5 rounded-2xl bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100">
-                                          <div className="text-[11px] text-gray-500 mb-1.5">验证邮件已发送至</div>
+                                          <div className="text-[11px] text-gray-500 mb-1.5">{t("waitlist_email_sent")}</div>
                                           <div className="text-sm font-black text-[var(--vgo)] break-all">{savedEmail || "your email"}</div>
-                                          {savedUsername && <div className="text-[11px] text-gray-400 mt-3">账号 ID：{savedUsername}</div>}
+                                          {savedUsername && <div className="text-[11px] text-gray-400 mt-3">{t("waitlist_account_id")}{savedUsername}</div>}
                                           {sysId && <div className="text-[10px] text-gray-400 mt-1">{sysId}</div>}
                                         </div>
                     
                                         <div className="p-4 rounded-2xl bg-blue-50 border border-blue-100 mb-5 text-left">
-                                          <div className="text-sm font-black text-blue-700 mb-2">📮 下一步：</div>
+                                          <div className="text-sm font-black text-blue-700 mb-2">{t("waitlist_next_title")}</div>
                                           <ol className="text-xs text-blue-800 leading-relaxed space-y-1 pl-4 list-decimal">
-                                            <li>打开你的邮箱</li>
-                                            <li>点击邮件里的「验证我的邮箱」按钮</li>
-                                            <li>验证成功后即可登录 App 领取福利</li>
+                                            <li>{t("waitlist_step1")}</li>
+                                            <li>{t("waitlist_step2")}</li>
+                                            <li>{t("waitlist_step3")}</li>
                                           </ol>
                                         </div>
                     
@@ -428,6 +428,21 @@ export default function Waitlist() {
                       >
                         {gI("cta")}
                         <ArrowRight size={18} strokeWidth={2.5} />
+                      </button>
+
+                      <button
+                        onClick={() => {
+                          const url = role === "merchant"
+                            ? "https://merchant.vgoservice.com/login/merchant"
+                            : role === "tech" || role === "artisan"
+                              ? "https://tech.vgoservice.com/login/provider"
+                              : "https://customer.vgoservice.com/login/customer";
+                          window.location.href = url;
+                        }}
+                        className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-white border border-gray-200 text-gray-700 font-bold text-[14px] hover:bg-gray-50 active:scale-[0.98] transition"
+                      >
+                        {l === "zh" ? "已有账号？直接登录" : l === "ms" ? "Sudah ada akaun? Log masuk" : "Already have an account? Login"}
+                        <ArrowRight size={16} strokeWidth={2.5} />
                       </button>
 
                       <div className="flex items-center justify-center gap-1.5 pt-1">
