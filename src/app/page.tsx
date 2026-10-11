@@ -15,6 +15,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Cooperation from "@/components/Cooperation";
 import FinalCTA from "@/components/FinalCTA";
+import AppLinks from "@/components/AppLinks";
 import Footer from "@/components/Footer";
 import Waitlist from "@/components/Waitlist";
 import Notice from "@/components/Notice";
@@ -42,9 +43,9 @@ export default function Home() {
   }, []);
 
   const STATS = [
-    { num: "4.9",  label: t("stat_rating") },
-    { num: "12K+", label: t("stat_family") },
-    { num: "30+",  label: t("stat_category") },
+    { num: "亚庇", label: t("stat_rating") },
+    { num: "首批", label: t("stat_family") },
+    { num: "6 大", label: t("stat_category") },
     { num: "全马", label: t("stat_cover") },
   ];
 
@@ -52,18 +53,6 @@ export default function Home() {
     <>
       <main id="home" className="relative min-h-[100svh] flex flex-col overflow-hidden bg-gray-950 noise">
         <div className="absolute inset-0 z-0">
-          {/* 视频背景（移动端跳过，省流量）*/}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            className="hidden md:block absolute inset-0 w-full h-full object-cover"
-            style={{ display: "none" }}
-          >
-            <source src="/videos/hero.mp4" type="video/mp4" />
-          </video>
           <AnimatePresence mode="sync">
             <motion.div
               key={idx}
@@ -180,6 +169,7 @@ export default function Home() {
               <div key={s.label} className="py-2 rounded-xl bg-white/5 hover:bg-white/10 transition-colors text-center">
                 <div className="text-base sm:text-2xl font-black text-[var(--vgo)] leading-tight">{s.num}</div>
                 <div className="text-[10px] sm:text-xs text-white/65 mt-0.5">{s.label}</div>
+                <div className="text-[8px] text-white/30 mt-0.5">示例</div>
               </div>
             ))}
           </motion.div>
@@ -215,18 +205,19 @@ export default function Home() {
       </main>
 
       <NewsTicker />
-      <Reveal><PainPoints /></Reveal>
-      <Reveal><AboutVGO /></Reveal>
       <Reveal><FeatureCards /></Reveal>
       <Reveal><SceneShowcase /></Reveal>
+      <Reveal><PainPoints /></Reveal>
+      <Reveal><AboutVGO /></Reveal>
       <Reveal><HowItWorks /></Reveal>
       <Reveal><Guarantees /></Reveal>
+      <Reveal><Testimonials /></Reveal>
       <Reveal><Roles /></Reveal>
       <Reveal><Merchant /></Reveal>
-      <Reveal><Testimonials /></Reveal>
       <Reveal><Cooperation /></Reveal>
       <Reveal><FAQ /></Reveal>
       <Reveal><FinalCTA /></Reveal>
+      <AppLinks />
       <Footer />
       <Waitlist />
       <Notice />
