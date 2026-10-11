@@ -21,3 +21,4 @@ public/videos/*.mp4
 *.bak*
 *.log
 tsconfig.tsbuildinfo
+.vercel

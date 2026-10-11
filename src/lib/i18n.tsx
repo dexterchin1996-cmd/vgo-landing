@@ -10,6 +10,15 @@ export const TRANSLATIONS = {
     nav_news: "公告",
     nav_about: "关于",
     nav_download: "下载 App",
+    nav_city_badge: "亚庇",
+    waitlist_email_title: "📧 请查收邮件",
+    waitlist_email_sent: "验证邮件已发送至",
+    waitlist_account_id: "账号 ID：",
+    waitlist_next_title: "📮 下一步：",
+    waitlist_step1: "打开你的邮箱",
+    waitlist_step2: "点击邮件里的「验证我的邮箱」按钮",
+    waitlist_step3: "验证成功后即可登录 App 领取福利",
+    nav_batch_badge: "首批",
     pricing_fixed: "固定价",
     pricing_quote: "报价制",
     drawer_group_service: "服务",
@@ -159,6 +168,8 @@ export const TRANSLATIONS = {
     cta_title2: "上门找 V'GO",
     cta_sub: "免费注册，认证师傅随叫随到",
     cta_register: "免费注册",
+    cta_voucher_banner: "注册即送 RM80 上门检查券",
+    ready_title: "准备好了吗？",
     cta_download: "下载 App",
     cta_note: "iOS · Android · 无需应用商店，浏览器直接安装",
     footer_tagline: "马来西亚上门服务平台。\n认证师傅，随叫随到。",
@@ -308,6 +319,15 @@ export const TRANSLATIONS = {
     nav_news: "News",
     nav_about: "About",
     nav_download: "Download App",
+    nav_city_badge: "KK",
+    nav_batch_badge: "Early",
+    waitlist_email_title: "📧 Check your inbox",
+    waitlist_email_sent: "Verification email sent to",
+    waitlist_account_id: "Account ID: ",
+    waitlist_next_title: "📮 Next steps:",
+    waitlist_step1: "Open your email inbox",
+    waitlist_step2: "Click the \"Verify my email\" button",
+    waitlist_step3: "After verification, log in to the app and claim your reward",
     pricing_fixed: "Fixed Rate",
     pricing_quote: "Quotation",
     drawer_group_service: "Services",
@@ -457,6 +477,8 @@ export const TRANSLATIONS = {
     cta_title2: "V'GO's On The Way",
     cta_sub: "Free to sign up. Certified pros on demand.",
     cta_register: "Sign Up Free",
+    cta_voucher_banner: "Sign up and get RM80 home inspection voucher",
+    ready_title: "Ready to start?",
     cta_download: "Download App",
     cta_note: "iOS · Android · No app store needed — install from browser",
     footer_tagline: "Malaysia home-service platform.\nCertified hands, one tap away.",
@@ -606,6 +628,15 @@ export const TRANSLATIONS = {
     nav_news: "Berita",
     nav_about: "Tentang",
     nav_download: "Muat Turun",
+    nav_city_badge: "KK",
+    nav_batch_badge: "Awal",
+    waitlist_email_title: "📧 Sila semak e-mel",
+    waitlist_email_sent: "E-mel pengesahan dihantar ke",
+    waitlist_account_id: "ID Akaun: ",
+    waitlist_next_title: "📮 Langkah seterusnya:",
+    waitlist_step1: "Buka peti masuk e-mel anda",
+    waitlist_step2: "Klik butang \"Sahkan e-mel saya\"",
+    waitlist_step3: "Selepas pengesahan, log masuk ke app dan tuntut ganjaran",
     pricing_fixed: "Harga Tetap",
     pricing_quote: "Sebutharga",
     drawer_group_service: "Perkhidmatan",
@@ -755,6 +786,8 @@ export const TRANSLATIONS = {
     cta_title2: "Kami Sedia",
     cta_sub: "Daftar percuma. Tukang bertauliah sedia membantu.",
     cta_register: "Daftar Percuma",
+    cta_voucher_banner: "Daftar dan dapat baun pemeriksaan RM80",
+    ready_title: "Sedia mula?",
     cta_download: "Muat Turun App",
     cta_note: "iOS · Android · Tak perlu app store — pasang dari browser",
     footer_tagline: "Platform perkhidmatan ke rumah Malaysia.\nTukang bertauliah, satu tap sahaja.",
@@ -900,7 +933,7 @@ export const TRANSLATIONS = {
   },
 } as const;
 
-export type TransKey = keyof typeof TRANSLATIONS.zh;
+export type TransKey = keyof typeof TRANSLATIONS.zh | (string & {});
 
 const LangCtx = createContext<{
   lang: Lang;
@@ -909,7 +942,7 @@ const LangCtx = createContext<{
 }>({
   lang: "zh",
   setLang: () => {},
-  t: (k) => TRANSLATIONS.zh[k],
+  t: (k) => (TRANSLATIONS.zh as any)[k],
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
@@ -932,7 +965,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
       ? navigator.languages
       : [navigator.language || "en"]).map(l => String(l).toLowerCase());
 
-    let detected: Lang = "en"; // 默认英文
+    let detected: Lang = "en"; // fallback 英文，检测不到设备语言时用
     for (const l of langs) {
       if (l.startsWith("zh")) { detected = "zh"; break; }
       if (l.startsWith("ms") || l.startsWith("id")) { detected = "ms"; break; }
@@ -951,7 +984,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const t = (k: TransKey) => TRANSLATIONS[lang][k] ?? TRANSLATIONS.zh[k];
+  const t = (k: TransKey) => (TRANSLATIONS[lang] as any)[k] ?? (TRANSLATIONS.zh as any)[k];
 
   return <LangCtx.Provider value={{ lang, setLang, t }}>{children}</LangCtx.Provider>;
 }

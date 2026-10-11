@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "motion/react";
 import Link from "next/link";
 import { ArrowLeft, TrendingUp, MapPin, Target, Globe, Mail, MessageCircle, Sparkles, Store, Wrench, Crown, Briefcase } from "lucide-react";
@@ -15,9 +16,9 @@ export default function PartnerPage() {
   ];
 
   const TRACTION = [
-    { num: "30+",  label: t("partner_traction_1") },
-    { num: "4.9",  label: t("partner_traction_2") },
-    { num: "12K+", label: t("partner_traction_3") },
+    { num: "6 大", label: t("partner_traction_1") },
+    { num: "亚庇", label: t("partner_traction_2") },
+    { num: "首批", label: t("partner_traction_3") },
     { num: "全马", label: t("partner_traction_4") },
   ];
 

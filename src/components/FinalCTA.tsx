@@ -24,7 +24,7 @@ export default function FinalCTA() {
           <div className="relative">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs sm:text-sm font-bold mb-5">
               <span className="text-lg">🎁</span>
-              <span>注册即送 <span className="text-lg font-black">RM80</span> 上门检查券</span>
+              <span>{t("cta_voucher_banner")}</span>
             </div>
 
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight">
@@ -37,10 +37,10 @@ export default function FinalCTA() {
             </p>
 
             <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a href="#download" className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-white text-[var(--vgo-dark)] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-all">
+              <a href="/how-it-works/customer" className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-white text-[var(--vgo-dark)] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-all">
                 {t("cta_register")}
               </a>
-              <a href="#technician" className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-white/15 backdrop-blur-md border border-white/40 text-white font-bold text-base hover:bg-white/25 active:scale-95 transition-all">
+              <a href="/services/repair" className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-white/15 backdrop-blur-md border border-white/40 text-white font-bold text-base hover:bg-white/25 active:scale-95 transition-all">
                 {t("cta_download")}
               </a>
             </div>

@@ -6,10 +6,10 @@ import { useLang } from "@/lib/i18n";
 
 const C = {
   zh: {
-    label: "真实场景",
+    label: "使用场景（示例）",
     title: "这些时候，你需要 VGO",
     scenes: [
-      { tag: "紧急维修", title: "半夜水管爆了？", desc: "拍照下单，附近认证师傅 30 分钟上门。24 小时接单，明码标价，不会坐地起价。", cta: "立即叫师傅", img: "/scenes/burst.jpg", icon: "urgent" },
+      { tag: "紧急维修", title: "半夜水管爆了？", desc: "拍照下单，附近认证师傅就近匹配。24 小时接单，明码标价，不会坐地起价。", cta: "立即叫师傅", img: "/scenes/burst.jpg", icon: "urgent" },
       { tag: "家庭清洁", title: "周末想休息，不想打扫？", desc: "专业保洁团队上门，自带工具和清洁剂。深度清洁、开荒保洁、日常维护，一次搞定。", cta: "预约保洁", img: "/shared/s01.jpg", icon: "clean" },
       { tag: "按摩养生", title: "工作累了，想放松？", desc: "认证按摩师上门，中式推拿、泰式按摩、经络疏通。不用出门，在自己家就能享受。", cta: "预约按摩", img: "/shared/s09.jpg", icon: "massage" },
       { tag: "跑腿代购", title: "没时间买东西？", desc: "同城跑腿、代买代送、加急配送。买菜、取快递、送文件，交给靠谱的人。", cta: "找人跑腿", img: "/scenes/move.jpg", icon: "errand" },
@@ -17,10 +17,10 @@ const C = {
     ],
   },
   en: {
-    label: "Real Scenarios",
+    label: "Use Cases (Sample)",
     title: "When You'll Need VGO",
     scenes: [
-      { tag: "Urgent Repair", title: "Pipe burst at midnight?", desc: "Snap a photo, order in one tap. Certified pros nearby arrive in 30 minutes. 24/7 service, transparent pricing.", cta: "Get a Pro Now", img: "/scenes/burst.jpg", icon: "urgent" },
+      { tag: "Urgent Repair", title: "Pipe burst at midnight?", desc: "Snap a photo, order in one tap. Certified pros nearby, matched fast. 24/7 service, transparent pricing.", cta: "Get a Pro Now", img: "/scenes/burst.jpg", icon: "urgent" },
       { tag: "Home Cleaning", title: "Weekend off, no cleaning?", desc: "Professional cleaning team comes to you, tools and supplies included. Deep clean, move-in clean, or regular upkeep.", cta: "Book Cleaning", img: "/shared/s01.jpg", icon: "clean" },
       { tag: "Massage", title: "Tired after work?", desc: "Certified therapists come to you — Chinese tui na, Thai massage, meridian therapy. Relax in your own home.", cta: "Book Massage", img: "/shared/s09.jpg", icon: "massage" },
       { tag: "Errands", title: "No time to shop?", desc: "Same-city errands, buy & deliver, express pickup. Groceries, parcels, documents — handed to someone reliable.", cta: "Send Errand", img: "/scenes/move.jpg", icon: "errand" },
@@ -28,10 +28,10 @@ const C = {
     ],
   },
   ms: {
-    label: "Senario Sebenar",
+    label: "Senario (Contoh)",
     title: "Bila Anda Perlukan VGO",
     scenes: [
-      { tag: "Pembaikan Segera", title: "Paip pecah tengah malam?", desc: "Ambil gambar, tempah satu tap. Tukang bertauliah berdekatan sampai 30 minit. 24 jam, harga telus.", cta: "Panggil Tukang", img: "/scenes/burst.jpg", icon: "urgent" },
+      { tag: "Pembaikan Segera", title: "Paip pecah tengah malam?", desc: "Ambil gambar, tempah satu tap. Tukang bertauliah berdekatan. 24 jam, harga telus.", cta: "Panggil Tukang", img: "/scenes/burst.jpg", icon: "urgent" },
       { tag: "Pembersihan Rumah", title: "Hujung minggu nak rehat?", desc: "Pasukan cuci profesional datang ke rumah, bawa alat sendiri. Cuci mendalam atau penyelenggaraan biasa.", cta: "Tempah Pembersihan", img: "/shared/s01.jpg", icon: "clean" },
       { tag: "Urutan", title: "Penat lepas kerja?", desc: "Tukang urut bertauliah datang — tui na Cina, urutan Thai, terapi meridian. Rehat di rumah sendiri.", cta: "Tempah Urutan", img: "/shared/s09.jpg", icon: "massage" },
       { tag: "Penghantaran", title: "Tak ada masa nak beli?", desc: "Penghantaran same-city, beli & hantar, pickup ekspres. Barang dapur, parcel, dokumen — serah pada yang dipercayai.", cta: "Hantar Sekarang", img: "/scenes/move.jpg", icon: "errand" },

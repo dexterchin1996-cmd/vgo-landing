@@ -23,27 +23,27 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
       key: "drawer_group_service",
       items: [
         { icon: Home,     label: t("nav_home"),       href: "#home" },
-        { icon: Wrench,   label: t("drawer_repair"),  href: "#features" },
-        { icon: Sparkles, label: t("drawer_clean"),   href: "#features" },
-        { icon: Heart,    label: t("drawer_massage"), href: "#features" },
-        { icon: Truck,    label: t("drawer_errand"),  href: "#features" },
+        { icon: Wrench,   label: t("drawer_repair"),  href: "/services/repair/" },
+        { icon: Sparkles, label: t("drawer_clean"),   href: "/services/clean/" },
+        { icon: Heart,    label: t("drawer_massage"), href: "/services/massage/" },
+        { icon: Truck,    label: t("drawer_errand"),  href: "/services/errand/" },
       ],
     },
     {
       key: "drawer_group_market",
       items: [
-        { icon: ShoppingBag, label: t("drawer_market"), href: "#features" },
-        { icon: Briefcase,   label: t("drawer_jobs"),   href: "#features" },
-        { icon: Megaphone,   label: t("drawer_news"),   href: "#news" },
+        { icon: ShoppingBag, label: t("drawer_market"), href: "/services/market/" },
+        { icon: Briefcase,   label: t("drawer_jobs"),   href: "/services/jobs/" },
+        { icon: Megaphone,   label: t("drawer_news"),   href: "/offers/" },
       ],
     },
     {
       key: "drawer_group_about",
       items: [
-        { icon: Info,     label: t("drawer_about"),  href: "/about" },
-        { icon: BookOpen, label: t("drawer_how"),    href: "/how-it-works/customer" },
-        { icon: Gift,     label: t("drawer_offers"), href: "/offers" },
-        { icon: Users,    label: t("nav_partner"),   href: "/partner" },
+        { icon: Info,     label: t("drawer_about"),  href: "/about/" },
+        { icon: BookOpen, label: t("drawer_how"),    href: "/how-it-works/customer/" },
+        { icon: Gift,     label: t("drawer_offers"), href: "/offers/" },
+        { icon: Users,    label: t("nav_partner"),   href: "/partner/" },
       ],
     },
   ];
@@ -62,7 +62,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
             className="fixed top-0 left-0 bottom-0 z-[70] w-[82%] max-w-sm bg-white shadow-2xl flex flex-col md:hidden">
             <div className="flex items-center justify-between px-5 h-16 border-b border-gray-100">
               <div className="flex items-center gap-2.5">
-                <Image src="/logo-bg.png" alt="V'GO" width={36} height={36} className="w-9 h-9 object-contain shrink-0" />
+                <Image src="/logo-mark.svg" alt="V'GO" width={36} height={36} className="w-9 h-9 object-contain shrink-0" />
                 <div className="flex flex-col leading-none">
                   <span className="font-black text-lg text-gray-900">V'GO</span>
                   <span className="text-[8px] font-semibold tracking-[0.2em] text-gray-400">Smart. Simple. Sorted.</span>

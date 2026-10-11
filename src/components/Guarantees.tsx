@@ -6,7 +6,7 @@ import { useLang } from "@/lib/i18n";
 const C = {
   zh: {
     label: "我们的承诺",
-    title: "为什么 12K+ 家庭选择 VGO",
+    title: "为什么选择 VGO",
     sub: "6 大保障，让你用得放心",
     items: [
       { Icon: ShieldCheck, title: "认证师傅", p1: "身份验证 + 技能审核", p2: "不满意免费更换" },
@@ -19,7 +19,7 @@ const C = {
   },
   en: {
     label: "Our Promise",
-    title: "Why 12K+ Families Choose VGO",
+    title: "Why Choose VGO",
     sub: "6 guarantees for your peace of mind",
     items: [
       { Icon: ShieldCheck, title: "Certified Pros", p1: "ID + skill verified", p2: "Free replacement if unsatisfied" },
@@ -32,7 +32,7 @@ const C = {
   },
   ms: {
     label: "Janji Kami",
-    title: "Kenapa 12K+ Keluarga Pilih VGO",
+    title: "Kenapa Pilih VGO",
     sub: "6 jaminan untuk ketenangan anda",
     items: [
       { Icon: ShieldCheck, title: "Tukang Bertauliah", p1: "Pengesahan ID + kemahiran", p2: "Ganti percuma jika tak puas" },

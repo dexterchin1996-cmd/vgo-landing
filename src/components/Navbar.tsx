@@ -25,20 +25,20 @@ export default function Navbar() {
     {
       label: t("nav_features"), href: "#features",
       children: [
-        { icon: Wrench,   label: t("drawer_repair"),  href: "#features" },
-        { icon: Sparkles, label: t("drawer_clean"),   href: "#features" },
-        { icon: Heart,    label: t("drawer_massage"), href: "#features" },
-        { icon: Truck,    label: t("drawer_errand"),  href: "#features" },
+        { icon: Wrench,   label: t("drawer_repair"),  href: "/services/repair/" },
+        { icon: Sparkles, label: t("drawer_clean"),   href: "/services/clean/" },
+        { icon: Heart,    label: t("drawer_massage"), href: "/services/massage/" },
+        { icon: Truck,    label: t("drawer_errand"),  href: "/services/errand/" },
       ],
     },
     { label: t("nav_news"), href: "#news" },
-    { label: t("nav_partner"), href: "/partner" },
-    { label: t("nav_about"), href: "/about" },
-    { label: lang === "zh" ? "福利" : lang === "ms" ? "Tawaran" : "Offers", href: "/offers" },
+    { label: t("nav_partner"), href: "/partner/" },
+    { label: t("nav_about"), href: "/about/" },
+    { label: lang === "zh" ? "福利" : lang === "ms" ? "Tawaran" : "Offers", href: "/offers/" },
     { label: lang === "zh" ? "指南" : lang === "ms" ? "Panduan" : "Guides", children: [
-      { icon: User,   label: lang === "zh" ? "客户指南" : lang === "ms" ? "Panduan Pelanggan" : "Customer Guide",   href: "/how-it-works/customer" },
-      { icon: Store,  label: lang === "zh" ? "商家指南" : lang === "ms" ? "Panduan Peniaga"   : "Merchant Guide",   href: "/how-it-works/merchant" },
-      { icon: Wrench, label: lang === "zh" ? "师傅指南" : lang === "ms" ? "Panduan Juruteknik" : "Technician Guide", href: "/how-it-works/technician" },
+      { icon: User,   label: lang === "zh" ? "客户指南" : lang === "ms" ? "Panduan Pelanggan" : "Customer Guide",   href: "/how-it-works/customer/" },
+      { icon: Store,  label: lang === "zh" ? "商家指南" : lang === "ms" ? "Panduan Peniaga"   : "Merchant Guide",   href: "/how-it-works/merchant/" },
+      { icon: Wrench, label: lang === "zh" ? "师傅指南" : lang === "ms" ? "Panduan Juruteknik" : "Technician Guide", href: "/how-it-works/technician/" },
     ] },
   ];
 
@@ -51,7 +51,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
-            <Image src="/logo-bg.png" alt="V'GO" width={40} height={40} priority className="w-10 h-10 object-contain shrink-0" />
+            <Image src="/logo-mark.svg" alt="V'GO" width={40} height={40} priority className="w-10 h-10 object-contain shrink-0" />
             <div className="flex flex-col leading-none">
               <span className={`font-black text-2xl tracking-tight transition-colors ${scrolled ? "text-gray-900" : "text-white"}`}>
                 V&apos;GO
@@ -66,9 +66,9 @@ export default function Navbar() {
             scrolled ? "bg-gray-100 border-gray-200" : "bg-white/15 border-white/25"
           }`}>
             <Star size={11} className="text-yellow-400 fill-yellow-400" />
-            <span className={`text-[11px] font-bold ${scrolled ? "text-gray-900" : "text-white"}`}>4.9</span>
+            <span className={`text-[11px] font-bold ${scrolled ? "text-gray-900" : "text-white"}`}>{t("nav_city_badge")}</span>
             <span className={`text-[10px] ${scrolled ? "text-gray-400" : "text-white/50"}`}>·</span>
-            <span className={`text-[10px] font-medium ${scrolled ? "text-gray-500" : "text-white/70"}`}>12K+</span>
+            <span className={`text-[10px] font-medium ${scrolled ? "text-gray-500" : "text-white/70"}`}>{t("nav_batch_badge")}</span>
           </div>
 
           <nav className="hidden md:flex items-center gap-1">

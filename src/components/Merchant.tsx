@@ -40,8 +40,7 @@ export default function Merchant() {
             <p className="mt-5 text-gray-600 text-base leading-relaxed">{t("merchant_desc")}</p>
 
             <div className="mt-7 rounded-3xl overflow-hidden shadow-xl">
-              <img
-                src="/shared/s06.jpg"
+              <img loading="lazy"                 src="/shared/s06.jpg"
                 alt="Merchant"
                 className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -67,7 +66,7 @@ export default function Merchant() {
             </div>
 
             <a
-              href="#merchant"
+              href="/merchant"
               className="mt-8 inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-[var(--vgo)] text-white font-bold shadow-lg shadow-orange-500/30 hover:bg-[var(--vgo-dark)] hover:scale-105 transition-all pulse-glow"
             >
               {t("merchant_cta")}

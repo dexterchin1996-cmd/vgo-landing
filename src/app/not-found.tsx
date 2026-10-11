@@ -1,16 +1,20 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center bg-[#0F172A] text-white">
-      <div className="w-20 h-20 rounded-2xl bg-white text-[#1B2A47] flex items-center justify-center text-3xl font-black mb-8">V&apos;GO</div>
-      <h1 className="text-6xl font-black mb-3">404</h1>
-      <p className="text-white/70 text-lg mb-2">页面走丢了</p>
-      <p className="text-white/50 text-sm mb-10">你要找的页面不存在，或已经搬家。</p>
-      <div className="flex gap-3">
-        <Link href="/" className="px-6 py-3 rounded-xl bg-[#FF6600] text-white font-bold">回首页</Link>
-        <Link href="/contact" className="px-6 py-3 rounded-xl bg-white/10 text-white font-bold">联系我们</Link>
+    <main className="min-h-screen flex items-center justify-center bg-gray-950 text-white px-5 relative overflow-hidden">
+      <div className="absolute -top-32 -left-24 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(255,102,0,.22), transparent 70%)" }} />
+      <div className="absolute -bottom-32 -right-24 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(96,165,250,.18), transparent 70%)" }} />
+
+      <div className="relative text-center max-w-lg">
+        <div className="text-[100px] sm:text-[140px] font-black leading-none bg-gradient-to-b from-[#FFD24A] to-[#FF6600] bg-clip-text text-transparent">404</div>
+        <h1 className="text-2xl sm:text-3xl font-black mt-2">页面走丢了</h1>
+        <p className="text-sm text-white/60 mt-3 leading-relaxed">你要找的页面不存在，或已经被移动。<br/>回到首页继续浏览吧。</p>
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <Link href="/" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-all">回到首页</Link>
+          <Link href="/contact/" className="text-sm text-white/60 hover:text-white transition">联系我们 →</Link>
+        </div>
       </div>
-    </div>
+    </main>
   );
 }

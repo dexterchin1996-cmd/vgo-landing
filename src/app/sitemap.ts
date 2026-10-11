@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -9,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/contact', priority: 0.9, freq: 'monthly' },
     { url: '/faq', priority: 0.7, freq: 'monthly' },
     { url: '/partner', priority: 0.8, freq: 'monthly' },
+    { url: '/merchant', priority: 0.9, freq: 'monthly' },
+    { url: '/technician', priority: 0.9, freq: 'monthly' },
     { url: '/offers', priority: 0.7, freq: 'weekly' },
     { url: '/how-it-works/customer', priority: 0.7, freq: 'monthly' },
     { url: '/how-it-works/merchant', priority: 0.7, freq: 'monthly' },

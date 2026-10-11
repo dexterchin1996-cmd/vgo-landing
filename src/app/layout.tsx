@@ -1,25 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CookieBanner from "@/components/CookieBanner";
+import BackToTop from "@/components/BackToTop";
+import ShareButton from "@/components/ShareButton";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { LangProvider } from "@/lib/i18n";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const notoSansSC = Noto_Sans_SC({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-noto-sc",
-  weight: ["400", "500", "700", "900"],
-});
 
 const BASE_URL = "https://vgo-website.vercel.app";
 
@@ -64,7 +51,7 @@ export const metadata: Metadata = {
     description: "马来西亚上门服务平台。居家维修、清洁、按摩、跑腿、商城、找工作，一站搞定。",
     images: [
       {
-        url: "/og-image.png",
+        url: "/shared/s01.jpg",
         width: 1200,
         height: 630,
         alt: "V'GO - 有事不用愁，上门找 V'GO",
@@ -75,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "V'GO · 有事不用愁，上门找 V'GO",
     description: "马来西亚上门服务平台。居家维修、清洁、按摩、跑腿、商城、找工作，一站搞定。",
-    images: ["/og-image.png"],
+    images: ["/shared/s01.jpg"],
   },
   robots: {
     index: true,
@@ -88,7 +75,10 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/icon.png",
+    icon: [
+      { url: "/logo-mark.svg", type: "image/svg+xml" },
+    ],
+    apple: "/logo-mark.svg",
   },
   category: "service",
 };
@@ -99,7 +89,7 @@ const jsonLd = {
   name: "V'GO",
   alternateName: "V Go On",
   url: BASE_URL,
-  logo: BASE_URL + "/logo-bg.png",
+  logo: BASE_URL + "/logo-mark.svg",
   description: "马来西亚沙巴本地生活服务平台。上门维修、清洁、按摩、跑腿、二手、招聘。",
   brand: "V'GO",
   parentOrganization: {
@@ -126,7 +116,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-MY" className={`${inter.variable} ${notoSansSC.variable}`}>
+    <html lang="zh-MY" >
       <head>
         <script
           type="application/ld+json"
@@ -137,7 +127,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LangProvider>
           <Navbar />
           {children}
-          <CookieBanner />
+          <BackToTop />
+        <ShareButton />
+        <CookieBanner />
           <Analytics />
           <SpeedInsights />
         </LangProvider>

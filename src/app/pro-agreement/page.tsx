@@ -1,4 +1,5 @@
 "use client";
+
 import { useLang } from "@/lib/i18n";
 import LegalShell from "@/components/LegalShell";
 type Sec = { t: string; c: string[] };

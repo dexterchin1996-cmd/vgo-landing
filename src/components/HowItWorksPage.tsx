@@ -53,7 +53,7 @@ const IMG = {
 
 const L = {
   zh: {
-    label: "操作指南", reviews_title: "用户怎么说", scroll: "向下滑动", cta: "立即注册", other: "查看其他角色指南",
+    label: "操作指南", reviews_title: "用户评价（示例）", scroll: "向下滑动", cta: "立即注册", other: "查看其他角色指南",
     pain_title: "你是不是也遇到过", solve_title: "VGO 怎么帮你解决",
     flow_title: "4 步搞定", before_t: "没有 VGO 时", after_t: "有 VGO 后",
     trust_title: "值得信赖", disclaimer: "本页为流程概览，不构成合同要约。手续费、结算、质保等具体条款，以您签署的《VGO 协议》为准。",
@@ -66,7 +66,7 @@ const L = {
         steps: [["提交需求","选服务、时间、地址，即时查看预估报价"],["智能匹配","系统推荐附近认证师傅，可查看评分和报价"],["上门服务","认证师傅按时到达，服务前确认最终价格"],["付款评价","App 内安全支付，完成后评价打分"]],
         before: ["靠熟人介绍","等电话等回复","上门才报价","出问题没人管"],
         after: ["30 秒找到人","就近自动匹配","下单前看清价","平台质保兜底"],
-        trust: [["4.9","用户评分"],["12K+","服务家庭"],["30+","服务类目"],["100%","平台质保"]],
+        trust: [["亚庇","首发城市"],["首批","邀请制"],["30+","服务类目"],["100%","平台运营"]],
       },
       merchant: {
         tag: "商家指南", title: "让全马客户，找到你的店",
@@ -76,7 +76,7 @@ const L = {
         steps: [["申请入驻","提交资料，免费创建店铺页"],["上架服务","配置服务和价格，平台首页推荐曝光"],["接收订单","客户下单，App 即时通知"],["结算售后","平台自动结算入账，协助处理售后"]],
         before: ["守店等客上门","抽成多到手的少","想触网不懂技术","没有线上曝光"],
         after: ["订单主动到家","手续费透明清晰","零技术一键上架","平台首页推荐"],
-        trust: [["12K+","活跃用户"],["0 元","入驻费用"],["免费","店铺页面"],["自动","结算入账"]],
+        trust: [["首批","邀请制"],["0 元","入驻费用"],["免费","店铺页面"],["自动","结算入账"]],
       },
       technician: {
         tag: "师傅指南", title: "有手艺，就有单",
@@ -86,12 +86,12 @@ const L = {
         steps: [["注册认证","提交技能和证件，平台审核认证"],["智能接单","就近派单或抢单，单源持续稳定"],["上门服务","按时到达，平台担保交易"],["自动打款","完工确认，平台自动打款入账"]],
         before: ["靠熟人接单","客户拖款跑单","比价杀价压低","没有稳定收入"],
         after: ["系统就近派单","平台担保打款","平台标准定价","单源持续稳定"],
-        trust: [["4.9","用户评分"],["12K+","服务家庭"],["100%","平台担保"],["24h","结算周期"]],
+        trust: [["亚庇","首发城市"],["首批","邀请制"],["100%","平台运营"],["按单结算","平台规则"]],
       },
     },
   },
   en: {
-    label: "How It Works", reviews_title: "What users say", scroll: "Scroll to explore", cta: "Sign Up Now", other: "View other role guides",
+    label: "How It Works", reviews_title: "Reviews (Sample)", scroll: "Scroll to explore", cta: "Sign Up Now", other: "View other role guides",
     pain_title: "Sound familiar?", solve_title: "How VGO solves it",
     flow_title: "4 Simple Steps", before_t: "Without VGO", after_t: "With VGO",
     trust_title: "Trusted by Thousands", disclaimer: "This page is a process overview and does not constitute a contractual offer. Fees, settlement and warranty terms are subject to the VGO Agreement you sign.",
@@ -104,7 +104,7 @@ const L = {
         steps: [["Post Request","Pick service, time, address — see upfront quote"],["Smart Match","See nearby certified technicians with ratings & prices"],["On-Site Service","Pro arrives on time, confirm final price first"],["Pay & Rate","Secure in-app payment, then rate"]],
         before: ["Ask friends for leads","Wait for callbacks","Quoted on site only","No one to complain to"],
         after: ["Find help in 30s","Auto-matched nearby","See price upfront","Platform warranty"],
-        trust: [["4.9","User rating"],["12K+","Families served"],["30+","Service categories"],["100%","Platform warranty"]],
+        trust: [["KK","Launch City"],["By invite","Beta Access"],["6","Core Services"],["100%","Platform-run"]],
       },
       merchant: {
         tag: "Merchant Guide", title: "Get found by customers nationwide",
@@ -114,7 +114,7 @@ const L = {
         steps: [["Apply","Submit info, get a free store page"],["List Services","Configure services & prices, featured on homepage"],["Receive Orders","Get instant in-app notifications"],["Settle & Support","Auto settlement, plus after-sales support"]],
         before: ["Wait for walk-ins","High commissions","No tech skills","Zero online exposure"],
         after: ["Orders come to you","Transparent fees","One-click listing","Featured on platform"],
-        trust: [["12K+","Active users"],["Free","Onboarding"],["Free","Store page"],["Auto","Settlement"]],
+        trust: [["By invite","Beta access"],["Free","Onboarding"],["Free","Store page"],["Auto","Settlement"]],
       },
       technician: {
         tag: "Technician Guide", title: "Have skills? Get jobs",
@@ -124,12 +124,12 @@ const L = {
         steps: [["Register & Verify","Submit skills & docs, get verified"],["Take Jobs","Nearby dispatch or grab, steady jobs"],["On-Site Service","Arrive on time, platform-secured transaction"],["Auto Payout","Complete job, auto payout to your account"]],
         before: ["Rely on referrals","Fear of non-payment","Price haggling","Unstable income"],
         after: ["Auto dispatch nearby","Guaranteed payout","Fair platform pricing","Steady jobs"],
-        trust: [["4.9","User rating"],["12K+","Families served"],["100%","Platform guarantee"],["24h","Payout cycle"]],
+        trust: [["KK","Launch City"],["By invite","Beta access"],["100%","Platform-run"],["Per order","Platform rules"]],
       },
     },
   },
   ms: {
-    label: "Panduan", reviews_title: "Kata pengguna", scroll: "Tatal ke bawah", cta: "Daftar Sekarang", other: "Lihat panduan peranan lain",
+    label: "Panduan", reviews_title: "Ulasan (Contoh)", scroll: "Tatal ke bawah", cta: "Daftar Sekarang", other: "Lihat panduan peranan lain",
     pain_title: "Pernah alami?", solve_title: "Cara VGO selesaikan",
     flow_title: "4 Langkah Mudah", before_t: "Tanpa VGO", after_t: "Dengan VGO",
     trust_title: "Dipercayai Ramai", disclaimer: "Halaman ini adalah gambaran proses dan bukan tawaran kontrak. Terma caj, penyelesaian dan jaminan tertakluk kepada Perjanjian VGO yang anda tandatangani.",
@@ -142,7 +142,7 @@ const L = {
         steps: [["Hantar Permintaan","Pilih servis, masa, alamat — lihat sebut harga awal"],["Padanan Pintar","Lihat juruteknik berhampiran dengan penilaian & harga"],["Servis di Lokasi","Pakar tiba tepat masa, sahkan harga dahulu"],["Bayar & Ulas","Bayar selamat dalam app, kemudian beri ulasan"]],
         before: ["Tanya kawan cari orang","Tunggu panggilan balik","Hanya quote di lokasi","Tiada tempat aduan"],
         after: ["Cari bantuan dalam 30s","Auto-padan berhampiran","Lihat harga di depan","Jaminan platform"],
-        trust: [["4.9","Penilaian"],["12K+","Keluarga"],["30+","Kategori servis"],["100%","Jaminan platform"]],
+        trust: [["KK","Bandar Pelancaran"],["Jemputan","Akses Beta"],["6","Servis Utama"],["100%","Platform"]],
       },
       merchant: {
         tag: "Panduan Peniaga", title: "Ditemui pelanggan seluruh negara",
@@ -152,7 +152,7 @@ const L = {
         steps: [["Mohon Sertai","Hantar maklumat, dapat halaman kedai percuma"],["Senarai Servis","Tetapkan servis & harga, dipaparkan di utama"],["Terima Pesanan","Notifikasi segera dalam app"],["Selesai & Sokongan","Auto penyelesaian, sokongan selepas jualan"]],
         before: ["Tunggu pelanggan masuk","Fi Perkhidmatan tinggi","Tiada kemahiran teknologi","Sifar pendedahan dalam talian"],
         after: ["Pesanan datang sendiri","Caj telus","Senarai sekali klik","Ditampilkan di platform"],
-        trust: [["12K+","Pengguna aktif"],["Percuma","Pendaftaran"],["Percuma","Halaman kedai"],["Auto","Penyelesaian"]],
+        trust: [["Jemputan","Akses beta"],["Percuma","Pendaftaran"],["Percuma","Halaman kedai"],["Auto","Penyelesaian"]],
       },
       technician: {
         tag: "Panduan Juruteknik", title: "Ada kemahiran? Dapat kerja",
@@ -162,7 +162,7 @@ const L = {
         steps: [["Daftar & Sahkan","Hantar kemahiran & dokumen, dapat pengesahan"],["Ambil Kerja","Hantar berhampiran atau rebut, kerja stabil"],["Servis di Lokasi","Tiba tepat masa, transaksi dijamin platform"],["Bayaran Auto","Siap kerja, auto bayar ke akaun"]],
         before: ["Bergantung rujukan","Takut tak dibayar","Tawar-menawar harga","Pendapatan tak stabil"],
         after: ["Auto-hantar berhampiran","Bayaran dijamin","Harga platform adil","Kerja stabil"],
-        trust: [["4.9","Penilaian"],["12K+","Keluarga"],["100%","Jaminan platform"],["24h","Kitaran bayaran"]],
+        trust: [["KK","Bandar Pelancaran"],["Jemputan","Akses beta"],["100%","Platform"],["Ikut pesanan","Peraturan platform"]],
       },
     },
   },
@@ -188,19 +188,19 @@ const ROLE_IMGS: Record<Role, { pain: string[]; solve: string[]; before: string;
 
 const REVIEWS: Record<"zh"|"en"|"ms", Array<{name: string; service: string; quote: string}>> = {
   zh: [
-    { name: "陈女士", service: "空调清洗", quote: "师傅很专业，提前到了 10 分钟，清洗得很干净，价格也比外面便宜。" },
-    { name: "李先生", service: "水管维修", quote: "晚上水管爆了，30 分钟就找到师傅上门，修好了才付款，很放心。" },
-    { name: "王女士", service: "家庭保洁", quote: "阿姨打扫得很仔细，平台有保障，比找熟人放心多了。" },
+    { name: "亚庇用户 · C", service: "空调清洗", quote: "师傅很专业，提前到了 10 分钟，清洗得很干净，价格也比外面便宜。" },
+    { name: "亚庇用户 · L", service: "水管维修", quote: "晚上水管爆了，很快就匹配到师傅上门，修好了才付款，很放心。" },
+    { name: "亚庇用户 · W", service: "家庭保洁", quote: "阿姨打扫得很仔细，平台有保障，比找熟人放心多了。" },
   ],
   en: [
-    { name: "Ms. Tan", service: "Air-Cond Servicing", quote: "Professional technician, arrived 10 minutes early, price better than outside." },
-    { name: "Mr. Lee", service: "Plumbing Repair", quote: "Pipe burst at night, found a technician in 30 minutes. Paid only after it was fixed." },
-    { name: "Ms. Wong", service: "Home Cleaning", quote: "Very thorough cleaning. The platform warranty gives real peace of mind." },
+    { name: "KK User · T", service: "Air-Cond Servicing", quote: "Professional technician, arrived 10 minutes early, price better than outside." },
+    { name: "KK User · L", service: "Plumbing Repair", quote: "Pipe burst at night, found a technician quickly. Paid only after it was fixed." },
+    { name: "KK User · W", service: "Home Cleaning", quote: "Very thorough cleaning. The platform warranty gives real peace of mind." },
   ],
   ms: [
-    { name: "Cik Tan", service: "Servis Penghawa Dingin", quote: "Juruteknik profesional, tiba 10 minit awal, harga lebih baik." },
-    { name: "Encik Lee", service: "Baiki Paip", quote: "Paip pecah waktu malam, jumpa juruteknik dalam 30 minit. Bayar selepas siap." },
-    { name: "Cik Wong", service: "Pembersihan Rumah", quote: "Pembersih sangat teliti, jaminan platform beri ketenangan." },
+    { name: "Pengguna KK · T", service: "Servis Penghawa Dingin", quote: "Juruteknik profesional, tiba 10 minit awal, harga lebih baik." },
+    { name: "Pengguna KK · L", service: "Baiki Paip", quote: "Paip pecah waktu malam, jumpa juruteknik dengan cepat. Bayar selepas siap." },
+    { name: "Pengguna KK · W", service: "Pembersihan Rumah", quote: "Pembersih sangat teliti, jaminan platform beri ketenangan." },
   ],
 };
 
@@ -236,7 +236,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }} className="mt-5 text-sm sm:text-base text-white/70 max-w-xl mx-auto">{r.sub}</motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }} className="mt-8">
-            <a href="#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-all">{t.cta}</a>
+            <a href="/#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-all">{t.cta}</a>
           </motion.div>
           <p className="mt-10 text-xs text-white/40">{t.scroll} ↓</p>
         </div>
@@ -327,7 +327,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
           })}
         </div>
         <div className="mt-10 text-center">
-          <a href="#download" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_8px_30px_-6px_rgba(255,150,0,0.6)] hover:scale-[1.02] active:scale-95 transition-all">{t.cta}</a>
+          <a href="/#download" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_8px_30px_-6px_rgba(255,150,0,0.6)] hover:scale-[1.02] active:scale-95 transition-all">{t.cta}</a>
         </div>
       </section>
       <section className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 py-16">
@@ -360,7 +360,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
       </section>
       <section className="relative z-10 max-w-3xl mx-auto px-5 sm:px-8 py-16">
         <div className="text-center mb-8">
-          <a href="#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-all">{t.cta}</a>
+          <a href="/#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-all">{t.cta}</a>
         </div>
         <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-400/30 flex gap-3 mb-12">
           <ShieldAlert size={20} className="text-amber-400 shrink-0 mt-0.5" />

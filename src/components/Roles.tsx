@@ -13,7 +13,7 @@ export default function Roles() {
       desc: t("role_customer_desc"),
       points: [t("role_customer_p1"), t("role_customer_p2"), t("role_customer_p3"), t("role_customer_p4")],
       cta: t("role_customer_cta"),
-      href: "#download",
+      href: "/how-it-works/customer",
       img: "/shared/s03.jpg",
     },
     {
@@ -22,7 +22,7 @@ export default function Roles() {
       desc: t("role_merchant_desc"),
       points: [t("role_merchant_p1"), t("role_merchant_p2"), t("role_merchant_p3"), t("role_merchant_p4")],
       cta: t("role_merchant_cta"),
-      href: "#merchant",
+      href: "/merchant",
       img: "/shared/s06.jpg",
     },
     {
@@ -31,7 +31,7 @@ export default function Roles() {
       desc: t("role_tech_desc"),
       points: [t("role_tech_p1"), t("role_tech_p2"), t("role_tech_p3"), t("role_tech_p4")],
       cta: t("role_tech_cta"),
-      href: "#technician",
+      href: "/technician",
       img: "/shared/s02.jpg",
     },
   ];

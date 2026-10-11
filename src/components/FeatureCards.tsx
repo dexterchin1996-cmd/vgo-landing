@@ -14,12 +14,12 @@ export default function FeatureCards() {
   // 换图策略：无人物工作场景，避免品牌风险
   // 图片精准配对：有合适图用图，没合适的用色块+大图标
   const SERVICES = [
-    { id: "repair",  Icon: Wrench,      titleKey: "svc_repair",  descKey: "svc_repair_desc",  img: "/features/repair.jpg",  grad: null,                                       href: "/how-it-works/customer" },
-    { id: "clean",   Icon: Sparkles,    titleKey: "svc_clean",   descKey: "svc_clean_desc",   img: null,                    grad: "linear-gradient(135deg, #60A5FA 0%, #0891B2 100%)", href: "/how-it-works/customer" },
-    { id: "massage", Icon: Heart,       titleKey: "svc_massage", descKey: "svc_massage_desc", img: null,                    grad: "linear-gradient(135deg, #F472B6 0%, #DB2777 100%)", href: "/how-it-works/customer" },
-    { id: "errand",  Icon: Truck,       titleKey: "svc_errand",  descKey: "svc_errand_desc",  img: "/features/errand.jpg",  grad: null,                                       href: "/how-it-works/customer" },
-    { id: "market",  Icon: ShoppingBag, titleKey: "svc_market",  descKey: "svc_market_desc",  img: "/features/market.jpg",  grad: null,                                       href: "/how-it-works/customer" },
-    { id: "jobs",    Icon: Briefcase,   titleKey: "svc_jobs",    descKey: "svc_jobs_desc",    img: "/features/jobs.jpg",    grad: null,                                       href: "/how-it-works/customer" },
+    { id: "repair",  Icon: Wrench,      titleKey: "svc_repair",  descKey: "svc_repair_desc",  img: "/features/repair.jpg",  grad: null,                                       href: "/services/repair/" },
+    { id: "clean",   Icon: Sparkles,    titleKey: "svc_clean",   descKey: "svc_clean_desc",   img: null,                    grad: "linear-gradient(135deg, #60A5FA 0%, #0891B2 100%)", href: "/services/clean/" },
+    { id: "massage", Icon: Heart,       titleKey: "svc_massage", descKey: "svc_massage_desc", img: null,                    grad: "linear-gradient(135deg, #F472B6 0%, #DB2777 100%)", href: "/services/massage/" },
+    { id: "errand",  Icon: Truck,       titleKey: "svc_errand",  descKey: "svc_errand_desc",  img: "/features/errand.jpg",  grad: null,                                       href: "/services/errand/" },
+    { id: "market",  Icon: ShoppingBag, titleKey: "svc_market",  descKey: "svc_market_desc",  img: "/features/market.jpg",  grad: null,                                       href: "/services/market/" },
+    { id: "jobs",    Icon: Briefcase,   titleKey: "svc_jobs",    descKey: "svc_jobs_desc",    img: "/features/jobs.jpg",    grad: null,                                       href: "/services/jobs/" },
   ];
 
   return (

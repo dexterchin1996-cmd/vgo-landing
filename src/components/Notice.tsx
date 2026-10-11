@@ -74,8 +74,7 @@ export default function Notice() {
 
             {/* 场景背景图 */}
             <div className="relative h-32 overflow-hidden">
-              <img
-                src="/shared/s02.jpg"
+              <img loading="lazy"                 src="/shared/s02.jpg"
                 alt="Technician at work"
                 className="w-full h-full object-cover"
               />

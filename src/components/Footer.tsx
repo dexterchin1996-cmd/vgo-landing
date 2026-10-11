@@ -9,35 +9,35 @@ export default function Footer() {
     {
       title: t("footer_col1"),
       links: [
-        { label: t("footer_link_repair"),  href: "#features" },
-        { label: t("footer_link_clean"),   href: "#features" },
-        { label: t("footer_link_massage"), href: "#features" },
-        { label: t("footer_link_errand"),  href: "#features" },
-        { label: t("footer_link_market"),  href: "#features" },
-        { label: t("footer_link_jobs"),    href: "#features" },
+        { label: t("footer_link_repair"),  href: "/services/repair/" },
+        { label: t("footer_link_clean"),   href: "/services/clean/" },
+        { label: t("footer_link_massage"), href: "/services/massage/" },
+        { label: t("footer_link_errand"),  href: "/services/errand/" },
+        { label: t("footer_link_market"),  href: "/services/market/" },
+        { label: t("footer_link_jobs"),    href: "/services/jobs/" },
       ],
     },
     {
       title: t("footer_col2"),
       links: [
-        { label: t("footer_link_partner_invest"), href: "/partner" },
-        { label: t("footer_link_merchant"),       href: "#merchant" },
-        { label: t("footer_link_tech"),           href: "#technician" },
-        { label: t("footer_link_partner"),        href: "/partner" },
-        { label: t("footer_link_open"),           href: "/partner" },
-        { label: t("footer_link_enterprise"),     href: "/partner" },
+        { label: t("footer_link_partner_invest"), href: "/partner/" },
+        { label: t("footer_link_merchant"),       href: "/merchant/" },
+        { label: t("footer_link_tech"),           href: "/technician/" },
+        { label: t("footer_link_partner"),        href: "/partner/" },
+        { label: t("footer_link_open"),           href: "/partner/" },
+        { label: t("footer_link_enterprise"),     href: "/partner/" },
       ],
     },
     {
       title: t("footer_col3"),
       links: [
-        { label: t("footer_link_about"),    href: "/about" },
-        { label: t("footer_link_faq"),      href: "/faq" },
-        { label: t("footer_link_privacy"),  href: "/privacy" },
-        { label: t("footer_link_terms"),    href: "/terms" },
-        { label: t("footer_link_contact"),  href: "/contact" },
-        { label: t("footer_link_ip"),       href: "/ip-copyright" },
-        { label: t("footer_link_partner_agreement"), href: "/merchant-agreement" },
+        { label: t("footer_link_about"),    href: "/about/" },
+        { label: t("footer_link_faq"),      href: "/faq/" },
+        { label: t("footer_link_privacy"),  href: "/privacy/" },
+        { label: t("footer_link_terms"),    href: "/terms/" },
+        { label: t("footer_link_contact"),  href: "/contact/" },
+        { label: t("footer_link_ip"),       href: "/ip-copyright/" },
+        { label: t("footer_link_partner_agreement"), href: "/merchant-agreement/" },
       ],
     },
   ];
@@ -63,12 +63,21 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-3">
-              {["WhatsApp", "Facebook", "Instagram"].map((s) => (
-                <a key={s} href="https://wa.me/601172691788" aria-label={s}
+              {[
+                { name: "WhatsApp",  href: "https://wa.me/601172691788",             label: "W" },
+                { name: "Facebook",  href: "https://www.facebook.com/vgo.malaysia",  label: "F" },
+                { name: "Instagram", href: "https://www.instagram.com/vgo.malaysia", label: "I" },
+                { name: "TikTok",    href: "https://www.tiktok.com/@vgo.malaysia",   label: "T" },
+              ].map((s) => (
+                <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.name}
                    className="w-10 h-10 rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-xs font-bold text-white/70 hover:bg-[#FF6600] hover:text-white hover:border-[#FF6600] transition-all">
-                  {s[0]}
+                  {s.label}
                 </a>
               ))}
+            </div>
+            <div className="mt-5 space-y-1.5 text-xs text-white/50">
+              <p>WhatsApp: <a href="https://wa.me/601172691788" className="text-white/75 hover:text-[var(--vgo)] transition-colors">+60 11-7269 1788</a></p>
+              <p>Email: <a href="mailto:support.vgo@gmail.com" className="text-white/75 hover:text-[var(--vgo)] transition-colors">support.vgo@gmail.com</a></p>
             </div>
           </div>
 

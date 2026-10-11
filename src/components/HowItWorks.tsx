@@ -17,7 +17,7 @@ const C = {
         points: ["无需应用商店", "装到手机主屏", "像 App 一样用"],
         img: "/shared/s07.jpg" },
       { num: "03", Icon: MousePointerClick, title: "选择服务", time: "1 分钟",
-        desc: "30+ 服务类目，先看价格再下单",
+        desc: "6 大服务，先看价格再下单",
         points: ["价格透明", "一键下单", "实时派单"],
         img: "/shared/s01.jpg" },
       { num: "04", Icon: CheckCircle2, title: "师傅上门", time: "准时到",
@@ -39,7 +39,7 @@ const C = {
         points: ["No app store", "Add to home screen", "Works like an app"],
         img: "/shared/s07.jpg" },
       { num: "03", Icon: MousePointerClick, title: "Pick a Service", time: "1 min",
-        desc: "30+ services, see price before ordering",
+        desc: "6 core services, see price first",
         points: ["Transparent pricing", "One-tap booking", "Real-time dispatch"],
         img: "/shared/s01.jpg" },
       { num: "04", Icon: CheckCircle2, title: "Pro Arrives", time: "On time",
@@ -61,7 +61,7 @@ const C = {
         points: ["Tanpa app store", "Pasang di skrin utama", "Guna macam app"],
         img: "/shared/s07.jpg" },
       { num: "03", Icon: MousePointerClick, title: "Pilih Servis", time: "1 minit",
-        desc: "30+ servis, tengok harga dulu baru tempah",
+        desc: "6 servis utama, tengok harga dulu",
         points: ["Harga telus", "Tempah satu tap", "Hantar masa nyata"],
         img: "/shared/s01.jpg" },
       { num: "04", Icon: CheckCircle2, title: "Tukang Sampai", time: "Tepat masa",
@@ -112,8 +112,7 @@ export default function HowItWorks() {
             >
               <div className="relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[var(--vgo)]/40 transition-all duration-300">
                 <div className="relative h-32 overflow-hidden">
-                  <img
-                    src={s.img}
+                  <img loading="lazy"                     src={s.img}
                     alt={s.title}
                     className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-700"
                   />
