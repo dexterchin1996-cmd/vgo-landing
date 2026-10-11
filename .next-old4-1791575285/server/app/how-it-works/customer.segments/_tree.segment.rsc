@@ -1,2 +1,0 @@
-:HL["/_next/static/css/b5b934842f8557a0.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"how-it-works","param":null,"prefetchHints":4192,"slots":{"children":{"name":"role","param":{"type":"d","key":"customer","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"RYeKpR0qoUt0EhO710T4G"}

@@ -22,3 +22,5 @@ public/videos/*.mp4
 *.log
 tsconfig.tsbuildinfo
 .vercel
+.next-old*
+out/
