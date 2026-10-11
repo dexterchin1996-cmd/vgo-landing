@@ -1,5 +1,6 @@
 "use client";
 import { useLang } from "@/lib/i18n";
+import { useEffect, useRef, useState } from "react";
 
 const APPS = [
   {
@@ -33,48 +34,78 @@ const AI_CS_URL = "https://vgo-ai.jason52013141018.workers.dev";
 export default function AppLinks() {
   const { lang } = useLang();
   const L = (lang === "en" || lang === "ms") ? lang : "zh";
+  const [active, setActive] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  function onScroll() {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / APPS.length;
+    const idx = Math.round(el.scrollLeft / cardWidth);
+    setActive(Math.max(0, Math.min(APPS.length - 1, idx)));
+  }
+
+  function goTo(idx: number) {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.scrollWidth / APPS.length;
+    el.scrollTo({ left: idx * cardWidth, behavior: "smooth" });
+  }
 
   return (
-    <section id="apps" className="relative py-20 px-5 bg-gray-50">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-black text-gray-900">
-            {L === "zh" ? "选择你的 App" : L === "ms" ? "Pilih App Anda" : "Choose Your App"}
-          </h2>
-          <p className="mt-3 text-sm text-gray-500">
-            {L === "zh" ? "三个独立 App · 一个账号通用 · 数据互通" : L === "ms" ? "Tiga App berasingan · Satu akaun · Data dikongsi" : "Three separate Apps · One account · Shared data"}
-          </p>
-        </div>
+    <section id="apps" className="relative py-20 bg-gray-50 overflow-hidden">
+      <div className="max-w-5xl mx-auto px-5 text-center mb-10">
+        <h2 className="text-3xl sm:text-4xl font-black text-gray-900">
+          {L === "zh" ? "选择你的 App" : L === "ms" ? "Pilih App Anda" : "Choose Your App"}
+        </h2>
+        <p className="mt-3 text-sm text-gray-500">
+          {L === "zh" ? "三个独立 App · 一个账号通用 · 数据互通" : L === "ms" ? "Tiga App berasingan · Satu akaun · Data dikongsi" : "Three separate Apps · One account · Shared data"}
+        </p>
+      </div>
 
-        <div className="flex flex-col gap-4 mb-10">
-          {APPS.map((app) => (
-            <a
-              key={app.href}
-              href={app.href}
-              className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all"
+      <div
+        ref={scrollRef}
+        onScroll={onScroll}
+        className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth px-5 pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        style={{ scrollPaddingLeft: "20px" }}
+      >
+        {APPS.map((app, i) => (
+          <a
+            key={app.href}
+            href={app.href}
+            className="snap-center shrink-0 w-[80vw] max-w-[360px] group flex flex-col p-6 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all"
+          >
+            <div
+              className="w-16 h-16 rounded-2xl flex items-center justify-center text-4xl mb-5"
+              style={{ background: `${app.color}20`, color: app.color }}
             >
-              <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shrink-0"
-                style={{ background: `${app.color}20`, color: app.color }}
-              >
-                {app.icon}
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-base sm:text-lg font-black text-gray-900 mb-0.5">{app.title[L]}</h3>
-                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">{app.desc[L]}</p>
-              </div>
-              <div
-                className="hidden sm:flex items-center gap-1 text-sm font-bold shrink-0"
-                style={{ color: app.color }}
-              >
-                <span>{app.cta[L]}</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </div>
-              <span className="sm:hidden text-xl shrink-0" style={{ color: app.color }}>→</span>
-            </a>
-          ))}
-        </div>
+              {app.icon}
+            </div>
+            <h3 className="text-xl font-black text-gray-900 mb-2">{app.title[L]}</h3>
+            <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">{app.desc[L]}</p>
+            <div className="flex items-center gap-1.5 text-sm font-bold" style={{ color: app.color }}>
+              <span>{app.cta[L]}</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </a>
+        ))}
+        <div className="shrink-0 w-5" aria-hidden />
+      </div>
 
+      <div className="flex items-center justify-center gap-2 mt-5">
+        {APPS.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goTo(i)}
+            aria-label={`App ${i + 1}`}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              i === active ? "w-6 bg-[var(--vgo)]" : "w-2 bg-gray-300 hover:bg-gray-400"
+            }`}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-5xl mx-auto px-5 mt-10">
         <a
           href={AI_CS_URL}
           target="_blank"
