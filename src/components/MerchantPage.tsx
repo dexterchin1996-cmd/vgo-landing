@@ -301,7 +301,7 @@ export default function MerchantPage() {
           {c.stats.map((s, i) => (
             <motion.div key={s.l} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
               className="p-5 rounded-2xl bg-white/5 border border-white/10 text-center">
-              <div className="text-2xl sm:text-3xl font-black bg-gradient-to-b from-[#FFD24A] to-[#FF8A00] bg-clip-text text-transparent leading-tight">{s.n}</div>
+              <div className="text-2xl sm:text-3xl font-black text-[#D95000] leading-tight">{s.n}</div>
               <div className="text-xs text-white/60 mt-1.5">{s.l}</div>
             </motion.div>
           ))}

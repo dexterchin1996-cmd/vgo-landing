@@ -69,7 +69,7 @@ export default function ServiceModal({ item, onClose }: { item: ServiceItem | nu
                 <div className="text-xs font-black text-[var(--vgo)] uppercase tracking-widest mb-3">{t.sec_scene}</div>
                 <div className="flex flex-wrap gap-2">
                   {item.scenarios.map((x) => (
-                    <span key={x} className="px-3 py-1.5 rounded-full bg-orange-50 border border-orange-100 text-xs font-semibold text-gray-700">
+                    <span key={x} className="px-3 py-1.5 rounded-full bg-orange-50 border border-orange-100 text-xs font-semibold text-orange-950">
                       {x}
                     </span>
                   ))}

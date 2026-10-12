@@ -97,7 +97,7 @@ export default function Navbar() {
                           className="absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2"
                         >
                           {item.children.map((c) => (
-                            <a key={c.label} href={c.href} className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 hover:text-[var(--vgo)] transition">
+                            <a key={c.label} href={c.href} className="flex items-center gap-3 px-4 py-2.5 text-sm text-orange-950 hover:bg-orange-50 hover:text-[var(--vgo)] transition">
                               <c.icon size={16} strokeWidth={2} />
                               {c.label}
                             </a>

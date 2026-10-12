@@ -316,7 +316,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
             const Icon = Icons[i];
             return (
               <motion.div key={title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="relative p-6 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 text-center">
-                <div className="text-4xl font-black bg-gradient-to-b from-[#FFD24A] to-[#FF8A00] bg-clip-text text-transparent leading-none mb-4">0{i + 1}</div>
+                <div className="text-4xl font-black text-[#D95000] leading-none mb-4">0{i + 1}</div>
                 <div className="w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center shadow-lg shadow-orange-500/30 mb-4">
                   <Icon size={22} className="text-white" />
                 </div>
@@ -335,7 +335,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {r.trust.map(([num, label], i) => (
             <motion.div key={label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }} className="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
-              <div className="text-2xl sm:text-4xl font-black bg-gradient-to-b from-[#FFD24A] to-[#FF8A00] bg-clip-text text-transparent leading-tight">{num}</div>
+              <div className="text-2xl sm:text-4xl font-black text-[#D95000] leading-tight">{num}</div>
               <div className="text-[11px] sm:text-xs text-white/60 mt-1.5">{label}</div>
             </motion.div>
           ))}

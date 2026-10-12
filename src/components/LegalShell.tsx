@@ -90,9 +90,8 @@ export default function LegalShell({
           font-weight: 900;
           color: #111827;
           margin: 0 0 18px;
-          padding: 0 0 12px 14px;
-          border-bottom: 2px solid #f3f4f6;
-          border-left: 4px solid var(--vgo);
+          padding: 0 0 14px 0;
+          border-bottom: 3px solid var(--vgo);
           line-height: 1.4;
           letter-spacing: 0.01em;
         }
@@ -138,8 +137,8 @@ export default function LegalShell({
         .legal-body .note-box {
           padding: 16px 20px;
           background: #eff6ff;
-          border-left: 4px solid #3b82f6;
-          border-radius: 8px;
+          border: 1px solid #bfdbfe;
+          border-radius: 14px;
           font-size: 14.5px;
           line-height: 1.8;
           color: #1e40af;

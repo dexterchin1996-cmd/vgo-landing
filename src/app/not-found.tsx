@@ -7,7 +7,7 @@ export default function NotFound() {
       <div className="absolute -bottom-32 -right-24 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(96,165,250,.18), transparent 70%)" }} />
 
       <div className="relative text-center max-w-lg">
-        <div className="text-[100px] sm:text-[140px] font-black leading-none bg-gradient-to-b from-[#FFD24A] to-[#FF6600] bg-clip-text text-transparent">404</div>
+        <div className="text-[100px] sm:text-[140px] font-black leading-none text-[#D95000]">404</div>
         <h1 className="text-2xl sm:text-3xl font-black mt-2">页面走丢了</h1>
         <p className="text-sm text-white/60 mt-3 leading-relaxed">你要找的页面不存在，或已经被移动。<br/>回到首页继续浏览吧。</p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">

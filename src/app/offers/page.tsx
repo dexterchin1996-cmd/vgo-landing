@@ -121,7 +121,7 @@ export default function OffersPage() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-3xl sm:text-5xl font-black leading-tight tracking-tight"
         >
-          <span className="bg-gradient-to-b from-[#FFD24A] via-[#FF9500] to-[#E55A00] bg-clip-text text-transparent">
+          <span className="text-[#D95000]">
             {t.title}
           </span>
         </motion.h1>

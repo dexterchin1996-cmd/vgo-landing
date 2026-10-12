@@ -96,7 +96,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
                     <motion.a key={m.label} href={m.href} onClick={onClose}
                       initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.05 + (gi * 4 + i) * 0.03 }}
-                      className="flex items-center gap-3.5 px-5 py-3 text-gray-700 hover:bg-orange-50 hover:text-[var(--vgo)] transition group">
+                      className="flex items-center gap-3.5 px-5 py-3 text-orange-950 hover:bg-orange-50 hover:text-[var(--vgo)] transition group">
                       <m.icon size={20} strokeWidth={2} className="text-gray-400 group-hover:text-[var(--vgo)] transition-colors" />
                       <span className="font-medium text-[15px]">{m.label}</span>
                     </motion.a>
@@ -127,7 +127,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
                       className="absolute bottom-full left-0 right-0 mb-2 bg-white rounded-2xl shadow-xl border border-gray-100 py-1.5 z-10">
                       {LANGS.map((l) => (
                         <button key={l.code} onClick={() => { setLang(l.code); setLangOpen(false); }}
-                          className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 transition">
+                          className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-orange-950 hover:bg-orange-50 transition">
                           <span className="flex flex-col items-start">
                             <span className="font-semibold text-gray-900">{l.label}</span>
                             <span className="text-[10px] text-gray-400">{l.native}</span>

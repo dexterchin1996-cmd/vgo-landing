@@ -160,7 +160,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {c.stats.map((s) => (
             <div key={s.l} className="p-5 rounded-2xl bg-white/5 border border-white/10 text-center">
-              <div className="text-2xl sm:text-3xl font-black bg-gradient-to-b from-[#FFD24A] to-[#FF8A00] bg-clip-text text-transparent leading-tight">{s.n}</div>
+              <div className="text-2xl sm:text-3xl font-black text-[#D95000] leading-tight">{s.n}</div>
               <div className="text-xs text-white/60 mt-1.5">{s.l}</div>
             </div>
           ))}

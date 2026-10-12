@@ -56,7 +56,7 @@ export default function LangSwitcher({ scrolled = false }: { scrolled?: boolean 
                   setLang(l.code);
                   setOpen(false);
                 }}
-                className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:bg-orange-50 transition"
+                className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-orange-950 hover:bg-orange-50 transition"
               >
                 <span className="flex flex-col items-start">
                   <span className="font-semibold text-gray-900">{l.label}</span>

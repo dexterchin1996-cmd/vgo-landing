@@ -80,7 +80,7 @@ export default function PartnerPage() {
 
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
           className="text-4xl sm:text-6xl md:text-7xl font-black leading-[1.1] tracking-tight">
-          <span className="bg-gradient-to-b from-[#FFD24A] via-[#FF9500] to-[#E55A00] bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(255,180,0,0.4)]">
+          <span className="text-[#D95000] drop-shadow-[0_0_50px_rgba(255,180,0,0.4)]">
             {t("partner_title")}
           </span>
         </motion.h1>
@@ -141,7 +141,7 @@ export default function PartnerPage() {
           {FLOW.map((f, i) => (
             <motion.div key={f.n} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.5, delay: i * 0.1 }}
               className="relative p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-              <div className="text-3xl font-black bg-gradient-to-b from-[#FFD24A] to-[#FF8A00] bg-clip-text text-transparent leading-none mb-4">{f.n}</div>
+              <div className="text-3xl font-black text-[#D95000] leading-none mb-4">{f.n}</div>
               <h3 className="text-base font-black mb-2">{f.t}</h3>
               <p className="text-xs text-white/55 leading-relaxed">{f.d}</p>
             </motion.div>
@@ -206,7 +206,7 @@ export default function PartnerPage() {
           {TRACTION.map((s, i) => (
             <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
               className="p-5 sm:p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 text-center">
-              <div className="text-2xl sm:text-4xl font-black bg-gradient-to-b from-[#FFD24A] to-[#FF8A00] bg-clip-text text-transparent leading-tight">{s.num}</div>
+              <div className="text-2xl sm:text-4xl font-black text-[#D95000] leading-tight">{s.num}</div>
               <div className="text-[11px] sm:text-xs text-white/60 mt-1.5">{s.label}</div>
             </motion.div>
           ))}
