@@ -24,3 +24,8 @@ tsconfig.tsbuildinfo
 .vercel
 .next-old*
 out/
+
+# 设计扫描报告（临时产物，不提交）
+impeccable-report/
+manual-report.txt
+合并报告.md
