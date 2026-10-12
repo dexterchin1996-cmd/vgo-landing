@@ -1,10 +1,11 @@
 "use client";
 import { useLang } from "@/lib/i18n";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import { User, Store, Wrench, MessageCircle, ArrowRight } from "lucide-react";
 
 const APPS = [
   {
-    icon: "👤",
+    Icon: User,
     title: { zh: "客户版 App", en: "Customer App", ms: "App Pelanggan" },
     desc: { zh: "下单、报价、支付、评价", en: "Order, quote, pay, review", ms: "Pesan, sebut harga, bayar, ulasan" },
     cta: { zh: "打开客户版", en: "Open Customer", ms: "Buka Pelanggan" },
@@ -12,7 +13,7 @@ const APPS = [
     color: "#4A90D9",
   },
   {
-    icon: "🏪",
+    Icon: Store,
     title: { zh: "商家版 App", en: "Merchant App", ms: "App Peniaga" },
     desc: { zh: "服务管理、排班、对账", en: "Services, schedule, settlement", ms: "Perkhidmatan, jadual, penyelesaian" },
     cta: { zh: "打开商家版", en: "Open Merchant", ms: "Buka Peniaga" },
@@ -20,7 +21,7 @@ const APPS = [
     color: "#FF8A1F",
   },
   {
-    icon: "🔧",
+    Icon: Wrench,
     title: { zh: "师傅版 App", en: "Technician App", ms: "App Teknisi" },
     desc: { zh: "接单、报价、上传证据", en: "Jobs, quotes, upload evidence", ms: "Kerja, sebut harga, muat naik bukti" },
     cta: { zh: "打开师傅版", en: "Open Technician", ms: "Buka Teknisi" },
@@ -69,23 +70,23 @@ export default function AppLinks() {
         className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth px-5 pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         style={{ scrollPaddingLeft: "20px" }}
       >
-        {APPS.map((app, i) => (
+        {APPS.map(({ Icon, href, title, desc, cta, color }) => (
           <a
-            key={app.href}
-            href={app.href}
-            className="snap-center shrink-0 w-[80vw] max-w-[360px] group flex flex-col p-6 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all"
+            key={href}
+            href={href}
+            className="snap-center shrink-0 w-[80vw] max-w-[360px] group flex flex-col p-6 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-200"
           >
             <div
-              className="w-16 h-16 rounded-2xl flex items-center justify-center text-4xl mb-5"
-              style={{ background: `${app.color}20`, color: app.color }}
+              className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
+              style={{ background: `${color}20`, color }}
             >
-              {app.icon}
+              <Icon size={32} strokeWidth={2} />
             </div>
-            <h3 className="text-xl font-black text-gray-900 mb-2">{app.title[L]}</h3>
-            <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">{app.desc[L]}</p>
-            <div className="flex items-center gap-1.5 text-sm font-bold" style={{ color: app.color }}>
-              <span>{app.cta[L]}</span>
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            <h3 className="text-xl font-black text-gray-900 mb-2">{title[L]}</h3>
+            <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">{desc[L]}</p>
+            <div className="flex items-center gap-1.5 text-sm font-bold" style={{ color }}>
+              <span>{cta[L]}</span>
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
             </div>
           </a>
         ))}
@@ -98,7 +99,7 @@ export default function AppLinks() {
             key={i}
             onClick={() => goTo(i)}
             aria-label={`App ${i + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 ${
+            className={`h-2 rounded-full transition-[width,background-color] duration-300 ${
               i === active ? "w-6 bg-[var(--vgo)]" : "w-2 bg-gray-300 hover:bg-gray-400"
             }`}
           />
@@ -110,9 +111,9 @@ export default function AppLinks() {
           href={AI_CS_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-3 max-w-2xl mx-auto p-5 rounded-2xl bg-gradient-to-r from-[#4facfe] to-[#00f2fe] text-white shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all"
+          className="flex items-center justify-center gap-3 max-w-2xl mx-auto p-5 rounded-2xl bg-gradient-to-r from-[#4facfe] to-[#00f2fe] text-white shadow-lg hover:shadow-xl hover:scale-[1.01] transition-[transform,box-shadow] duration-200"
         >
-          <span className="text-2xl">💬</span>
+          <MessageCircle size={28} strokeWidth={2} />
           <div className="flex-1 text-left">
             <div className="font-black text-base">
               {L === "zh" ? "VGO 智能客服" : L === "ms" ? "Sokongan AI VGO" : "VGO AI Support"}
@@ -121,7 +122,7 @@ export default function AppLinks() {
               {L === "zh" ? "中/英/马 三语 · 7×24 在线" : L === "ms" ? "BM/EN/中文 · 7×24" : "EN/BM/中文 · 7×24"}
             </div>
           </div>
-          <span className="text-xl">→</span>
+          <ArrowRight size={20} />
         </a>
       </div>
     </section>

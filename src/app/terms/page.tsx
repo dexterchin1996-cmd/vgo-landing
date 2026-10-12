@@ -18,7 +18,7 @@ const C = {
     s4_t: "4. Payments",
     s4: "All prices are in Malaysian Ringgit (RM). Payments are processed via third-party providers. We are not liable for payment platform delays.",
     s5_t: "5. Cancellation & Refunds",
-    s5: "If the pro fails to arrive on time or the service is incomplete, users may request a full refund. Cancellation after service begins is settled by completed portion. Refunds processed within 1–3 business days.",
+    s5: "If the pro fails to arrive on time or the service is incomplete, users may request a full refund. Cancellation after service begins is settled by completed portion. Refunds processed within 1-3 business days.",
     s6_t: "6. Disclaimer",
     s6: "VGO is not directly liable for the independent acts of pros. However, we actively help resolve disputes. Use of the platform is at the user's own risk.",
     s7_t: "7. Dispute Resolution",
