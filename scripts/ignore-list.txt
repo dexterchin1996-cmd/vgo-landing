@@ -1,0 +1,8 @@
+# 忽略清单 - 每行一个模式，命中即跳过
+# 格式：文件路径:行号 或 关键词
+
+# 以下是设计判断保留项（非违规）：
+src/components/Roles.tsx:69              # 图片+文字混排，非等宽卡片
+src/components/Waitlist.tsx:489          # 三协议按钮（功能控件）
+src/components/Waitlist.tsx:767          # 服务模式三选（功能控件）
+src/components/Waitlist.tsx:844          # 服务模式三选（功能控件）
