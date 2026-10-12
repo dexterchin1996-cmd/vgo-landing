@@ -1,0 +1,66 @@
+════════ taste-skill ════════
+# tasteskill: Anti-Slop Frontend Skill
+## 0. BRIEF INFERENCE (Read the Room Before Anything Else)
+## 1. THE THREE DIALS (Core Configuration)
+## 2. BRIEF → DESIGN SYSTEM MAP
+## 3. DEFAULT ARCHITECTURE & CONVENTIONS
+## 4. DESIGN ENGINEERING DIRECTIVES (Bias Correction)
+## 5. CONTEXT-AWARE PROACTIVITY
+## 6. PERFORMANCE & ACCESSIBILITY GUARDRAILS
+## 7. DIAL DEFINITIONS (Technical Reference)
+## 8. DARK MODE PROTOCOL
+## 9. AI TELLS (Forbidden Patterns)
+## 10. REFERENCE VOCABULARY (Pattern Names the Agent Should Know)
+## 11. REDESIGN PROTOCOL
+## 12. THE BLOCK LIBRARY (Contract - Implementations Land Here Iteratively)
+## 13. OUT OF SCOPE
+## 14. FINAL PRE-FLIGHT CHECK
+# APPENDICES - Real Source-Backed Reference Material
+## Appendix A - Install Commands per Design System
+# Material Web (Material 3)
+# Fluent UI React (v9)
+# Fluent UI Web Components (framework-free)
+# IBM Carbon
+# Radix Themes
+# shadcn/ui (open code, owned components)
+# Primer CSS (GitHub product/devtool UI)
+# Primer Brand (GitHub marketing UI)
+# GOV.UK Frontend
+# USWDS (US Web Design System)
+# Atlassian Design System (Atlaskit)
+# Bootstrap 5.3
+
+════════ emil-design-eng ════════
+# Design Engineering
+## Initial Response
+## Core Philosophy
+## Review Format (Required)
+## The Animation Decision Framework
+## Spring Animations
+## Component Building Principles
+## CSS Transform Mastery
+## clip-path for Animation
+## Gesture and Drag Interactions
+## Performance Rules
+## Accessibility
+## The Sonner Principles (Building Loved Components)
+## Stagger Animations
+## Debugging Animations
+## Review Checklist
+
+════════ ui-ux-pro-max ════════
+# UI/UX Pro Max - Design Intelligence
+## When to Apply
+## Rule Categories by Priority
+## Running the search tool
+## Workflow
+## Query Contract
+## If a search returns 0 results
+## Example Workflow
+# Step 2: design system
+# Step 3: supplement
+# Step 4: stack guidelines
+## Output Formats
+## Tips for Better Results
+## Before Delivering App UI
+
