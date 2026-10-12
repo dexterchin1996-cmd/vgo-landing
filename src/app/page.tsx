@@ -96,7 +96,7 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.1, type: "spring", stiffness: 60 }}
             className="text-[34px] leading-[1.15] sm:text-6xl md:text-7xl font-black tracking-tight"
           >
-            <span className="block bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
+            <span className="block text-white">
               {t("hero_title1")}
             </span>
             <span className="block mt-1">

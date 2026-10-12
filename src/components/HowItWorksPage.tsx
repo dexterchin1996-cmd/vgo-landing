@@ -232,7 +232,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
         <div className="relative z-10 max-w-3xl mx-auto text-center pt-24">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 text-xs font-semibold mb-6">{t.label} · {r.tag}</motion.div>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="text-3xl sm:text-5xl md:text-6xl font-black leading-[1.1] tracking-tight">
-            <span className="bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">{r.title}</span>
+            <span className="text-white">{r.title}</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }} className="mt-5 text-sm sm:text-base text-white/70 max-w-xl mx-auto">{r.sub}</motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }} className="mt-8">

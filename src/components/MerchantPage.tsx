@@ -265,7 +265,7 @@ export default function MerchantPage() {
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
             className="text-3xl sm:text-5xl md:text-6xl font-black leading-[1.1] tracking-tight">
-            <span className="bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">{c.hero_t}</span>
+            <span className="text-white">{c.hero_t}</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-6 text-sm sm:text-base text-white/70 max-w-xl mx-auto leading-relaxed">{c.hero_s}</motion.p>
