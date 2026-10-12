@@ -142,7 +142,7 @@ export default function OffersPage() {
             <button
               key={tb.id}
               onClick={() => setTab(tb.id)}
-              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold transition-all ${
+              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold transition-[transform,box-shadow,opacity,width,background-color] ${
                 tab === tb.id
                   ? "bg-gradient-to-b from-[var(--vgo)] to-[var(--vgo-dark)] text-white shadow-lg shadow-orange-500/30"
                   : "text-white/60 hover:text-white hover:bg-white/5"
@@ -186,7 +186,7 @@ export default function OffersPage() {
             <div className="bg-white/5 backdrop-blur-xl p-6 border-t border-white/10">
               <a
                 href="/#download"
-                className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-orange-500/40"
+                className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black hover:scale-[1.02] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color] shadow-lg shadow-orange-500/40"
               >
                 {t.cta}
               </a>
@@ -281,7 +281,7 @@ export default function OffersPage() {
             <p className="text-sm text-white/80 mb-6 max-w-md mx-auto">首批福利限时限量，领完为止</p>
             <a
               href="/#download"
-              className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black shadow-2xl hover:scale-105 active:scale-95 transition-all"
+              className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]"
             >
               {t.cta} <ArrowLeft size={16} className="rotate-180" />
             </a>

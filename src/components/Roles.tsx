@@ -91,7 +91,7 @@ export default function Roles() {
                   </div>
                   <a
                     href={r.href}
-                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[var(--vgo)] text-white font-bold text-sm shadow-lg shadow-orange-500/30 hover:bg-[var(--vgo-dark)] hover:scale-105 transition-all"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-[var(--vgo)] text-white font-bold text-sm shadow-lg shadow-orange-500/30 hover:bg-[var(--vgo-dark)] hover:scale-105 transition-[transform,box-shadow,opacity,width,background-color]"
                   >
                     {r.cta}
                     <span>→</span>

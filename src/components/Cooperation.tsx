@@ -39,14 +39,14 @@ export default function Cooperation() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative p-7 rounded-3xl bg-gradient-to-br from-white to-gray-50 border border-gray-100 hover:border-[var(--vgo)]/40 hover:shadow-2xl hover:shadow-orange-500/10 transition-all"
+              className="group relative p-7 rounded-3xl bg-gradient-to-br from-white to-gray-50 border border-gray-100 hover:border-[var(--vgo)]/40 hover:shadow-2xl hover:shadow-orange-500/10 transition-[transform,box-shadow,opacity,width,background-color]"
             >
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--vgo)] to-[var(--vgo-dark)] flex items-center justify-center shadow-lg shadow-orange-500/30 mb-5">
                 <it.Icon size={26} strokeWidth={2.2} className="text-white" />
               </div>
               <h3 className="text-xl font-black text-gray-900 mb-3">{t(it.tKey as any)}</h3>
               <p className="text-sm text-gray-500 leading-relaxed mb-6 min-h-[66px]">{t(it.dKey as any)}</p>
-              <Link href="/partner" className="inline-flex items-center gap-1.5 text-sm font-black text-[var(--vgo)] group-hover:gap-3 transition-all">
+              <Link href="/partner" className="inline-flex items-center gap-1.5 text-sm font-black text-[var(--vgo)] group-hover:gap-3 transition-[transform,box-shadow,opacity,width,background-color]">
                 {t(it.cKey as any)} <ArrowRight size={15} strokeWidth={2.5} />
               </Link>
             </motion.div>

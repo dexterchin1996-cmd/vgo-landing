@@ -52,12 +52,12 @@ export default function FeatureCards() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: i * 0.06, type: "spring", stiffness: 80 }}
               whileHover={{ y: -4 }}
-              className="group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gray-900 shadow-lg hover:shadow-2xl transition-all duration-500 aspect-[4/5] sm:aspect-[4/3]"
+              className="group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-gray-900 shadow-lg hover:shadow-2xl transition-[transform,box-shadow,opacity,width,background-color] duration-500 aspect-[4/5] sm:aspect-[4/3]"
             >
               {s.img ? (
                 <>
                   <div
-                    className="absolute inset-0 bg-cover bg-center opacity-55 group-hover:opacity-85 group-hover:scale-105 transition-all duration-700"
+                    className="absolute inset-0 bg-cover bg-center opacity-55 group-hover:opacity-85 group-hover:scale-105 transition-[transform,box-shadow,opacity,width,background-color] duration-700"
                     style={{ backgroundImage: `url('${s.img}')` }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/20" />

@@ -45,7 +45,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 inset-x-0 z-50 transition-[transform,box-shadow,opacity,width,background-color] duration-300 ${
           scrolled ? "bg-white/85 backdrop-blur-xl shadow-[0_2px_20px_rgba(0,0,0,0.06)]" : "bg-transparent"
         }`}
       >
@@ -118,7 +118,7 @@ export default function Navbar() {
             <div className="ml-3">
               <LangSwitcher scrolled={scrolled} />
             </div>
-            <a href="#download" className="ml-3 px-6 py-2.5 rounded-xl bg-[var(--vgo)] text-white text-sm font-bold shadow-lg shadow-orange-500/30 hover:brightness-110 hover:scale-105 transition-all pulse-glow">
+            <a href="#download" className="ml-3 px-6 py-2.5 rounded-xl bg-[var(--vgo)] text-white text-sm font-bold shadow-lg shadow-orange-500/30 hover:brightness-110 hover:scale-105 transition-[transform,box-shadow,opacity,width,background-color] pulse-glow">
               {t("nav_download")}
             </a>
           </nav>

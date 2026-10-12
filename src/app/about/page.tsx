@@ -256,10 +256,10 @@ export default function AboutPage() {
           <h3 className="text-xl sm:text-2xl font-black text-white mb-3">{c.contact_t}</h3>
           <p className="text-sm text-white/85 mb-6 max-w-md mx-auto">{c.contact_d}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="https://wa.me/601172691788" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#D95000] font-black text-sm shadow-2xl hover:scale-105 active:scale-95 transition-all">
+            <a href="https://wa.me/601172691788" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#D95000] font-black text-sm shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               WhatsApp 联系
             </a>
-            <a href="/contact/" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/15 backdrop-blur border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-all">
+            <a href="/contact/" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/15 backdrop-blur border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-[transform,box-shadow,opacity,width,background-color]">
               更多联系方式 →
             </a>
           </div>

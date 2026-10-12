@@ -297,7 +297,7 @@ export default function Waitlist() {
                             const isNow = n === cur;
                             return (
                               <div key={i} className="flex items-center gap-2">
-                                <div className={`w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-black transition-all duration-300 ${isDone ? "bg-[var(--vgo)] text-white" : isNow ? "bg-[var(--vgo)] text-white ring-4 ring-orange-500/20" : "bg-gray-100 text-gray-400"}`}>
+                                <div className={`w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-black transition-[transform,box-shadow,opacity,width,background-color] duration-300 ${isDone ? "bg-[var(--vgo)] text-white" : isNow ? "bg-[var(--vgo)] text-white ring-4 ring-orange-500/20" : "bg-gray-100 text-gray-400"}`}>
                                   {isDone ? <CheckCircle2 size={13} strokeWidth={3} /> : n}
                                 </div>
                                 {i < totalForms - 1 && (
@@ -448,7 +448,7 @@ export default function Waitlist() {
                       <div className="flex items-center justify-center gap-1.5 pt-1">
                         {(["customer","merchant","tech","artisan"] as Role[]).map((k) => (
                           <button key={k} onClick={() => setRole(k)}
-                            className={`h-1.5 rounded-full transition-all ${role === k ? "w-5 bg-[var(--vgo)]" : "w-1.5 bg-gray-200"}`}
+                            className={`h-1.5 rounded-full transition-[transform,box-shadow,opacity,width,background-color] ${role === k ? "w-5 bg-[var(--vgo)]" : "w-1.5 bg-gray-200"}`}
                             aria-label={k}
                           />
                         ))}
@@ -488,8 +488,8 @@ export default function Waitlist() {
                     <div className="px-5 pt-5 space-y-4">
                       <div className="grid grid-cols-3 gap-2">
                         <button type="button" onClick={() => { setPreviewOpen("terms"); setScrolledEnd(p => ({...p, terms: false})); }}
-                          className={`flex flex-col items-center gap-2 p-3 rounded-2xl border-2 transition-all ${aTerms ? "border-[var(--vgo)] bg-orange-50/70 shadow-md shadow-orange-500/10" : "border-gray-200 bg-white hover:border-orange-300"}`}>
-                          <div className={`w-6 h-6 rounded-md flex items-center justify-center transition-all ${aTerms ? "bg-[var(--vgo)]" : "border-2 border-gray-300 bg-white"}`}>
+                          className={`flex flex-col items-center gap-2 p-3 rounded-2xl border-2 transition-[transform,box-shadow,opacity,width,background-color] ${aTerms ? "border-[var(--vgo)] bg-orange-50/70 shadow-md shadow-orange-500/10" : "border-gray-200 bg-white hover:border-orange-300"}`}>
+                          <div className={`w-6 h-6 rounded-md flex items-center justify-center transition-[transform,box-shadow,opacity,width,background-color] ${aTerms ? "bg-[var(--vgo)]" : "border-2 border-gray-300 bg-white"}`}>
                             {aTerms && <CheckCircle2 size={14} className="text-white" strokeWidth={3} />}
                           </div>
                           <div className="text-[11px] font-black text-gray-900 leading-tight text-center">
@@ -498,8 +498,8 @@ export default function Waitlist() {
                         </button>
 
                         <button type="button" onClick={() => { setPreviewOpen("privacy"); setScrolledEnd(p => ({...p, privacy: false})); }}
-                          className={`flex flex-col items-center gap-2 p-3 rounded-2xl border-2 transition-all ${aPrivacy ? "border-[var(--vgo)] bg-orange-50/70 shadow-md shadow-orange-500/10" : "border-gray-200 bg-white hover:border-orange-300"}`}>
-                          <div className={`w-6 h-6 rounded-md flex items-center justify-center transition-all ${aPrivacy ? "bg-[var(--vgo)]" : "border-2 border-gray-300 bg-white"}`}>
+                          className={`flex flex-col items-center gap-2 p-3 rounded-2xl border-2 transition-[transform,box-shadow,opacity,width,background-color] ${aPrivacy ? "border-[var(--vgo)] bg-orange-50/70 shadow-md shadow-orange-500/10" : "border-gray-200 bg-white hover:border-orange-300"}`}>
+                          <div className={`w-6 h-6 rounded-md flex items-center justify-center transition-[transform,box-shadow,opacity,width,background-color] ${aPrivacy ? "bg-[var(--vgo)]" : "border-2 border-gray-300 bg-white"}`}>
                             {aPrivacy && <CheckCircle2 size={14} className="text-white" strokeWidth={3} />}
                           </div>
                           <div className="text-[11px] font-black text-gray-900 leading-tight text-center">
@@ -508,8 +508,8 @@ export default function Waitlist() {
                         </button>
 
                         <button type="button" onClick={() => { setPreviewOpen("role"); setScrolledEnd(p => ({...p, role: false})); }}
-                          className={`flex flex-col items-center gap-2 p-3 rounded-2xl border-2 transition-all ${aRole ? "border-[var(--vgo)] bg-orange-50/70 shadow-md shadow-orange-500/10" : "border-gray-200 bg-white hover:border-orange-300"}`}>
-                          <div className={`w-6 h-6 rounded-md flex items-center justify-center transition-all ${aRole ? "bg-[var(--vgo)]" : "border-2 border-gray-300 bg-white"}`}>
+                          className={`flex flex-col items-center gap-2 p-3 rounded-2xl border-2 transition-[transform,box-shadow,opacity,width,background-color] ${aRole ? "border-[var(--vgo)] bg-orange-50/70 shadow-md shadow-orange-500/10" : "border-gray-200 bg-white hover:border-orange-300"}`}>
+                          <div className={`w-6 h-6 rounded-md flex items-center justify-center transition-[transform,box-shadow,opacity,width,background-color] ${aRole ? "bg-[var(--vgo)]" : "border-2 border-gray-300 bg-white"}`}>
                             {aRole && <CheckCircle2 size={14} className="text-white" strokeWidth={3} />}
                           </div>
                           <div className="text-[11px] font-black text-gray-900 leading-tight text-center">

@@ -101,7 +101,7 @@ export default function Home() {
             </span>
             <span className="block mt-1">
               {t("hero_title2").replace("V'GO", "")}
-              <span className="text-[var(--vgo)] drop-shadow-[0_0_40px_rgba(255,102,0,0.6)]">V'GO</span>
+              <span className="text-[var(--vgo)] drop-shadow-[0_0_40px_rgba(255,102,0,0.3)]">V'GO</span>
             </span>
           </motion.h1>
 
@@ -122,7 +122,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35 }}
-            className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white text-xs sm:text-sm font-bold shadow-[0_8px_30px_-8px_rgba(255,150,0,0.8)] hover:scale-105 active:scale-95 transition-all"
+            className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white text-xs sm:text-sm font-bold shadow-[0_8px_30px_-8px_rgba(255,150,0,0.3)] hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]"
           >
             <span className="text-base">🎁</span>
             <span>注册即送 <span className="text-base font-black">RM80</span> 上门检查券</span>
@@ -138,19 +138,19 @@ export default function Home() {
           >
             <Link
               href="/how-it-works/customer"
-              className="group flex items-center justify-center gap-2 w-full px-6 py-4 rounded-2xl bg-gradient-to-b from-[var(--vgo-light)] to-[var(--vgo-dark)] text-white font-bold text-base shadow-[0_10px_30px_-8px_rgba(255,102,0,0.6)] hover:shadow-[0_16px_40px_-8px_rgba(255,102,0,0.8)] hover:scale-[1.02] active:scale-95 transition-all pulse-glow"
+              className="group flex items-center justify-center gap-2 w-full px-6 py-4 rounded-2xl bg-gradient-to-b from-[var(--vgo-light)] to-[var(--vgo-dark)] text-white font-bold text-base shadow-[0_10px_30px_-8px_rgba(255,102,0,0.3)] hover:shadow-[0_16px_40px_-8px_rgba(255,102,0,0.3)] hover:scale-[1.02] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color] pulse-glow"
             >
               <span className="text-lg">👤</span>
               <span>{t("cta_customer")}</span>
               <span className="ml-1 px-2 py-0.5 rounded-full bg-white/25 text-[10px] font-black">领 RM80</span>
-              <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+              <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-[transform,box-shadow,opacity,width,background-color]">→</span>
             </Link>
             <div className="grid grid-cols-2 gap-3">
-              <Link href="/how-it-works/merchant" className="flex items-center justify-center gap-1.5 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-xl border border-white/20 text-white text-xs sm:text-sm font-semibold hover:bg-white/15 hover:border-white/40 active:scale-95 transition-all">
+              <Link href="/how-it-works/merchant" className="flex items-center justify-center gap-1.5 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-xl border border-white/20 text-white text-xs sm:text-sm font-semibold hover:bg-white/15 hover:border-white/40 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
                 <span>🏪</span>
                 <span>{t("cta_merchant")}</span>
               </Link>
-              <Link href="/how-it-works/technician" className="flex items-center justify-center gap-1.5 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-xl border border-white/20 text-white text-xs sm:text-sm font-semibold hover:bg-white/15 hover:border-white/40 active:scale-95 transition-all">
+              <Link href="/how-it-works/technician" className="flex items-center justify-center gap-1.5 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-xl border border-white/20 text-white text-xs sm:text-sm font-semibold hover:bg-white/15 hover:border-white/40 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
                 <span>🔧</span>
                 <span>{t("cta_tech")}</span>
               </Link>
@@ -180,7 +180,7 @@ export default function Home() {
                 key={i}
                 onClick={() => setIdx(i)}
                 aria-label={`slide ${i + 1}`}
-                className={`h-1.5 rounded-full overflow-hidden transition-all duration-500 ${
+                className={`h-1.5 rounded-full overflow-hidden transition-[transform,box-shadow,opacity,width,background-color] duration-500 ${
                   i === idx ? "w-10 bg-white/25" : "w-1.5 bg-white/40 hover:bg-white/70"
                 }`}
               >
@@ -199,7 +199,7 @@ export default function Home() {
 
           <a href="#features" className="flex items-center justify-center gap-1.5 text-white/50 text-xs hover:text-white transition">
             <span>{t("scroll_more")}</span>
-            <span className="animate-bounce">↓</span>
+            <span className="">↓</span>
           </a>
         </div>
       </main>

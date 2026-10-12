@@ -144,7 +144,7 @@ export default function SceneShowcase() {
                   >
                     <Link
                       href="/how-it-works/customer"
-                      className="group inline-flex items-center gap-2 text-base font-bold text-white border-b-2 border-[var(--vgo)] pb-1 hover:gap-3 transition-all"
+                      className="group inline-flex items-center gap-2 text-base font-bold text-white border-b-2 border-[var(--vgo)] pb-1 hover:gap-3 transition-[transform,box-shadow,opacity,width,background-color]"
                     >
                       {s.cta}
                       <ArrowRight size={18} className="text-[var(--vgo)]" />

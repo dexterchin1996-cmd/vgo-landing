@@ -110,11 +110,11 @@ export default function HowItWorks() {
               transition={{ duration: 0.6, delay: i * 0.12, type: "spring", stiffness: 70 }}
               className="relative group"
             >
-              <div className="relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[var(--vgo)]/40 transition-all duration-300">
+              <div className="relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[var(--vgo)]/40 transition-[transform,box-shadow,opacity,width,background-color] duration-300">
                 <div className="relative h-32 overflow-hidden">
                   <img loading="lazy"                     src={s.img}
                     alt={s.title}
-                    className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-all duration-700"
+                    className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-[transform,box-shadow,opacity,width,background-color] duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/50 to-transparent" />
                   <div className="absolute top-3 right-4 text-4xl font-black text-white/40 select-none">

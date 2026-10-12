@@ -79,7 +79,7 @@ export default function Guarantees() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.55, delay: i * 0.07 }}
               whileHover={{ y: -6 }}
-              className="group relative p-7 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:border-[var(--vgo)]/30 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-300"
+              className="group relative p-7 rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:border-[var(--vgo)]/30 hover:shadow-2xl hover:shadow-orange-500/10 transition-[transform,box-shadow,opacity,width,background-color] duration-300"
             >
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--vgo)] to-[var(--vgo-dark)] flex items-center justify-center mb-5 shadow-lg shadow-orange-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                 <item.Icon size={24} strokeWidth={2.2} className="text-white" />

@@ -93,12 +93,12 @@ export default function PartnerPage() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a href="mailto:support.vgo@gmail.com"
-            className="group inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold text-base shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65),inset_0_1px_0_rgba(255,255,255,0.4)] hover:shadow-[0_16px_50px_-6px_rgba(255,150,0,0.9)] hover:scale-[1.03] active:scale-95 transition-all">
+            className="group inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold text-base shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65),inset_0_1px_0_rgba(255,255,255,0.4)] hover:shadow-[0_16px_50px_-6px_rgba(255,150,0,0.3)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
             <Mail size={18} />
             <span>{t("partner_contact_email")}</span>
           </a>
           <a href="https://wa.me/601172691788" target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/25 text-white font-bold text-base hover:bg-white/20 hover:border-white/40 active:scale-95 transition-all">
+            className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/25 text-white font-bold text-base hover:bg-white/20 hover:border-white/40 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
             <MessageCircle size={18} />
             <span>{t("partner_contact_whatsapp")}</span>
           </a>
@@ -116,13 +116,13 @@ export default function PartnerPage() {
           {COOP.map((c, i) => (
             <motion.a key={c.title} href={c.href}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group block p-7 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[#FFB800]/50 hover:bg-white/8 transition-all">
+              className="group block p-7 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[#FFB800]/50 hover:bg-white/8 transition-[transform,box-shadow,opacity,width,background-color]">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center mb-5 shadow-lg shadow-orange-500/30">
                 <c.Icon size={26} strokeWidth={2.2} className="text-white" />
               </div>
               <h3 className="text-xl font-black mb-3">{c.title}</h3>
               <p className="text-sm text-white/60 leading-relaxed mb-5 min-h-[72px]">{c.desc}</p>
-              <div className="inline-flex items-center gap-2 text-sm font-bold text-[#FFB800] group-hover:gap-3 transition-all">
+              <div className="inline-flex items-center gap-2 text-sm font-bold text-[#FFB800] group-hover:gap-3 transition-[transform,box-shadow,opacity,width,background-color]">
                 {c.cta} <span>→</span>
               </div>
             </motion.a>
@@ -185,7 +185,7 @@ export default function PartnerPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {WHY.map((w, i) => (
             <motion.div key={w.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="p-7 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[#FFB800]/40 hover:bg-white/8 transition-all">
+              className="p-7 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[#FFB800]/40 hover:bg-white/8 transition-[transform,box-shadow,opacity,width,background-color]">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center mb-4 shadow-lg shadow-orange-500/30">
                 <w.Icon size={22} strokeWidth={2.2} className="text-white" />
               </div>
@@ -220,11 +220,11 @@ export default function PartnerPage() {
           <h2 className="text-2xl sm:text-4xl font-black mb-4">{t("partner_cta_title")}</h2>
           <p className="text-sm sm:text-base text-white/65 mb-8 max-w-lg mx-auto leading-relaxed">{t("partner_cta_desc")}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="mailto:support.vgo@gmail.com" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-all">
+            <a href="mailto:support.vgo@gmail.com" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               <Mail size={18} />
               {t("partner_contact_email")}
             </a>
-            <a href="https://wa.me/601172691788" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/25 text-white font-bold hover:bg-white/20 active:scale-95 transition-all">
+            <a href="https://wa.me/601172691788" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/25 text-white font-bold hover:bg-white/20 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               <MessageCircle size={18} />
               {t("partner_contact_whatsapp")}
             </a>

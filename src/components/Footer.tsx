@@ -70,7 +70,7 @@ export default function Footer() {
                 { name: "TikTok",    href: "https://www.tiktok.com/@vgo.malaysia",   label: "T" },
               ].map((s) => (
                 <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.name}
-                   className="w-10 h-10 rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-xs font-bold text-white/70 hover:bg-[#FF6600] hover:text-white hover:border-[#FF6600] transition-all">
+                   className="w-10 h-10 rounded-xl bg-white/8 border border-white/10 flex items-center justify-center text-xs font-bold text-white/70 hover:bg-[#FF6600] hover:text-white hover:border-[#FF6600] transition-[transform,box-shadow,opacity,width,background-color]">
                   {s.label}
                 </a>
               ))}

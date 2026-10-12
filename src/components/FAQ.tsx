@@ -53,7 +53,7 @@ export default function FAQ() {
                 className="w-full flex items-center justify-between gap-4 p-5 text-left"
               >
                 <span className="font-bold text-gray-900 text-sm sm:text-base">{f.q}</span>
-                <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-lg font-light transition-all duration-300 ${
+                <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-lg font-light transition-[transform,box-shadow,opacity,width,background-color] duration-300 ${
                   open === i ? "bg-[var(--vgo)] text-white rotate-45" : "bg-gray-100 text-gray-600"
                 }`}>+</span>
               </button>

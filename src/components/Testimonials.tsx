@@ -83,7 +83,7 @@ export default function Testimonials() {
               key={i}
               onClick={() => setIdx(i)}
               aria-label={`第 ${i + 1} 条`}
-              className={`h-1.5 rounded-full transition-all duration-500 ${
+              className={`h-1.5 rounded-full transition-[transform,box-shadow,opacity,width,background-color] duration-500 ${
                 i === idx ? "w-8 bg-[var(--vgo)]" : "w-1.5 bg-gray-300 hover:bg-gray-400"
               }`}
             />

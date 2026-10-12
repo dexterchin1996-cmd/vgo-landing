@@ -30,7 +30,7 @@ export default function LangSwitcher({ scrolled = false }: { scrolled?: boolean 
       <button
         onClick={() => setOpen(!open)}
         aria-label="Language"
-        className={`flex items-center gap-1.5 px-3 py-2 rounded-full border transition-all ${
+        className={`flex items-center gap-1.5 px-3 py-2 rounded-full border transition-[transform,box-shadow,opacity,width,background-color] ${
           scrolled
             ? "bg-gray-100 border-gray-200 text-gray-700 hover:bg-gray-200"
             : "bg-white/10 border-white/20 backdrop-blur-md text-white hover:bg-white/20"

@@ -271,7 +271,7 @@ export default function MerchantPage() {
             className="mt-6 text-sm sm:text-base text-white/70 max-w-xl mx-auto leading-relaxed">{c.hero_s}</motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="#apply" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-all">
+            <a href="#apply" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               {c.hero_cta} <ArrowRight size={18} />
             </a>
             <a href="#faq" className="text-xs text-white/60 hover:text-white transition">{c.hero_faq}</a>
@@ -423,7 +423,7 @@ export default function MerchantPage() {
           <div className="relative">
             <h2 className="text-2xl sm:text-4xl font-black text-white mb-4">{c.cta_t}</h2>
             <p className="text-sm text-white/85 mb-8 max-w-md mx-auto">{c.cta_s}</p>
-            <a href="mailto:support.vgo@gmail.com" className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-all">
+            <a href="mailto:support.vgo@gmail.com" className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               {c.cta_btn} <ArrowRight size={18} />
             </a>
             <p className="text-xs text-white/60 mt-4">{c.cta_note}</p>

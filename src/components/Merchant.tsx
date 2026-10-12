@@ -54,7 +54,7 @@ export default function Merchant() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="p-4 rounded-2xl bg-white border border-gray-100 hover:border-[var(--vgo)]/30 hover:shadow-md transition-all"
+                  className="p-4 rounded-2xl bg-white border border-gray-100 hover:border-[var(--vgo)]/30 hover:shadow-md transition-[transform,box-shadow,opacity,width,background-color]"
                 >
                   <div className="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center mb-3">
                     <b.Icon size={20} strokeWidth={2.2} className="text-[var(--vgo)]" />
@@ -67,7 +67,7 @@ export default function Merchant() {
 
             <a
               href="/merchant"
-              className="mt-8 inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-[var(--vgo)] text-white font-bold shadow-lg shadow-orange-500/30 hover:bg-[var(--vgo-dark)] hover:scale-105 transition-all pulse-glow"
+              className="mt-8 inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-[var(--vgo)] text-white font-bold shadow-lg shadow-orange-500/30 hover:bg-[var(--vgo-dark)] hover:scale-105 transition-[transform,box-shadow,opacity,width,background-color] pulse-glow"
             >
               {t("merchant_cta")}
               <ArrowRight size={18} strokeWidth={2.5} />

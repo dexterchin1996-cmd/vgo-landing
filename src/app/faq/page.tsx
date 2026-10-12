@@ -188,7 +188,7 @@ export default function FaqPage() {
                 className="w-full flex items-center justify-between gap-4 p-5 text-left"
               >
                 <span className="font-bold text-white text-sm sm:text-base">{item.q}</span>
-                <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-lg font-light transition-all duration-300 ${
+                <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-lg font-light transition-[transform,box-shadow,opacity,width,background-color] duration-300 ${
                   isOpen ? "bg-[#FFB800] text-white rotate-45" : "bg-white/10 text-white/60"
                 }`}>+</span>
               </button>

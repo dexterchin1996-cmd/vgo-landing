@@ -45,7 +45,7 @@ export default function ShareButton() {
         type="button"
         onClick={() => setOpen(!open)}
         aria-label="分享"
-        className="w-11 h-11 rounded-full flex items-center justify-center text-white shadow-lg transition-all hover:scale-110"
+        className="w-11 h-11 rounded-full flex items-center justify-center text-white shadow-lg transition-[transform,box-shadow,opacity,width,background-color] hover:scale-110"
         style={{ background: open ? "#6B7280" : "linear-gradient(135deg, #4B6A9B 0%, #1B2A47 100%)", boxShadow: "0 8px 20px rgba(27,42,71,.35)" }}
       >
         {open ? <X size={20} strokeWidth={2.6} /> : <Share2 size={20} strokeWidth={2.6} />}

@@ -101,7 +101,7 @@ export default function ContactPage() {
             href="https://wa.me/601172691788"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 p-5 rounded-2xl bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white font-bold hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-green-900/30"
+            className="flex items-center gap-3 p-5 rounded-2xl bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white font-bold hover:scale-[1.02] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color] shadow-lg shadow-green-900/30"
           >
             <MessageCircle size={24} strokeWidth={2.4} />
             <div className="text-left">
@@ -111,7 +111,7 @@ export default function ContactPage() {
           </a>
           <a
             href="mailto:support.vgo@gmail.com"
-            className="flex items-center gap-3 p-5 rounded-2xl bg-gradient-to-br from-[#1B2A47] to-[#2A3F63] text-white font-bold hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-blue-900/30"
+            className="flex items-center gap-3 p-5 rounded-2xl bg-gradient-to-br from-[#1B2A47] to-[#2A3F63] text-white font-bold hover:scale-[1.02] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color] shadow-lg shadow-blue-900/30"
           >
             <Mail size={24} strokeWidth={2.4} />
             <div className="text-left">
@@ -168,7 +168,7 @@ export default function ContactPage() {
             <Link
               key={q}
               href="/faq/"
-              className="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[var(--vgo)]/40 hover:bg-white/8 transition-all text-sm text-white/80"
+              className="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[var(--vgo)]/40 hover:bg-white/8 transition-[transform,box-shadow,opacity,width,background-color] text-sm text-white/80"
             >
               <span className="truncate">{q}</span>
               <span className="text-[var(--vgo)] shrink-0 ml-2">→</span>
@@ -176,7 +176,7 @@ export default function ContactPage() {
           ))}
         </div>
         <div className="text-center mt-6">
-          <Link href="/faq/" className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--vgo)] hover:gap-3 transition-all">
+          <Link href="/faq/" className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--vgo)] hover:gap-3 transition-[transform,box-shadow,opacity,width,background-color]">
             {c.faq_more} →
           </Link>
         </div>

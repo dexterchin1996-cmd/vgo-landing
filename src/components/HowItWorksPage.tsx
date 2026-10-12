@@ -236,7 +236,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }} className="mt-5 text-sm sm:text-base text-white/70 max-w-xl mx-auto">{r.sub}</motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }} className="mt-8">
-            <a href="/#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-all">{t.cta}</a>
+            <a href="/#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">{t.cta}</a>
           </motion.div>
           <p className="mt-10 text-xs text-white/40">{t.scroll} ↓</p>
         </div>
@@ -327,7 +327,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
           })}
         </div>
         <div className="mt-10 text-center">
-          <a href="/#download" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_8px_30px_-6px_rgba(255,150,0,0.6)] hover:scale-[1.02] active:scale-95 transition-all">{t.cta}</a>
+          <a href="/#download" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_8px_30px_-6px_rgba(255,150,0,0.3)] hover:scale-[1.02] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">{t.cta}</a>
         </div>
       </section>
       <section className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 py-16">
@@ -360,7 +360,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
       </section>
       <section className="relative z-10 max-w-3xl mx-auto px-5 sm:px-8 py-16">
         <div className="text-center mb-8">
-          <a href="/#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-all">{t.cta}</a>
+          <a href="/#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">{t.cta}</a>
         </div>
         <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-400/30 flex gap-3 mb-12">
           <ShieldAlert size={20} className="text-amber-400 shrink-0 mt-0.5" />
@@ -372,7 +372,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
             const M = META[o];
             const ot = t.roles[o];
             return (
-              <Link key={o} href={M.href} className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#FFB800]/40 hover:bg-white/8 transition-all flex items-center gap-4">
+              <Link key={o} href={M.href} className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#FFB800]/40 hover:bg-white/8 transition-[transform,box-shadow,opacity,width,background-color] flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center shrink-0">
                   <M.Icon size={20} className="text-white" />
                 </div>
@@ -380,7 +380,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
                   <div className="text-sm font-black">{ot.tag}</div>
                   <div className="text-xs text-white/50 mt-0.5">{ot.sub}</div>
                 </div>
-                <ArrowRight size={16} className="text-white/40 group-hover:text-[#FFB800] group-hover:translate-x-1 transition-all" />
+                <ArrowRight size={16} className="text-white/40 group-hover:text-[#FFB800] group-hover:translate-x-1 transition-[transform,box-shadow,opacity,width,background-color]" />
               </Link>
             );
           })}

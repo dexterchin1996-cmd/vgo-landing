@@ -92,7 +92,7 @@ export default function ServiceModal({ item, onClose }: { item: ServiceItem | nu
               <a
                 href="#download"
                 onClick={onClose}
-                className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-lg shadow-orange-500/30 hover:scale-[1.02] active:scale-95 transition-all"
+                className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-lg shadow-orange-500/30 hover:scale-[1.02] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]"
               >
                 {t.cta} <ArrowRight size={18} />
               </a>
