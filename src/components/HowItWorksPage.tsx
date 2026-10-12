@@ -236,7 +236,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }} className="mt-5 text-sm sm:text-base text-white/70 max-w-xl mx-auto">{r.sub}</motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }} className="mt-8">
-            <a href="/#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">{t.cta}</a>
+            <a href="/#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.3)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">{t.cta}</a>
           </motion.div>
           <p className="mt-10 text-xs text-white/40">{t.scroll} ↓</p>
         </div>
@@ -360,7 +360,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
       </section>
       <section className="relative z-10 max-w-3xl mx-auto px-5 sm:px-8 py-16">
         <div className="text-center mb-8">
-          <a href="/#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">{t.cta}</a>
+          <a href="/#download" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.3)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">{t.cta}</a>
         </div>
         <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-400/30 flex gap-3 mb-12">
           <ShieldAlert size={20} className="text-amber-400 shrink-0 mt-0.5" />

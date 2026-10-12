@@ -93,7 +93,7 @@ export default function PartnerPage() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a href="mailto:support.vgo@gmail.com"
-            className="group inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold text-base shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65),inset_0_1px_0_rgba(255,255,255,0.4)] hover:shadow-[0_16px_50px_-6px_rgba(255,150,0,0.3)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
+            className="group inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold text-base shadow-[0_10px_40px_-6px_rgba(255,150,0,0.3),inset_0_1px_0_rgba(255,255,255,0.4)] hover:shadow-[0_16px_50px_-6px_rgba(255,150,0,0.3)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
             <Mail size={18} />
             <span>{t("partner_contact_email")}</span>
           </a>
@@ -220,7 +220,7 @@ export default function PartnerPage() {
           <h2 className="text-2xl sm:text-4xl font-black mb-4">{t("partner_cta_title")}</h2>
           <p className="text-sm sm:text-base text-white/65 mb-8 max-w-lg mx-auto leading-relaxed">{t("partner_cta_desc")}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="mailto:support.vgo@gmail.com" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
+            <a href="mailto:support.vgo@gmail.com" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-bold shadow-[0_10px_40px_-6px_rgba(255,150,0,0.3)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               <Mail size={18} />
               {t("partner_contact_email")}
             </a>

@@ -292,7 +292,7 @@ export default function ServiceDetailPage({ id }: { id: ServiceId }) {
             className="mt-6 text-sm sm:text-base text-white/70 max-w-xl mx-auto leading-relaxed">{d.value}</motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="#book" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.65)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">{t.cta}</a>
+            <a href="#book" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.3)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">{t.cta}</a>
             <Link href="/#features" className="text-xs text-white/60 hover:text-white transition">{t.all} →</Link>
           </motion.div>
         </div>
