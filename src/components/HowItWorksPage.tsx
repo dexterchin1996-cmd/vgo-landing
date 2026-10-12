@@ -243,7 +243,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
       </section>
       <section className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-16">
         <h2 className="text-2xl sm:text-4xl font-black text-center mb-10">{t.pain_title}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {r.pains.map(([title, desc], i) => (
             <motion.div key={title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="rounded-3xl overflow-hidden bg-white/3 border border-red-500/20">
               <div className="relative h-44 overflow-hidden">
@@ -261,7 +261,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
       </section>
       <section className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-16">
         <h2 className="text-2xl sm:text-4xl font-black text-center mb-10">{t.solve_title}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {r.solves.map(([title, desc], i) => (
             <motion.div key={title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="rounded-3xl overflow-hidden bg-gradient-to-br from-[#FFB800]/10 to-[#FF6600]/5 border border-[#FFB800]/25">
               <div className="relative h-44 overflow-hidden">
@@ -343,7 +343,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
       </section>
       <section className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 py-16">
         <h2 className="text-2xl sm:text-4xl font-black text-center mb-10">{t.reviews_title}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {REVIEWS[lang].map((rv, i) => (
             <motion.div key={rv.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="p-6 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10">
               <div className="flex items-center gap-1 mb-4 text-[#FFB800]">

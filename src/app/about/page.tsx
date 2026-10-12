@@ -195,7 +195,7 @@ export default function AboutPage() {
       {/* 三类人群 */}
       <div className="not-prose mb-12">
         <h3 className="font-black text-lg text-white mb-6">{c.roles_t}</h3>
-        <div className="grid sm:grid-cols-3 gap-3">
+        <div className="grid sm:grid-cols-2 gap-3">
           {c.roles.map((r, i) => (
             <motion.div
               key={r.t}

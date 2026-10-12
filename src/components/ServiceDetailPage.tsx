@@ -335,7 +335,7 @@ export default function ServiceDetailPage({ id }: { id: ServiceId }) {
       {/* 4. 服务包含 */}
       <section className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-16">
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-2xl sm:text-4xl font-black text-center mb-10">{t.overview}</motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {item.canDo.map((x, i) => (
             <motion.div key={x} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.05 }}
               className="flex items-start gap-3 p-4 rounded-2xl bg-white/5 border border-white/10">
@@ -365,7 +365,7 @@ export default function ServiceDetailPage({ id }: { id: ServiceId }) {
       {/* 6. 平台机制 */}
       <section className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-16">
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-2xl sm:text-4xl font-black text-center mb-10">{t.mechTitle}</motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {d.mechanisms.map(([title, desc], i) => (
             <motion.div key={title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.06 }}
               className="p-5 rounded-2xl bg-white/5 border border-white/10">

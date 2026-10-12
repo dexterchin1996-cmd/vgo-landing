@@ -70,7 +70,7 @@ export default function Guarantees() {
           <p className="mt-4 text-gray-500 text-sm sm:text-base max-w-2xl mx-auto">{c.sub}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {c.items.map((item, i) => (
             <motion.div
               key={item.title}

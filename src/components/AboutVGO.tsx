@@ -27,7 +27,7 @@ export default function AboutVGO() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4">{t("about_vgo_title")}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">{t("about_vgo_desc")}</p>
         </motion.div>
-        <div className="grid md:grid-cols-3 gap-5 mb-12">
+        <div className="grid md:grid-cols-2 gap-5 mb-12">
           {CARDS.map((c, i) => (
             <motion.div key={c.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.5, delay: i * 0.1 }} className="p-6 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center mb-4">

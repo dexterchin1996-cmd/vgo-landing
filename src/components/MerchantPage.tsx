@@ -282,7 +282,7 @@ export default function MerchantPage() {
       <section className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-16">
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-2xl sm:text-4xl font-black text-center mb-10">{c.benefits_t}</motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {c.benefits.map((b, i) => (
             <motion.div key={b.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.06 }}
               className="p-6 rounded-2xl bg-white/5 border border-white/10">
@@ -312,7 +312,7 @@ export default function MerchantPage() {
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-2xl sm:text-4xl font-black text-center mb-3">{c.earnings_t}</motion.h2>
         <p className="text-center text-xs text-white/40 mb-10">{c.earnings_sub}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {c.earnings.map((e, i) => (
             <motion.div key={e.l} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}
               className="p-6 rounded-2xl bg-gradient-to-br from-amber-500/10 to-orange-600/5 border border-amber-500/25 text-center">
@@ -327,7 +327,7 @@ export default function MerchantPage() {
       <section className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-16">
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-2xl sm:text-4xl font-black text-center mb-10">{c.support_t}</motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {c.support.map((sp, i) => (
             <motion.div key={sp.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.06 }}
               className="p-5 rounded-2xl bg-white/5 border border-white/10">
@@ -345,7 +345,7 @@ export default function MerchantPage() {
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           className="text-2xl sm:text-4xl font-black text-center mb-3">{c.stories_t}</motion.h2>
         <p className="text-center text-xs text-white/40 mb-10">{c.stories_sub}</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {c.stories.map((st, i) => (
             <motion.div key={st.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
               className="relative p-6 rounded-3xl bg-white/5 border border-white/10">

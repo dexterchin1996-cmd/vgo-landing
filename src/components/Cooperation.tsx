@@ -31,7 +31,7 @@ export default function Cooperation() {
           <p className="text-sm sm:text-base text-gray-500 max-w-2xl mx-auto leading-relaxed">{t("coop_home_sub")}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-12">
           {ITEMS.map((it, i) => (
             <motion.div
               key={it.tKey}
