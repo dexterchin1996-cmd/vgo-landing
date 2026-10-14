@@ -144,3 +144,100 @@ html, body {
 .kb-zoom-in:hover, .kb-zoom-out:hover, .kb-pan-left:hover, .kb-pan-right:hover {
   animation-play-state: paused;
 }
+
+/* ═══════════════════════════════════════════
+   VGO Hero — Animated Gradient Mesh + 3D Grid
+   Replaces worker photo slideshow
+   ═══════════════════════════════════════════ */
+
+.vgo-hero-mesh {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 0%,   #FFB347 0%, transparent 55%),
+    radial-gradient(ellipse 70% 70% at 85% 15%,  #FF6600 0%, transparent 60%),
+    radial-gradient(ellipse 90% 70% at 50% 90%,  #D95000 0%, transparent 65%),
+    linear-gradient(160deg, #1A0F05 0%, #2A1508 45%, #0F0A05 100%);
+  animation: vgoMesh 14s ease-in-out infinite alternate;
+}
+
+@keyframes vgoMesh {
+  0%   { background-position: 0% 0%, 100% 0%, 50% 100%, 0 0; filter: hue-rotate(0deg); }
+  50%  { background-position: 10% 15%, 85% 10%, 45% 95%, 0 0; filter: hue-rotate(-8deg); }
+  100% { background-position: 0% 25%, 100% 25%, 55% 90%, 0 0; filter: hue-rotate(0deg); }
+}
+
+.vgo-hero-grid {
+  background-image:
+    linear-gradient(rgba(255,180,80,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,180,80,0.15) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 75%);
+  animation: vgoGridPan 20s linear infinite;
+}
+
+@keyframes vgoGridPan {
+  0%   { background-position: 0 0, 0 0; }
+  100% { background-position: 48px 48px, 48px 48px; }
+}
+
+.vgo-hero-scan {
+  background: linear-gradient(180deg, transparent 0%, rgba(255,150,60,0.08) 50%, transparent 100%);
+  animation: vgoScan 8s ease-in-out infinite;
+}
+
+@keyframes vgoScan {
+  0%, 100% { opacity: 0.2; transform: translateY(-30%); }
+  50%      { opacity: 0.7; transform: translateY(30%); }
+}
+
+/* VGO pulse glow for CTA */
+@keyframes vgoPulseGlow {
+  0%, 100% { box-shadow: 0 10px 30px -8px rgba(255,102,0,0.5); }
+  50%      { box-shadow: 0 16px 50px -8px rgba(255,180,71,0.8); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   VGO 设计令牌 v1 · 追加 2026-10-15
+   原则：只追加，不覆盖；作用域限定，不影响现有样式
+   ═══════════════════════════════════════════════════════════ */
+
+/* —— 间距令牌（作为 CSS 变量，供组件按需引用）—— */
+:root {
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 40px;
+  --sp-7: 64px;
+  --sp-8: 96px;
+
+  /* 圆角 —— 上限 16，克制是高级感的来源 */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 16px;
+
+  /* 半透明发丝边框 */
+  --border-hairline: oklch(1 0 0 / 8%);
+  --border-active:   oklch(1 0 0 / 14%);
+}
+
+/* ═══ 地图区块专用深色作用域 ═══
+   仅作用于 .vgo-map-section 容器内，不污染全站亮色主题 */
+.vgo-map-section {
+  --map-bg-base:     oklch(0.145 0 0);
+  --map-bg-surface:  oklch(0.175 0.005 270);
+  --map-bg-elevated: oklch(0.21 0.006 270);
+
+  --map-text-primary:   oklch(0.985 0 0);
+  --map-text-secondary: oklch(0.71 0.01 270);
+  --map-text-tertiary:  oklch(0.55 0.01 270);
+
+  /* 状态三色：金橙 / 琥珀 / 暗蓝灰 */
+  --map-live:    oklch(0.78 0.16 75);
+  --map-coming:  oklch(0.65 0.12 65);
+  --map-planned: oklch(0.35 0.02 250);
+
+  background: var(--map-bg-base);
+  color: var(--map-text-primary);
+}

@@ -7,9 +7,11 @@ import { Wrench, Sparkles, Heart, Truck, ChevronDown, Menu, Star, User, Store } 
 import SideDrawer from "./SideDrawer";
 import LangSwitcher from "./LangSwitcher";
 import { useLang } from "@/lib/i18n";
+import { AUTH_OPTIONS } from "@/lib/appUrls";
 
 export default function Navbar() {
   const { t, lang } = useLang();
+  const ROLE_ICONS = { user: User, store: Store, wrench: Wrench } as const;
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [openDrop, setOpenDrop] = useState<string | null>(null);
@@ -118,6 +120,56 @@ export default function Navbar() {
             <div className="ml-3">
               <LangSwitcher scrolled={scrolled} />
             </div>
+
+            {/* 统一登录/注册入口 */}
+            <div
+              className="relative ml-3"
+              onMouseEnter={() => setOpenDrop("__auth")}
+              onMouseLeave={() => setOpenDrop(null)}
+            >
+              <button
+                className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition ${
+                  scrolled ? "text-gray-700 hover:bg-gray-100" : "text-white/90 hover:bg-white/10"
+                }`}
+              >
+                {t("drawer_login")} / {t("drawer_register")}
+                <ChevronDown
+                  size={14}
+                  className={`transition-transform ${openDrop === "__auth" ? "rotate-180" : ""}`}
+                />
+              </button>
+              <AnimatePresence>
+                {openDrop === "__auth" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 6 }}
+                    transition={{ duration: 0.18 }}
+                    className="absolute top-full right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2"
+                  >
+                    {AUTH_OPTIONS.map((opt) => {
+                      const Icon = ROLE_ICONS[opt.icon];
+                      const label = opt.label[lang as keyof typeof opt.label] || opt.label.en;
+                      const sub = opt.sub[lang as keyof typeof opt.sub] || opt.sub.en;
+                      return (
+                        <a
+                          key={opt.role}
+                          href={opt.loginUrl}
+                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-orange-950 hover:bg-orange-50 hover:text-[var(--vgo)] transition"
+                        >
+                          <Icon size={16} strokeWidth={2} />
+                          <span className="flex flex-col leading-tight">
+                            <span className="font-semibold">{label}</span>
+                            <span className="text-[11px] text-gray-500">{sub}</span>
+                          </span>
+                        </a>
+                      );
+                    })}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             <a href="#download" className="ml-3 px-6 py-2.5 rounded-xl bg-[var(--vgo)] text-white text-sm font-bold shadow-lg shadow-orange-500/30 hover:brightness-110 hover:scale-105 transition-[transform,box-shadow,opacity,width,background-color] pulse-glow">
               {t("nav_download")}
             </a>

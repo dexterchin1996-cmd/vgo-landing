@@ -1,12 +1,10 @@
 "use client";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
-import {
-  Home, Wrench, Sparkles, Heart, Truck, ShoppingBag, Briefcase, Megaphone,
-  Info, X, Globe, Check, UserPlus, MessageCircle, BookOpen, Gift, Users,
-} from "lucide-react";
+import { Home, Wrench, Sparkles, Heart, Truck, ShoppingBag, Briefcase, Megaphone, Info, X, Globe, Check, UserPlus, MessageCircle, BookOpen, Gift, Users, User, Store, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { useLang, Lang } from "@/lib/i18n";
+import { AUTH_OPTIONS } from "@/lib/appUrls";
 
 const LANGS: { code: Lang; label: string; native: string }[] = [
   { code: "zh", label: "中文", native: "简体中文" },
@@ -16,6 +14,7 @@ const LANGS: { code: Lang; label: string; native: string }[] = [
 
 export default function SideDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { t, lang, setLang } = useLang();
+  const [authOpen, setAuthOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
 
   const GROUPS = [
@@ -77,14 +76,36 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
                 <UserPlus size={18} className="text-[var(--vgo)]" strokeWidth={2.5} />
                 <span className="font-bold text-sm text-gray-900">{t("drawer_help")}</span>
               </div>
-              <div className="flex gap-2">
-                <a href="#download" onClick={onClose} className="flex-1 text-center py-2.5 rounded-xl bg-[var(--vgo)] text-white font-bold text-sm shadow-md">
-                  {t("drawer_register")}
-                </a>
-                <a href="#download" onClick={onClose} className="flex-1 text-center py-2.5 rounded-xl border-2 border-[var(--vgo)] text-[var(--vgo)] font-bold text-sm">
-                  {t("drawer_login")}
-                </a>
-              </div>
+              <button
+                onClick={() => setAuthOpen(!authOpen)}
+                className="w-full py-2.5 rounded-xl bg-[var(--vgo)] text-white font-bold text-sm shadow-md flex items-center justify-center gap-1.5"
+              >
+                {t("drawer_login")} / {t("drawer_register")}
+                <ChevronDown size={16} className={`transition-transform ${authOpen ? "rotate-180" : ""}`} />
+              </button>
+              {authOpen && (
+                <div className="mt-2 space-y-1.5">
+                  {AUTH_OPTIONS.map((opt) => {
+                    const Icon = ROLE_ICONS[opt.icon];
+                    const label = opt.label[lang as keyof typeof opt.label] || opt.label.en;
+                    const sub = opt.sub[lang as keyof typeof opt.sub] || opt.sub.en;
+                    return (
+                      <a
+                        key={opt.role}
+                        href={opt.loginUrl}
+                        onClick={onClose}
+                        className="flex items-center gap-3 px-3 py-2.5 bg-white rounded-xl border border-gray-200 hover:border-[var(--vgo)] hover:bg-orange-50 transition"
+                      >
+                        <Icon size={16} strokeWidth={2} className="text-[var(--vgo)]" />
+                        <span className="flex flex-col leading-tight text-left">
+                          <span className="font-semibold text-[13px] text-gray-900">{label}</span>
+                          <span className="text-[11px] text-gray-500">{sub}</span>
+                        </span>
+                      </a>
+                    );
+                  })}
+                </div>
+              )}
             </div>
             <nav className="flex-1 overflow-y-auto py-2">
               {GROUPS.map((g, gi) => (

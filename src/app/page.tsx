@@ -19,6 +19,7 @@ import AppLinks from "@/components/AppLinks";
 import Footer from "@/components/Footer";
 import Waitlist from "@/components/Waitlist";
 import Notice from "@/components/Notice";
+import ParticleField from "@/components/ParticleField";
 import Reveal from "@/components/Reveal";
 import { useLang } from "@/lib/i18n";
 
@@ -53,25 +54,10 @@ export default function Home() {
     <>
       <main id="home" className="relative min-h-[100svh] flex flex-col overflow-hidden bg-gray-950 noise">
         <div className="absolute inset-0 z-0">
-          <AnimatePresence mode="sync">
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 1.08 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1 }}
-              transition={{
-                opacity: { duration: TRANSITION_S, ease: "easeInOut" },
-                scale:   { duration: TRANSITION_S, ease: "easeOut" },
-              }}
-              className="absolute inset-0"
-            >
-              <div
-                className={`absolute inset-0 bg-cover bg-center ${HERO_IMAGES[idx].kb}`}
-                style={{ backgroundImage: `url('${HERO_IMAGES[idx].src}')` }}
-              />
-            </motion.div>
-          </AnimatePresence>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
+          <div className="vgo-hero-mesh absolute inset-0" />
+          <div className="vgo-hero-grid absolute inset-0 opacity-30" />
+          <div className="vgo-hero-scan absolute inset-0" />
+          <ParticleField count={140} />
         </div>
 
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
