@@ -1,7 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /verify-success
-Disallow: /verify-failed
-Disallow: /api/
-
-Sitemap: https://vgo-website.vercel.app/sitemap.xml
