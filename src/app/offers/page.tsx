@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, Gift, Store, Wrench, User, Check, Clock, Shield, TrendingUp, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { OFFERS as L } from "@/data/offers";
+import { useLang } from "@/lib/i18n";
 
 type Tab = "customer" | "merchant" | "tech";
 type LangKey = "zh" | "en" | "ms";
@@ -59,7 +60,7 @@ const LABELS = {
 
 export default function OffersPage() {
   const [tab, setTab] = useState<Tab>("customer");
-  const [lang, setLang] = useState<LangKey>("zh");
+  const { lang, setLang } = useLang();
   const t = L[lang];
   const labels = LABELS[lang];
   const howSteps = HOW_STEPS[lang];
