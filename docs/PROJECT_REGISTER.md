@@ -138,3 +138,18 @@
 - 版权主体：Ventus Reflexology（已确认）
 - 归属：阶段 6 上线前
 - 不阻塞 3.0 开发
+
+## R14 完成（2026-10-18）
+- 17/17 layout 全部改为 generateMetadata + cookie 读取
+- i18n.tsx 新增 key：about_meta_* (2) + 13 页 × 2 + merchant/technician × 2 + site_meta_* (2) = 34 条 × 3 语 = 102 条
+- i18n.tsx 新增 setLangCookie helper，写入 vgo_lang cookie
+- 运行时验证：Termux 无法跑 dev server（KP-9），留待 Vercel 部署验证
+- 数据层验证通过（静态脚本）：key 齐全、cookie helper 定义+3处调用、layout 4项检查
+
+## T30 完成（2026-10-18）
+- 13 个子页 layout 批量去重 + i18n 化
+- 全部 tsc 通过
+
+## KP-9 已登记
+- Termux 无法编译 Next 15 页面，只做 tsc/git/静态验证
+- 生产构建走 Vercel / Cloudflare / 云服务器
