@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { User, Store, Wrench } from "lucide-react";
+import { User, Store, Wrench, Handshake } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 export default function Roles() {
@@ -33,6 +33,15 @@ export default function Roles() {
       cta: t("role_tech_cta"),
       href: "/technician",
       img: "/shared/s02.jpg",
+    },
+    {
+      id: "partner", tag: t("role_partner_tag"), Icon: Handshake,
+      title: t("role_partner_title"),
+      desc: t("role_partner_desc"),
+      points: [t("role_partner_p1"), t("role_partner_p2"), t("role_partner_p3"), t("role_partner_p4")],
+      cta: t("role_partner_cta"),
+      href: "/partner",
+      img: "/shared/s04.jpg",
     },
   ];
 
