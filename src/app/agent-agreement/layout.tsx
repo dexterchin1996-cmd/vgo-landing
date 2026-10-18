@@ -1,25 +1,30 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
+import { TRANSLATIONS, type Lang } from "@/lib/i18n";
 
-const agentAgreementMeta = {
-  title: "代理协议 | V'GO",
-  description: "VGO 代理合作协议",
-};
-
-export const metadata: Metadata = {
-  title: agentAgreementMeta.title,
-  description: agentAgreementMeta.description,
-  openGraph: {
-    title: agentAgreementMeta.title,
-    description: agentAgreementMeta.description,
-    url: "/agent-agreement/",
-    type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: agentAgreementMeta.title,
-    description: agentAgreementMeta.description,
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const raw = cookieStore.get("vgo_lang")?.value;
+  const lang: Lang = raw === "zh" || raw === "en" || raw === "ms" ? raw : "zh";
+  const T = TRANSLATIONS[lang] as Record<string, string>;
+  const title = T.agent_agreement_meta_title ?? "agent-agreement | V'GO";
+  const description = T.agent_agreement_meta_desc ?? "";
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: "/agent-agreement/",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+  };
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;

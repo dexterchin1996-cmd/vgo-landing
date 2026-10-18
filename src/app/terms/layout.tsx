@@ -1,25 +1,30 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
+import { TRANSLATIONS, type Lang } from "@/lib/i18n";
 
-const termsMeta = {
-  title: "服务条款 | V'GO",
-  description: "VGO 平台服务条款",
-};
-
-export const metadata: Metadata = {
-  title: termsMeta.title,
-  description: termsMeta.description,
-  openGraph: {
-    title: termsMeta.title,
-    description: termsMeta.description,
-    url: "/terms/",
-    type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: termsMeta.title,
-    description: termsMeta.description,
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const raw = cookieStore.get("vgo_lang")?.value;
+  const lang: Lang = raw === "zh" || raw === "en" || raw === "ms" ? raw : "zh";
+  const T = TRANSLATIONS[lang] as Record<string, string>;
+  const title = T.terms_meta_title ?? "terms | V'GO";
+  const description = T.terms_meta_desc ?? "";
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: "/terms/",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+  };
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return children;
