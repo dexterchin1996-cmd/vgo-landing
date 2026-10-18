@@ -185,12 +185,12 @@ export default function OffersPage() {
               </div>
             </div>
             <div className="bg-[#06111d]/5 backdrop-blur-xl p-6 border-t border-white/10">
-              <a
+              <Link
                 href="/#download"
                 className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black hover:scale-[1.02] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color] shadow-lg shadow-orange-500/40"
               >
                 {t.cta}
-              </a>
+              </Link>
             </div>
           </motion.div>
         </AnimatePresence>
@@ -280,12 +280,12 @@ export default function OffersPage() {
             <TrendingUp size={28} className="text-white/90 mx-auto mb-4" />
             <h2 className="text-xl sm:text-2xl font-black text-white mb-3">名额有限，先到先得</h2>
             <p className="text-sm text-white/80 mb-6 max-w-md mx-auto">首批福利限时限量，领完为止</p>
-            <a
+            <Link
               href="/#download"
               className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-[#06111d] text-[#D95000] font-black shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]"
             >
               {t.cta} <ArrowLeft size={16} className="rotate-180" />
-            </a>
+            </Link>
           </div>
         </motion.div>
       </section>

@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { motion } from "motion/react";
 import { useLang } from "@/lib/i18n";
 
@@ -37,12 +38,12 @@ export default function FinalCTA() {
             </p>
 
             <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a href="/how-it-works/customer" className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-[#06111d] text-[var(--vgo-dark)] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
+              <Link href="/how-it-works/customer" className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-[#06111d] text-[var(--vgo-dark)] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
                 {t("cta_register")}
-              </a>
-              <a href="/services/repair" className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-[#06111d]/15 backdrop-blur-md border border-white/40 text-white font-bold text-base hover:bg-[#06111d]/25 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
+              </Link>
+              <Link href="/services/repair" className="w-full sm:w-auto px-9 py-4 rounded-2xl bg-[#06111d]/15 backdrop-blur-md border border-white/40 text-white font-bold text-base hover:bg-[#06111d]/25 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
                 {t("cta_download")}
-              </a>
+              </Link>
             </div>
 
             <p className="mt-6 text-xs text-white/60">{t("cta_note")}</p>

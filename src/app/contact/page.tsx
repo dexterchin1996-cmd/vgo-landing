@@ -65,7 +65,7 @@ const C = {
 
 const FAQ_LINKS = {
   zh: [
-    <span id="what-is-vgo">V&apos;GO 是什么？</span>,
+    <span key="what-is-vgo" id="what-is-vgo">V&apos;GO 是什么？</span>,
     "怎么下单？",
     "师傅有认证吗？",
     "价格怎么算？",
