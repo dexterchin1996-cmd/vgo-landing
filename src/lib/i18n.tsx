@@ -289,6 +289,8 @@ export const TRANSLATIONS = {
     page_about_label: "关于我们",
     page_about_title: "我们是谁",
     about_vgo_label: "关于 V'GO",
+    about_meta_title: "关于 VGO | V'GO",
+    about_meta_desc: "了解 VGO 平台的故事、愿景与团队",
     about_vgo_title: "马来西亚本地生活服务平台",
     about_vgo_desc: "V'GO 成立于马来西亚沙巴，使命是用一个 App 解决生活中的所有上门需求 —— 从维修、清洁、按摩到跑腿配送。让每次服务都简单、透明、有保障。",
     about_vgo_c1_t: "认证师傅",
@@ -606,6 +608,8 @@ export const TRANSLATIONS = {
     page_about_label: "About Us",
     page_about_title: "Who We Are",
     about_vgo_label: "About V'GO",
+    about_meta_title: "About VGO | V'GO",
+    about_meta_desc: "Learn about VGO platform's story, vision and team",
     about_vgo_title: "Malaysia's Local Lifestyle Services Platform",
     about_vgo_desc: "Founded in Sabah, Malaysia, V'GO's mission is to solve all your home-service needs with one app.",
     about_vgo_c1_t: "Certified Technicians",
@@ -923,6 +927,8 @@ export const TRANSLATIONS = {
     page_about_label: "Tentang Kami",
     page_about_title: "Siapa Kami",
     about_vgo_label: "Tentang V'GO",
+    about_meta_title: "Tentang VGO | V'GO",
+    about_meta_desc: "Ketahui kisah, visi dan pasukan platform VGO",
     about_vgo_title: "Platform Perkhidmatan Gaya Hidup Tempatan Malaysia",
     about_vgo_desc: "Diasaskan di Sabah, Malaysia, misi V'GO adalah menyelesaikan semua keperluan perkhidmatan ke rumah anda dengan satu app.",
     about_vgo_c1_t: "Juruteknik Disahkan",
@@ -959,6 +965,11 @@ export const TRANSLATIONS = {
 
 export type TransKey = keyof typeof TRANSLATIONS.zh | (string & {});
 
+const setLangCookie = (l: Lang) => {
+  if (typeof document === "undefined") return;
+  document.cookie = "vgo_lang=" + l + "; path=/; max-age=31536000; SameSite=Lax";
+};
+
 const LangCtx = createContext<{
   lang: Lang;
   setLang: (l: Lang) => void;
@@ -979,6 +990,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
     const saved = localStorage.getItem("vgo_lang");
     if (saved === "zh" || saved === "en" || saved === "ms") {
       setLangState(saved);
+      setLangCookie(saved);
       document.documentElement.setAttribute("data-lang", saved);
       return;
     }
@@ -997,11 +1009,13 @@ export function LangProvider({ children }: { children: ReactNode }) {
     }
 
     setLangState(detected);
+    setLangCookie(detected);
     document.documentElement.setAttribute("data-lang", detected);
   }, []);
 
   const setLang = (l: Lang) => {
     setLangState(l);
+    setLangCookie(l);
     if (typeof window !== "undefined") {
       localStorage.setItem("vgo_lang", l);
       document.documentElement.setAttribute("data-lang", l);
