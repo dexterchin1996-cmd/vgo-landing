@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+const aboutMeta = {
   title: "关于 VGO | V'GO",
   description: "了解 VGO 平台的故事、愿景与团队",
+};
+
+export const metadata: Metadata = {
+  title: aboutMeta.title,
+  description: aboutMeta.description,
   openGraph: {
-    title: "关于 VGO | V'GO",
-    description: "了解 VGO 平台的故事、愿景与团队",
+    title: aboutMeta.title,
+    description: aboutMeta.description,
     url: "/about/",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "关于 VGO | V'GO",
-    description: "了解 VGO 平台的故事、愿景与团队",
+    title: aboutMeta.title,
+    description: aboutMeta.description,
   },
 };
 
