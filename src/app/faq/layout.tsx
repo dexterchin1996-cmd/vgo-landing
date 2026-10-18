@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+const faqMeta = {
   title: "常见问题 | V'GO",
   description: "VGO 平台常见问题解答",
+};
+
+export const metadata: Metadata = {
+  title: faqMeta.title,
+  description: faqMeta.description,
   openGraph: {
-    title: "常见问题 | V'GO",
-    description: "VGO 平台常见问题解答",
+    title: faqMeta.title,
+    description: faqMeta.description,
     url: "/faq/",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "常见问题 | V'GO",
-    description: "VGO 平台常见问题解答",
+    title: faqMeta.title,
+    description: faqMeta.description,
   },
 };
 

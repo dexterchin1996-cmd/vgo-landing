@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+const ipCopyrightMeta = {
   title: "知识产权 | V'GO",
   description: "VGO 知识产权与版权声明",
+};
+
+export const metadata: Metadata = {
+  title: ipCopyrightMeta.title,
+  description: ipCopyrightMeta.description,
   openGraph: {
-    title: "知识产权 | V'GO",
-    description: "VGO 知识产权与版权声明",
+    title: ipCopyrightMeta.title,
+    description: ipCopyrightMeta.description,
     url: "/ip-copyright/",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "知识产权 | V'GO",
-    description: "VGO 知识产权与版权声明",
+    title: ipCopyrightMeta.title,
+    description: ipCopyrightMeta.description,
   },
 };
 

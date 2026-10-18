@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+const privacyMeta = {
   title: "隐私政策 | V'GO",
   description: "VGO 平台隐私政策（PDPA 2024 合规）",
+};
+
+export const metadata: Metadata = {
+  title: privacyMeta.title,
+  description: privacyMeta.description,
   openGraph: {
-    title: "隐私政策 | V'GO",
-    description: "VGO 平台隐私政策（PDPA 2024 合规）",
+    title: privacyMeta.title,
+    description: privacyMeta.description,
     url: "/privacy/",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "隐私政策 | V'GO",
-    description: "VGO 平台隐私政策（PDPA 2024 合规）",
+    title: privacyMeta.title,
+    description: privacyMeta.description,
   },
 };
 

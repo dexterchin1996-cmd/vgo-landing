@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+const verifySuccessMeta = {
   title: "验证成功 | V'GO",
   description: "邮箱验证成功",
+};
+
+export const metadata: Metadata = {
+  title: verifySuccessMeta.title,
+  description: verifySuccessMeta.description,
   openGraph: {
-    title: "验证成功 | V'GO",
-    description: "邮箱验证成功",
+    title: verifySuccessMeta.title,
+    description: verifySuccessMeta.description,
     url: "/verify-success/",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "验证成功 | V'GO",
-    description: "邮箱验证成功",
+    title: verifySuccessMeta.title,
+    description: verifySuccessMeta.description,
   },
 };
 

@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+const proAgreementMeta = {
   title: "师傅协议 | V'GO",
   description: "VGO 技术员服务协议",
+};
+
+export const metadata: Metadata = {
+  title: proAgreementMeta.title,
+  description: proAgreementMeta.description,
   openGraph: {
-    title: "师傅协议 | V'GO",
-    description: "VGO 技术员服务协议",
+    title: proAgreementMeta.title,
+    description: proAgreementMeta.description,
     url: "/pro-agreement/",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "师傅协议 | V'GO",
-    description: "VGO 技术员服务协议",
+    title: proAgreementMeta.title,
+    description: proAgreementMeta.description,
   },
 };
 
