@@ -273,27 +273,76 @@ export default function ServiceDetailPage({ id }: { id: ServiceId }) {
   return (
     <main className="relative min-h-screen bg-gray-950 text-white overflow-hidden">
       {/* 1. Hero */}
-      <section className="relative min-h-[60svh] flex items-center justify-center px-5 overflow-hidden">
+      <section className="relative min-h-[75svh] flex items-center px-5 sm:px-8 py-24 overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-cover bg-center kenburns" style={{ backgroundImage: `url('${item.image}')` }} />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-gray-950" />
+          <div className="absolute inset-0 bg-cover bg-center kenburns opacity-30" style={{ backgroundImage: `url('${item.image}')` }} />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#06111d] via-[#06111d]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#06111d] via-transparent to-transparent" />
         </div>
-        <div className="relative z-10 max-w-3xl mx-auto text-center pt-24">
-          <Link href="/#features" className="absolute left-0 top-0 inline-flex items-center gap-1 text-white/60 hover:text-white text-xs"><ArrowLeft size={14} /> {t.back}</Link>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 text-xs font-semibold mb-6">
-            <Icon size={14} /> {item.title}
-          </motion.div>
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-3xl sm:text-5xl md:text-6xl font-black leading-[1.1] tracking-tight">
-            <span className="text-white">{item.tagline}</span>
-          </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-6 text-sm sm:text-base text-white/70 max-w-xl mx-auto leading-relaxed">{d.value}</motion.p>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="#book" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-[0_10px_40px_-6px_rgba(255,150,0,0.3)] hover:scale-[1.03] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">{t.cta}</a>
-            <Link href="/#features" className="text-xs text-white/60 hover:text-white transition">{t.all} →</Link>
+        
+        <div className="relative z-10 w-full max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center pt-10">
+          
+          {/* 左侧文案 */}
+          <div className="text-left">
+            <Link href="/#features" className="inline-flex items-center gap-1 text-white/60 hover:text-white text-xs mb-8 transition-colors"><ArrowLeft size={14} /> {t.back}</Link>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 text-xs font-semibold mb-6">
+              <Icon size={14} className="text-[#FF7A00]" /> {item.title}
+            </motion.div>
+            
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
+              className="font-display text-4xl sm:text-5xl md:text-6xl font-black leading-[1.1] tracking-tight text-white">
+              {item.tagline}
+            </motion.h1>
+            
+            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }}
+              className="mt-6 text-sm sm:text-base text-white/70 max-w-xl leading-relaxed">
+              {d.value}
+            </motion.p>
+            
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }}
+              className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <Link href="/#features" className="text-sm font-medium text-white/60 hover:text-white transition flex items-center h-12">{t.all} →</Link>
+            </motion.div>
+          </div>
+
+          {/* 右侧：磨砂玻璃预订卡 */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="w-full max-w-md mx-auto lg:mx-0 lg:ml-auto rounded-[24px] border border-white/10 bg-white/[0.04] p-6 md:p-8 backdrop-blur-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-bold text-white">预订此服务</h3>
+              <div className="flex items-center gap-1 text-[12px] text-white/70">
+                <span className="text-[#FF7A00]">★</span> 4.9
+              </div>
+            </div>
+            
+            <div className="flex gap-2 mb-6">
+               <span className="px-3 py-1 bg-white/5 rounded-full text-[11px] text-white/60 border border-white/5 flex items-center gap-1"><ShieldCheck size={12} className="text-[#FF7A00]"/> 平台质保</span>
+               <span className="px-3 py-1 bg-white/5 rounded-full text-[11px] text-white/60 border border-white/5 flex items-center gap-1"><Clock size={12} className="text-[#FF7A00]"/> 快速响应</span>
+            </div>
+            
+            <div className="space-y-3">
+              <div className="h-12 rounded-xl border border-white/10 bg-white/[0.03] px-4 flex items-center text-[13px] text-white/40">
+                输入服务地址
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="h-12 rounded-xl border border-white/10 bg-white/[0.03] px-4 flex items-center text-[13px] text-white/40">
+                  选择日期
+                </div>
+                <div className="h-12 rounded-xl border border-white/10 bg-white/[0.03] px-4 flex items-center text-[13px] text-white/40">
+                  选择时间
+                </div>
+              </div>
+              
+              {/* 这里的按钮直接指向原有的 #book 区域 */}
+              <a href="#book" className="mt-4 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-[#FF7A00] text-[14px] font-bold text-white transition-colors hover:bg-[#FF9A33]">
+                {t.cta} <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
