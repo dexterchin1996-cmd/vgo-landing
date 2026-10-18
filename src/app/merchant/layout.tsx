@@ -1,6 +1,31 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "商家合作 | V'GO",
-  description: "加入VGO平台，让全马客户找到你的店。免费入驻，订单直推，透明费率。",
-};
-export default function Layout({ children }: { children: React.ReactNode }) { return children; }
+import { cookies } from "next/headers";
+import { TRANSLATIONS, type Lang } from "@/lib/i18n";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const raw = cookieStore.get("vgo_lang")?.value;
+  const lang: Lang = raw === "zh" || raw === "en" || raw === "ms" ? raw : "zh";
+  const T = TRANSLATIONS[lang] as Record<string, string>;
+  const title = T.merchant_meta_title ?? "商家合作 | V'GO";
+  const description = T.merchant_meta_desc ?? "";
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: "/merchant/",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+  };
+}
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return children;
+}

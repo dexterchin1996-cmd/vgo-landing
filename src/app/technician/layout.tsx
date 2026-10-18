@@ -1,6 +1,31 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "师傅入驻 | V'GO",
-  description: "加入VGO平台，就近派单，按单结算，自己排时间。手艺人的平台。",
-};
-export default function Layout({ children }: { children: React.ReactNode }) { return children; }
+import { cookies } from "next/headers";
+import { TRANSLATIONS, type Lang } from "@/lib/i18n";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const raw = cookieStore.get("vgo_lang")?.value;
+  const lang: Lang = raw === "zh" || raw === "en" || raw === "ms" ? raw : "zh";
+  const T = TRANSLATIONS[lang] as Record<string, string>;
+  const title = T.technician_meta_title ?? "师傅入驻 | V'GO";
+  const description = T.technician_meta_desc ?? "";
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: "/technician/",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+  };
+}
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return children;
+}
