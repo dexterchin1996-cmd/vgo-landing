@@ -7,7 +7,6 @@
 
 
 
-!.env.example
 # Build
 # Env
 # IDE
@@ -48,3 +47,4 @@ tsconfig.tsbuildinfo
 yarn-debug.log*
 合并报告.md
 *.bak-*
+!.env.example
