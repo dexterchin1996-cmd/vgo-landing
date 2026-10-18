@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 import {
   ArrowLeft, ArrowRight, Check, Clock, ShieldCheck, XCircle,
   Wrench, Sparkles, Heart, Truck, ShoppingBag, Briefcase,
-  AlertCircle, FileCheck, MessageSquare, type LucideIcon,
+  type LucideIcon,
 } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import { SERVICES, type ServiceItem } from "@/data/services";
