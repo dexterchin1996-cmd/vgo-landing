@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
+import { TRANSLATIONS, type Lang } from "@/lib/i18n";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CookieBanner from "@/components/CookieBanner";
@@ -30,10 +32,15 @@ export const viewport = {
   viewportFit: "cover" as const,
 };
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = await cookies();
+  const raw = cookieStore.get("vgo_lang")?.value;
+  const lang: Lang = raw === "zh" || raw === "en" || raw === "ms" ? raw : "zh";
+  const T = TRANSLATIONS[lang] as Record<string, string>;
+  return {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: SITE.title,
+    default: (T.site_meta_title ?? SITE.title),
     template: "%s · V'GO",
   },
   description: "V'GO（V Go On）—— 马来西亚上门服务平台。居家维修、清洁、按摩、跑腿、商城、找工作，一站搞定。",
@@ -55,8 +62,8 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "ms_MY"],
     url: BASE_URL,
     siteName: "V'GO",
-    title: SITE.title,
-    description: SITE.descShort,
+    title: (T.site_meta_title ?? SITE.title),
+    description: (T.site_meta_desc ?? SITE.descShort),
     images: [
       {
         url: SITE.ogImage,
@@ -68,8 +75,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: SITE.title,
-    description: SITE.descShort,
+    title: (T.site_meta_title ?? SITE.title),
+    description: (T.site_meta_desc ?? SITE.descShort),
     images: [SITE.ogImage],
   },
   robots: {
@@ -89,7 +96,9 @@ export const metadata: Metadata = {
     apple: SITE.logo,
   },
   category: "service",
-};
+  };
+}
+
 
 const jsonLd = {
   "@context": "https://schema.org",
