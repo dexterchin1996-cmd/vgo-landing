@@ -72,9 +72,13 @@ export default function Roles() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="relative overflow-hidden rounded-[28px] border border-white/5 group"
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.02] backdrop-blur-[16px] group transition-colors duration-300 hover:border-[#FF7A00]/30 hover:bg-white/[0.04] hover:shadow-[0_0_0_1px_rgba(255,121,0,0.15),0_12px_40px_rgba(0,0,0,0.3),0_0_24px_rgba(255,121,0,0.15)]"
             >
+              {/* 顶部橙色扫光 */}
+              <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#FF7A00]/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10" />
+
               <div className="grid md:grid-cols-3">
                 <div className="relative h-56 md:h-auto overflow-hidden">
                   <div

@@ -68,6 +68,32 @@ export default function CoveragePage() {
         </div>
       </section>
 
+      {/* Decorative Glow Map Element */}
+      <section className="px-6 pb-12 relative">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="relative mx-auto max-w-3xl aspect-[2/1] rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md overflow-hidden flex items-center justify-center"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,121,0,0.1)_0%,transparent_70%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:30px_30px]" />
+          
+          <div className="relative z-10 flex flex-col items-center">
+            <motion.div 
+              className="relative flex h-4 w-4 items-center justify-center rounded-full bg-[#FF7A00] shadow-[0_0_20px_#FF7A00]"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <div className="absolute inset-[3px] rounded-full bg-white" />
+            </motion.div>
+            <div className="mt-4 text-[13px] font-bold tracking-widest text-[#FF7A00] uppercase drop-shadow-[0_0_10px_rgba(255,121,0,0.5)]">
+              Malaysia Coverage
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       <section className="px-6 pb-20">
         <div className="max-w-5xl mx-auto flex flex-col gap-4">
           {liveStates.map((state, i) => (
