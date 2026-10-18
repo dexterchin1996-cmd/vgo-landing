@@ -104,6 +104,22 @@ export default function Hero() {
                 {t("hero_proof_3")}
               </div>
             </div>
+
+            {/* 4 角色快速分流 */}
+            <motion.div {...rise(0.6)} className="mt-8 flex flex-wrap gap-3">
+              <a href="/how-it-works/customer" className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[12px] font-semibold text-white/80 backdrop-blur transition-all hover:bg-white/10 hover:text-white">
+                我是客户，找服务
+              </a>
+              <a href="/technician" className="inline-flex items-center gap-1.5 rounded-full border border-[#FF7A00]/30 bg-[#FF7A00]/10 px-4 py-2 text-[12px] font-semibold text-[#FF7A00] backdrop-blur transition-all hover:bg-[#FF7A00]/20">
+                我是师傅，接单
+              </a>
+              <a href="/merchant" className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[12px] font-semibold text-white/80 backdrop-blur transition-all hover:bg-white/10 hover:text-white">
+                我是商家，入驻
+              </a>
+              <a href="/partner" className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[12px] font-semibold text-white/80 backdrop-blur transition-all hover:bg-white/10 hover:text-white">
+                我是渠道，合作
+              </a>
+            </motion.div>
           </motion.div>
 
           {/* Right: Team image + floating glass card */}
