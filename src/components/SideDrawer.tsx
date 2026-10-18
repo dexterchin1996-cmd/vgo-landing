@@ -65,7 +65,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
               <div className="flex items-center gap-2.5">
                 <Image src="/logo-mark.svg" alt="V'GO" width={36} height={36} className="w-9 h-9 object-contain shrink-0" />
                 <div className="flex flex-col leading-none">
-                  <span className="font-black text-lg text-gray-900">V'GO</span>
+                  <span className="font-black text-lg text-gray-900">V&apos;GO</span>
                   <span className="text-[8px] font-semibold tracking-[0.2em] text-gray-400">Smart. Simple. Sorted.</span>
                 </div>
               </div>

@@ -88,7 +88,7 @@ export default function OffersPage() {
       {/* 顶部返回 */}
       <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 pt-8 flex items-center justify-between">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition">
-          <ArrowLeft size={16} /><span>V'GO</span>
+          <ArrowLeft size={16} /><span>V&apos;GO</span>
         </Link>
         <div className="flex gap-2">
           {(["zh", "en", "ms"] as LangKey[]).map((l) => (

@@ -350,7 +350,7 @@ export default function MerchantPage() {
             <motion.div key={st.name} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
               className="relative p-6 rounded-3xl bg-white/5 border border-white/10">
               <Quote size={36} strokeWidth={1} className="absolute top-3 right-3 text-[var(--vgo)] opacity-10" />
-              <p className="text-sm text-white/75 leading-[1.8] mb-5">"{st.quote}"</p>
+              <p className="text-sm text-white/75 leading-[1.8] mb-5">&quot;{st.quote}&quot;</p>
               <div className="pt-4 border-t border-white/10 flex items-center gap-2">
                 <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center text-xs font-black shrink-0">{st.name[0]}</div>
                 <div className="min-w-0">

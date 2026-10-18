@@ -349,7 +349,7 @@ export default function HowItWorksPage({ role }: { role: Role }) {
               <div className="flex items-center gap-1 mb-4 text-[#FFB800]">
                 {"★★★★★".split("").map((_, j) => <span key={j}>★</span>)}
               </div>
-              <p className="text-sm text-white/75 leading-relaxed mb-5">"{rv.quote}"</p>
+              <p className="text-sm text-white/75 leading-relaxed mb-5">&quot;{rv.quote}&quot;</p>
               <div className="pt-4 border-t border-white/10">
                 <div className="text-sm font-black">{rv.name}</div>
                 <div className="text-xs text-white/40 mt-0.5">{rv.service}</div>

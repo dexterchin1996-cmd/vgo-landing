@@ -21,7 +21,7 @@ export default function Testimonials() {
             <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.15 }} whileHover={{ rotateX: 5, rotateY: -5, translateZ: 20 }} className="relative p-8 rounded-3xl bg-[#06111d] border border-white/5 shadow-2xl flex flex-col justify-between" style={{ transformStyle: "preserve-3d" }}>
               <div>
                 <div className="flex gap-1 mb-6">{[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-[#ff7900] text-[#ff7900]" />)}</div>
-                <p className="text-white/80 text-base leading-relaxed mb-8">"{r.text}"</p>
+                <p className="text-white/80 text-base leading-relaxed mb-8">&quot;{r.text}&quot;</p>
               </div>
               <div className="flex items-center gap-4 border-t border-white/5 pt-6">
                 <img src={r.img} alt={r.name} className="w-12 h-12 rounded-full object-cover border border-white/10" />

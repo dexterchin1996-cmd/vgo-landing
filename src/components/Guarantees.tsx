@@ -20,7 +20,7 @@ export default function Guarantees() {
         
         <div className="text-center mb-16">
           <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-[#ff7900] font-bold text-xs tracking-[0.2em] uppercase mb-3">
-            V'GO Guarantee
+            V&apos;GO Guarantee
           </motion.p>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-3xl sm:text-5xl font-black text-white tracking-tight">
             安心托付的保障。
