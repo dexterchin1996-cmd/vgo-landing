@@ -92,3 +92,8 @@
 - 保留：AboutVGO（T12 数字墙）、ComingSoon（R8 未来功能）、ParticleField（T14 粒子背景）、ServiceModal（R9 未接线）
 - 新发现：T13 PainPointWall 曾硬编码中文（已修复）
 - R1 状态：✅ 收尾
+
+## N. src/app + src/data 扫描（2026-10-18）
+- T15：src/data/navigation.ts、site.config.ts 零引用候选。CA-1 待二次确认（7 种隐形使用），阶段4处理
+- T16：src/app 21 个页面层普遍硬编码中文（metadata + 内容），about/layout.tsx 同一文案重复3次。阶段4系统性 i18n 化
+- 今日目标2：✅ 扫完登记，不深挖
