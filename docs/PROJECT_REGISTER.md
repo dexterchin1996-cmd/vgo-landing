@@ -125,3 +125,16 @@
 - about/layout.tsx 文案重复 3 次 → 提取常量，现 1 次
 - tsc 退出码 0
 - 可复制到其他 20 个 layout.tsx
+
+## T18 关闭（2026-10-18 用户确认）
+- Ventus Reflexology 确认为 VGO 的合法注册运营公司
+- 用户可见披露（contact、Footer）：合法，保留
+- 代码版权注释（website 3 处 + vgo-service 210 处）：合法，保留
+- 结论：不是技术债，是法律披露。T18 关闭。
+
+## T28 LICENSE 缺失（2026-10-18 登记）
+- 三仓库均无 LICENSE / COPYRIGHT 文件
+- 商业项目上线前必须补，明确版权归属和使用限制
+- 版权主体：Ventus Reflexology（已确认）
+- 归属：阶段 6 上线前
+- 不阻塞 3.0 开发
