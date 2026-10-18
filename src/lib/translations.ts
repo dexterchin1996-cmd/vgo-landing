@@ -363,6 +363,9 @@ export const TRANSLATIONS = {
     trust_price_desc: "明码标价 · 无隐藏费用",
     trust_support_title: "全天候客服",
     trust_support_desc: "7x24小时在线",
+    hero_proof_1: "全马服务",
+    hero_proof_2: "实名认证师傅",
+    hero_proof_3: "价格先确认",
   },
   en: {
     nav_home: "Home",
@@ -726,6 +729,9 @@ export const TRANSLATIONS = {
     trust_price_desc: "Clear rates, no hidden fees",
     trust_support_title: "24/7 Support",
     trust_support_desc: "Always online, day and night",
+    hero_proof_1: "Nationwide coverage",
+    hero_proof_2: "Verified professionals",
+    hero_proof_3: "Price confirmed first",
   },
   ms: {
     nav_home: "Utama",
@@ -1089,6 +1095,9 @@ export const TRANSLATIONS = {
     trust_price_desc: "Kadar jelas, tiada caj tersembunyi",
     trust_support_title: "Sokongan 24/7",
     trust_support_desc: "Sentiasa dalam talian",
+    hero_proof_1: "Liputan seluruh negara",
+    hero_proof_2: "Tukang disahkan",
+    hero_proof_3: "Harga disahkan dahulu",
   },
 } as const;
 

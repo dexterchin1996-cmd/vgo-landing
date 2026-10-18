@@ -58,6 +58,21 @@ export default function Hero() {
           >
             {t("hero_sub")}
           </motion.p>
+
+          <motion.ul {...rise(0.42)} className="mt-7 flex flex-wrap gap-x-5 gap-y-2">
+            <li className="flex items-center gap-1.5 text-[11px] font-semibold text-white/55">
+              <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 stroke-[#ff7900] fill-none" strokeWidth={2.4} aria-hidden="true"><path d="M12 21s-7-4.4-7-10a7 7 0 0114 0c0 5.6-7 10-7 10z"/><circle cx="12" cy="11" r="2.6"/></svg>
+              {t("hero_proof_1")}
+            </li>
+            <li className="flex items-center gap-1.5 text-[11px] font-semibold text-white/55">
+              <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 stroke-[#ff7900] fill-none" strokeWidth={2.4} aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.4 8.8-8 10-4.6-1.2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+              {t("hero_proof_2")}
+            </li>
+            <li className="flex items-center gap-1.5 text-[11px] font-semibold text-white/55">
+              <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 stroke-[#ff7900] fill-none" strokeWidth={2.4} aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.8 1.8 0 010 3.6h-3a1.8 1.8 0 000 3.6h4"/></svg>
+              {t("hero_proof_3")}
+            </li>
+          </motion.ul>
         </div>
       </div>
 
@@ -121,7 +136,7 @@ export default function Hero() {
           </li>
         </motion.ul>
 
-        <motion.div {...rise(0.42)}>
+        <motion.div {...rise(0.5)} className="flex flex-col gap-3">
           <Link
             href="#download"
             className="flex items-center justify-between gap-3.5 w-full px-5.5 py-4 rounded-[13px] bg-[#ff7900] text-[#0a0a0a] font-bold text-[14.5px] transition-colors duration-200 hover:bg-[#ff9633] active:scale-[0.98]"
@@ -130,6 +145,12 @@ export default function Hero() {
             <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-current fill-none" strokeWidth={2.4} aria-hidden="true">
               <path d="M12 4v12M6 12l6 6 6-6" />
             </svg>
+          </Link>
+          <Link
+            href="/how-it-works/intro"
+            className="block text-center text-[12px] font-semibold text-white/45 border-b border-white/15 pb-1 mx-auto transition-colors duration-200 hover:text-white hover:border-white/60"
+          >
+            {t("hero_cta_secondary")}
           </Link>
         </motion.div>
       </div>
