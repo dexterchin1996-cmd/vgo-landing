@@ -207,3 +207,42 @@
 - public/how-it-works/：角色流程配图
 - 视频：0
 - 字体：Archivo + Archivo Black（next/font 自托管）
+
+## SEO 与结构收尾（2026-10-19 凌晨）
+
+### 已完成
+
+- 4b6d1b6 chore(seo): /coverage 登记进 sitemap
+- d2b72dc chore(seo): 6 个服务页登记进 sitemap，verify 两页加 noindex
+
+### 本轮审计结论
+
+- robots.ts：正确，含 sitemap 引用 + verify 页 disallow
+- 全站 href：无断链，全部指向有效路由
+- sitemap 路由数：25（含 6 服务页 + /coverage）
+- verify-success / verify-failed：已加 robots noindex，不进 sitemap
+
+### T15 结案（2026-10-19）
+
+- navigation.ts（21 行）与 site.config.ts（382B）确认零引用，7 种检测全过
+- 按 CA-11 保留不删，登记待清理
+
+### T43 数据不一致（2026-10-19 登记）
+
+- site.config.ts 的 contact.email 为 hello@vgo.com.my
+- layout.tsx jsonLd 与 README 记录为 support.vgo@gmail.com
+- 两者不一致，site.config.ts 为死数据，未在任何页面使用
+- 风险：将来误引用会导致联系方式错误
+- 建议：后续统一为单一来源，或归档 site.config.ts
+- 归属：阶段 3 内容层整理
+
+### 当前 SEO 骨架完整度
+
+- sitemap：25 路由，覆盖全部静态页 + 6 服务页
+- robots：正确引用 sitemap，屏蔽 verify 与 api
+- metadata：17 个 layout 全部 i18n 化
+- 404 / error / global-error：齐全
+- PWA manifest：已配置
+- hreflang：layout 中已配置三语 alternates
+
+结论：SEO 骨架达到国际标准官网要求，可进入内容层补全。
