@@ -10,6 +10,14 @@ import { LangProvider } from "@/lib/i18n";
 
 const BASE_URL = "https://vgo-website.vercel.app";
 
+const SITE = {
+  title: "V'GO · 有事不用愁，上门找 V'GO",
+  descShort: "马来西亚上门服务平台。居家维修、清洁、按摩、跑腿、商城、找工作，一站搞定。",
+  company: "Ventus Reflexology",
+  logo: "/logo-mark.svg",
+  ogImage: "/shared/s01.jpg",
+} as const;
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -25,14 +33,14 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "V'GO · 有事不用愁，上门找 V'GO",
+    default: SITE.title,
     template: "%s · V'GO",
   },
   description: "V'GO（V Go On）—— 马来西亚上门服务平台。居家维修、清洁、按摩、跑腿、商城、找工作，一站搞定。",
   keywords: ["VGO", "上门服务", "马来西亚", "沙巴", "亚庇", "Kota Kinabalu", "维修", "清洁", "按摩", "跑腿"],
-  authors: [{ name: "Ventus Reflexology" }],
-  creator: "Ventus Reflexology",
-  publisher: "Ventus Reflexology",
+  authors: [{ name: SITE.company }],
+  creator: SITE.company,
+  publisher: SITE.company,
   alternates: {
     canonical: BASE_URL,
     languages: {
@@ -47,11 +55,11 @@ export const metadata: Metadata = {
     alternateLocale: ["en_MY", "ms_MY"],
     url: BASE_URL,
     siteName: "V'GO",
-    title: "V'GO · 有事不用愁，上门找 V'GO",
-    description: "马来西亚上门服务平台。居家维修、清洁、按摩、跑腿、商城、找工作，一站搞定。",
+    title: SITE.title,
+    description: SITE.descShort,
     images: [
       {
-        url: "/shared/s01.jpg",
+        url: SITE.ogImage,
         width: 1200,
         height: 630,
         alt: "V'GO - 有事不用愁，上门找 V'GO",
@@ -60,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "V'GO · 有事不用愁，上门找 V'GO",
-    description: "马来西亚上门服务平台。居家维修、清洁、按摩、跑腿、商城、找工作，一站搞定。",
-    images: ["/shared/s01.jpg"],
+    title: SITE.title,
+    description: SITE.descShort,
+    images: [SITE.ogImage],
   },
   robots: {
     index: true,
@@ -76,9 +84,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/logo-mark.svg", type: "image/svg+xml" },
+      { url: SITE.logo, type: "image/svg+xml" },
     ],
-    apple: "/logo-mark.svg",
+    apple: SITE.logo,
   },
   category: "service",
 };
@@ -89,12 +97,12 @@ const jsonLd = {
   name: "V'GO",
   alternateName: "V Go On",
   url: BASE_URL,
-  logo: BASE_URL + "/logo-mark.svg",
+  logo: BASE_URL + SITE.logo,
   description: "马来西亚沙巴本地生活服务平台。上门维修、清洁、按摩、跑腿、二手、招聘。",
   brand: "V'GO",
   parentOrganization: {
     "@type": "Organization",
-    name: "Ventus Reflexology",
+    name: SITE.company,
   },
   address: {
     "@type": "PostalAddress",
