@@ -97,3 +97,11 @@
 - T15：src/data/navigation.ts、site.config.ts 零引用候选。CA-1 待二次确认（7 种隐形使用），阶段4处理
 - T16：src/app 21 个页面层普遍硬编码中文（metadata + 内容），about/layout.tsx 同一文案重复3次。阶段4系统性 i18n 化
 - 今日目标2：✅ 扫完登记，不深挖
+
+## R13 招募页无表单（2026-10-18 登记）
+- MerchantPage.tsx 435 行，TechnicianPage.tsx 459 行
+- 均无 <form>、<input>、onSubmit、API 调用
+- 性质：纯文案 + FAQ + 引导下载 App
+- 待确认：设计如此（引导到 App）还是未完成（应补网页申请）
+- 归属：阶段 4 设计与内容
+- 不阻塞 3.0 落地
