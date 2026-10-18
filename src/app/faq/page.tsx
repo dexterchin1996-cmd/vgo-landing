@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Search, HelpCircle, User, Store, Wrench, Shield, MessageCircle } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import PageShell from "@/components/PageShell";
 
 type Cat = "all" | "general" | "customer" | "merchant" | "tech" | "security";
 
-const CATS: Record<Cat, { zh: string; en: string; ms: string; Icon: any }> = {
+const CATS: Record<Cat, { zh: string; en: string; ms: string; Icon: LucideIcon }> = {
   all:      { zh: "全部", en: "All", ms: "Semua", Icon: HelpCircle },
   general:  { zh: "关于 V'GO", en: "About V'GO", ms: "Tentang V'GO", Icon: HelpCircle },
   customer: { zh: "客户", en: "Customer", ms: "Pelanggan", Icon: User },
@@ -117,7 +118,7 @@ export default function FaqPage() {
   const [open, setOpen] = useState<number | null>(0);
   const [query, setQuery] = useState("");
 
-  const allItems: { cat: string; q: string; a: string }[] = FAQ[c] as any;
+  const allItems: { cat: string; q: string; a: string }[] = FAQ[c] as unknown as { cat: string; q: string; a: string }[];
   const filtered = allItems.filter((item) => {
     const matchCat = cat === "all" || item.cat === cat;
     const matchQ = !query.trim() ||

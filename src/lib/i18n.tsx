@@ -1073,7 +1073,7 @@ const LangCtx = createContext<{
 }>({
   lang: "zh",
   setLang: () => {},
-  t: (k) => (TRANSLATIONS.zh as any)[k],
+  t: (k) => (TRANSLATIONS.zh as Record<string, string>)[k],
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
@@ -1118,7 +1118,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
     }
   };
 
-  const t = (k: TransKey) => (TRANSLATIONS[lang] as any)[k] ?? (TRANSLATIONS.zh as any)[k];
+  const t = (k: TransKey) => (TRANSLATIONS[lang] as Record<string, string>)[k] ?? (TRANSLATIONS.zh as Record<string, string>)[k];
 
   return <LangCtx.Provider value={{ lang, setLang, t }}>{children}</LangCtx.Provider>;
 }

@@ -44,10 +44,10 @@ export default function Cooperation() {
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--vgo)] to-[var(--vgo-dark)] flex items-center justify-center shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] shadow-orange-500/30 mb-5">
                 <it.Icon size={26} strokeWidth={2.2} className="text-white" />
               </div>
-              <h3 className="text-xl font-black text-white mb-3">{t(it.tKey as any)}</h3>
-              <p className="text-sm text-white/50 leading-relaxed mb-6 min-h-[66px]">{t(it.dKey as any)}</p>
+              <h3 className="text-xl font-black text-white mb-3">{t(it.tKey)}</h3>
+              <p className="text-sm text-white/50 leading-relaxed mb-6 min-h-[66px]">{t(it.dKey)}</p>
               <Link href="/partner" className="inline-flex items-center gap-1.5 text-sm font-black text-[var(--vgo)] group-hover:gap-3 transition-[transform,box-shadow,opacity,width,background-color]">
-                {t(it.cKey as any)} <ArrowRight size={15} strokeWidth={2.5} />
+                {t(it.cKey)} <ArrowRight size={15} strokeWidth={2.5} />
               </Link>
             </motion.div>
           ))}
@@ -64,7 +64,7 @@ export default function Cooperation() {
             href="/partner"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-b from-[var(--vgo)] to-[var(--vgo-dark)] text-white font-black shadow-xl shadow-orange-500/30 hover:brightness-110 active:scale-[0.98] transition"
           >
-            {t("coop_home_more" as any)}
+            {t("coop_home_more")}
             <ArrowRight size={18} strokeWidth={2.5} />
           </Link>
         </motion.div>

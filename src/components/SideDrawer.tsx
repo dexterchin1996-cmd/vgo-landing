@@ -113,7 +113,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
               {GROUPS.map((g, gi) => (
                 <div key={g.key} className="py-1">
                   <div className="px-5 py-2 text-[10px] font-bold tracking-[0.18em] text-gray-400 uppercase">
-                    {t(g.key as any)}
+                    {t(g.key)}
                   </div>
                   {g.items.map((m, i) => (
                     <motion.a key={m.label} href={m.href} onClick={onClose}

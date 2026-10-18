@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { AlertTriangle, Sparkles, Heart, Truck, ShoppingBag, ArrowRight } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
 const C = {
@@ -40,7 +41,7 @@ const C = {
   },
 } as const;
 
-const ICONS: Record<string, any> = {
+const ICONS: Record<string, LucideIcon> = {
   urgent: AlertTriangle,
   clean: Sparkles,
   massage: Heart,

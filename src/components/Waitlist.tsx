@@ -83,7 +83,7 @@ export default function Waitlist() {
   const [skillMain, setSkillMain] = useState<string[]>([]);
   const [skillSubs, setSkillSubs] = useState<string[]>([]);
 
-  const up = (k: keyof typeof f, v: any) => setF(prev => ({ ...prev, [k]: v }));
+  const up = <K extends keyof typeof f>(k: K, v: (typeof f)[K]) => setF(prev => ({ ...prev, [k]: v }));
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -155,7 +155,7 @@ export default function Waitlist() {
 
     setSubmitting(true);
     try {
-      const body: any = {
+      const body: Record<string, unknown> = {
         role,
         lang: l,
         username: f.username.trim(),
@@ -234,7 +234,7 @@ export default function Waitlist() {
   const close = () => { setOpen(false); reset(); };
 
   const introKey = ROLE_PREFIX[role];
-  const gI = (k: string) => (c as any)["intro_" + introKey + "_" + k];
+  const gI = (k: string) => (c as Record<string, string>)["intro_" + introKey + "_" + k];
   const introBenefits: { t: string; s: string }[] = [1,2,3,4,5]
     .map(n => ({ t: gI("b" + n), s: gI("b" + n + "_sub") }))
     .filter(b => b.t) as { t: string; s: string }[];
