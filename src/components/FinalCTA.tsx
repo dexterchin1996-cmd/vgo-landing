@@ -6,7 +6,10 @@ import { useLang } from "@/lib/i18n";
 export default function FinalCTA() {
   const { t } = useLang();
   return (
-    <section id="download" className="relative bg-[#06111d] px-5 py-20 sm:py-24">
+    <section className="relative overflow-hidden"
+    >
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,121,0,0.15)_0%,transparent_70%)] blur-[40px]" />
+      <div id="download" className="relative bg-[#06111d] px-5 py-20 sm:py-24">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

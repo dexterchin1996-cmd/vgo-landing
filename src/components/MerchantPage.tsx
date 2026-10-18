@@ -1,4 +1,5 @@
 "use client";
+import OnboardingForm from "./OnboardingForm";
 import { motion } from "motion/react";
 import {
   Rocket, TrendingUp, Bell, Wallet, ArrowRight, CheckCircle2,
@@ -430,6 +431,9 @@ export default function MerchantPage() {
           </div>
         </motion.div>
       </section>
+
+      <OnboardingForm />
+
     </main>
   );
 }

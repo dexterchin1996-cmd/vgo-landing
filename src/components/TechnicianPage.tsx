@@ -1,4 +1,5 @@
 "use client";
+import OnboardingForm from "./OnboardingForm";
 import { motion } from "motion/react";
 import {
   Wrench, Zap, ShieldCheck, Clock, Wallet, Award, ArrowRight, CheckCircle2,
@@ -454,6 +455,9 @@ export default function TechnicianPage() {
           </div>
         </motion.div>
       </section>
+
+      <OnboardingForm />
+
     </main>
   );
 }
