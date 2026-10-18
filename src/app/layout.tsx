@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Archivo, Archivo_Black } from "next/font/google";
 import { cookies } from "next/headers";
 import { TRANSLATIONS, type Lang } from "@/lib/translations";
 import "./globals.css";
@@ -9,6 +10,20 @@ import ShareButton from "@/components/ShareButton";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { LangProvider } from "@/lib/i18n";
+
+const archivo = Archivo({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-archivo",
+  display: "swap",
+});
+
+const archivoBlack = Archivo_Black({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-archivo-black",
+  display: "swap",
+});
 
 const BASE_URL = "https://vgo-website.vercel.app";
 
@@ -133,14 +148,14 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-MY" >
+    <html lang="zh-MY" className={archivo.variable + " " + archivoBlack.variable}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#06111d] text-white antialiased">
+      <body className="bg-[#06111d] text-white antialiased font-sans">
         <LangProvider>
           <Navbar />
           {children}

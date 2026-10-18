@@ -46,7 +46,7 @@ export default function Hero() {
 
           <motion.h1
             {...rise(0.15)}
-            className="font-black uppercase leading-[0.92] tracking-[-0.045em] text-[clamp(46px,9vw,96px)]"
+            className="font-display uppercase leading-[0.92] tracking-[-0.045em] text-[clamp(46px,9vw,96px)]"
           >
             {t("hero_title1")}
             <span className="block text-[#ff7900]">{t("hero_title2")}</span>
