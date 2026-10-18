@@ -8,7 +8,6 @@ export default function HeroBackgroundMotion() {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* 背景图 - 20秒呼吸推拉 */}
       <motion.div
         className="absolute inset-0 will-change-transform"
         initial={{ scale: 1, x: 0, y: 0 }}
@@ -24,29 +23,21 @@ export default function HeroBackgroundMotion() {
           repeatType: "loop"
         }}
       >
-        {/* 桌面图 */}
         <Image
           src="/images/hero/hero-desktop-16x9.jpg"
           alt="KL skyline night"
           fill
           priority
           sizes="100vw"
-          className="hidden md:block object-cover object-[center_30%]"
+          className="hidden md:block object-cover object-[center_30%] opacity-60"
         />
-        
-        {/* 移动图 (如果没有下载移动版，会自动降级用桌面图) */}
         <Image
           src="/images/hero/hero-mobile-9x16.jpg" 
           alt="KL skyline night mobile"
           fill
           priority
           sizes="100vw"
-          className="block md:hidden object-cover object-center"
-          onError={(e) => {
-            // 如果移动版图不存在，回退到桌面版
-            const target = e.target as HTMLImageElement;
-            target.src = "/images/hero/hero-desktop-16x9.jpg";
-          }}
+          className="block md:hidden object-cover object-center opacity-60"
         />
       </motion.div>
 
