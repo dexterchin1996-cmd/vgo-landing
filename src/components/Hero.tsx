@@ -153,6 +153,19 @@ export default function Hero() {
             {...rise(0.55)}
             className="hidden md:block rounded-2xl border border-white/12 bg-[#0a0a0a]/55 backdrop-blur-md p-6"
           >
+            {/* TODO(T39): replace src with a real photo of a VGO technician */}
+            <div className="relative aspect-[16/10] rounded-xl overflow-hidden mb-4">
+              <Image
+                src="/features/repair.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 px-3 pt-8 pb-3 bg-gradient-to-t from-[#0a0a0a] to-transparent text-[11px] font-semibold text-white/85">
+                {t("hero_technician_caption")}
+              </div>
+            </div>
             <div className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/40 pb-4 border-b border-white/10">
               {t("hero_desc")}
             </div>

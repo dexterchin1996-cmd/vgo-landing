@@ -450,6 +450,7 @@ export const TRANSLATIONS = {
     partner_traction_num_2: "亚庇",
     partner_traction_num_3: "首批",
     partner_traction_num_4: "全马",
+    hero_technician_caption: "认证师傅，上门服务",
   },
   en: {
     nav_home: "Home",
@@ -900,6 +901,7 @@ export const TRANSLATIONS = {
     partner_traction_num_2: "KK",
     partner_traction_num_3: "1st",
     partner_traction_num_4: "MY",
+    hero_technician_caption: "Certified technician, at your door",
   },
   ms: {
     nav_home: "Utama",
@@ -1350,6 +1352,7 @@ export const TRANSLATIONS = {
     partner_traction_num_2: "KK",
     partner_traction_num_3: "1st",
     partner_traction_num_4: "MY",
+    hero_technician_caption: "Tukang bertauliah, ke pintu anda",
   },
 } as const;
 
