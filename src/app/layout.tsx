@@ -107,8 +107,16 @@ export async function generateMetadata(): Promise<Metadata> {
   icons: {
     icon: [
       { url: SITE.logo, type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: SITE.logo,
+  },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "V'GO",
   },
   category: "service",
   };
