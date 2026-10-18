@@ -7,6 +7,7 @@ import FeatureCards from "@/components/FeatureCards";
 import SceneShowcase from "@/components/SceneShowcase";
 import HowItWorks from "@/components/HowItWorks";
 import Guarantees from "@/components/Guarantees";
+import Pricing from "@/components/Pricing";
 import PlatformTrust from "@/components/PlatformTrust";
 import Roles from "@/components/Roles";
 import Merchant from "@/components/Merchant";
@@ -32,6 +33,7 @@ export default function Home() {
         <Reveal><FeatureCards /></Reveal>
         <Reveal><SceneShowcase /></Reveal>
         <Reveal><HowItWorks /></Reveal>
+        <Reveal><Pricing /></Reveal>
         <Reveal><Guarantees /></Reveal>
         <PlatformTrust />
         <Reveal><Testimonials /></Reveal>
