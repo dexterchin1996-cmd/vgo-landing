@@ -390,6 +390,10 @@ export const TRANSLATIONS = {
     pain_fix_6: "快速上门",
     pain_fix_7: "服务有保障",
     pain_fix_8: "安全用药",
+    hero_rotator_1: "半夜水管爆了",
+    hero_rotator_2: "空调不冷等不了",
+    hero_rotator_3: "周末不想打扫",
+    hero_rotator_4: "累了想放松一下",
   },
   en: {
     nav_home: "Home",
@@ -780,6 +784,10 @@ export const TRANSLATIONS = {
     pain_fix_6: "Fast arrival",
     pain_fix_7: "Service guaranteed",
     pain_fix_8: "Safe treatment",
+    hero_rotator_1: "Pipe burst at midnight",
+    hero_rotator_2: "AC not cooling, can't wait",
+    hero_rotator_3: "Weekend, no cleaning",
+    hero_rotator_4: "Tired, need to unwind",
   },
   ms: {
     nav_home: "Utama",
@@ -1170,6 +1178,10 @@ export const TRANSLATIONS = {
     pain_fix_6: "Tiba pantas",
     pain_fix_7: "Perkhidmatan terjamin",
     pain_fix_8: "Rawatan selamat",
+    hero_rotator_1: "Paip pecah tengah malam",
+    hero_rotator_2: "Aircond tak sejuk, tak boleh tunggu",
+    hero_rotator_3: "Hujung minggu, malas cuci",
+    hero_rotator_4: "Penat, nak relaks",
   },
 } as const;
 

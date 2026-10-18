@@ -2,7 +2,7 @@ export const MAIN_NAV = [
   { href: '/', label: '首页' },
   { href: '/about', label: '关于我们' },
   { href: '/services/repair', label: '服务项目' },
-  { href: '/how-it-works/intro', label: '使用流程' },
+  { href: '/how-it-works/customer', label: '使用流程' },
   { href: '/faq', label: '常见问题' },
   { href: '/contact', label: '联系我们' },
 ] as const;
