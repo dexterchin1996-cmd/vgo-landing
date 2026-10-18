@@ -1,0 +1,337 @@
+.
+├── .agents
+│   └── skills
+│       ├── emil-design-eng
+│       │   └── SKILL.md
+│       ├── taste-skill
+│       │   └── SKILL.md
+│       └── ui-ux-pro-max
+│           ├── data
+│           │   ├── stacks
+│           │   │   ├── angular.csv
+│           │   │   ├── astro.csv
+│           │   │   ├── avalonia.csv
+│           │   │   ├── flutter.csv
+│           │   │   ├── html-tailwind.csv
+│           │   │   ├── javafx.csv
+│           │   │   ├── jetpack-compose.csv
+│           │   │   ├── laravel.csv
+│           │   │   ├── nextjs.csv
+│           │   │   ├── nuxt-ui.csv
+│           │   │   ├── nuxtjs.csv
+│           │   │   ├── react-native.csv
+│           │   │   ├── react.csv
+│           │   │   ├── shadcn.csv
+│           │   │   ├── svelte.csv
+│           │   │   ├── swiftui.csv
+│           │   │   ├── threejs.csv
+│           │   │   ├── uno.csv
+│           │   │   ├── uwp.csv
+│           │   │   ├── vue.csv
+│           │   │   ├── winui.csv
+│           │   │   └── wpf.csv
+│           │   ├── app-interface.csv
+│           │   ├── catalog-summary.json
+│           │   ├── charts.csv
+│           │   ├── colors.csv
+│           │   ├── data-provenance.json
+│           │   ├── google-font-licenses.json
+│           │   ├── google-fonts.csv
+│           │   ├── icons.csv
+│           │   ├── landing.csv
+│           │   ├── motion.csv
+│           │   ├── phosphor-icons-upstream.json
+│           │   ├── products.csv
+│           │   ├── react-performance.csv
+│           │   ├── styles.csv
+│           │   ├── typography.csv
+│           │   ├── ui-reasoning.csv
+│           │   └── ux-guidelines.csv
+│           ├── references
+│           │   ├── pro-rules.md
+│           │   └── quick-reference.md
+│           ├── scripts
+│           │   ├── __pycache__
+│           │   │   ├── core.cpython-314.pyc
+│           │   │   ├── design_system.cpython-314.pyc
+│           │   │   └── reasoning_contract.cpython-314.pyc
+│           │   ├── tests
+│           │   │   ├── fixtures
+│           │   │   │   ├── catalogs
+│           │   │   │   │   ├── google-api.json
+│           │   │   │   │   ├── google-catalog.json
+│           │   │   │   │   ├── google-existing.csv
+│           │   │   │   │   ├── google-metadata.json
+│           │   │   │   │   ├── google-overrides.json
+│           │   │   │   │   ├── icons-curated.csv
+│           │   │   │   │   ├── phosphor-core.json
+│           │   │   │   │   ├── phosphor-package.json
+│           │   │   │   │   ├── phosphor-react-exports.json
+│           │   │   │   │   └── phosphor-react-package.json
+│           │   │   │   ├── relevance-baseline.json
+│           │   │   │   ├── relevance-cases.json
+│           │   │   │   └── relevance-thresholds.json
+│           │   │   ├── test_catalog_refresh.py
+│           │   │   ├── test_catalog_summary_line_endings.py
+│           │   │   ├── test_core.py
+│           │   │   ├── test_core_data_quality.py
+│           │   │   ├── test_data_contracts.py
+│           │   │   ├── test_design_system_mode.py
+│           │   │   ├── test_design_system_stack.py
+│           │   │   ├── test_native_desktop_stack_freshness.py
+│           │   │   ├── test_relevance_evaluator.py
+│           │   │   ├── test_skill_script_paths.py
+│           │   │   ├── test_style_taxonomy.py
+│           │   │   ├── test_text_layout_resilience.py
+│           │   │   └── test_web_stack_freshness.py
+│           │   ├── core.py
+│           │   ├── design_system.py
+│           │   ├── reasoning_contract.py
+│           │   ├── search.py
+│           │   └── validate_data.py
+│           └── SKILL.md
+├── .claude
+│   └── skills
+│       └── ui-ux-pro-max -> ../../.agents/skills/ui-ux-pro-max
+├── .github
+│   └── workflows
+│       └── impeccable.yml
+├── .grok
+│   └── skills
+│       └── ui-ux-pro-max -> ../../.agents/skills/ui-ux-pro-max
+├── _archive
+│   ├── logo-backup-20261010
+│   │   └── logo-bg.png
+│   ├── og-backup-20261010
+│   │   └── opengraph-image.tsx
+│   └── ui-fix-20261009
+│       ├── FeatureCards.tsx
+│       ├── FinalCTA.before-fix
+│       ├── SceneShowcase.before-redesign.tsx
+│       ├── ServiceDetailPage.v1.tsx
+│       ├── layout.tsx.before-font-fix
+│       └── page.tsx.before-remove-video
+├── _design_rules
+│   └── 目录.txt
+├── docs
+│   ├── ARCHITECTURE_TREE_FULL.txt
+│   ├── ARCHITECTURE_TREE_L3.txt
+│   └── PROJECT_REGISTER.md
+├── public
+│   ├── brand
+│   │   └── vgo-wordmark.svg
+│   ├── features
+│   │   ├── clean.jpg
+│   │   ├── errand.jpg
+│   │   ├── jobs.jpg
+│   │   ├── market.jpg
+│   │   ├── massage.jpg
+│   │   └── repair.jpg
+│   ├── how-it-works
+│   │   ├── b-c.jpg
+│   │   ├── b-m.jpg
+│   │   ├── b-t.jpg
+│   │   ├── hero-c.jpg
+│   │   ├── hero-m.jpg
+│   │   ├── hero-t.jpg
+│   │   ├── p-c1.jpg
+│   │   ├── p-c2.jpg
+│   │   ├── p-c3.jpg
+│   │   ├── p-m1.jpg
+│   │   ├── p-m2.jpg
+│   │   ├── p-m3.jpg
+│   │   ├── p-t1.jpg
+│   │   ├── p-t3.jpg
+│   │   ├── s-c3.jpg
+│   │   ├── s-m2.jpg
+│   │   └── s-m3.jpg
+│   ├── icons
+│   │   ├── calendar.svg
+│   │   ├── chat.svg
+│   │   ├── cleaning.svg
+│   │   ├── errands.svg
+│   │   ├── home-repair.svg
+│   │   ├── jobs.svg
+│   │   ├── map.svg
+│   │   ├── massage.svg
+│   │   ├── phone.svg
+│   │   ├── plumbing.svg
+│   │   ├── search.svg
+│   │   ├── shield.svg
+│   │   ├── shopping.svg
+│   │   └── user.svg
+│   ├── scenes
+│   │   ├── aircon.jpg
+│   │   ├── burst.jpg
+│   │   ├── clog.jpg
+│   │   ├── leak.jpg
+│   │   ├── lock.jpg
+│   │   ├── mold.jpg
+│   │   ├── move.jpg
+│   │   ├── paint.jpg
+│   │   ├── pest.jpg
+│   │   ├── power.jpg
+│   │   ├── tap.jpg
+│   │   └── tire.jpg
+│   ├── shared
+│   │   ├── s01.jpg
+│   │   ├── s02.jpg
+│   │   ├── s03.jpg
+│   │   ├── s04.jpg
+│   │   ├── s05.jpg
+│   │   ├── s06.jpg
+│   │   ├── s07.jpg
+│   │   ├── s08.jpg
+│   │   ├── s09.jpg
+│   │   └── s10.jpg
+│   ├── logo-mark.svg
+│   └── logo.png
+├── reports
+│   └── design-scan-20261012
+│       ├── README.md
+│       ├── impeccable-report.json
+│       ├── manual-report.txt
+│       └── 合并报告.md
+├── scripts
+│   ├── ignore-list.txt
+│   ├── merge.sh
+│   └── scan-manual.sh
+├── src
+│   ├── app
+│   │   ├── about
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── agent-agreement
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── contact
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── faq
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── how-it-works
+│   │   │   └── [role]
+│   │   │       └── page.tsx
+│   │   ├── ip-copyright
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── map-preview
+│   │   │   └── page.tsx
+│   │   ├── merchant
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── merchant-agreement
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── offers
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── partner
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── privacy
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── pro-agreement
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── regions-preview
+│   │   │   └── page.tsx
+│   │   ├── services
+│   │   │   └── [id]
+│   │   │       └── page.tsx
+│   │   ├── technician
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── terms
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── user-agreement
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── verify-failed
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── verify-success
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── error.tsx
+│   │   ├── globals.css
+│   │   ├── icon.png
+│   │   ├── layout.tsx
+│   │   ├── loading.tsx
+│   │   ├── not-found.tsx
+│   │   ├── page.tsx
+│   │   ├── robots.ts
+│   │   └── sitemap.ts
+│   ├── components
+│   │   ├── AboutVGO.tsx
+│   │   ├── AppLinks.tsx
+│   │   ├── BackToTop.tsx
+│   │   ├── ComingSoon.tsx
+│   │   ├── CookieBanner.tsx
+│   │   ├── Cooperation.tsx
+│   │   ├── CoverageSection.tsx
+│   │   ├── FAQ.tsx
+│   │   ├── FeatureCards.tsx
+│   │   ├── FinalCTA.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Guarantees.tsx
+│   │   ├── HowItWorks.tsx
+│   │   ├── HowItWorksPage.tsx
+│   │   ├── LangSwitcher.tsx
+│   │   ├── LegalShell.tsx
+│   │   ├── MalaysiaMap.tsx
+│   │   ├── Merchant.tsx
+│   │   ├── MerchantPage.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── NewsTicker.tsx
+│   │   ├── Notice.tsx
+│   │   ├── PageShell.tsx
+│   │   ├── PainPointWall.tsx
+│   │   ├── PainPoints.tsx
+│   │   ├── ParticleField.tsx
+│   │   ├── PlatformTrust.tsx
+│   │   ├── Reveal.tsx
+│   │   ├── Roles.tsx
+│   │   ├── SceneShowcase.tsx
+│   │   ├── ServiceDetailPage.tsx
+│   │   ├── ServiceModal.tsx
+│   │   ├── ShareButton.tsx
+│   │   ├── SideDrawer.tsx
+│   │   ├── TechnicianPage.tsx
+│   │   ├── Testimonials.tsx
+│   │   └── Waitlist.tsx
+│   ├── data
+│   │   ├── coverage.ts
+│   │   ├── navigation.ts
+│   │   ├── offers.ts
+│   │   ├── regions.ts
+│   │   ├── services.ts
+│   │   ├── site.config.ts
+│   │   └── waitlist.ts
+│   ├── lib
+│   │   ├── appUrls.ts
+│   │   └── i18n.tsx
+│   └── types
+│       └── env.d.ts
+├── .eslintrc.json
+├── .gitignore
+├── .npmrc
+├── .prettierrc
+├── CHANGELOG.md
+├── MAP.md
+├── README.md
+├── gen-map-3d.mjs
+├── gen-map-html.mjs
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── skills-lock.json
+├── tsconfig.json
+├── vercel.json
+└── 输出文件名.jpg
+
+66 directories, 269 files

@@ -47,3 +47,4 @@ public/videos/*.mp4
 tsconfig.tsbuildinfo
 yarn-debug.log*
 合并报告.md
+*.bak-*

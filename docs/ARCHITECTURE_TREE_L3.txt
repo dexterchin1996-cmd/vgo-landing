@@ -1,0 +1,193 @@
+.
+├── _archive
+│   ├── logo-backup-20261010
+│   │   └── logo-bg.png
+│   ├── og-backup-20261010
+│   │   └── opengraph-image.tsx
+│   └── ui-fix-20261009
+│       ├── FeatureCards.tsx
+│       ├── FinalCTA.before-fix
+│       ├── SceneShowcase.before-redesign.tsx
+│       ├── ServiceDetailPage.v1.tsx
+│       ├── layout.tsx.before-font-fix
+│       └── page.tsx.before-remove-video
+├── _design_rules
+│   └── 目录.txt
+├── docs
+│   └── ARCHITECTURE_TREE.txt
+├── public
+│   ├── brand
+│   │   └── vgo-wordmark.svg
+│   ├── features
+│   │   ├── clean.jpg
+│   │   ├── errand.jpg
+│   │   ├── jobs.jpg
+│   │   ├── market.jpg
+│   │   ├── massage.jpg
+│   │   └── repair.jpg
+│   ├── how-it-works
+│   │   ├── b-c.jpg
+│   │   ├── b-m.jpg
+│   │   ├── b-t.jpg
+│   │   ├── hero-c.jpg
+│   │   ├── hero-m.jpg
+│   │   ├── hero-t.jpg
+│   │   ├── p-c1.jpg
+│   │   ├── p-c2.jpg
+│   │   ├── p-c3.jpg
+│   │   ├── p-m1.jpg
+│   │   ├── p-m2.jpg
+│   │   ├── p-m3.jpg
+│   │   ├── p-t1.jpg
+│   │   ├── p-t3.jpg
+│   │   ├── s-c3.jpg
+│   │   ├── s-m2.jpg
+│   │   └── s-m3.jpg
+│   ├── icons
+│   │   ├── calendar.svg
+│   │   ├── chat.svg
+│   │   ├── cleaning.svg
+│   │   ├── errands.svg
+│   │   ├── home-repair.svg
+│   │   ├── jobs.svg
+│   │   ├── map.svg
+│   │   ├── massage.svg
+│   │   ├── phone.svg
+│   │   ├── plumbing.svg
+│   │   ├── search.svg
+│   │   ├── shield.svg
+│   │   ├── shopping.svg
+│   │   └── user.svg
+│   ├── scenes
+│   │   ├── aircon.jpg
+│   │   ├── burst.jpg
+│   │   ├── clog.jpg
+│   │   ├── leak.jpg
+│   │   ├── lock.jpg
+│   │   ├── mold.jpg
+│   │   ├── move.jpg
+│   │   ├── paint.jpg
+│   │   ├── pest.jpg
+│   │   ├── power.jpg
+│   │   ├── tap.jpg
+│   │   └── tire.jpg
+│   ├── shared
+│   │   ├── s01.jpg
+│   │   ├── s02.jpg
+│   │   ├── s03.jpg
+│   │   ├── s04.jpg
+│   │   ├── s05.jpg
+│   │   ├── s06.jpg
+│   │   ├── s07.jpg
+│   │   ├── s08.jpg
+│   │   ├── s09.jpg
+│   │   └── s10.jpg
+│   ├── logo-mark.svg
+│   └── logo.png
+├── reports
+│   └── design-scan-20261012
+│       ├── README.md
+│       ├── impeccable-report.json
+│       ├── manual-report.txt
+│       └── 合并报告.md
+├── scripts
+│   ├── ignore-list.txt
+│   ├── merge.sh
+│   └── scan-manual.sh
+├── src
+│   ├── app
+│   │   ├── about
+│   │   ├── agent-agreement
+│   │   ├── contact
+│   │   ├── faq
+│   │   ├── how-it-works
+│   │   ├── ip-copyright
+│   │   ├── map-preview
+│   │   ├── merchant
+│   │   ├── merchant-agreement
+│   │   ├── offers
+│   │   ├── partner
+│   │   ├── privacy
+│   │   ├── pro-agreement
+│   │   ├── regions-preview
+│   │   ├── services
+│   │   ├── technician
+│   │   ├── terms
+│   │   ├── user-agreement
+│   │   ├── verify-failed
+│   │   ├── verify-success
+│   │   ├── error.tsx
+│   │   ├── globals.css
+│   │   ├── icon.png
+│   │   ├── layout.tsx
+│   │   ├── loading.tsx
+│   │   ├── not-found.tsx
+│   │   ├── page.tsx
+│   │   ├── robots.ts
+│   │   └── sitemap.ts
+│   ├── components
+│   │   ├── AboutVGO.tsx
+│   │   ├── AppLinks.tsx
+│   │   ├── BackToTop.tsx
+│   │   ├── ComingSoon.tsx
+│   │   ├── CookieBanner.tsx
+│   │   ├── Cooperation.tsx
+│   │   ├── CoverageSection.tsx
+│   │   ├── FAQ.tsx
+│   │   ├── FeatureCards.tsx
+│   │   ├── FinalCTA.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Guarantees.tsx
+│   │   ├── HowItWorks.tsx
+│   │   ├── HowItWorksPage.tsx
+│   │   ├── LangSwitcher.tsx
+│   │   ├── LegalShell.tsx
+│   │   ├── MalaysiaMap.tsx
+│   │   ├── Merchant.tsx
+│   │   ├── MerchantPage.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── NewsTicker.tsx
+│   │   ├── Notice.tsx
+│   │   ├── PageShell.tsx
+│   │   ├── PainPointWall.tsx
+│   │   ├── PainPoints.tsx
+│   │   ├── ParticleField.tsx
+│   │   ├── PlatformTrust.tsx
+│   │   ├── Reveal.tsx
+│   │   ├── Roles.tsx
+│   │   ├── SceneShowcase.tsx
+│   │   ├── ServiceDetailPage.tsx
+│   │   ├── ServiceModal.tsx
+│   │   ├── ShareButton.tsx
+│   │   ├── SideDrawer.tsx
+│   │   ├── TechnicianPage.tsx
+│   │   ├── Testimonials.tsx
+│   │   └── Waitlist.tsx
+│   ├── data
+│   │   ├── coverage.ts
+│   │   ├── navigation.ts
+│   │   ├── offers.ts
+│   │   ├── regions.ts
+│   │   ├── services.ts
+│   │   ├── site.config.ts
+│   │   └── waitlist.ts
+│   ├── lib
+│   │   ├── appUrls.ts
+│   │   └── i18n.tsx
+│   └── types
+│       └── env.d.ts
+├── CHANGELOG.md
+├── MAP.md
+├── README.md
+├── gen-map-3d.mjs
+├── gen-map-html.mjs
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── skills-lock.json
+├── tsconfig.json
+├── vercel.json
+└── 输出文件名.jpg
+
+43 directories, 148 files

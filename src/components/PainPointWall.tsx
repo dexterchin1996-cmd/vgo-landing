@@ -2,15 +2,17 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { useLang } from "@/lib/i18n";
 
 const PAIN_ITEMS = [
-  { img: "/scenes/leak.jpg",  text: "半夜水管爆了" },
-  { img: "/scenes/burst.jpg", text: "跳电了找不到人" },
-  { img: "/scenes/clog.jpg",  text: "马桶堵了干着急" },
-  { img: "/scenes/power.jpg", text: "空调不冷等不了" },
+  { img: "/scenes/leak.jpg",  sceneKey: "pain_scene_1" as const, painKey: "pain_1" as const },
+  { img: "/scenes/burst.jpg", sceneKey: "pain_scene_2" as const, painKey: "pain_2" as const },
+  { img: "/scenes/clog.jpg",  sceneKey: "pain_scene_3" as const, painKey: "pain_3" as const },
+  { img: "/scenes/power.jpg", sceneKey: "pain_scene_4" as const, painKey: "pain_4" as const },
 ];
 
 export default function PainPointWall() {
+  const { t } = useLang();
   const wallRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: wallRef,
@@ -27,25 +29,27 @@ export default function PainPointWall() {
     <section ref={wallRef} className="relative bg-[#06111d] py-24 sm:py-32 overflow-hidden">
       <div className="relative max-w-6xl mx-auto px-6">
         <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-white text-3xl sm:text-5xl font-black text-center mb-4 tracking-tight">
-          生活不会先预约
+          {t("pain_wall_title")}
         </motion.h2>
         <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="text-white/55 text-center text-sm sm:text-base mb-14 sm:mb-20 max-w-xl mx-auto">
-          麻烦总是突然发生。先看这些，再往下看答案。
+          {t("pain_wall_sub")}
         </motion.p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
           {PAIN_ITEMS.map((item, i) => (
             <motion.div key={item.img} style={{ y: ys[i] }} className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl shadow-red-950/40">
-              <img src={item.img} alt={item.text} className="w-full h-full object-cover" loading="lazy" />
+              <img src={item.img} alt={t(item.sceneKey)} className="w-full h-full object-cover" loading="lazy" />
               <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(180deg, rgba(10,10,10,0.05) 0%, rgba(10,10,10,0.9) 100%), radial-gradient(ellipse at 50% 40%, transparent 25%, rgba(180,20,20,0.35) 100%)" }} />
               <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
-                <p className="text-white font-black text-xs sm:text-base leading-tight">{item.text}</p>
+                <p className="text-white font-black text-xs sm:text-base leading-tight">{t(item.sceneKey)}</p>
+                <p className="text-white/60 text-[10px] sm:text-xs mt-1 leading-tight">{t(item.painKey)}</p>
               </div>
             </motion.div>
           ))}
         </div>
         <motion.div style={{ clipPath: revealClip }} className="mt-20 sm:mt-28 text-center">
-          <h2 className="text-white text-3xl sm:text-5xl font-black mb-4 tracking-tight">麻烦不用自己扛。</h2>
-          <p className="text-white/60 text-sm sm:text-base max-w-xl mx-auto">选一类，V&apos;GO 帮你找到对的人。</p>
+          <h2 className="text-white text-3xl sm:text-5xl font-black mb-4 tracking-tight">{t("pain_wall_end_title")}</h2>
+          <p className="text-white/60 text-sm sm:text-base max-w-xl mx-auto">{t("pain_wall_end_sub")}</p>
+          <p className="text-[var(--vgo)] text-xs sm:text-sm font-bold mt-4 tracking-wide">{t("pain_answer")}</p>
         </motion.div>
       </div>
     </section>
