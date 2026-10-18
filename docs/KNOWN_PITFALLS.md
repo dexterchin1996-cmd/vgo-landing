@@ -82,3 +82,22 @@
 - **根因：** WASM 版 Turbopack 不完整，Android 无法启用
 - **正确做法：** 放弃 Turbopack，用 Webpack（见 KP-3/KP-4）
 - **验证：** 启动无该报错
+
+## KP-9 Termux 无法编译 Next 15 页面（2026-10-18）
+- **症状**：dev server 能启动（✓ Ready），但编译页面时崩溃
+  - `unknown field disablePageConfig at line 1 column 3592`
+  - `ENOENT .next/fallback-build-manifest.json`
+  - 21 字节 `500 Internal Server Error`
+- **关键词**：disablePageConfig / fallback-build-manifest / Termux 编译
+- **根因**：Termux aarch64 缺原生 SWC/Turbopack 绑定，WASM 回退功能不完整
+- **无效做法**：
+  - `rm -rf .next`（已试）
+  - 装 `@next/swc-wasm-nodejs@15.5.4`（已装，仍报错）
+  - 降级 Next 到 15.3.5（未尝试，但不是根本解）
+  - `--webpack` 标志（15.5.4 CLI 不识别）
+  - `NEXT_DISABLE_TURBOPACK=1`（环境变量无效）
+- **正确做法**：
+  1. **Termux 只做开发与静态验证**：写代码、`tsc --noEmit`、`node --check`、git、静态分析
+  2. **生产构建走云端**：Vercel（website）、Cloudflare（vgo-service）、云服务器（server）
+  3. **不要**在 Termux 上跑 `next dev` 或 `next build`——浪费时间和精力
+- **验证**：`tsc --noEmit` 退出码 0 即代码正确；运行时验证在云端做
