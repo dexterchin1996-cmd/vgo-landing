@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
-import { Wrench, Sparkles, Heart, Truck, ChevronDown, Menu, Star, User, Store } from "lucide-react";
+import { Wrench, Sparkles, Heart, Truck, ChevronDown, Menu, Star, User, Store, Briefcase } from "lucide-react";
 import SideDrawer from "./SideDrawer";
 import LangSwitcher from "./LangSwitcher";
 import { useLang } from "@/lib/i18n";
@@ -37,11 +37,12 @@ export default function Navbar() {
     { label: t("nav_partner"), href: "/partner/" },
     { label: t("nav_about"), href: "/about/" },
     { label: t("nav_coverage"), href: "/coverage/" },
-    { label: lang === "zh" ? "福利" : lang === "ms" ? "Tawaran" : "Offers", href: "/offers/" },
-    { label: lang === "zh" ? "指南" : lang === "ms" ? "Panduan" : "Guides", children: [
-      { icon: User,   label: lang === "zh" ? "客户指南" : lang === "ms" ? "Panduan Pelanggan" : "Customer Guide",   href: "/how-it-works/customer/" },
-      { icon: Store,  label: lang === "zh" ? "商家指南" : lang === "ms" ? "Panduan Peniaga"   : "Merchant Guide",   href: "/how-it-works/merchant/" },
-      { icon: Wrench, label: lang === "zh" ? "师傅指南" : lang === "ms" ? "Panduan Juruteknik" : "Technician Guide", href: "/how-it-works/technician/" },
+    { label: t("nav_offers"), href: "/offers/" },
+    { label: t("nav_guide"), children: [
+      { icon: User,     label: t("nav_guide_customer"),   href: "/how-it-works/customer/" },
+      { icon: Store,    label: t("nav_guide_merchant"),   href: "/how-it-works/merchant/" },
+      { icon: Wrench,   label: t("nav_guide_technician"), href: "/how-it-works/technician/" },
+      { icon: Briefcase,label: t("nav_guide_partner"),    href: "/partner/" },
     ] },
   ];
 

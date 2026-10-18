@@ -263,7 +263,7 @@ const L = {
 };
 
 export default function ServiceDetailPage({ id }: { id: ServiceId }) {
-  const { lang } = useLang();
+  const { t: tr, lang } = useLang();
   const t = L[lang];
   const data = SERVICES[lang];
   const item = data.items.find((x) => x.id === id) as ServiceItem;
@@ -403,7 +403,7 @@ export default function ServiceDetailPage({ id }: { id: ServiceId }) {
           className="rounded-3xl bg-gradient-to-br from-[#FF8A1F] to-[#D95000] p-8 sm:p-12 text-center relative overflow-hidden">
           <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(255,255,255,.25), transparent 70%)' }} />
           <div className="relative">
-            <h2 className="text-2xl sm:text-4xl font-black text-white mb-4">{lang === "zh" ? "准备好了吗？" : lang === "ms" ? "Sedia mula?" : "Ready to start?"}</h2>
+            <h2 className="text-2xl sm:text-4xl font-black text-white mb-4">{tr("service_ready_title")}</h2>
             <p className="text-sm text-white/85 mb-8 max-w-md mx-auto">{d.value}</p>
             <Link href="/#download" className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black text-base shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               {t.cta} <ArrowRight size={18} />

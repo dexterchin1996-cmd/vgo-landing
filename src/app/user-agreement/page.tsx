@@ -160,7 +160,7 @@ const C: Record<string, { label: string; title: string; version: string; intro: 
   },
 };
 export default function UserAgreementPage() {
-  const { lang } = useLang();
+  const { t, lang } = useLang();
   const c = C[lang] ?? C.en;
   return (
     <LegalShell label={c.label} title={c.title} version={c.version}>
@@ -173,7 +173,7 @@ export default function UserAgreementPage() {
         </section>
       ))}
       <div className="sig-box">
-        <strong>【{lang === "zh" ? "同意确认" : lang === "ms" ? "Pengesahan Persetujuan" : "Confirmation"}】</strong>
+        <strong>【{t("agree_confirm")}】</strong>
         <p style={{ marginTop: 8 }}>{c.sig}</p>
         <p style={{ fontSize: 12, color: "#9a3412", marginTop: 10 }}>support.vgo@gmail.com</p>
       </div>
