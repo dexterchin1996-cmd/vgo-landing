@@ -166,3 +166,44 @@
 - offers 原用本地 useState("zh")，语言切换只影响本页
 - 改为 useLang()，切换全站生效
 - commit 987dd84
+
+## 阶段 2 · 首页重构进度（2026-10-18 晚）
+
+### 已完成（有 commit 证据）
+
+- 39eb19b feat(i18n): 新增 12 个 hero/trust 三语键（36 条）
+- ce89624 fix(i18n): 移除 trust_fast_desc 的「30 分钟」承诺（铁律 15）
+- 882416b feat(hero): 新建 Hero.tsx 组件（i18n 驱动）
+- d8ec02a refactor(home): page.tsx 从 178 行减至 50 行，内联 Hero 移除
+- a6a512a feat(design): 接入 Archivo 字体系统 + 全站胶片颗粒层
+- fccee5a feat(hero): 补回次级 CTA + 新增 Proof Strip（3 条事实）
+- 27f3119 feat(roles): Roles 扩为四类角色，新增渠道合作方
+- a9c6c81 feat(pain-wall): 痛点墙从 4 场景扩至 8 场景，每卡加平台承诺标签
+- f64d44a fix(reveal): Reveal 从时间驱动改为滚动驱动，修复「只显示一半」
+- 3a057f6 feat(hero): Hero 改为 4 图场景轮播 + 修复 /how-it-works/intro 断链
+
+### 本轮修复的缺陷
+
+- **生产级断链**：主导航「使用流程」与 Hero 次级 CTA 均指向 /how-it-works/intro，
+  但该路由 dynamicParams=false 且 VALID 仅三值，点击必定 404。已改指 /how-it-works/customer。
+- **动画缺陷**：Reveal 用 useInView + 0.7s 时间驱动，滚动快时动画未完成即离屏，
+  表现为「只显示一半」。已改为 useScroll 滚动驱动。
+
+### 新增技术债 / 待办
+
+- **T39 师傅真人照片缺失**：Hero 右侧「师傅群像」位现用 repair.jpg 占位，
+  需真实师傅照片或团队合照，否则达不到「服务是人」的视觉表达。
+- **T40 视频素材确认**：全仓库扫描 mp4/webm 结果为 0，此前记忆中的视频素材不在 vgo-3.0，
+  需确认是否在其他仓库或需重新制作。
+- **T41 占位页面核查**：/map-preview、/regions-preview 疑似预览页，需确认是否转为正式页。
+- **T42 角色页覆盖**：/how-it-works/[role] 仅支持 customer/merchant/technician，
+  渠道合作方（partner）暂无对应流程页，需评估是否新增。
+
+### 素材盘点（2026-10-18 晚）
+
+- public/scenes/：12 张问题场景图（全部已用上）
+- public/features/：6 张服务类目图
+- public/shared/：10 张共享场景图
+- public/how-it-works/：角色流程配图
+- 视频：0
+- 字体：Archivo + Archivo Black（next/font 自托管）
