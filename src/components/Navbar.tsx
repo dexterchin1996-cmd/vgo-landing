@@ -131,7 +131,7 @@ export default function Navbar() {
             >
               <button
                 type="button"
-                onClick={() => setOpenDrop(openDrop === "__auth" ? null : "__auth")}
+                onClick={() => { window.dispatchEvent(new Event("open-waitlist")); setOpenDrop(null); }}
                 aria-expanded={openDrop === "__auth"}
                 aria-haspopup="true"
                 className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition ${
