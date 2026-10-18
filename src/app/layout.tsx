@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
-import { TRANSLATIONS, type Lang } from "@/lib/i18n";
+import { TRANSLATIONS, type Lang } from "@/lib/translations";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import CookieBanner from "@/components/CookieBanner";

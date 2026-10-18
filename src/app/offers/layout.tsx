@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
-import { TRANSLATIONS, type Lang } from "@/lib/i18n";
+import { TRANSLATIONS, type Lang } from "@/lib/translations";
 
 export async function generateMetadata(): Promise<Metadata> {
   const cookieStore = await cookies();
