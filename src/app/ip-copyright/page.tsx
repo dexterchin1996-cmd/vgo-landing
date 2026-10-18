@@ -87,7 +87,7 @@ export default function IpPage() {
           <p className="text-white/65 leading-relaxed">{s.d}</p>
         </div>
       ))}
-      <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+      <div className="p-6 rounded-2xl bg-[#06111d]/5 border border-white/10">
         <h2 className="text-xl font-black mb-3">{c.s8_t}</h2>
         <a href="mailto:support.vgo@gmail.com" className="text-[#FFB800] hover:underline">support.vgo@gmail.com</a>
       </div>

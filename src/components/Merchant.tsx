@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import { motion } from "motion/react";
 import { Rocket, TrendingUp, Bell, Wallet, ArrowRight } from "lucide-react";
 import { useLang } from "@/lib/i18n";
@@ -20,7 +22,7 @@ export default function Merchant() {
   ];
 
   return (
-    <section id="merchant" className="relative bg-gray-50 py-20 sm:py-28 px-5 overflow-hidden">
+    <section id="merchant" className="relative bg-[#0a0f18] py-20 sm:py-28 px-5 overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--vgo)]/8 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto">
@@ -32,18 +34,15 @@ export default function Merchant() {
             transition={{ duration: 0.7 }}
           >
             <p className="text-[var(--vgo)] font-bold text-sm tracking-widest uppercase mb-3">{t("merchant_label")}</p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
               {t("merchant_title1")}
               <br />
               {t("merchant_title2")}
             </h2>
-            <p className="mt-5 text-gray-600 text-base leading-relaxed">{t("merchant_desc")}</p>
+            <p className="mt-5 text-white/60 text-base leading-relaxed">{t("merchant_desc")}</p>
 
             <div className="mt-7 rounded-3xl overflow-hidden shadow-xl">
-              <img loading="lazy"                 src="/shared/s06.jpg"
-                alt="Merchant"
-                className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-700"
-              />
+              <Image src="/shared/s06.jpg" alt="" width={800} height={600} loading="lazy" />
             </div>
 
             <div className="mt-7 grid grid-cols-2 gap-4">
@@ -54,20 +53,20 @@ export default function Merchant() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="p-4 rounded-2xl bg-white border border-gray-100 hover:border-[var(--vgo)]/30 hover:shadow-md transition-[transform,box-shadow,opacity,width,background-color]"
+                  className="p-4 rounded-2xl bg-[#06111d] border border-white/5 hover:border-[var(--vgo)]/30 hover:shadow-xl transition-[transform,box-shadow,opacity,width,background-color]"
                 >
                   <div className="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center mb-3">
                     <b.Icon size={20} strokeWidth={2.2} className="text-[var(--vgo)]" />
                   </div>
-                  <div className="font-bold text-gray-900 text-sm mb-1">{b.title}</div>
-                  <div className="text-xs text-gray-500">{b.desc}</div>
+                  <div className="font-bold text-white text-sm mb-1">{b.title}</div>
+                  <div className="text-xs text-white/50">{b.desc}</div>
                 </motion.div>
               ))}
             </div>
 
             <a
               href="/merchant"
-              className="mt-8 inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-[var(--vgo)] text-white font-bold shadow-lg shadow-orange-500/30 hover:bg-[var(--vgo-dark)] hover:scale-105 transition-[transform,box-shadow,opacity,width,background-color] pulse-glow"
+              className="mt-8 inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-[var(--vgo)] text-white font-bold shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] shadow-orange-500/30 hover:bg-[var(--vgo-dark)] hover:scale-105 transition-[transform,box-shadow,opacity,width,background-color] pulse-glow"
             >
               {t("merchant_cta")}
               <ArrowRight size={18} strokeWidth={2.5} />
@@ -93,7 +92,7 @@ export default function Merchant() {
                 <div className="space-y-6">
                   {FLOW.map((f) => (
                     <div key={f.step} className="flex gap-4 items-start">
-                      <div className="shrink-0 w-12 h-12 rounded-2xl bg-white/10 backdrop-blur border border-white/15 flex items-center justify-center font-black text-[var(--vgo)]">
+                      <div className="shrink-0 w-12 h-12 rounded-2xl bg-[#06111d]/10 backdrop-blur border border-white/15 flex items-center justify-center font-black text-[var(--vgo)]">
                         {f.step}
                       </div>
                       <div className="pt-1">

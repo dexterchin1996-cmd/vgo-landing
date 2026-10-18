@@ -123,7 +123,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>
+      <body className="bg-[#06111d] text-white antialiased">
         <LangProvider>
           <Navbar />
           {children}

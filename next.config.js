@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
 const nextConfig = {
-  images: { unoptimized: true },
-  trailingSlash: true,
-  eslint: { ignoreDuringBuilds: true },
+  outputFileTracingRoot: path.join(__dirname),
 };
-
 module.exports = nextConfig;

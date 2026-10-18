@@ -17,7 +17,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="relative bg-white py-20 sm:py-28 px-5 overflow-hidden">
+    <section className="relative bg-[#06111d] py-20 sm:py-28 px-5 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-[0.04]"
         style={{ backgroundImage: "url('/shared/s06.jpg')" }}
@@ -31,7 +31,7 @@ export default function FAQ() {
           className="text-center mb-14"
         >
           <p className="text-[var(--vgo)] font-bold text-sm tracking-widest uppercase mb-3">{t("faq_label")}</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
             {t("faq_title")}
           </h2>
         </motion.div>
@@ -45,16 +45,16 @@ export default function FAQ() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               className={`rounded-2xl border transition-colors ${
-                open === i ? "border-[var(--vgo)]/30 bg-orange-50/40" : "border-gray-100 bg-white hover:border-gray-200"
+                open === i ? "border-[var(--vgo)]/30 bg-orange-50/40" : "border-white/5 bg-[#06111d] hover:border-white/10"
               }`}
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full flex items-center justify-between gap-4 p-5 text-left"
               >
-                <span className="font-bold text-gray-900 text-sm sm:text-base">{f.q}</span>
+                <span className="font-bold text-white text-sm sm:text-base">{f.q}</span>
                 <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-lg font-light transition-[transform,box-shadow,opacity,width,background-color] duration-300 ${
-                  open === i ? "bg-[var(--vgo)] text-white rotate-45" : "bg-gray-100 text-gray-600"
+                  open === i ? "bg-[var(--vgo)] text-white rotate-45" : "bg-white/5 text-white/60"
                 }`}>+</span>
               </button>
               <AnimatePresence initial={false}>
@@ -66,7 +66,7 @@ export default function FAQ() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <p className="px-5 pb-5 text-sm text-gray-600 leading-relaxed">{f.a}</p>
+                    <p className="px-5 pb-5 text-sm text-white/60 leading-relaxed">{f.a}</p>
                   </motion.div>
                 )}
               </AnimatePresence>

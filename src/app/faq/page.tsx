@@ -137,7 +137,7 @@ export default function FaqPage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={c === "en" ? "Search questions..." : c === "ms" ? "Cari soalan..." : "搜索问题..."}
-            className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white/5 border border-white/10 text-white text-sm outline-none focus:border-[var(--vgo)] placeholder-white/40 transition"
+            className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-[#06111d]/5 border border-white/10 text-white text-sm outline-none focus:border-[var(--vgo)] placeholder-white/40 transition"
           />
         </div>
       </div>
@@ -154,7 +154,7 @@ export default function FaqPage() {
               className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold transition ${
                 active
                   ? "bg-gradient-to-b from-[var(--vgo)] to-[var(--vgo-dark)] text-white shadow-lg shadow-orange-500/30"
-                  : "bg-white/5 border border-white/10 text-white/60 hover:bg-white/10 hover:text-white"
+                  : "bg-[#06111d]/5 border border-white/10 text-white/60 hover:bg-[#06111d]/10 hover:text-white"
               }`}
             >
               <Icon size={13} strokeWidth={2.4} />
@@ -180,7 +180,7 @@ export default function FaqPage() {
             <div
               key={item.q}
               className={`rounded-2xl border transition-colors ${
-                isOpen ? "border-[#FFB800]/40 bg-orange-50/5" : "border-white/10 bg-white/3 hover:border-white/20"
+                isOpen ? "border-[#FFB800]/40 bg-orange-50/5" : "border-white/10 bg-[#06111d]/3 hover:border-white/20"
               }`}
             >
               <button
@@ -189,7 +189,7 @@ export default function FaqPage() {
               >
                 <span className="font-bold text-white text-sm sm:text-base">{item.q}</span>
                 <span className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-lg font-light transition-[transform,box-shadow,opacity,width,background-color] duration-300 ${
-                  isOpen ? "bg-[#FFB800] text-white rotate-45" : "bg-white/10 text-white/60"
+                  isOpen ? "bg-[#FFB800] text-white rotate-45" : "bg-[#06111d]/10 text-white/60"
                 }`}>+</span>
               </button>
               <AnimatePresence initial={false}>
@@ -219,8 +219,7 @@ export default function FaqPage() {
           </p>
           <a
             href="https://wa.me/601172691788"
-            target="_blank"
-            rel="noopener noreferrer"
+            target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white text-sm font-black hover:scale-105 active:scale-95 transition"
           >
             <MessageCircle size={16} />

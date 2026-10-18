@@ -4,18 +4,20 @@
   "private": true,
   "license": "Proprietary",
   "scripts": {
-    "dev": "NODE_OPTIONS='--max-old-space-size=1024' next dev --webpack -p 5000",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096' next build --webpack",
-    "start": "NODE_OPTIONS='--max-old-space-size=1024' next start -p 5000",
+    "dev": "NODE_OPTIONS=--max-old-space-size=1024 next dev -p 5000",
+    "build": "next build",
+    "start": "next start -p 5000",
     "lint": "eslint src"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
+    "autoprefixer": "^10.6.1",
     "krackedmaps": "^0.2.0",
     "lucide-react": "^1.48.0",
     "motion": "^12.23.12",
-    "next": "16.3.6",
+    "next": "15.5.4",
+    "postcss": "^8.5.30",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
@@ -26,7 +28,10 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.6",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.3.3",
     "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "@next/swc-wasm-nodejs": "^15.5.4"
   }
 }

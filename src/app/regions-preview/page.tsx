@@ -24,7 +24,7 @@ export default function RegionsPreview() {
                 <div className="font-bold text-green-900 mb-2">{s.label.zh} · {s.label.en}</div>
                 <div className="flex flex-wrap gap-1.5">
                   {s.cities.map(c => (
-                    <span key={c.id} className={"text-xs px-2.5 py-1 rounded-full " + (c.status === "live" ? "bg-green-500 text-white" : "bg-white text-gray-500 border")}>
+                    <span key={c.id} className={"text-xs px-2.5 py-1 rounded-full " + (c.status === "live" ? "bg-green-500 text-white" : "bg-[#06111d] text-gray-500 border")}>
                       {c.label.zh} {c.status === "live" ? "✓" : ""}
                     </span>
                   ))}
@@ -44,7 +44,7 @@ export default function RegionsPreview() {
             {coming.map(s => (
               <div key={s.id} className="p-4 rounded-2xl bg-amber-50 border border-amber-200">
                 <div className="font-bold text-amber-900 mb-2 text-sm">{s.label.zh} · {s.label.en}</div>
-                <div className="text-xs text-gray-600">{s.cities.length} 个城市</div>
+                <div className="text-xs text-white/60">{s.cities.length} 个城市</div>
               </div>
             ))}
           </div>
@@ -58,8 +58,8 @@ export default function RegionsPreview() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
             {planned.map(s => (
-              <div key={s.id} className="p-3 rounded-xl bg-white border text-sm">
-                <div className="font-bold text-gray-700">{s.label.zh}</div>
+              <div key={s.id} className="p-3 rounded-xl bg-[#06111d] border text-sm">
+                <div className="font-bold text-white/80">{s.label.zh}</div>
                 <div className="text-xs text-gray-400">{s.label.en}</div>
               </div>
             ))}

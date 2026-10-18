@@ -65,7 +65,7 @@ const C = {
 
 const FAQ_LINKS = {
   zh: [
-    "V'GO 是什么？",
+    <span id="what-is-vgo">V'GO 是什么？</span>,
     "怎么下单？",
     "师傅有认证吗？",
     "价格怎么算？",
@@ -99,8 +99,7 @@ export default function ContactPage() {
         <div className="grid sm:grid-cols-2 gap-3">
           <a
             href="https://wa.me/601172691788"
-            target="_blank"
-            rel="noopener noreferrer"
+            target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-3 p-5 rounded-2xl bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white font-bold hover:scale-[1.02] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color] shadow-lg shadow-green-900/30"
           >
             <MessageCircle size={24} strokeWidth={2.4} />
@@ -127,7 +126,7 @@ export default function ContactPage() {
         <h3 className="text-sm font-black text-white/70 uppercase tracking-widest mb-4">{c.dept_t}</h3>
         <div className="grid sm:grid-cols-2 gap-3">
           {c.depts.map((d) => (
-            <div key={d.name} className="p-5 rounded-2xl bg-white/5 border border-white/10">
+            <div key={d.name} className="p-5 rounded-2xl bg-[#06111d]/5 border border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center shrink-0">
                   <d.Icon size={18} className="text-white" strokeWidth={2.4} />
@@ -151,7 +150,7 @@ export default function ContactPage() {
       </div>
 
       {/* 服务时间 */}
-      <div className="not-prose mb-10 p-6 rounded-2xl bg-white/5 border border-white/10">
+      <div className="not-prose mb-10 p-6 rounded-2xl bg-[#06111d]/5 border border-white/10">
         <div className="flex items-center gap-2 mb-2">
           <Clock size={16} className="text-[var(--vgo)]" />
           <h3 className="font-black text-base text-white">{c.hours_t}</h3>
@@ -166,9 +165,9 @@ export default function ContactPage() {
         <div className="grid sm:grid-cols-2 gap-2">
           {faqs.map((q) => (
             <Link
-              key={q}
-              href="/faq/"
-              className="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[var(--vgo)]/40 hover:bg-white/8 transition-[transform,box-shadow,opacity,width,background-color] text-sm text-white/80"
+              key={String(q)}
+              href="/faq/#what-is-vgo"
+              className="flex items-center justify-between p-4 rounded-xl bg-[#06111d]/5 border border-white/10 hover:border-[var(--vgo)]/40 hover:bg-[#06111d]/8 transition-[transform,box-shadow,opacity,width,background-color] text-sm text-white/80"
             >
               <span className="truncate">{q}</span>
               <span className="text-[var(--vgo)] shrink-0 ml-2">→</span>
@@ -176,14 +175,14 @@ export default function ContactPage() {
           ))}
         </div>
         <div className="text-center mt-6">
-          <Link href="/faq/" className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--vgo)] hover:gap-3 transition-[transform,box-shadow,opacity,width,background-color]">
+          <Link href="/faq/#what-is-vgo" className="inline-flex items-center gap-1.5 text-sm font-bold text-[var(--vgo)] hover:gap-3 transition-[transform,box-shadow,opacity,width,background-color]">
             {c.faq_more} →
           </Link>
         </div>
       </div>
 
       {/* 办公地址 */}
-      <div className="not-prose mb-8 p-6 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-3">
+      <div className="not-prose mb-8 p-6 rounded-2xl bg-[#06111d]/5 border border-white/10 flex items-center gap-3">
         <MapPin size={20} className="text-[var(--vgo)] shrink-0" />
         <div>
           <div className="text-sm font-black text-white">Kota Kinabalu, Sabah, Malaysia</div>

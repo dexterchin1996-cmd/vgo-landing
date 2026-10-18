@@ -170,7 +170,7 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            <a href="#download" className="ml-3 px-6 py-2.5 rounded-xl bg-[var(--vgo)] text-white text-sm font-bold shadow-lg shadow-orange-500/30 hover:brightness-110 hover:scale-105 transition-[transform,box-shadow,opacity,width,background-color] pulse-glow">
+            <a href="#apps" className="ml-3 px-6 py-2.5 rounded-xl bg-[var(--vgo)] text-white text-sm font-bold shadow-lg shadow-orange-500/30 hover:brightness-110 hover:scale-105 transition-[transform,box-shadow,opacity,width,background-color] pulse-glow">
               {t("nav_download")}
             </a>
           </nav>

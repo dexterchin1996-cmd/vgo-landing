@@ -1,31 +1,49 @@
-node_modules/
-.next/
-out/
-build/
-.env*
+
+
+
+
+
+
+
+
+
 !.env.example
-*.log
-.DS_Store
-next-env.d.ts
-*.tsbuildinfo
-
-# 视频文件暂不上传（本地保留）
-public/videos/*.mp4
-
-
+# Build
+# Env
+# IDE
+# Logs
 # backup + scratch
-.bak-*/
-20行要分段*
-
 # 备份文件
+# 视频文件暂不上传（本地保留）
+# 设计扫描报告（临时产物，不提交）
 *.bak*
 *.log
-tsconfig.tsbuildinfo
-.vercel
+*.log
+*.swp
+*.tsbuildinfo
+.DS_Store
+.bak-*/
+.env
+.env*
+.env.*.local
+.env.local
+.idea/
 .next-old*
-out/
-
-# 设计扫描报告（临时产物，不提交）
+.next/
+.next/
+.vercel
+.vscode/
+20行要分段*
+build/
 impeccable-report/
 manual-report.txt
+next-env.d.ts
+node_modules/
+npm-debug.log*
+out/
+out/
+out/
+public/videos/*.mp4
+tsconfig.tsbuildinfo
+yarn-debug.log*
 合并报告.md

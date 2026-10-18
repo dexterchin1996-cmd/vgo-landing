@@ -54,12 +54,12 @@ export default function AppLinks() {
   }
 
   return (
-    <section id="apps" className="relative py-20 bg-gray-50 overflow-hidden">
+    <section id="apps" className="relative py-20 bg-[#0a0f18] overflow-hidden">
       <div className="max-w-5xl mx-auto px-5 text-center mb-10">
-        <h2 className="text-3xl sm:text-4xl font-black text-gray-900">
+        <h2 className="text-3xl sm:text-4xl font-black text-white">
           {L === "zh" ? "选择你的 App" : L === "ms" ? "Pilih App Anda" : "Choose Your App"}
         </h2>
-        <p className="mt-3 text-sm text-gray-500">
+        <p className="mt-3 text-sm text-white/50">
           {L === "zh" ? "三个独立 App · 一个账号通用 · 数据互通" : L === "ms" ? "Tiga App berasingan · Satu akaun · Data dikongsi" : "Three separate Apps · One account · Shared data"}
         </p>
       </div>
@@ -74,7 +74,7 @@ export default function AppLinks() {
           <a
             key={href}
             href={href}
-            className="snap-center shrink-0 w-[80vw] max-w-[360px] group flex flex-col p-6 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-200"
+            className="snap-center shrink-0 w-[80vw] max-w-[360px] group flex flex-col p-6 rounded-3xl bg-[#06111d] border border-white/5 shadow-sm hover:shadow-xl transition-shadow duration-200"
           >
             <div
               className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
@@ -82,8 +82,8 @@ export default function AppLinks() {
             >
               <Icon size={32} strokeWidth={2} />
             </div>
-            <h3 className="text-xl font-black text-gray-900 mb-2">{title[L]}</h3>
-            <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">{desc[L]}</p>
+            <h3 className="text-xl font-black text-white mb-2">{title[L]}</h3>
+            <p className="text-sm text-white/50 leading-relaxed mb-6 flex-1">{desc[L]}</p>
             <div className="flex items-center gap-1.5 text-sm font-bold" style={{ color }}>
               <span>{cta[L]}</span>
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
@@ -100,7 +100,7 @@ export default function AppLinks() {
             onClick={() => goTo(i)}
             aria-label={`App ${i + 1}`}
             className={`h-2 rounded-full transition-[width,background-color] duration-300 ${
-              i === active ? "w-6 bg-[var(--vgo)]" : "w-2 bg-gray-300 hover:bg-gray-400"
+              i === active ? "w-6 bg-[var(--vgo)]" : "w-2 bg-white/20 hover:bg-gray-400"
             }`}
           />
         ))}
@@ -111,7 +111,7 @@ export default function AppLinks() {
           href={AI_CS_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-3 max-w-2xl mx-auto p-5 rounded-2xl bg-gradient-to-r from-[#4facfe] to-[#00f2fe] text-white shadow-lg hover:shadow-xl hover:scale-[1.01] transition-[transform,box-shadow] duration-200"
+          className="flex items-center justify-center gap-3 max-w-2xl mx-auto p-5 rounded-2xl bg-gradient-to-r from-[#4facfe] to-[#00f2fe] text-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] hover:shadow-xl hover:scale-[1.01] transition-[transform,box-shadow] duration-200"
         >
           <MessageCircle size={28} strokeWidth={2} />
           <div className="flex-1 text-left">

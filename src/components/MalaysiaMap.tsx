@@ -34,11 +34,10 @@ export default function MalaysiaMap() {
     });
     map.setData(data, { from: "#34c3a6", to: "#ffcc33" });
 
-    // 监听选中事件
-    map.on("state:select", (payload: { slug: string }) => {
-      setSelected(payload.slug);
+    // 监听选中事件（krackedmaps 只支持 select，payload.slug 为空表示取消）
+    map.on("select", (payload: { slug?: string | null }) => {
+      setSelected(payload?.slug ?? null);
     });
-    map.on("state:deselect", () => setSelected(null));
 
     return () => {
       map.destroy();

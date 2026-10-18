@@ -16,12 +16,12 @@ function Inner() {
   };
   return (
     <div className="min-h-screen flex items-center justify-center p-5 bg-gradient-to-br from-red-50 to-orange-50">
-      <div className="max-w-md w-full bg-white rounded-3xl shadow-2xl p-8 text-center">
+      <div className="max-w-md w-full bg-[#06111d] rounded-3xl shadow-2xl p-8 text-center">
         <div className="w-20 h-20 mx-auto rounded-full bg-red-50 flex items-center justify-center mb-5">
           <AlertCircle size={44} className="text-red-500" strokeWidth={2.5} />
         </div>
-        <h1 className="text-2xl font-black text-gray-900 mb-2">验证失败</h1>
-        <p className="text-sm text-gray-600 mb-6">{msgs[e] || msgs.unknown}</p>
+        <h1 className="text-2xl font-black text-white mb-2">验证失败</h1>
+        <p className="text-sm text-white/60 mb-6">{msgs[e] || msgs.unknown}</p>
         <div className="p-4 rounded-2xl bg-amber-50 border border-amber-100 mb-6 text-xs text-amber-800 leading-relaxed">
           你可以回到官网重新注册或联系我们重发验证邮件<br/>
           support.vgo@gmail.com · WhatsApp +601172691788

@@ -90,7 +90,7 @@ export default function ServiceModal({ item, onClose }: { item: ServiceItem | nu
             {/* 底部 CTA */}
             <div className="shrink-0 p-5 border-t border-gray-100 bg-white">
               <a
-                href="#download"
+                href="#apps"
                 onClick={onClose}
                 className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black shadow-lg shadow-orange-500/30 hover:scale-[1.02] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]"
               >

@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import { motion } from "motion/react";
 import { UserPlus, Smartphone, MousePointerClick, CheckCircle2 } from "lucide-react";
 import { useLang } from "@/lib/i18n";
@@ -112,10 +114,7 @@ export default function HowItWorks() {
             >
               <div className="relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[var(--vgo)]/40 transition-[transform,box-shadow,opacity,width,background-color] duration-300">
                 <div className="relative h-32 overflow-hidden">
-                  <img loading="lazy"                     src={s.img}
-                    alt={s.title}
-                    className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-110 transition-[transform,box-shadow,opacity,width,background-color] duration-700"
-                  />
+                  <Image src={s.img} alt="" width={600} height={400} loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/50 to-transparent" />
                   <div className="absolute top-3 right-4 text-4xl font-black text-white/40 select-none">
                     {s.num}

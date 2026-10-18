@@ -1,14 +1,14 @@
 "use client";
+
 import Link from "next/link";
-import { motion, AnimatePresence } from "motion/react";
-import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 import NewsTicker from "@/components/NewsTicker";
-import PainPoints from "@/components/PainPoints";
-import AboutVGO from "@/components/AboutVGO";
+import PainPointWall from "@/components/PainPointWall";
 import FeatureCards from "@/components/FeatureCards";
 import SceneShowcase from "@/components/SceneShowcase";
 import HowItWorks from "@/components/HowItWorks";
 import Guarantees from "@/components/Guarantees";
+import PlatformTrust from "@/components/PlatformTrust";
 import Roles from "@/components/Roles";
 import Merchant from "@/components/Merchant";
 import Testimonials from "@/components/Testimonials";
@@ -19,194 +19,160 @@ import AppLinks from "@/components/AppLinks";
 import Footer from "@/components/Footer";
 import Waitlist from "@/components/Waitlist";
 import Notice from "@/components/Notice";
-import ParticleField from "@/components/ParticleField";
 import Reveal from "@/components/Reveal";
 import { useLang } from "@/lib/i18n";
 
-const HERO_IMAGES = [
-  { src: "/shared/s01.jpg", kb: "kb-zoom-in" },
-  { src: "/shared/s02.jpg", kb: "kb-pan-right" },
-  { src: "/features/repair.jpg", kb: "kb-zoom-out" },
-  { src: "/shared/s03.jpg", kb: "kb-pan-left" },
-  { src: "/features/clean.jpg", kb: "kb-zoom-in" },
-];
-
-const SLIDE_MS = 7000;
-const TRANSITION_S = 1.8;
-
 export default function Home() {
   const { t } = useLang();
-  const [idx, setIdx] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => setIdx(i => (i + 1) % HERO_IMAGES.length), SLIDE_MS);
-    return () => clearInterval(timer);
-  }, []);
-
-  const STATS = [
-    { num: "亚庇", label: t("stat_rating") },
-    { num: "首批", label: t("stat_family") },
-    { num: "6 大", label: t("stat_category") },
-    { num: "全马", label: t("stat_cover") },
-  ];
 
   return (
     <>
-      <main id="home" className="relative min-h-[100svh] flex flex-col overflow-hidden bg-gray-950 noise">
-        <div className="absolute inset-0 z-0">
-          <div className="vgo-hero-mesh absolute inset-0" />
-          <div className="vgo-hero-grid absolute inset-0 opacity-30" />
-          <div className="vgo-hero-scan absolute inset-0" />
-          <ParticleField count={140} />
-        </div>
+      <main id="home" className="relative bg-[#06111d] overflow-x-hidden font-sans">
+        
+        {/* ============================================
+            HERO - 2026 Premium UX/UI Spec
+            - 主标题 88px，字间距收紧
+            - 留白 3-5x
+            - 色彩克制：橙仅用于 CTA 和 品牌词
+            - CTA 单一焦点，次级降为纯文本
+            ============================================ */}
+        <section className="relative min-h-[100vh] flex flex-col justify-between overflow-hidden">
 
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <div className="aurora absolute -top-32 -left-24 w-[500px] h-[500px] rounded-full bg-[var(--vgo)] blur-[140px] opacity-60" />
-          <div className="aurora-2 absolute -bottom-32 -right-24 w-[600px] h-[600px] rounded-full bg-[#FF8A3D] blur-[160px] opacity-50" />
-        </div>
-
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-24 pb-6 text-center text-white">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, type: "spring", stiffness: 80 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 text-xs sm:text-sm font-semibold mb-6"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--vgo)] animate-pulse" />
-            {t("hero_tag")}
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1, type: "spring", stiffness: 60 }}
-            className="text-[34px] leading-[1.15] sm:text-6xl md:text-7xl font-black tracking-tight"
-          >
-            <span className="block text-white">
-              {t("hero_title1")}
-            </span>
-            <span className="block mt-1">
-              {t("hero_title2").replace("V'GO", "")}
-              <span className="text-[var(--vgo)] drop-shadow-[0_0_40px_rgba(255,102,0,0.3)]">V'GO</span>
-            </span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-5 text-sm sm:text-base text-white/70 max-w-xl mx-auto leading-relaxed"
-          >
-            {t("hero_desc")}
-            <br />
-            <span className="text-white/50 text-xs sm:text-sm">{t("hero_sub")}</span>
-          </motion.p>
-
-          {/* 🎁 福利横幅 */}
-          <motion.a
-            href="#download"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
-            className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white text-xs sm:text-sm font-bold shadow-[0_8px_30px_-8px_rgba(255,150,0,0.3)] hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]"
-          >
-            <span className="text-base">🎁</span>
-            <span>注册即送 <span className="text-base font-black">RM80</span> 上门检查券</span>
-            <span className="text-white/70">·</span>
-            <span className="text-white/90">限首批 1000 名</span>
-          </motion.a>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 w-full max-w-sm mx-auto space-y-3"
-          >
-            <Link
-              href="/how-it-works/customer"
-              className="group flex items-center justify-center gap-2 w-full px-6 py-4 rounded-2xl bg-gradient-to-b from-[var(--vgo-light)] to-[var(--vgo-dark)] text-white font-bold text-base shadow-[0_10px_30px_-8px_rgba(255,102,0,0.3)] hover:shadow-[0_16px_40px_-8px_rgba(255,102,0,0.3)] hover:scale-[1.02] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color] pulse-glow"
-            >
-              <span className="text-lg">👤</span>
-              <span>{t("cta_customer")}</span>
-              <span className="ml-1 px-2 py-0.5 rounded-full bg-white/25 text-[10px] font-black">领 RM80</span>
-              <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-[transform,box-shadow,opacity,width,background-color]">→</span>
-            </Link>
-            <div className="grid grid-cols-2 gap-3">
-              <Link href="/how-it-works/merchant" className="flex items-center justify-center gap-1.5 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-xl border border-white/20 text-white text-xs sm:text-sm font-semibold hover:bg-white/15 hover:border-white/40 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
-                <span>🏪</span>
-                <span>{t("cta_merchant")}</span>
-              </Link>
-              <Link href="/how-it-works/technician" className="flex items-center justify-center gap-1.5 px-3 py-3 rounded-xl bg-white/8 backdrop-blur-xl border border-white/20 text-white text-xs sm:text-sm font-semibold hover:bg-white/15 hover:border-white/40 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
-                <span>🔧</span>
-                <span>{t("cta_tech")}</span>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-
-        <div className="relative z-20 pb-4 px-5">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.7 }}
-            className="max-w-3xl mx-auto mb-4 grid grid-cols-4 gap-1 sm:gap-2 p-2 rounded-2xl bg-white/8 backdrop-blur-2xl border border-white/15"
-          >
-            {STATS.map((s) => (
-              <div key={s.label} className="py-2 rounded-xl bg-white/5 hover:bg-white/10 transition-colors text-center">
-                <div className="text-base sm:text-2xl font-black text-[var(--vgo)] leading-tight">{s.num}</div>
-                <div className="text-[10px] sm:text-xs text-white/65 mt-0.5">{s.label}</div>
-                <div className="text-[8px] text-white/30 mt-0.5">示例</div>
-              </div>
-            ))}
-          </motion.div>
-
-          <div className="flex justify-center gap-2 mb-3">
-            {HERO_IMAGES.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setIdx(i)}
-                aria-label={`slide ${i + 1}`}
-                className={`h-1.5 rounded-full overflow-hidden transition-[transform,box-shadow,opacity,width,background-color] duration-500 ${
-                  i === idx ? "w-10 bg-white/25" : "w-1.5 bg-white/40 hover:bg-white/70"
-                }`}
-              >
-                {i === idx && (
-                  <motion.div
-                    key={`bar-${idx}`}
-                    initial={{ width: 0 }}
-                    animate={{ width: "100%" }}
-                    transition={{ duration: SLIDE_MS / 1000, ease: "linear" }}
-                    className="h-full bg-[var(--vgo)]"
-                  />
-                )}
-              </button>
-            ))}
+          {/* 背景：深海军蓝 + 极克制的微弱光 */}
+          <div className="absolute inset-0 z-0 bg-[#06111d]">
+            <div className="absolute inset-0 bg-[url('/shared/s05.jpg')] bg-cover bg-center opacity-20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#06111d] via-[#06111d]/85 to-[#06111d]/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#06111d] via-transparent to-transparent" />
           </div>
 
-          <a href="#features" className="flex items-center justify-center gap-1.5 text-white/50 text-xs hover:text-white transition">
-            <span>{t("scroll_more")}</span>
-            <span className="">↓</span>
-          </a>
-        </div>
-      </main>
+          <div className="pt-36 md:pt-44" />
 
-      <NewsTicker />
-      <Reveal><FeatureCards /></Reveal>
-      <Reveal><SceneShowcase /></Reveal>
-      <Reveal><PainPoints /></Reveal>
-      <Reveal><AboutVGO /></Reveal>
-      <Reveal><HowItWorks /></Reveal>
-      <Reveal><Guarantees /></Reveal>
-      <Reveal><Testimonials /></Reveal>
-      <Reveal><Roles /></Reveal>
-      <Reveal><Merchant /></Reveal>
-      <Reveal><Cooperation /></Reveal>
-      <Reveal><FAQ /></Reveal>
-      <Reveal><FinalCTA /></Reveal>
-      <AppLinks />
-      <Footer />
-      <Waitlist />
-      <Notice />
+          {/* 核心网格：左右分栏，gap 加大到 16（呼吸感） */}
+          <div className="relative z-10 max-w-[1440px] mx-auto w-full px-6 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center flex-1 pb-20">
+
+            {/* 左：文字金字塔 */}
+            <div className="w-full text-left relative z-20">
+
+              {/* 顶部标签 - 克制 */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 mb-10 text-[#ff7900] text-xs font-bold tracking-[0.25em] uppercase"
+              >
+                <span className="w-8 h-px bg-[#ff7900]" />
+                V&apos;GO Malaysia · Premium Service
+              </motion.div>
+
+              {/* H1 主标题 - 88px，字距收紧 */}
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: "easeOut" }}
+                className="text-[56px] sm:text-7xl md:text-[88px] leading-[0.95] font-black text-white tracking-tighter"
+              >
+                有事不用愁<br />
+                <span className="text-white/90">上门找 </span>
+                <span className="text-[#ff7900]">V&apos;GO</span>
+              </motion.h1>
+
+              {/* 副标题 - 16-18px，white/55 降低噪音 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}
+                className="mt-12 max-w-md text-base leading-relaxed text-white/55"
+              >
+                <p className="text-white/90 font-medium text-lg mb-3">马来西亚上门服务平台</p>
+                <p>居家维修 · 清洁 · 按摩 · 跑腿 · 商城 · 找工作<br/>一站式搞定生活里的每一件事</p>
+              </motion.div>
+
+              {/* CTA 区 - 单一主按钮 + 纯文本次级 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.55 }}
+                className="mt-14 flex items-center gap-8"
+              >
+                <Link
+                  href="/how-it-works/customer"
+                  className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#ff7900] text-white font-bold text-base shadow-[0_15px_40px_-12px_rgba(255,121,0,0.65)] hover:bg-[#ff8a1f] hover:scale-[1.03] transition-all duration-300"
+                >
+                  立即体验
+                  <span className="text-lg">→</span>
+                </Link>
+                <Link
+                  href="#services"
+                  className="group inline-flex items-center gap-2 text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors"
+                >
+                  了解服务
+                  <span className="group-hover:translate-x-1 transition-transform">↓</span>
+                </Link>
+              </motion.div>
+
+            </div>
+
+            {/* 右：真人视觉锚点 */}
+            <div className="w-full relative flex justify-center md:justify-end">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.4, ease: "easeOut", delay: 0.2 }}
+                className="relative w-full max-w-[560px] aspect-[4/5] flex items-end justify-center"
+              >
+                {/* 视频接口 - 透明真人视频就位后自动播放 */}
+                <video
+                  autoPlay loop muted playsInline
+                  className="w-full h-full object-contain z-10 relative"
+                  poster="/features/repair.jpg"
+                >
+                  <source src="/motion/hero-worker-walkin-alpha.webm" type="video/webm" />
+                  <source src="/motion/hero-worker-fallback.mp4" type="video/mp4" />
+                </video>
+
+                {/* 底部渐变融合，让人物与背景无缝 */}
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#06111d] to-transparent z-20 pointer-events-none" />
+              </motion.div>
+            </div>
+
+          </div>
+
+          {/* 底部信任条 - 极简克制 */}
+          <div className="relative z-10 w-full border-t border-white/[0.06]">
+            <div className="max-w-[1440px] mx-auto px-6 md:px-16 py-8 flex overflow-x-auto md:justify-between items-center gap-10 scrollbar-hide">
+              {[
+                { icon: "shield", title: "安全可靠", desc: "实名认证 · 专业认证" },
+                { icon: "search", title: "快速响应", desc: "30分钟内接单" },
+                { icon: "user", title: "优质服务", desc: "专业团队 · 品质保障" },
+                { icon: "calendar", title: "价格透明", desc: "明码标价 · 无隐藏费用" },
+                { icon: "chat", title: "全天候客服", desc: "7x24小时在线" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 shrink-0 group">
+                  <img
+                    src={`/icons/${item.icon}.svg`}
+                    alt={item.title}
+                    className="w-5 h-5 opacity-40 group-hover:opacity-100 transition-opacity"
+                  />
+                  <div>
+                    <div className="text-white/85 font-semibold text-[13px] tracking-wide whitespace-nowrap">{item.title}</div>
+                    <div className="text-white/35 text-[11px] whitespace-nowrap mt-0.5">{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <NewsTicker />
+        <PainPointWall />
+        <Reveal><FeatureCards /></Reveal>
+        <Reveal><SceneShowcase /></Reveal>
+        <Reveal><HowItWorks /></Reveal>
+        <Reveal><Guarantees /></Reveal>
+        <PlatformTrust />
+        <Reveal><Testimonials /></Reveal>
+        <Reveal><Roles /></Reveal>
+        <Reveal><Merchant /></Reveal>
+        <Reveal><Cooperation /></Reveal>
+        <Reveal><FAQ /></Reveal>
+        <Reveal><FinalCTA /></Reveal>
+        <AppLinks />
+        <Footer />
+        <Waitlist />
+        <Notice />
+      </main>
     </>
   );
 }

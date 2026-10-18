@@ -1,243 +1,212 @@
 @import "tailwindcss";
 
-/* ===== VGO 统一主题色（橙色系）===== */
-:root, html[data-lang="zh"], html[data-lang="en"], html[data-lang="ms"] {
-  --vgo: #FF6600;
-  --vgo-light: #FF8A3D;
-  --vgo-dark: #D95000;
-  --vgo-glow: rgba(255,102,0,0.5);
-  --vgo-grad-from: #FFB33D;
-  --vgo-grad-via: #FF8A1F;
-  --vgo-grad-to: #D95000;
-}
-
-/* ===== 流体字号系统（clamp 自动调节）===== */
-/* 说明：min 是手机最小字号，vw 是随屏宽缩放，max 是桌面最大字号 */
 :root {
-  /* 正文 */
-  --fs-xs:    clamp(10px, 0.65vw + 8px, 12px);
-  --fs-sm:    clamp(12px, 0.8vw + 9.5px, 14px);
-  --fs-base:  clamp(14px, 0.9vw + 11.5px, 16px);
-  --fs-lg:    clamp(15px, 1vw + 12.5px, 18px);
-  --fs-xl:    clamp(17px, 1.3vw + 14px, 22px);
-  /* 标题 */
-  --fs-2xl:   clamp(20px, 1.8vw + 15px, 28px);
-  --fs-3xl:   clamp(24px, 2.5vw + 16px, 36px);
-  --fs-4xl:   clamp(28px, 3.5vw + 17px, 48px);
-  --fs-5xl:   clamp(32px, 4.5vw + 18px, 60px);
-  --fs-6xl:   clamp(36px, 6vw + 18px, 80px);
-  /* 行高（跟字号联动）*/
-  --lh-tight: 1.15;
-  --lh-snug:  1.3;
-  --lh-body:  1.6;
-  /* 间距（流体）*/
-  --sp-section-y: clamp(48px, 8vw, 120px);
-  --sp-gap:       clamp(16px, 2.5vw, 32px);
+  --color-primary: #FF7A00;
+  --color-primary-dark: #E66A00;
+  --color-primary-light: #FF9500;
+  --color-secondary: #1F2937;
+  --color-accent: #F97316;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #FFF7ED;
+  --color-text: #374151;
+  --color-text-muted: #6B7280;
 }
 
-/* 全局基准字号 */
-html { font-size: var(--fs-base); }
-
-/* 大屏加宽内容区 */
-@media (min-width: 1536px) {
-  .max-w-7xl { max-width: 88rem; }
-  .max-w-6xl { max-width: 80rem; }
+html {
+  scroll-behavior: smooth;
 }
 
-/* 超宽屏（≥ 1920px）内容居中不拉伸 */
-@media (min-width: 1920px) {
-  .max-w-7xl { max-width: 96rem; }
-  body { font-size: 17px; }
+body {
+  color: #374151;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
 }
 
-/* 折叠屏 / 平板竖屏（600-768）额外优化 */
-@media (min-width: 600px) and (max-width: 768px) {
-  .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
-/* 减少动效（无障碍：尊重系统设置）*/
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* 深色模式（自动跟随系统）*/
-@media (prefers-color-scheme: dark) {
-  :root {
-    --vgo: #FF7A2E;
-    --vgo-glow: rgba(255,122,46,0.6);
-  }
-}
-
-
-/* 平滑过渡 */
-html, body, header, section, footer, a, button, div {
-  transition: background-color 0.5s, color 0.5s, border-color 0.5s;
-}
-
+/* V'GO brand tokens - added in R2.1 for Tailwind v4 */
 @theme {
-  --color-vgo: var(--vgo);
-  --color-vgo-dark: var(--vgo-dark);
-  --color-vgo-light: #FFF3E8;
+  --color-vgo: #FF641C;
+  --color-vgo-dark: #E94F0B;
+  --color-vgo-soft: #FFF0E7;
+  --color-bg-warm: #F8F6F2;
+  --color-bg-surface: #FFFFFF;
+  --color-dark-scene: #151515;
+  --color-ink: #202020;
+  --color-ink-muted: #6B6B6B;
+  --color-line: #E7E2DC;
+  --color-success: #23865B;
 }
 
-html, body {
-  background: #FFFFFF;
-  color: #1A1A1A;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Roboto, Arial, sans-serif;
-  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'ss01';
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
+/* ============================================
+   V'GO Visual Layer - R3.1
+   补全首页空壳类：vgo-hero-mesh / vgo-hero-grid /
+   vgo-hero-scan / aurora / noise / kb-*
+   仅视觉增强，不改结构
+   ============================================ */
 
-/* 首屏背景电影感缓推 */
-@keyframes kenburns {
-  0%   { transform: scale(1) translate(0, 0); }
-  100% { transform: scale(1.12) translate(-1%, -1%); }
-}
-.kenburns { animation: kenburns 20s ease-out infinite alternate; }
-
-/* 滚动进度条 */
-@keyframes pulseGlow {
-  0%,100% { box-shadow: 0 0 0 0 rgba(255,102,0,0.5); }
-  50%     { box-shadow: 0 0 0 12px rgba(255,102,0,0); }
-}
-.pulse-glow { animation: pulseGlow 2.4s ease-in-out infinite; }
-
-/* 无缝滚动公告 */
-@keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.marquee { animation: marquee 30s linear infinite; }
-.marquee:hover { animation-play-state: paused; }
-
-
-/* ===== Ken Burns 场景动效（图"活"起来）===== */
-@keyframes kb-zoom-in {
-  0%   { transform: scale(1) translate(0, 0); }
-  100% { transform: scale(1.15) translate(-2%, -1%); }
-}
-@keyframes kb-zoom-out {
-  0%   { transform: scale(1.15) translate(1%, 1%); }
-  100% { transform: scale(1) translate(0, 0); }
-}
-@keyframes kb-pan-left {
-  0%   { transform: scale(1.1) translate(2%, 0); }
-  100% { transform: scale(1.1) translate(-2%, 0); }
-}
-@keyframes kb-pan-right {
-  0%   { transform: scale(1.1) translate(-2%, 0); }
-  100% { transform: scale(1.1) translate(2%, 0); }
-}
-.kb-zoom-in  { animation: kb-zoom-in 20s ease-in-out infinite alternate; }
-.kb-zoom-out { animation: kb-zoom-out 20s ease-in-out infinite alternate; }
-.kb-pan-left { animation: kb-pan-left 24s ease-in-out infinite alternate; }
-.kb-pan-right{ animation: kb-pan-right 24s ease-in-out infinite alternate; }
-
-/* hover 时暂停（尊重用户） */
-.kb-zoom-in:hover, .kb-zoom-out:hover, .kb-pan-left:hover, .kb-pan-right:hover {
-  animation-play-state: paused;
-}
-
-/* ═══════════════════════════════════════════
-   VGO Hero — Animated Gradient Mesh + 3D Grid
-   Replaces worker photo slideshow
-   ═══════════════════════════════════════════ */
-
+/* Hero 背景层：mesh 渐变 + 缓慢漂移 */
 .vgo-hero-mesh {
   background:
-    radial-gradient(ellipse 80% 60% at 20% 0%,   #FFB347 0%, transparent 55%),
-    radial-gradient(ellipse 70% 70% at 85% 15%,  #FF6600 0%, transparent 60%),
-    radial-gradient(ellipse 90% 70% at 50% 90%,  #D95000 0%, transparent 65%),
-    linear-gradient(160deg, #1A0F05 0%, #2A1508 45%, #0F0A05 100%);
-  animation: vgoMesh 14s ease-in-out infinite alternate;
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(255, 100, 28, 0.22), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 80% 70%, rgba(233, 79, 11, 0.16), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(255, 138, 61, 0.10), transparent 60%),
+    linear-gradient(135deg, #0a0a0a 0%, #1a0f08 45%, #0a0a0a 100%);
+  animation: vgoMeshShift 22s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
-@keyframes vgoMesh {
-  0%   { background-position: 0% 0%, 100% 0%, 50% 100%, 0 0; filter: hue-rotate(0deg); }
-  50%  { background-position: 10% 15%, 85% 10%, 45% 95%, 0 0; filter: hue-rotate(-8deg); }
-  100% { background-position: 0% 25%, 100% 25%, 55% 90%, 0 0; filter: hue-rotate(0deg); }
+@keyframes vgoMeshShift {
+  0%   { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.12) translate(-1.5%, -1%); }
 }
 
+/* 网格线 */
 .vgo-hero-grid {
   background-image:
-    linear-gradient(rgba(255,180,80,0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,180,80,0.15) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 75%);
-  animation: vgoGridPan 20s linear infinite;
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 25%, transparent 78%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 25%, transparent 78%);
 }
 
-@keyframes vgoGridPan {
-  0%   { background-position: 0 0, 0 0; }
-  100% { background-position: 48px 48px, 48px 48px; }
-}
-
+/* 扫描线 */
 .vgo-hero-scan {
-  background: linear-gradient(180deg, transparent 0%, rgba(255,150,60,0.08) 50%, transparent 100%);
-  animation: vgoScan 8s ease-in-out infinite;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 100, 28, 0.02) 42%,
+    rgba(255, 100, 28, 0.14) 50%,
+    rgba(255, 100, 28, 0.02) 58%,
+    transparent 100%
+  );
+  animation: vgoScanMove 9s linear infinite;
+  will-change: transform;
 }
 
-@keyframes vgoScan {
-  0%, 100% { opacity: 0.2; transform: translateY(-30%); }
-  50%      { opacity: 0.7; transform: translateY(30%); }
+@keyframes vgoScanMove {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
 }
 
-/* VGO pulse glow for CTA */
-@keyframes vgoPulseGlow {
-  0%, 100% { box-shadow: 0 10px 30px -8px rgba(255,102,0,0.5); }
-  50%      { box-shadow: 0 16px 50px -8px rgba(255,180,71,0.8); }
+/* Aurora 光晕 */
+.aurora,
+.aurora-2 {
+  animation: vgoAuroraPulse 10s ease-in-out infinite alternate;
+  will-change: transform, opacity;
 }
 
-/* ═══════════════════════════════════════════════════════════
-   VGO 设计令牌 v1 · 追加 2026-10-15
-   原则：只追加，不覆盖；作用域限定，不影响现有样式
-   ═══════════════════════════════════════════════════════════ */
+.aurora-2 {
+  animation-delay: -5s;
+}
 
-/* —— 间距令牌（作为 CSS 变量，供组件按需引用）—— */
+@keyframes vgoAuroraPulse {
+  0%   { transform: scale(1) translate(0, 0); opacity: 0.55; }
+  50%  { transform: scale(1.12) translate(2%, -2%); opacity: 0.75; }
+  100% { transform: scale(1.06) translate(-2%, 2%); opacity: 0.60; }
+}
+
+/* 噪点纹理 */
+.noise {
+  position: relative;
+}
+
+.noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-repeat: repeat;
+  z-index: 1;
+}
+
+/* Ken Burns：Hero 轮播镜头运动 */
+.kb-zoom-in,
+.kb-zoom-out,
+.kb-pan-right,
+.kb-pan-left {
+  will-change: transform;
+}
+
+.kb-zoom-in {
+  animation: kbZoomIn 14s ease-in-out infinite alternate;
+}
+
+.kb-zoom-out {
+  animation: kbZoomOut 14s ease-in-out infinite alternate;
+}
+
+.kb-pan-right {
+  animation: kbPanRight 18s ease-in-out infinite alternate;
+}
+
+.kb-pan-left {
+  animation: kbPanLeft 18s ease-in-out infinite alternate;
+}
+
+@keyframes kbZoomIn {
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.14); }
+}
+
+@keyframes kbZoomOut {
+  0%   { transform: scale(1.14); }
+  100% { transform: scale(1); }
+}
+
+@keyframes kbPanRight {
+  0%   { transform: scale(1.08) translateX(-2%); }
+  100% { transform: scale(1.08) translateX(2%); }
+}
+
+@keyframes kbPanLeft {
+  0%   { transform: scale(1.08) translateX(2%); }
+  100% { transform: scale(1.08) translateX(-2%); }
+}
+
+/* 无障碍：减少动态效果 */
+@media (prefers-reduced-motion: reduce) {
+  .vgo-hero-mesh,
+  .vgo-hero-scan,
+  .aurora,
+  .aurora-2,
+  .kb-zoom-in,
+  .kb-zoom-out,
+  .kb-pan-right,
+  .kb-pan-left,
+  .noise::after {
+    animation: none !important;
+  }
+  .vgo-hero-mesh {
+    transform: none !important;
+  }
+}
+
+/* 移动端：降低复杂度，省电省性能 */
+@media (max-width: 768px) {
+  .vgo-hero-scan {
+    display: none;
+  }
+  .vgo-hero-grid {
+    background-size: 48px 48px;
+  }
+  .aurora,
+  .aurora-2 {
+    animation-duration: 14s;
+  }
+}
+
+/* Official V'GO Brand System - R4.1 */
+@theme {
+  --color-vgo-navy: #06111d;
+  --color-vgo-orange: #ff7900;
+  --color-vgo-white: #ffffff;
+}
 :root {
-  --sp-1: 4px;
-  --sp-2: 8px;
-  --sp-3: 12px;
-  --sp-4: 16px;
-  --sp-5: 24px;
-  --sp-6: 40px;
-  --sp-7: 64px;
-  --sp-8: 96px;
-
-  /* 圆角 —— 上限 16，克制是高级感的来源 */
-  --r-sm: 6px;
-  --r-md: 12px;
-  --r-lg: 16px;
-
-  /* 半透明发丝边框 */
-  --border-hairline: oklch(1 0 0 / 8%);
-  --border-active:   oklch(1 0 0 / 14%);
-}
-
-/* ═══ 地图区块专用深色作用域 ═══
-   仅作用于 .vgo-map-section 容器内，不污染全站亮色主题 */
-.vgo-map-section {
-  --map-bg-base:     oklch(0.145 0 0);
-  --map-bg-surface:  oklch(0.175 0.005 270);
-  --map-bg-elevated: oklch(0.21 0.006 270);
-
-  --map-text-primary:   oklch(0.985 0 0);
-  --map-text-secondary: oklch(0.71 0.01 270);
-  --map-text-tertiary:  oklch(0.55 0.01 270);
-
-  /* 状态三色：金橙 / 琥珀 / 暗蓝灰 */
-  --map-live:    oklch(0.78 0.16 75);
-  --map-coming:  oklch(0.65 0.12 65);
-  --map-planned: oklch(0.35 0.02 250);
-
-  background: var(--map-bg-base);
-  color: var(--map-text-primary);
+  --vgo: #ff7900;
+  --vgo-dark: #cc6100;
+  --vgo-light: #ff9933;
 }

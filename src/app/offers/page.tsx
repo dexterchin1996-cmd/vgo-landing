@@ -95,7 +95,7 @@ export default function OffersPage() {
               key={l}
               onClick={() => setLang(l)}
               className={`text-xs font-bold px-3 py-1.5 rounded-full transition ${
-                lang === l ? "bg-[var(--vgo)] text-white" : "bg-white/10 text-white/60 hover:bg-white/20"
+                lang === l ? "bg-[var(--vgo)] text-white" : "bg-[#06111d]/10 text-white/60 hover:bg-[#06111d]/20"
               }`}
             >
               {l === "zh" ? "中" : l === "en" ? "EN" : "BM"}
@@ -110,7 +110,7 @@ export default function OffersPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 text-xs font-semibold mb-6"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#06111d]/10 backdrop-blur-xl border border-white/20 text-xs font-semibold mb-6"
         >
           <Gift size={14} className="text-[#FFB800]" />
           {t.label}
@@ -137,7 +137,7 @@ export default function OffersPage() {
 
       {/* Tabs */}
       <section className="relative z-10 max-w-3xl mx-auto px-5 sm:px-8">
-        <div className="flex justify-center gap-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-1.5">
+        <div className="flex justify-center gap-2 bg-[#06111d]/5 backdrop-blur-xl border border-white/10 rounded-2xl p-1.5">
           {TABS.map((tb) => (
             <button
               key={tb.id}
@@ -145,7 +145,7 @@ export default function OffersPage() {
               className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold transition-[transform,box-shadow,opacity,width,background-color] ${
                 tab === tb.id
                   ? "bg-gradient-to-b from-[var(--vgo)] to-[var(--vgo-dark)] text-white shadow-lg shadow-orange-500/30"
-                  : "text-white/60 hover:text-white hover:bg-white/5"
+                  : "text-white/60 hover:text-white hover:bg-[#06111d]/5"
               }`}
             >
               <tb.Icon size={16} strokeWidth={2.4} />
@@ -183,7 +183,7 @@ export default function OffersPage() {
                 </ul>
               </div>
             </div>
-            <div className="bg-white/5 backdrop-blur-xl p-6 border-t border-white/10">
+            <div className="bg-[#06111d]/5 backdrop-blur-xl p-6 border-t border-white/10">
               <a
                 href="/#download"
                 className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl bg-gradient-to-b from-[#FFB33D] via-[#FF8A1F] to-[#D95000] text-white font-black hover:scale-[1.02] active:scale-95 transition-[transform,box-shadow,opacity,width,background-color] shadow-lg shadow-orange-500/40"
@@ -215,7 +215,7 @@ export default function OffersPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex gap-5 items-start p-5 rounded-2xl bg-white/5 border border-white/10"
+              className="flex gap-5 items-start p-5 rounded-2xl bg-[#06111d]/5 border border-white/10"
             >
               <div className="shrink-0 w-12 h-12 rounded-2xl bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center font-black text-lg">
                 {s.n}
@@ -257,7 +257,7 @@ export default function OffersPage() {
 
       {/* 提示 */}
       <section className="relative z-10 max-w-3xl mx-auto px-5 sm:px-8 pb-12">
-        <div className="p-5 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3">
+        <div className="p-5 rounded-2xl bg-[#06111d]/5 border border-white/10 flex items-start gap-3">
           <Clock size={18} className="text-[var(--vgo)] shrink-0 mt-0.5" />
           <div>
             <div className="text-sm font-black text-white mb-1">{labels.note_t}</div>
@@ -281,7 +281,7 @@ export default function OffersPage() {
             <p className="text-sm text-white/80 mb-6 max-w-md mx-auto">首批福利限时限量，领完为止</p>
             <a
               href="/#download"
-              className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-white text-[#D95000] font-black shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]"
+              className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-[#06111d] text-[#D95000] font-black shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]"
             >
               {t.cta} <ArrowLeft size={16} className="rotate-180" />
             </a>

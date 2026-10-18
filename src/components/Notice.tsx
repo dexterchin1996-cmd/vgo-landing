@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, Gift, ArrowRight } from "lucide-react";
@@ -74,10 +76,7 @@ export default function Notice() {
 
             {/* 场景背景图 */}
             <div className="relative h-32 overflow-hidden">
-              <img loading="lazy"                 src="/shared/s02.jpg"
-                alt="Technician at work"
-                className="w-full h-full object-cover"
-              />
+              <Image src="/shared/s02.jpg" alt="" width={800} height={500} loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
               <div className="absolute bottom-3 left-4 right-4 flex items-center gap-2">
@@ -99,7 +98,7 @@ export default function Notice() {
               <div className="text-xs text-gray-500 mb-4">{c.desc}</div>
 
               <a
-                href="#download"
+                href="#apps"
                 onClick={close}
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-b from-[var(--vgo)] to-[var(--vgo-dark)] text-white font-black text-sm shadow-lg shadow-orange-500/30 hover:brightness-110 active:scale-95 transition"
               >

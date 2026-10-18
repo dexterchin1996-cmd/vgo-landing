@@ -159,7 +159,7 @@ export default function AboutPage() {
         <h3 className="font-black text-lg text-white mb-6">{c.stats_t}</h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {c.stats.map((s) => (
-            <div key={s.l} className="p-5 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <div key={s.l} className="p-5 rounded-2xl bg-[#06111d]/5 border border-white/10 text-center">
               <div className="text-2xl sm:text-3xl font-black text-[#D95000] leading-tight">{s.n}</div>
               <div className="text-xs text-white/60 mt-1.5">{s.l}</div>
             </div>
@@ -178,7 +178,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10"
+              className="flex items-start gap-4 p-5 rounded-2xl bg-[#06111d]/5 border border-white/10"
             >
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center shrink-0">
                 <v.Icon size={18} color="#fff" strokeWidth={2.4} />
@@ -203,7 +203,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="p-6 rounded-2xl bg-white/5 border border-white/10 text-center"
+              className="p-6 rounded-2xl bg-[#06111d]/5 border border-white/10 text-center"
             >
               <div className="w-12 h-12 mx-auto rounded-2xl bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center mb-3">
                 <r.Icon size={22} color="#fff" strokeWidth={2.2} />
@@ -226,7 +226,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="flex gap-5 items-start p-5 rounded-2xl bg-white/5 border border-white/10"
+              className="flex gap-5 items-start p-5 rounded-2xl bg-[#06111d]/5 border border-white/10"
             >
               <div className="shrink-0 w-20 text-center">
                 <div className="text-sm font-black text-[var(--vgo)]">{item.d}</div>
@@ -241,7 +241,7 @@ export default function AboutPage() {
       </div>
 
       {/* 服务范围 */}
-      <div className="not-prose mb-12 p-6 rounded-2xl bg-white/5 border border-white/10">
+      <div className="not-prose mb-12 p-6 rounded-2xl bg-[#06111d]/5 border border-white/10">
         <div className="flex items-center gap-2 mb-2">
           <MapPin size={18} className="text-[var(--vgo)]" />
           <h3 className="font-black text-base text-white">{c.region_t}</h3>
@@ -256,10 +256,10 @@ export default function AboutPage() {
           <h3 className="text-xl sm:text-2xl font-black text-white mb-3">{c.contact_t}</h3>
           <p className="text-sm text-white/85 mb-6 max-w-md mx-auto">{c.contact_d}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="https://wa.me/601172691788" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#D95000] font-black text-sm shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
+            <a href="https://wa.me/601172691788" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#06111d] text-[#D95000] font-black text-sm shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               WhatsApp 联系
             </a>
-            <a href="/contact/" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/15 backdrop-blur border border-white/30 text-white font-bold text-sm hover:bg-white/25 transition-[transform,box-shadow,opacity,width,background-color]">
+            <a href="/contact/" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#06111d]/15 backdrop-blur border border-white/30 text-white font-bold text-sm hover:bg-[#06111d]/25 transition-[transform,box-shadow,opacity,width,background-color]">
               更多联系方式 →
             </a>
           </div>

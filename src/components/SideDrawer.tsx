@@ -6,6 +6,8 @@ import { useState } from "react";
 import { useLang, Lang } from "@/lib/i18n";
 import { AUTH_OPTIONS } from "@/lib/appUrls";
 
+const ROLE_ICONS: Record<string, typeof User> = { user: User, store: Store, wrench: Wrench };
+
 const LANGS: { code: Lang; label: string; native: string }[] = [
   { code: "zh", label: "中文", native: "简体中文" },
   { code: "en", label: "English", native: "English" },
@@ -160,7 +162,7 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
                   )}
                 </AnimatePresence>
               </div>
-              <a href="#download" onClick={onClose}
+              <a href="#apps" onClick={onClose}
                 className="block text-center py-3.5 rounded-xl bg-[var(--vgo)] text-white font-bold shadow-lg pulse-glow">
                 {t("nav_download")}
               </a>

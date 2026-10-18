@@ -1,92 +1,33 @@
 "use client";
-import { motion, AnimatePresence } from "motion/react";
-import { useState, useEffect } from "react";
-import { useLang } from "@/lib/i18n";
-
+import { motion } from "motion/react";
+import { Star } from "lucide-react";
 const REVIEWS = [
-  { name: "Jason C.", area: "Kota Kinabalu", stars: 5, text: "师傅很专业，打压测试做得很认真。价格事先说清楚，没有额外收费。", tag: "水管维修" },
-  { name: "陈小姐", area: "Damai", stars: 5, text: "通渠很快，价格公道。约了两小时后就到，比等师傅上门靠谱多了。", tag: "通渠" },
-  { name: "李先生", area: "Penampang", stars: 5, text: "电路排查仔细，稍微迟到 5 分钟还提前打电话告知，很负责任。", tag: "电路维修" },
-  { name: "Siti R.", area: "Luyang", stars: 5, text: "Pekerja datang tepat masa, kerja bersih dan harga berpatutan.", tag: "清洁" },
-  { name: "Master Rosman", area: "Inanam", stars: 5, text: "平台接单方便，客户素质好，收入比以前靠熟人介绍稳定多了。", tag: "师傅反馈" },
+  { name: "Sarah T.", role: "客户", text: "半夜水管漏水，没想到 30 分钟师傅就到了，马上搞定，价格也很透明！", img: "/shared/s03.jpg" },
+  { name: "Ahmad R.", role: "客户", text: "第一次用这种上门服务，师傅很专业，穿鞋套，修完还把地拖干净了。", img: "/shared/s05.jpg" },
+  { name: "李先生", role: "商家", text: "合作了几个月，平台派单很稳定，客户质量也高，结算特别准时。", img: "/shared/s07.jpg" },
 ];
-
 export default function Testimonials() {
-  const { t } = useLang();
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setIdx(i => (i + 1) % REVIEWS.length), 6000);
-    return () => clearInterval(t);
-  }, []);
-
   return (
-    <section className="relative bg-gray-50 py-20 sm:py-28 px-5 overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--vgo)]/5 rounded-full blur-[140px]" />
-      </div>
-
-      <div className="relative max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
-        >
-          <p className="text-[var(--vgo)] font-bold text-sm tracking-widest uppercase mb-3">
-            {t("review_label")}
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
-            {t("review_title")}
-          </h2>
-        </motion.div>
-
-        <div className="relative h-[280px] sm:h-[260px]">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -40 }}
-              transition={{ duration: 0.5 }}
-              className="absolute inset-0 p-7 sm:p-10 rounded-[32px] bg-white border border-gray-100 shadow-xl shadow-gray-200/50 flex flex-col"
-            >
-              {/* 引号 */}
-              <div className="text-6xl font-black text-[var(--vgo)]/20 leading-none -mt-3 mb-2">"</div>
-
-              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed flex-1">
-                {REVIEWS[idx].text}
-              </p>
-
-              <div className="mt-6 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[var(--vgo-light)] to-[var(--vgo-dark)] text-white font-black flex items-center justify-center text-lg">
-                    {REVIEWS[idx].name[0]}
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900 text-sm">{REVIEWS[idx].name}</div>
-                    <div className="text-xs text-gray-500">{REVIEWS[idx].area} · {REVIEWS[idx].tag}</div>
-                  </div>
-                </div>
-                <div className="text-yellow-400 text-lg tracking-wider">
-                  {"★".repeat(REVIEWS[idx].stars)}
-                </div>
+    <section className="relative bg-[#0a0f18] py-24 sm:py-32 overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-16 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div>
+            <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-[#ff7900] font-bold text-xs tracking-[0.2em] uppercase mb-3">Testimonials</motion.p>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="text-3xl sm:text-5xl font-black text-white tracking-tight">他们的真实反馈。</motion.h2>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6" style={{ perspective: "1000px" }}>
+          {REVIEWS.map((r, i) => (
+            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.15 }} whileHover={{ rotateX: 5, rotateY: -5, translateZ: 20 }} className="relative p-8 rounded-3xl bg-[#06111d] border border-white/5 shadow-2xl flex flex-col justify-between" style={{ transformStyle: "preserve-3d" }}>
+              <div>
+                <div className="flex gap-1 mb-6">{[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-[#ff7900] text-[#ff7900]" />)}</div>
+                <p className="text-white/80 text-base leading-relaxed mb-8">"{r.text}"</p>
+              </div>
+              <div className="flex items-center gap-4 border-t border-white/5 pt-6">
+                <img src={r.img} alt={r.name} className="w-12 h-12 rounded-full object-cover border border-white/10" />
+                <div><div className="text-white font-bold text-sm">{r.name}</div><div className="text-white/40 text-xs">{r.role}</div></div>
               </div>
             </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* 指示点 */}
-        <div className="flex justify-center gap-2 mt-8">
-          {REVIEWS.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setIdx(i)}
-              aria-label={`第 ${i + 1} 条`}
-              className={`h-1.5 rounded-full transition-[transform,box-shadow,opacity,width,background-color] duration-500 ${
-                i === idx ? "w-8 bg-[var(--vgo)]" : "w-1.5 bg-gray-300 hover:bg-gray-400"
-              }`}
-            />
           ))}
         </div>
       </div>

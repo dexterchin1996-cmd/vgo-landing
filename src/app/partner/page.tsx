@@ -73,7 +73,7 @@ export default function PartnerPage() {
       {/* Hero */}
       <section className="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 pt-12 pb-20 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 text-xs sm:text-sm font-semibold mb-6">
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#06111d]/10 backdrop-blur-xl border border-white/20 text-xs sm:text-sm font-semibold mb-6">
           <Sparkles size={14} className="text-[#FFB800]" />
           {t("partner_label")}
         </motion.div>
@@ -98,7 +98,7 @@ export default function PartnerPage() {
             <span>{t("partner_contact_email")}</span>
           </a>
           <a href="https://wa.me/601172691788" target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/25 text-white font-bold text-base hover:bg-white/20 hover:border-white/40 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
+            className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-[#06111d]/10 backdrop-blur-xl border border-white/25 text-white font-bold text-base hover:bg-[#06111d]/20 hover:border-white/40 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
             <MessageCircle size={18} />
             <span>{t("partner_contact_whatsapp")}</span>
           </a>
@@ -116,7 +116,7 @@ export default function PartnerPage() {
           {COOP.map((c, i) => (
             <motion.a key={c.title} href={c.href}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group block p-7 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[#FFB800]/50 hover:bg-white/8 transition-[transform,box-shadow,opacity,width,background-color]">
+              className="group block p-7 rounded-3xl bg-[#06111d]/5 backdrop-blur-xl border border-white/10 hover:border-[#FFB800]/50 hover:bg-[#06111d]/8 transition-[transform,box-shadow,opacity,width,background-color]">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center mb-5 shadow-lg shadow-orange-500/30">
                 <c.Icon size={26} strokeWidth={2.2} className="text-white" />
               </div>
@@ -140,7 +140,7 @@ export default function PartnerPage() {
         <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-3">
           {FLOW.map((f, i) => (
             <motion.div key={f.n} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
+              className="relative p-6 rounded-2xl bg-[#06111d]/5 backdrop-blur-xl border border-white/10">
               <div className="text-3xl font-black text-[#D95000] leading-none mb-4">{f.n}</div>
               <h3 className="text-base font-black mb-2">{f.t}</h3>
               <p className="text-xs text-white/55 leading-relaxed">{f.d}</p>
@@ -185,7 +185,7 @@ export default function PartnerPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {WHY.map((w, i) => (
             <motion.div key={w.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="p-7 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-[#FFB800]/40 hover:bg-white/8 transition-[transform,box-shadow,opacity,width,background-color]">
+              className="p-7 rounded-3xl bg-[#06111d]/5 backdrop-blur-xl border border-white/10 hover:border-[#FFB800]/40 hover:bg-[#06111d]/8 transition-[transform,box-shadow,opacity,width,background-color]">
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#FFB33D] to-[#D95000] flex items-center justify-center mb-4 shadow-lg shadow-orange-500/30">
                 <w.Icon size={22} strokeWidth={2.2} className="text-white" />
               </div>
@@ -205,7 +205,7 @@ export default function PartnerPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
           {TRACTION.map((s, i) => (
             <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="p-5 sm:p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 text-center">
+              className="p-5 sm:p-6 rounded-2xl bg-[#06111d]/5 backdrop-blur-xl border border-white/10 text-center">
               <div className="text-2xl sm:text-4xl font-black text-[#D95000] leading-tight">{s.num}</div>
               <div className="text-[11px] sm:text-xs text-white/60 mt-1.5">{s.label}</div>
             </motion.div>
@@ -224,7 +224,7 @@ export default function PartnerPage() {
               <Mail size={18} />
               {t("partner_contact_email")}
             </a>
-            <a href="https://wa.me/601172691788" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/25 text-white font-bold hover:bg-white/20 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
+            <a href="https://wa.me/601172691788" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-[#06111d]/10 backdrop-blur-xl border border-white/25 text-white font-bold hover:bg-[#06111d]/20 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               <MessageCircle size={18} />
               {t("partner_contact_whatsapp")}
             </a>
