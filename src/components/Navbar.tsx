@@ -85,7 +85,12 @@ export default function Navbar() {
               if (item.children) {
                 return (
                   <div key={item.label} className="relative" onMouseEnter={() => setOpenDrop(item.label)} onMouseLeave={() => setOpenDrop(null)}>
-                    <button className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition ${
+                    <button
+                      type="button"
+                      onClick={() => setOpenDrop(openDrop === item.label ? null : item.label)}
+                      aria-expanded={openDrop === item.label}
+                      aria-haspopup="true"
+                      className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition ${
                       scrolled ? "text-gray-700 hover:bg-gray-100" : "text-white/90 hover:bg-white/10"
                     }`}>
                       {item.label}
@@ -101,10 +106,10 @@ export default function Navbar() {
                           className="absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2"
                         >
                           {item.children.map((c) => (
-                            <a key={c.label} href={c.href} className="flex items-center gap-3 px-4 py-2.5 text-sm text-orange-950 hover:bg-orange-50 hover:text-[var(--vgo)] transition">
+                            <Link key={c.label} href={c.href} className="flex items-center gap-3 px-4 py-2.5 text-sm text-orange-950 hover:bg-orange-50 hover:text-[var(--vgo)] transition">
                               <c.icon size={16} strokeWidth={2} />
                               {c.label}
-                            </a>
+                            </Link>
                           ))}
                         </motion.div>
                       )}
@@ -116,7 +121,7 @@ export default function Navbar() {
               return isExternal ? (
                 <Link key={item.label} href={item.href} className={cls}>{item.label}</Link>
               ) : (
-                <a key={item.label} href={item.href} className={cls}>{item.label}</a>
+                <Link key={item.label} href={item.href} className={cls}>{item.label}</Link>
               );
             })}
             <div className="ml-3">
@@ -130,6 +135,10 @@ export default function Navbar() {
               onMouseLeave={() => setOpenDrop(null)}
             >
               <button
+                type="button"
+                onClick={() => setOpenDrop(openDrop === "__auth" ? null : "__auth")}
+                aria-expanded={openDrop === "__auth"}
+                aria-haspopup="true"
                 className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition ${
                   scrolled ? "text-gray-700 hover:bg-gray-100" : "text-white/90 hover:bg-white/10"
                 }`}
