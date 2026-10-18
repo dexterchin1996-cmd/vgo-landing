@@ -54,6 +54,13 @@ export default function Waitlist() {
   const c = T[l] ?? T.en;
 
   const [open, setOpen] = useState(false);
+  
+  // 监听全局事件，随时唤醒注册弹窗
+  useEffect(() => {
+    const handleOpen = () => setOpen(true);
+    window.addEventListener("open-waitlist", handleOpen);
+    return () => window.removeEventListener("open-waitlist", handleOpen);
+  }, []);
   const [agreeGate, setAgreeGate] = useState(false);
   const [aTerms, setATerms] = useState(false);
   const [aPrivacy, setAPrivacy] = useState(false);
