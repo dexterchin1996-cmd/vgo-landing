@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Link from "next/link";
 import { Target, Heart, ShieldCheck, Sparkles, Users, MapPin, TrendingUp, Award, Clock, Store, Wrench, Home } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import PageShell from "@/components/PageShell";
@@ -259,9 +260,9 @@ export default function AboutPage() {
             <a href="https://wa.me/601172691788" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#06111d] text-[#D95000] font-black text-sm shadow-2xl hover:scale-105 active:scale-95 transition-[transform,box-shadow,opacity,width,background-color]">
               WhatsApp 联系
             </a>
-            <a href="/contact/" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#06111d]/15 backdrop-blur border border-white/30 text-white font-bold text-sm hover:bg-[#06111d]/25 transition-[transform,box-shadow,opacity,width,background-color]">
+            <Link href="/contact/" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#06111d]/15 backdrop-blur border border-white/30 text-white font-bold text-sm hover:bg-[#06111d]/25 transition-[transform,box-shadow,opacity,width,background-color]">
               更多联系方式 →
-            </a>
+            </Link>
           </div>
         </div>
       </div>

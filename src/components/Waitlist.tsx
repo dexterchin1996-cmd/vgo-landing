@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import {
@@ -872,7 +873,7 @@ export default function Waitlist() {
                   <input type="checkbox" checked={f.agree} onChange={(e) => up("agree", e.target.checked)}
                          className="mt-0.5 w-4 h-4 accent-[var(--vgo)]" />
                   <span className="text-[11px] text-gray-600 leading-relaxed">
-                    {c.agree} <a href="/terms" className="text-[var(--vgo)] underline">{c.terms}</a> {c.and} <a href="/privacy" className="text-[var(--vgo)] underline">{c.privacy}</a>
+                    {c.agree} <Link href="/terms" className="text-[var(--vgo)] underline">{c.terms}</Link> {c.and} <Link href="/privacy" className="text-[var(--vgo)] underline">{c.privacy}</Link>
                   </span>
                 </label>
               )}
