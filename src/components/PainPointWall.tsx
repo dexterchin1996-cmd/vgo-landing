@@ -5,10 +5,14 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useLang } from "@/lib/i18n";
 
 const PAIN_ITEMS = [
-  { img: "/scenes/leak.jpg",  sceneKey: "pain_scene_1" as const, painKey: "pain_1" as const },
-  { img: "/scenes/burst.jpg", sceneKey: "pain_scene_2" as const, painKey: "pain_2" as const },
-  { img: "/scenes/clog.jpg",  sceneKey: "pain_scene_3" as const, painKey: "pain_3" as const },
-  { img: "/scenes/power.jpg", sceneKey: "pain_scene_4" as const, painKey: "pain_4" as const },
+  { img: "/scenes/leak.jpg",   sceneKey: "pain_scene_1" as const, painKey: "pain_1" as const, fixKey: "pain_fix_1" as const },
+  { img: "/scenes/burst.jpg",  sceneKey: "pain_scene_2" as const, painKey: "pain_2" as const, fixKey: "pain_fix_2" as const },
+  { img: "/scenes/clog.jpg",   sceneKey: "pain_scene_3" as const, painKey: "pain_3" as const, fixKey: "pain_fix_3" as const },
+  { img: "/scenes/power.jpg",  sceneKey: "pain_scene_4" as const, painKey: "pain_4" as const, fixKey: "pain_fix_4" as const },
+  { img: "/scenes/aircon.jpg", sceneKey: "pain_scene_5" as const, painKey: "pain_5" as const, fixKey: "pain_fix_5" as const },
+  { img: "/scenes/lock.jpg",   sceneKey: "pain_scene_6" as const, painKey: "pain_6" as const, fixKey: "pain_fix_6" as const },
+  { img: "/scenes/mold.jpg",   sceneKey: "pain_scene_7" as const, painKey: "pain_7" as const, fixKey: "pain_fix_7" as const },
+  { img: "/scenes/pest.jpg",   sceneKey: "pain_scene_8" as const, painKey: "pain_8" as const, fixKey: "pain_fix_8" as const },
 ];
 
 export default function PainPointWall() {
@@ -22,7 +26,11 @@ export default function PainPointWall() {
   const y1 = useTransform(scrollYProgress, [0, 1], [120, -120]);
   const y2 = useTransform(scrollYProgress, [0, 1], [60, -60]);
   const y3 = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const ys = [y0, y1, y2, y3];
+  const y4 = useTransform(scrollYProgress, [0, 1], [70, -70]);
+  const y5 = useTransform(scrollYProgress, [0, 1], [110, -110]);
+  const y6 = useTransform(scrollYProgress, [0, 1], [90, -90]);
+  const y7 = useTransform(scrollYProgress, [0, 1], [65, -65]);
+  const ys = [y0, y1, y2, y3, y4, y5, y6, y7];
   const revealClip = useTransform(scrollYProgress, [0.55, 0.85], ["inset(0 0 0 100%)", "inset(0 0 0 0%)"]);
 
   return (
@@ -42,6 +50,9 @@ export default function PainPointWall() {
               <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
                 <p className="text-white font-black text-xs sm:text-base leading-tight">{t(item.sceneKey)}</p>
                 <p className="text-white/60 text-[10px] sm:text-xs mt-1 leading-tight">{t(item.painKey)}</p>
+                <span className="inline-block mt-2 px-2 py-0.5 rounded-full bg-[#ff7900]/15 border border-[#ff7900]/40 text-[#ff7900] text-[9px] sm:text-[10px] font-bold whitespace-nowrap">
+                  {t(item.fixKey)}
+                </span>
               </div>
             </motion.div>
           ))}
