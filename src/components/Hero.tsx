@@ -53,6 +53,22 @@ export default function Hero() {
             {/* Subtitle */}
             <p className="mt-6 max-w-[480px] text-[15px] md:text-[16px] leading-relaxed text-white/60">
               {t("hero_sub")}
+
+            {/* 4 角色快速分流 */}
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="/how-it-works/customer" className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[12px] font-semibold text-white/80 backdrop-blur hover:bg-white/10 hover:text-white transition-all">
+                我是客户，找服务
+              </a>
+              <a href="/technician" className="inline-flex items-center gap-1.5 rounded-full border border-[#FF7A00]/30 bg-[#FF7A00]/10 px-4 py-2 text-[12px] font-semibold text-[#FF7A00] backdrop-blur hover:bg-[#FF7A00]/20 transition-all">
+                我是师傅，接单
+              </a>
+              <a href="/merchant" className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[12px] font-semibold text-white/80 backdrop-blur hover:bg-white/10 hover:text-white transition-all">
+                我是商家，入驻
+              </a>
+              <a href="/partner" className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[12px] font-semibold text-white/80 backdrop-blur hover:bg-white/10 hover:text-white transition-all">
+                我是渠道，合作
+              </a>
+            </div>
             </p>
 
             {/* CTA Buttons with Shimmer */}
