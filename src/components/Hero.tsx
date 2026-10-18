@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import HeroBackgroundMotion from "./HeroBackgroundMotion";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 import { useLang } from "@/lib/i18n";
@@ -23,20 +24,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex items-center overflow-hidden bg-[#06111D]">
       {/* 1. Background layer */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero/hero-desktop-16x9.jpg"
-          alt="VGO Hero Background"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#06111D] via-[#06111D]/90 to-[#06111D]/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#06111D] via-transparent to-transparent" />
-        {/* Orange ambient glow */}
-        <div className="absolute -top-1/2 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-[#FF7A00]/10 blur-[120px] rounded-full pointer-events-none" />
-      </div>
+      <HeroBackgroundMotion />
 
       {/* 2. Content layer */}
       <div className="relative z-10 mx-auto w-full max-w-[1240px] px-6 md:px-10 py-24 md:py-32">

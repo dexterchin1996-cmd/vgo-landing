@@ -8,6 +8,7 @@ import SceneShowcase from "@/components/SceneShowcase";
 import HowItWorks from "@/components/HowItWorks";
 import Guarantees from "@/components/Guarantees";
 import Pricing from "@/components/Pricing";
+import AbstractAuroraTransition from "@/components/AbstractAuroraTransition";
 import PlatformTrust from "@/components/PlatformTrust";
 import Roles from "@/components/Roles";
 import Merchant from "@/components/Merchant";
@@ -34,6 +35,7 @@ export default function Home() {
         <Reveal><SceneShowcase /></Reveal>
         <Reveal><HowItWorks /></Reveal>
         <Reveal><Pricing /></Reveal>
+        <AbstractAuroraTransition />
         <Reveal><Guarantees /></Reveal>
         <PlatformTrust />
         <Reveal><Testimonials /></Reveal>
