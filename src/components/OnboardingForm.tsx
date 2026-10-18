@@ -14,8 +14,7 @@ export default function OnboardingForm() {
       
       <div className="relative max-w-4xl mx-auto px-6">
         <motion.div
-          initial={reduce ? false : { y: 20, opacity: 0 }}
-          whileInView={reduce ? false : { y: 0, opacity: 1 }}
+          {...(reduce ? {} : { initial: { y: 20, opacity: 0 }, whileInView: { y: 0, opacity: 1 } })}
           viewport={{ once: true }}
           className="rounded-[24px] border border-white/10 bg-white/[0.04] p-6 md:p-10 backdrop-blur-[20px] shadow-[0_20px_60px_rgba(0,0,0,0.4)]"
         >
