@@ -446,6 +446,10 @@ export const TRANSLATIONS = {
     vf_unknown: "验证失败，请重试",
     vf_help: "你可以回到官网重新注册，或联系我们重发验证邮件",
     vf_back: "返回首页",
+    partner_traction_num_1: "6 大",
+    partner_traction_num_2: "亚庇",
+    partner_traction_num_3: "首批",
+    partner_traction_num_4: "全马",
   },
   en: {
     nav_home: "Home",
@@ -892,6 +896,10 @@ export const TRANSLATIONS = {
     vf_unknown: "Verification failed, please try again",
     vf_help: "You can register again on our website, or contact us to resend the verification email",
     vf_back: "Back to home",
+    partner_traction_num_1: "6",
+    partner_traction_num_2: "KK",
+    partner_traction_num_3: "1st",
+    partner_traction_num_4: "MY",
   },
   ms: {
     nav_home: "Utama",
@@ -1338,6 +1346,10 @@ export const TRANSLATIONS = {
     vf_unknown: "Pengesahan gagal, sila cuba lagi",
     vf_help: "Anda boleh mendaftar semula di laman web kami, atau hubungi kami untuk menghantar semula e-mel pengesahan",
     vf_back: "Kembali ke laman utama",
+    partner_traction_num_1: "6",
+    partner_traction_num_2: "KK",
+    partner_traction_num_3: "1st",
+    partner_traction_num_4: "MY",
   },
 } as const;
 

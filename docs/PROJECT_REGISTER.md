@@ -246,3 +246,21 @@
 - hreflang：layout 中已配置三语 alternates
 
 结论：SEO 骨架达到国际标准官网要求，可进入内容层补全。
+
+## 流程审计与批次修复（2026-10-19）
+
+### 流程审计结论
+- 死链 0、占位链接 0、TODO 0
+- 内部链接用 next/link：全站清零
+- 下拉菜单：补 onClick + aria-expanded，触屏键盘可用
+
+### 本轮批次修复
+- 2c68e57 下拉菜单无障碍 + 内部链接
+- 62a12ee Waitlist 与 about 页改用 Link
+- Navbar 冗余 isExternal 三元折叠
+
+### 新登记
+- T44 krackedmaps 依赖待移除：组件已归档但 package.json 仍有依赖。
+  直接改会破坏 lock，Vercel 可能构建失败。需完整 npm install 环境处理。
+- T45 partner 页 num 字段中文化：「6 大」「亚庇」「首批」「全马」等，
+  英文与马来文用户会看到中文混搭。需改 i18n 键。

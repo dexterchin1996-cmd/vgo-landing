@@ -16,10 +16,10 @@ export default function PartnerPage() {
   ];
 
   const TRACTION = [
-    { num: "6 大", label: t("partner_traction_1") },
-    { num: "亚庇", label: t("partner_traction_2") },
-    { num: "首批", label: t("partner_traction_3") },
-    { num: "全马", label: t("partner_traction_4") },
+    { num: t("partner_traction_num_1"), label: t("partner_traction_1") },
+    { num: t("partner_traction_num_2"), label: t("partner_traction_2") },
+    { num: t("partner_traction_num_3"), label: t("partner_traction_3") },
+    { num: t("partner_traction_num_4"), label: t("partner_traction_4") },
   ];
 
   const COOP = [

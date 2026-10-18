@@ -77,7 +77,6 @@ export default function Navbar() {
 
           <nav className="hidden md:flex items-center gap-1">
             {NAV.map((item) => {
-              const isExternal = (item.href || "").startsWith("/");
               const cls = `px-4 py-2 rounded-lg text-sm font-semibold transition ${
                 scrolled ? "text-gray-700 hover:bg-gray-100" : "text-white/90 hover:bg-white/10"
               }`;
@@ -118,11 +117,7 @@ export default function Navbar() {
                 );
               }
 
-              return isExternal ? (
-                <Link key={item.label} href={item.href} className={cls}>{item.label}</Link>
-              ) : (
-                <Link key={item.label} href={item.href} className={cls}>{item.label}</Link>
-              );
+              return <Link key={item.label} href={item.href} className={cls}>{item.label}</Link>;
             })}
             <div className="ml-3">
               <LangSwitcher scrolled={scrolled} />
