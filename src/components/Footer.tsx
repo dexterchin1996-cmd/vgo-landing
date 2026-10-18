@@ -32,6 +32,7 @@ export default function Footer() {
       title: t("footer_col3"),
       links: [
         { label: t("footer_link_about"),    href: "/about/" },
+        { label: t("footer_link_coverage"), href: "/coverage/" },
         { label: t("footer_link_faq"),      href: "/faq/" },
         { label: t("footer_link_privacy"),  href: "/privacy/" },
         { label: t("footer_link_terms"),    href: "/terms/" },

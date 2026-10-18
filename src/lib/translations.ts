@@ -423,6 +423,8 @@ export const TRANSLATIONS = {
     coverage_cta_title: "你的城市还没开通？",
     coverage_cta_desc: "留下邮箱，开通时第一时间通知你。",
     coverage_cta_button: "查看联系页",
+    nav_coverage: "服务覆盖",
+    footer_link_coverage: "服务覆盖",
   },
   en: {
     nav_home: "Home",
@@ -846,6 +848,8 @@ export const TRANSLATIONS = {
     coverage_cta_title: "Your city not live yet?",
     coverage_cta_desc: "Leave your email and we will notify you the moment we launch.",
     coverage_cta_button: "Go to contact page",
+    nav_coverage: "Coverage",
+    footer_link_coverage: "Coverage",
   },
   ms: {
     nav_home: "Utama",
@@ -1269,6 +1273,8 @@ export const TRANSLATIONS = {
     coverage_cta_title: "Bandar anda belum aktif?",
     coverage_cta_desc: "Tinggalkan e-mel anda dan kami akan maklumkan sebaik sahaja dilancarkan.",
     coverage_cta_button: "Pergi ke halaman hubungi",
+    nav_coverage: "Liputan",
+    footer_link_coverage: "Liputan",
   },
 } as const;
 

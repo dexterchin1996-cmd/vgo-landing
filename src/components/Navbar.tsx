@@ -36,6 +36,7 @@ export default function Navbar() {
     { label: t("nav_news"), href: "#news" },
     { label: t("nav_partner"), href: "/partner/" },
     { label: t("nav_about"), href: "/about/" },
+    { label: t("nav_coverage"), href: "/coverage/" },
     { label: lang === "zh" ? "福利" : lang === "ms" ? "Tawaran" : "Offers", href: "/offers/" },
     { label: lang === "zh" ? "指南" : lang === "ms" ? "Panduan" : "Guides", children: [
       { icon: User,   label: lang === "zh" ? "客户指南" : lang === "ms" ? "Panduan Pelanggan" : "Customer Guide",   href: "/how-it-works/customer/" },
