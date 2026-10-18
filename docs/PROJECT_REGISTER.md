@@ -153,3 +153,16 @@
 ## KP-9 已登记
 - Termux 无法编译 Next 15 页面，只做 tsc/git/静态验证
 - 生产构建走 Vercel / Cloudflare / 云服务器
+
+## T26 决策（2026-10-18）：不迁移，登记保留
+- const C 存在于 4 个页面：about / contact / ip-copyright / offers
+- 三语功能正常，用户无感知
+- i18n.tsx 已 1126 行，直接迁移会变 2000+ 行
+- 拆分 i18n 是独立架构任务，需专门设计
+- 决策：暂不迁移，等 i18n 拆分时一起做
+- 不阻塞上线
+
+## T31 offers 语言 bug 修复（2026-10-18）
+- offers 原用本地 useState("zh")，语言切换只影响本页
+- 改为 useLang()，切换全站生效
+- commit 987dd84
