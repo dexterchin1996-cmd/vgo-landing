@@ -22,21 +22,18 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[100dvh] flex items-center overflow-hidden bg-[#06111D]">
-      
       {/* 1. Background layer */}
       <div className="absolute inset-0 z-0">
-        {/* Background image placeholder */}
         <Image
-          src="/scenes/burst.jpg" // Temporary placeholder
+          src="/images/hero/hero-desktop-16x9.jpg"
           alt="VGO Hero Background"
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-20"
+          className="object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#06111D] via-[#06111D]/90 to-[#06111D]/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#06111D] via-[#06111D]/90 to-[#06111D]/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#06111D] via-transparent to-transparent" />
-        
         {/* Orange ambient glow */}
         <div className="absolute -top-1/2 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-[#FF7A00]/10 blur-[120px] rounded-full pointer-events-none" />
       </div>
@@ -70,14 +67,17 @@ export default function Hero() {
               {t("hero_sub")}
             </p>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons with Shimmer */}
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link
                 href="#download"
-                className="inline-flex h-[52px] items-center justify-center gap-2 rounded-full bg-[#FF7A00] px-8 text-[15px] font-bold text-white shadow-[0_0_32px_rgba(255,122,0,0.35)] transition-all duration-200 hover:bg-[#FF9A33] active:scale-[0.98]"
+                className="group relative inline-flex h-[52px] items-center justify-center gap-2 overflow-hidden rounded-full bg-[#FF7A00] px-8 text-[15px] font-bold text-white shadow-[0_0_32px_rgba(255,122,0,0.35)] transition-all duration-200 hover:bg-[#FF9A33] active:scale-[0.98]"
               >
-                {t("hero_cta_primary")}
-                <svg viewBox="0 0 24 24" className="w-4 h-4 stroke-current fill-none" strokeWidth={2.4} aria-hidden="true">
+                <span className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-150%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(150%)]">
+                  <span className="relative h-full w-8 bg-white/20" />
+                </span>
+                <span className="relative z-10">{t("hero_cta_primary")}</span>
+                <svg viewBox="0 0 24 24" className="relative z-10 w-4 h-4 stroke-current fill-none" strokeWidth={2.4} aria-hidden="true">
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
               </Link>
@@ -112,7 +112,7 @@ export default function Hero() {
             {/* Team image */}
             <div className="relative w-full h-full max-w-[500px]">
               <Image
-                src="/vgo-team-transparent.png" // Transparent PNG
+                src="/images/roles-transparent/vgo_team_group_4_transparent_v2.png"
                 alt="VGO Technicians"
                 fill
                 priority
@@ -120,11 +120,11 @@ export default function Hero() {
               />
             </div>
 
-            {/* Floating glass card */}
+            {/* Floating glass card (3s float) */}
             <motion.div 
               initial={reduce ? false : { opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8, ease: EASE }}
+              animate={reduce ? { opacity: 1, y: 0 } : { opacity: 1, y: [0, -10, 0] }}
+              transition={reduce ? { duration: 0.8, delay: 0.8 } : { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
               className="absolute bottom-12 left-0 rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md p-4 pr-6 shadow-[0_8px_32px_rgba(6,17,29,0.4)]"
             >
               <div className="flex items-center gap-4">
