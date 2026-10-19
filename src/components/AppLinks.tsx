@@ -33,6 +33,8 @@ const APPS = [
 const AI_CS_URL = "https://vgo-ai.jason52013141018.workers.dev";
 
 export default function AppLinks() {
+  const { t } = useLang();
+
   const { lang } = useLang();
   const L = (lang === "en" || lang === "ms") ? lang : "zh";
   const [active, setActive] = useState(0);
@@ -57,10 +59,10 @@ export default function AppLinks() {
     <section id="apps" className="relative py-20 bg-[#0a0f18] overflow-hidden">
       <div className="max-w-5xl mx-auto px-5 text-center mb-10">
         <h2 className="text-3xl sm:text-4xl font-black text-white">
-          {L === "zh" ? "选择你的 App" : L === "ms" ? "Pilih App Anda" : "Choose Your App"}
+          {t("app_choose")}
         </h2>
         <p className="mt-3 text-sm text-white/50">
-          {L === "zh" ? "三个独立 App · 一个账号通用 · 数据互通" : L === "ms" ? "Tiga App berasingan · Satu akaun · Data dikongsi" : "Three separate Apps · One account · Shared data"}
+          {t("app_choose")}
         </p>
       </div>
 
@@ -116,10 +118,10 @@ export default function AppLinks() {
           <MessageCircle size={28} strokeWidth={2} />
           <div className="flex-1 text-left">
             <div className="font-black text-base">
-              {L === "zh" ? "VGO 智能客服" : L === "ms" ? "Sokongan AI VGO" : "VGO AI Support"}
+              {t("app_choose")}
             </div>
             <div className="text-xs opacity-90 mt-0.5">
-              {L === "zh" ? "中/英/马 三语 · 7×24 在线" : L === "ms" ? "BM/EN/中文 · 7×24" : "EN/BM/中文 · 7×24"}
+              {t("app_choose")}
             </div>
           </div>
           <ArrowRight size={20} />
