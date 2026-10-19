@@ -10,6 +10,8 @@ import ShareButton from "@/components/ShareButton";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { LangProvider } from "@/lib/i18n";
+import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -164,6 +166,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-[#06111d] text-white antialiased font-sans">
+        <SmoothScroll>
         <LangProvider>
           <Navbar />
           {children}
@@ -173,6 +176,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Analytics />
           <SpeedInsights />
         </LangProvider>
+        <CustomCursor />
+      </SmoothScroll>
       </body>
     </html>
   );

@@ -591,7 +591,7 @@ export default function Waitlist() {
 
                 {/* ============ 协议预览弹窗 ============ */}
                 {previewOpen && (
-                  <div className="fixed inset-0 z-[300] flex items-center justify-center p-2 sm:p-4 bg-black/70 backdrop-blur-md" onClick={() => setPreviewOpen(null)}>
+                  <div className="fixed inset-0 z-[300] flex items-center justify-center p-2 sm:p-4 bg-black/70 backdrop-blur-md" data-lenis-prevent="true" onClick={() => setPreviewOpen(null)}>
                     <div className="relative w-full max-w-lg h-[88vh] flex flex-col rounded-3xl bg-white shadow-2xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
                       <div className="shrink-0 px-5 py-4 border-b border-gray-100 flex items-center justify-between bg-white">
                         <div className="text-[15px] font-black text-gray-900">
