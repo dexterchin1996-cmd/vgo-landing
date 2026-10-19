@@ -61,6 +61,21 @@ export default function Waitlist() {
     window.addEventListener("open-waitlist", handleOpen);
     return () => window.removeEventListener("open-waitlist", handleOpen);
   }, []);
+
+  // 当弹窗打开时，锁定背景滚动，并监听 ESC 键
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+      const handleEsc = (e: KeyboardEvent) => {
+        if (e.key === "Escape") setOpen(false);
+      };
+      window.addEventListener("keydown", handleEsc);
+      return () => {
+        document.body.style.overflow = "unset";
+        window.removeEventListener("keydown", handleEsc);
+      };
+    }
+  }, [open]);
   const [agreeGate, setAgreeGate] = useState(false);
   const [aTerms, setATerms] = useState(false);
   const [aPrivacy, setAPrivacy] = useState(false);

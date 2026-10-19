@@ -106,7 +106,7 @@ export default function Hero() {
             </div>
 
             {/* 4 角色快速分流 */}
-            <motion.div {...rise(0.6)} className="mt-8 flex flex-wrap gap-3">
+            <motion.div {...rise(0.6)} className="mt-8 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3">
               <Link href="/how-it-works/customer" className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[12px] font-semibold text-white/80 backdrop-blur transition-all hover:bg-white/10 hover:text-white">
                 我是客户，找服务
               </Link>

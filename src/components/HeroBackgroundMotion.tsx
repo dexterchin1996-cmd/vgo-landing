@@ -24,6 +24,7 @@ export default function HeroBackgroundMotion() {
         }}
       >
         <Image
+          fetchPriority="high"
           src="/images/hero/hero-desktop-16x9.jpg"
           alt="KL skyline night"
           fill
@@ -32,6 +33,7 @@ export default function HeroBackgroundMotion() {
           className="hidden md:block object-cover object-[center_30%] opacity-60"
         />
         <Image
+          fetchPriority="high"
           src="/images/hero/hero-mobile-9x16.jpg" 
           alt="KL skyline night mobile"
           fill
