@@ -36,7 +36,11 @@ export default function OnboardingForm() {
       setStatus("success");
     } catch (err: any) {
       setStatus("error");
-      setErrMsg(err.message || "网络异常");
+      // 捕获后端返回的具体错误，或者显示友好提示
+      const friendlyMsg = err.message?.includes("fetch") 
+        ? "无法连接到服务器，请检查网络后重试。" 
+        : (err.message || "提交失败，请稍后再试。");
+      setErrMsg(friendlyMsg);
     }
   };
 
@@ -90,7 +94,7 @@ export default function OnboardingForm() {
                 <AlertCircle size={16} /> {errMsg}
               </div>
             )}
-            <button type="submit" disabled={status === "loading"} className="mt-2 flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[#FF7A00] text-[15px] font-bold text-white transition-transform hover:scale-[1.02] disabled:opacity-70">
+            <button type="submit" disabled={status === "loading"} className="mt-2 flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[#FF7A00] text-[15px] font-bold text-white transition-transform hover:scale-[1.02] disabled:opacity-70 shadow-[0_0_24px_rgba(255,121,0,0.35)]">
               {status === "loading" ? <><Loader2 className="h-4 w-4 animate-spin" /> 提交中...</> : <>{t("form_submit")} <ArrowRight className="h-4 w-4" /></>}
             </button>
             <div className="text-center text-[11px] text-white/30">{t("form_hint")}</div>
