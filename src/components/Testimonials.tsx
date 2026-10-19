@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { motion } from "motion/react";
+import Image from "next/image";
 import { Star } from "lucide-react";
 const REVIEWS = [
   { name: "Sarah T.", role: "客户", text: "半夜水管漏水，没想到 30 分钟师傅就到了，马上搞定，价格也很透明！", img: "/shared/s03.jpg" },
