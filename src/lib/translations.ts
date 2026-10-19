@@ -458,6 +458,7 @@ export const TRANSLATIONS = {
     form_desc: "简单描述您的经验或业务范围...",
     form_submit: "提交申请",
     form_hint: "提交即代表同意平台服务条款与隐私政策",
+    app_choose: "选择你的 App",
   },
   en: {
     nav_home: "Home",
@@ -916,6 +917,7 @@ export const TRANSLATIONS = {
     form_desc: "Briefly describe your experience or business...",
     form_submit: "Submit Application",
     form_hint: "By submitting, you agree to our Terms and Privacy Policy",
+    app_choose: "Choose Your App",
   },
   ms: {
     nav_home: "Utama",
@@ -1374,6 +1376,7 @@ export const TRANSLATIONS = {
     form_desc: "Terangkan secara ringkas pengalaman atau perniagaan anda...",
     form_submit: "Hantar Permohonan",
     form_hint: "Dengan menghantar, anda bersetuju dengan Terma dan Dasar Privasi kami",
+    app_choose: "Pilih App Anda",
   },
 } as const;
 

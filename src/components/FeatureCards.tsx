@@ -46,7 +46,7 @@ export default function FeatureCards() {
             return (
               <motion.div key={item.id} style={{ y: yOffset }} className={`relative rounded-[2rem] overflow-hidden group ${item.className}`}>
                 <Link href={item.href} className="block w-full h-full relative">
-                  <img src={item.img} alt={item.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                  <Image src={item.img} alt={item.name} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#06111d] via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
                   
                   <div className="absolute inset-0 p-6 md:p-10 flex flex-col justify-end">

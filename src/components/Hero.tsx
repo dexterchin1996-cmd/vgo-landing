@@ -73,8 +73,8 @@ export default function Hero() {
 
             {/* CTA Buttons with Shimmer */}
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="#download"
+              <button
+                onClick={() => window.dispatchEvent(new Event("open-waitlist"))}
                 className="group relative inline-flex h-[52px] items-center justify-center gap-2 overflow-hidden rounded-full bg-[#FF7A00] px-8 text-[15px] font-bold text-white shadow-[0_0_32px_rgba(255,122,0,0.35)] transition-all duration-200 hover:bg-[#FF9A33] active:scale-[0.98]"
               >
                 <span className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-150%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(150%)]">
@@ -84,7 +84,7 @@ export default function Hero() {
                 <svg viewBox="0 0 24 24" className="relative z-10 w-4 h-4 stroke-current fill-none" strokeWidth={2.4} aria-hidden="true">
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
-              </Link>
+              </button>
               <Link
                 href="/how-it-works/customer"
                 className="inline-flex h-[52px] items-center justify-center rounded-full border border-white/20 px-8 text-[15px] font-medium text-white transition-all duration-200 hover:bg-white/10 active:scale-[0.98]"
