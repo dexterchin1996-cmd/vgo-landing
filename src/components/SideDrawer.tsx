@@ -44,7 +44,9 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
         { icon: Info,     label: t("drawer_about"),  href: "/about/" },
         { icon: BookOpen, label: t("drawer_how"),    href: "/how-it-works/customer/" },
         { icon: Gift,     label: t("drawer_offers"), href: "/offers/" },
-        { icon: Users,    label: t("nav_partner"),   href: "/partner/" },
+        { icon: Store,    label: t("role_merchant_cta") || "商家入驻", href: "/merchant/" },
+          { icon: Wrench,   label: t("role_tech_cta") || "师傅入驻", href: "/technician/" },
+          { icon: Users,    label: t("nav_partner"),   href: "/partner/" },
       ],
     },
   ];
@@ -166,7 +168,17 @@ export default function SideDrawer({ open, onClose }: { open: boolean; onClose: 
                 className="block text-center py-3.5 rounded-xl bg-[var(--vgo)] text-white font-bold shadow-lg pulse-glow">
                 {t("nav_download")}
               </a>
-            </div>
+            
+          <button 
+            onClick={() => { 
+              window.dispatchEvent(new Event("open-waitlist")); 
+              // 如果 SideDrawer 有 onClose 属性，这里最好调用 onClose，但没有的话只能靠点击遮罩关闭
+            }} 
+            className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#FF7A00] py-3.5 text-sm font-bold text-white shadow-lg shadow-orange-500/30"
+          >
+            登录 / 注册
+          </button>
+        </div>
           </motion.aside>
         </>
       )}

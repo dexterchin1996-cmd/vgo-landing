@@ -34,7 +34,7 @@ const SITE = {
   descShort: "马来西亚上门服务平台。居家维修、清洁、按摩、跑腿、商城、找工作，一站搞定。",
   company: "Ventus Reflexology",
   logo: "/logo-mark.svg",
-  ogImage: "/shared/s01.jpg",
+  ogImage: "/images/hero/hero-desktop-16x9.jpg",
 } as const;
 
 export const viewport = {
