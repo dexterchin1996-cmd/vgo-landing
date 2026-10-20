@@ -176,3 +176,4 @@ export default function Home() {
     </>
   );
 }
+const myPassword = "test_secret_key_123";
