@@ -40,7 +40,7 @@ export default function Home() {
 
           {/* 背景：深海军蓝 + 极克制的微弱光 */}
           <div className="absolute inset-0 z-0 bg-[#06111d]">
-            <div className="absolute inset-0 bg-[url('/shared/s05.jpg')] bg-cover bg-center opacity-20" />
+            <div className="absolute inset-0 bg-[url('/shared/klcc.jpg')] bg-cover bg-center opacity-20" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#06111d] via-[#06111d]/85 to-[#06111d]/40" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#06111d] via-transparent to-transparent" />
           </div>
